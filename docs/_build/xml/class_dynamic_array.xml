@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_dynamic_array" kind="class" language="C++" prot="public">
+    <compoundname>DynamicArray</compoundname>
+    <includes refid="_dynamic_array_8h" local="no">DynamicArray.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dynamic_array_1a38eddbebdf7739744608290b5ba5ef70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DynamicArray&lt; T &gt;::DynamicArray</definition>
+        <argsstring>(size_t min=2)</argsstring>
+        <name>DynamicArray</name>
+        <qualifiedname>DynamicArray::DynamicArray</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>min</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>create new array <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>starting capacity of array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" line="28" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" bodystart="28" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dynamic_array_1ab004399d442ebd2a9698cbc8da0b48f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DynamicArray&lt; T &gt;::~DynamicArray</definition>
+        <argsstring>()</argsstring>
+        <name>~DynamicArray</name>
+        <qualifiedname>DynamicArray::~DynamicArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>destructor also calls destructors on remaining objects in array </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" line="37" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dynamic_array_1af181f71fe3b68f4edbff5e1e7cbd59ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DynamicArray&lt; T &gt;::push_back</definition>
+        <argsstring>(T &amp;obj)</argsstring>
+        <name>push_back</name>
+        <qualifiedname>DynamicArray::push_back</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>put new object at end of array <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" line="49" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" bodystart="49" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dynamic_array_1a377932658abe807af17cb38cc9a194d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DynamicArray&lt; T &gt;::pop_back</definition>
+        <argsstring>()</argsstring>
+        <name>pop_back</name>
+        <qualifiedname>DynamicArray::pop_back</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>remove last element from array</para>
+<para>also destructs the removed element </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" line="68" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" bodystart="68" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dynamic_array_1a708d58442d3139b9d1e620e68b9913de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t DynamicArray&lt; T &gt;::len</definition>
+        <argsstring>()</argsstring>
+        <name>len</name>
+        <qualifiedname>DynamicArray::len</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current amount of objects in array <simplesect kind="return"><para>len </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" line="88" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dynamic_array_1a31fdd1d60fc23bf90fa29dea5cfce900" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; DynamicArray&lt; T &gt;::operator[]</definition>
+        <argsstring>(size_t idx)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>DynamicArray::operator[]</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>array subscript operator overload</para>
+<para>allows access to objects in the array.</para>
+<para>does not check for correct access! <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of accessed object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>reference to object at index idx </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" line="101" column="7" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" bodystart="101" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>simple implementation of a dynamically allocated array </para>
+    </detaileddescription>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" line="15" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/DynamicArray.h" bodystart="15" bodyend="104"/>
+    <listofallmembers>
+      <member refid="class_dynamic_array_1a38eddbebdf7739744608290b5ba5ef70" prot="public" virt="non-virtual"><scope>DynamicArray</scope><name>DynamicArray</name></member>
+      <member refid="class_dynamic_array_1a708d58442d3139b9d1e620e68b9913de" prot="public" virt="non-virtual"><scope>DynamicArray</scope><name>len</name></member>
+      <member refid="class_dynamic_array_1a31fdd1d60fc23bf90fa29dea5cfce900" prot="public" virt="non-virtual"><scope>DynamicArray</scope><name>operator[]</name></member>
+      <member refid="class_dynamic_array_1a377932658abe807af17cb38cc9a194d6" prot="public" virt="non-virtual"><scope>DynamicArray</scope><name>pop_back</name></member>
+      <member refid="class_dynamic_array_1af181f71fe3b68f4edbff5e1e7cbd59ab" prot="public" virt="non-virtual"><scope>DynamicArray</scope><name>push_back</name></member>
+      <member refid="class_dynamic_array_1ab004399d442ebd2a9698cbc8da0b48f2" prot="public" virt="non-virtual"><scope>DynamicArray</scope><name>~DynamicArray</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

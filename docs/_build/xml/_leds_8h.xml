@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_leds_8h" kind="file" language="C++">
+    <compoundname>Leds.h</compoundname>
+    <includes refid="constants_8h" local="yes">constants.h</includes>
+    <includes local="yes">stm/gpio.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/Leds.h</label>
+        <link refid="_leds_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>constants.h</label>
+        <link refid="constants_8h_source"/>
+      </node>
+      <node id="3">
+        <label>stm/gpio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_leds_8h_1aefa0182b26e480b6aeb03318aa668437" prot="public" static="no" mutable="no">
+        <type>DIO *</type>
+        <definition>DIO* LedRed</definition>
+        <argsstring></argsstring>
+        <name>LedRed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/Leds.h" line="12" column="12" declfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/Leds.h" declline="12" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="_leds_8h_1a64f246f6ed99fb04147c590a6b999e89" prot="public" static="no" mutable="no">
+        <type>DIO *</type>
+        <definition>DIO* LedGreen</definition>
+        <argsstring></argsstring>
+        <name>LedGreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/Leds.h" line="13" column="12" declfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/Leds.h" declline="13" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="_leds_8h_1a0ff37e0d9e3b9b6c73000e50e770a06f" prot="public" static="no" mutable="no">
+        <type>DIO *</type>
+        <definition>DIO* LedBlue</definition>
+        <argsstring></argsstring>
+        <name>LedBlue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/Leds.h" line="14" column="12" declfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/Leds.h" declline="14" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright (c) 2020 IACE </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LEDS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEDS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm/gpio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>DIO<sp/>*LedRed;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>DIO<sp/>*LedGreen;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>DIO<sp/>*LedBlue;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//LEDS_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/Leds.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_b596f468b52957496e4f78b80e029268" kind="dir">
+    <compoundname>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src</compoundname>
+    <innerfile refid="encoder_8cpp">encoder.cpp</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="motor__controller_8cpp">motor_controller.cpp</innerfile>
+    <innerfile refid="pid__controller_8cpp">pid_controller.cpp</innerfile>
+    <innerfile refid="_simulated_encoder_8cpp">SimulatedEncoder.cpp</innerfile>
+    <innerfile refid="stm32f7xx__hal__msp_8c">stm32f7xx_hal_msp.c</innerfile>
+    <innerfile refid="stm32f7xx__it_8c">stm32f7xx_it.c</innerfile>
+    <innerfile refid="syscalls_8c">syscalls.c</innerfile>
+    <innerfile refid="sysmem_8c">sysmem.c</innerfile>
+    <innerfile refid="system__stm32f7xx_8c">system_stm32f7xx.c</innerfile>
+    <innerfile refid="timer__initialize_8cpp">timer_initialize.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/"/>
+  </compounddef>
+</doxygen>

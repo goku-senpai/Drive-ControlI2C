@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_moving_average" kind="class" language="C++" prot="public">
+    <compoundname>MovingAverage</compoundname>
+    <includes refid="_moving_average_8h" local="no">MovingAverage.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_moving_average_1a55d6652c79489736cebf9653d60601b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MovingAverage&lt; T, N &gt;::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <qualifiedname>MovingAverage::operator()</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator overload to return the average value. <simplesect kind="return"><para>the average value as double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/MovingAverage.h" line="20" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/MovingAverage.h" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_moving_average_1a0473a2ec5b974a01621668773b8f6b44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MovingAverage&lt; T, N &gt;::operator()</definition>
+        <argsstring>(T tSample)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>MovingAverage::operator()</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>tSample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator overload to add a new value to the filter. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tSample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/MovingAverage.h" line="32" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/MovingAverage.h" bodystart="32" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Template class that implements a moving average filter as fifo. <parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type of the filter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the filter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/MovingAverage.h" line="14" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/MovingAverage.h" bodystart="14" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_moving_average_1a55d6652c79489736cebf9653d60601b3" prot="public" virt="non-virtual"><scope>MovingAverage</scope><name>operator()</name></member>
+      <member refid="class_moving_average_1a0473a2ec5b974a01621668773b8f6b44" prot="public" virt="non-virtual"><scope>MovingAverage</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

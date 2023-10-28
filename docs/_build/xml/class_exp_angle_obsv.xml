@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_exp_angle_obsv" kind="class" language="C++" prot="public">
+    <compoundname>ExpAngleObsv</compoundname>
+    <basecompoundref refid="class_experiment_module" prot="public" virt="non-virtual">ExperimentModule</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_exp_angle_obsv_1ab594f9e192c0a3e6515948931a41012b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExpAngleObsv::bDirLeft</definition>
+        <argsstring></argsstring>
+        <name>bDirLeft</name>
+        <qualifiedname>ExpAngleObsv::bDirLeft</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="222" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_angle_obsv_1aca5ceb08e741a111c3e64219dc97b5d7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExpAngleObsv::bDirRight</definition>
+        <argsstring></argsstring>
+        <name>bDirRight</name>
+        <qualifiedname>ExpAngleObsv::bDirRight</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="223" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_exp_angle_obsv_1a03418e16ccff1ec325db318ff71ec01a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpAngleObsv::deactivate</definition>
+        <argsstring>()</argsstring>
+        <name>deactivate</name>
+        <qualifiedname>ExpAngleObsv::deactivate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="227" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="227" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_angle_obsv_1ab3bdc13044b626b14eda2f2ba6fdca9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ExpAngleObsv::compute</definition>
+        <argsstring>(uint32_t lTime) override</argsstring>
+        <name>compute</name>
+        <qualifiedname>ExpAngleObsv::compute</qualifiedname>
+        <reimplements refid="class_experiment_module_1a812c5ce3fc52525e6ee9d4f260a5936a">compute</reimplements>
+        <param>
+          <type>uint32_t</type>
+          <declname>lTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>function is called regularly in EXP_DT ms intervals <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current experiment time in ms </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="232" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="232" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_angle_obsv_1af17cd767ffbc52ae8ca327f8ec9d1e32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ExpAngleObsv::ExpAngleObsv</definition>
+        <argsstring>()</argsstring>
+        <name>ExpAngleObsv</name>
+        <qualifiedname>ExpAngleObsv::ExpAngleObsv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="237" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="237" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_angle_obsv_1ae5b58994fb88cf1028692028ea8abf12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpAngleObsv::sendFrame</definition>
+        <argsstring>(unsigned char id, unsigned long lTime) override</argsstring>
+        <name>sendFrame</name>
+        <qualifiedname>ExpAngleObsv::sendFrame</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>lTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="243" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="243" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_angle_obsv_1a8616ba8171782f01a5cab180e107af12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpAngleObsv::handleFrame</definition>
+        <argsstring>(unsigned char id) override</argsstring>
+        <name>handleFrame</name>
+        <qualifiedname>ExpAngleObsv::handleFrame</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="253" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="253" bodyend="264"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ExpAngleObsv</label>
+        <link refid="class_exp_angle_obsv"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExperimentModule</label>
+        <link refid="class_experiment_module"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ExpAngleObsv</label>
+        <link refid="class_exp_angle_obsv"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExperimentModule</label>
+        <link refid="class_experiment_module"/>
+      </node>
+    </collaborationgraph>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="219" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="219" bodyend="265"/>
+    <listofallmembers>
+      <member refid="class_exp_angle_obsv_1ab594f9e192c0a3e6515948931a41012b" prot="private" virt="non-virtual"><scope>ExpAngleObsv</scope><name>bDirLeft</name></member>
+      <member refid="class_exp_angle_obsv_1aca5ceb08e741a111c3e64219dc97b5d7" prot="private" virt="non-virtual"><scope>ExpAngleObsv</scope><name>bDirRight</name></member>
+      <member refid="class_exp_angle_obsv_1ab3bdc13044b626b14eda2f2ba6fdca9c" prot="public" virt="virtual"><scope>ExpAngleObsv</scope><name>compute</name></member>
+      <member refid="class_exp_angle_obsv_1a03418e16ccff1ec325db318ff71ec01a" prot="public" virt="non-virtual"><scope>ExpAngleObsv</scope><name>deactivate</name></member>
+      <member refid="class_exp_angle_obsv_1af17cd767ffbc52ae8ca327f8ec9d1e32" prot="public" virt="non-virtual"><scope>ExpAngleObsv</scope><name>ExpAngleObsv</name></member>
+      <member refid="class_experiment_module_1a8dc870b13ef7b6013dc2ab5aa7f5ffe7" prot="public" virt="non-virtual"><scope>ExpAngleObsv</scope><name>ExperimentModule</name></member>
+      <member refid="class_experiment_module_1ac2f139ac6c26181fd2a7a7343c855eee" prot="public" virt="non-virtual"><scope>ExpAngleObsv</scope><name>getOutput</name></member>
+      <member refid="class_experiment_module_1acf4101354fe002c105da75892d220dc7" prot="public" virt="non-virtual"><scope>ExpAngleObsv</scope><name>getState</name></member>
+      <member refid="class_exp_angle_obsv_1a8616ba8171782f01a5cab180e107af12" prot="public" virt="non-virtual"><scope>ExpAngleObsv</scope><name>handleFrame</name></member>
+      <member refid="class_experiment_module_1a74fa6d8dbe61a4351135082d2f288da4" prot="public" virt="virtual" ambiguityscope="ExperimentModule::"><scope>ExpAngleObsv</scope><name>handleFrame</name></member>
+      <member refid="class_experiment_module_1ab8628df2b6883cdf92f55c5b067430d2" prot="public" virt="virtual"><scope>ExpAngleObsv</scope><name>init</name></member>
+      <member refid="class_experiment_module_1af7cddd22f46a142c197203da7130ffdf" prot="protected" virt="non-virtual"><scope>ExpAngleObsv</scope><name>outputs</name></member>
+      <member refid="class_experiment_module_1a7d7697d611871d8f054b618080769dcc" prot="public" virt="virtual"><scope>ExpAngleObsv</scope><name>registerModules</name></member>
+      <member refid="class_exp_angle_obsv_1ae5b58994fb88cf1028692028ea8abf12" prot="public" virt="non-virtual"><scope>ExpAngleObsv</scope><name>sendFrame</name></member>
+      <member refid="class_experiment_module_1aabbf45990fca2a3b0a50644c7741004f" prot="public" virt="virtual" ambiguityscope="ExperimentModule::"><scope>ExpAngleObsv</scope><name>sendFrame</name></member>
+      <member refid="class_experiment_module_1a6286b09a3f2e24144534321a7e5ef2c2" prot="protected" virt="non-virtual"><scope>ExpAngleObsv</scope><name>states</name></member>
+      <member refid="class_experiment_module_1a63415ccd081a94e842487e48dadbd8c0" prot="public" virt="virtual"><scope>ExpAngleObsv</scope><name>stop</name></member>
+      <member refid="class_experiment_module_1a909d236cad2e09e23f479a4263cbd1e9" prot="public" virt="non-virtual"><scope>ExpAngleObsv</scope><name>~ExperimentModule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

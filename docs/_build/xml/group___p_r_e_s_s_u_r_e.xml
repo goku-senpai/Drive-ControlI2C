@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group___p_r_e_s_s_u_r_e" kind="group">
+    <compoundname>PRESSURE</compoundname>
+    <title>PRESSURE</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gaa81f5570bd48914884577d7e8af066cd" prot="public" static="no">
+        <name>PRESSURE_SENSOR_PIN_LEFT</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="83" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga5537d94182e1832bf857649885407039" prot="public" static="no">
+        <name>PRESSURE_SENSOR_PIN_RIGHT</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="84" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga214df8a3e912c4b6e7249b41a87c2d83" prot="public" static="no">
+        <name>PRESSURE_SENSOR_PIN_SUPPLY</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="85" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga72356426b7c13201bd8cd8df056f1dc6" prot="public" static="no">
+        <name>PRESSURE_SENSOR_PIN_TANK</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="86" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga18582ec8c41f2d28eeb0c74896bbc6ad" prot="public" static="no">
+        <name>PRESSURE_SENSOR_SLOPE</name>
+        <initializer>0.00133816662</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="89" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga414a43e4a1794574a1e628625b1ffd87" prot="public" static="no">
+        <name>PRESSURE_SENSOR_OFFSET</name>
+        <initializer>-1.65</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="90" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gaad62efebb7002ebba5980acffc3239be" prot="public" static="no">
+        <name>PRESSURE_MAX_HARDWARE</name>
+        <initializer>8.5</initializer>
+        <briefdescription>
+<para>maximum pressure before hardware breaks </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="94" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gac227a36330af30773686946ac2c087fe" prot="public" static="no">
+        <name>PRESSURE_MAX_UI</name>
+        <initializer>6.5</initializer>
+        <briefdescription>
+<para>max. target pressure for UI input at 100% </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="95" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga8819fd42232ef601b6ee560028782a8c" prot="public" static="no">
+        <name>PRESSURE_MIN_UI</name>
+        <initializer>0.0</initializer>
+        <briefdescription>
+<para>min. target pressure for UI input at 0% </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="96" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga0aa3fc0afc12a4a54b3e52af1a6c0444" prot="public" static="no">
+        <name>PRESSURE_DEADZONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>minimum pressure difference between traget pressure and actual pressure to activate; not essential </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="98" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gabeb3061d608c36ec8f1c41be1d1d8e78" prot="public" static="no">
+        <name>PRESSURE_MIN_NICE</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para>minimum supply pressure for system to work as expected; essential </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="100" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga57fec8c4dc337bf505cf2bde9fc6f39d" prot="public" static="no">
+        <name>PRESSURE_MIN_SUPPY</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para>minimum supply pressure for system to work as expected; essential </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="101" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga14ba699806218d25c321556290a7ab50" prot="public" static="no">
+        <name>PRESSURE_NEGLECTABLE</name>
+        <initializer>0.1</initializer>
+        <briefdescription>
+<para>in case of insuficient supply pressure, the pressure in the cylinders will be reduced to less than neglectable pressure </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="102" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga455802e0dd8dd60b7b148047240278ff" prot="public" static="no">
+        <name>PRESSURE_TARGET_REDUCTION</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>to avoid target pressure being higher than supply pressure due to small short term pressure drops; not essential </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="104" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga033b33df92554d5bd4135c3566ea9870" prot="public" static="no">
+        <name>PRESSURE_ADJUST_MODE</name>
+        <initializer>false</initializer>
+        <briefdescription>
+<para>prolongs open valve times in low supply pressure scenarios; not recommendet with regular 8bar supply </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="105" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga759cd32eaca0f1511cc6a50804c9da80" prot="public" static="no">
+        <name>PRESSURE_MAX_CYCLE_TIME</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para>avoiding long unresponsive system periods in [ms] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="107" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga86785264843a2025c45cf4c9057f26f4" prot="public" static="no">
+        <name>PRESSURE_MIN_CYCLE_TIME</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para>too fast for valves to make a real change [ms] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="108" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga2d6da9d902837a0237d0f97e4bd5ef41" prot="public" static="no">
+        <name>PRESSURE_BETA_IN_1</name>
+        <initializer>0.347</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="111" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga767862f9e824eccba209821272506830" prot="public" static="no">
+        <name>PRESSURE_BETA_IN_2</name>
+        <initializer>0.0052</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="112" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga508cb4a9a3fbcd17f719169c01c82192" prot="public" static="no">
+        <name>PRESSURE_BETA_IN_3</name>
+        <initializer>3.71e-5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="113" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gafa738b6910b9d9dc99b03d097ff0fee6" prot="public" static="no">
+        <name>PRESSURE_BETA_IN_4</name>
+        <initializer>-9.28e-8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="114" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga51da635df42703f5eb2fbcb45ac4f19e" prot="public" static="no">
+        <name>PRESSURE_BETA_OUT_1</name>
+        <initializer>0.04667</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="117" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga7f0b5df2982a50b3ec16d7b3c57c4df3" prot="public" static="no">
+        <name>PRESSURE_BETA_OUT_2</name>
+        <initializer>0.01795</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="118" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gaf270f48994cb12e75c65ed6797727541" prot="public" static="no">
+        <name>PRESSURE_BETA_OUT_3</name>
+        <initializer>-0.0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="119" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>various defines for pressure related stuff </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

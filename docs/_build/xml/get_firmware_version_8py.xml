@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="get_firmware_version_8py" kind="file" language="Python">
+    <compoundname>getFirmwareVersion.py</compoundname>
+    <innernamespace refid="namespaceget_firmware_version">getFirmwareVersion</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Import(</highlight><highlight class="stringliteral">&quot;env&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>pkg_resources</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">required_pkgs<sp/>=<sp/>{</highlight><highlight class="stringliteral">&apos;gitpython&apos;</highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">installed_pkgs<sp/>=<sp/>{pkg.key<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>pkg<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>pkg_resources.working_set}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">missing_pkgs<sp/>=<sp/>required_pkgs<sp/>-<sp/>installed_pkgs</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>missing_pkgs:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>env.Execute(</highlight><highlight class="stringliteral">&apos;$PYTHONEXE<sp/>-m<sp/>pip<sp/>install<sp/>gitpython<sp/>&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>git<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>ImportError<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>e:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;cant<sp/>import<sp/>git<sp/>module<sp/>:<sp/>pip<sp/>install<sp/>gitpython&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">pass</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>module<sp/>doesn&apos;t<sp/>exist,<sp/>deal<sp/>with<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">repo<sp/>=<sp/>git.Repo(search_parent_directories=</highlight><highlight class="keyword">True</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>repo:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;could<sp/>find<sp/>git<sp/>repo<sp/>in<sp/>parent<sp/>directories&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>sha<sp/>=<sp/>repo.head.object.hexsha</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">get_firmware_specifier_build_flag():</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>build_version<sp/>=<sp/>sha</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>build_flag<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;-D<sp/>AUTO_VERSION=\\\&quot;&quot;</highlight><highlight class="normal"><sp/>+<sp/>build_version<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;\\\&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>(</highlight><highlight class="stringliteral">&quot;\n\n<sp/>Firmware<sp/>Revision:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>build_version)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(build_flag)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">env.Append(</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>BUILD_FLAGS=[get_firmware_specifier_build_flag()]</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_p_i_d_controller" kind="class" language="C++" prot="public">
+    <compoundname>PIDController</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_i_d_controller_1a7abe8e43b88d28f7df05fc4a338ea69a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PIDController::kp_</definition>
+        <argsstring></argsstring>
+        <name>kp_</name>
+        <qualifiedname>PIDController::kp_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="22" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_controller_1a29a4b35864f64ed29e65398417b48da8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PIDController::ki_</definition>
+        <argsstring></argsstring>
+        <name>ki_</name>
+        <qualifiedname>PIDController::ki_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="23" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_controller_1a97fc1422b5bd43d3c6a1ca395427c458" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PIDController::kd_</definition>
+        <argsstring></argsstring>
+        <name>kd_</name>
+        <qualifiedname>PIDController::kd_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="24" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_controller_1a5cff53760fb7872603064b391d33bd3e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PIDController::max_output_</definition>
+        <argsstring></argsstring>
+        <name>max_output_</name>
+        <qualifiedname>PIDController::max_output_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="25" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_controller_1a599643de052eb427aa4b3730626ecb06" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PIDController::max_integral_</definition>
+        <argsstring></argsstring>
+        <name>max_integral_</name>
+        <qualifiedname>PIDController::max_integral_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="26" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_controller_1a7a5b19e2244f9987829ab5f23175c9c9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PIDController::target_</definition>
+        <argsstring></argsstring>
+        <name>target_</name>
+        <qualifiedname>PIDController::target_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="27" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_controller_1ad0a5e91ca64b72411f077b5d658295ce" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PIDController::integral_</definition>
+        <argsstring></argsstring>
+        <name>integral_</name>
+        <qualifiedname>PIDController::integral_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="29" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_controller_1a05058b0a86611c2e02476bc863519515" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PIDController::prev_error_</definition>
+        <argsstring></argsstring>
+        <name>prev_error_</name>
+        <qualifiedname>PIDController::prev_error_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="30" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_controller_1a2f5d648747f28ddd35f6dc8cf0af51f4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PIDController::output_</definition>
+        <argsstring></argsstring>
+        <name>output_</name>
+        <qualifiedname>PIDController::output_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="31" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_i_d_controller_1ac7e26b5f62e8e7d6ee0dda0cd4d127eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PIDController::PIDController</definition>
+        <argsstring>(float kp, float ki, float kd, float max_output, float max_integral, float target)</argsstring>
+        <name>PIDController</name>
+        <qualifiedname>PIDController::PIDController</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>kp</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ki</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>kd</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_output</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_integral</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="6" column="5" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/pid_controller.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_i_d_controller_1a081c1ad40df4ae192b3723d53a7718e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PIDController::update</definition>
+        <argsstring>(float current_value, float sample_time)</argsstring>
+        <name>update</name>
+        <qualifiedname>PIDController::update</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>current_value</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>sample_time</declname>
+        </param>
+        <briefdescription>
+<para>update function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sample_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="9" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/pid_controller.cpp" bodystart="19" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_i_d_controller_1aca3e1da521c4be6e05ee2ea89a18df86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PIDController::set_kp</definition>
+        <argsstring>(float kp)</argsstring>
+        <name>set_kp</name>
+        <qualifiedname>PIDController::set_kp</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>kp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="12" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/pid_controller.cpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_i_d_controller_1a24f741a6129d568c23f541f6f602fe3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PIDController::set_ki</definition>
+        <argsstring>(float ki)</argsstring>
+        <name>set_ki</name>
+        <qualifiedname>PIDController::set_ki</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>ki</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="13" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/pid_controller.cpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_i_d_controller_1a1a0ada2d70e2907bed1618c5a7edc27b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PIDController::set_kd</definition>
+        <argsstring>(float kd)</argsstring>
+        <name>set_kd</name>
+        <qualifiedname>PIDController::set_kd</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>kd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="14" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/pid_controller.cpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_i_d_controller_1a4a0a88861adadac85e82a4b3910f8202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PIDController::set_target</definition>
+        <argsstring>(float target)</argsstring>
+        <name>set_target</name>
+        <qualifiedname>PIDController::set_target</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="15" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/pid_controller.cpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_i_d_controller_1add79b8cd9ba95018cfed8c663972cc24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PIDController::get_output</definition>
+        <argsstring>() const</argsstring>
+        <name>get_output</name>
+        <qualifiedname>PIDController::get_output</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="18" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/pid_controller.cpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_i_d_controller_1aaed9d19e5e06a2a83cebb45ad494a622" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PIDController::get_target</definition>
+        <argsstring>() const</argsstring>
+        <name>get_target</name>
+        <qualifiedname>PIDController::get_target</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="19" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/pid_controller.cpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" line="4" column="1" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/pid_controller.h" bodystart="4" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_p_i_d_controller_1add79b8cd9ba95018cfed8c663972cc24" prot="public" virt="non-virtual"><scope>PIDController</scope><name>get_output</name></member>
+      <member refid="class_p_i_d_controller_1aaed9d19e5e06a2a83cebb45ad494a622" prot="public" virt="non-virtual"><scope>PIDController</scope><name>get_target</name></member>
+      <member refid="class_p_i_d_controller_1ad0a5e91ca64b72411f077b5d658295ce" prot="private" virt="non-virtual"><scope>PIDController</scope><name>integral_</name></member>
+      <member refid="class_p_i_d_controller_1a97fc1422b5bd43d3c6a1ca395427c458" prot="private" virt="non-virtual"><scope>PIDController</scope><name>kd_</name></member>
+      <member refid="class_p_i_d_controller_1a29a4b35864f64ed29e65398417b48da8" prot="private" virt="non-virtual"><scope>PIDController</scope><name>ki_</name></member>
+      <member refid="class_p_i_d_controller_1a7abe8e43b88d28f7df05fc4a338ea69a" prot="private" virt="non-virtual"><scope>PIDController</scope><name>kp_</name></member>
+      <member refid="class_p_i_d_controller_1a599643de052eb427aa4b3730626ecb06" prot="private" virt="non-virtual"><scope>PIDController</scope><name>max_integral_</name></member>
+      <member refid="class_p_i_d_controller_1a5cff53760fb7872603064b391d33bd3e" prot="private" virt="non-virtual"><scope>PIDController</scope><name>max_output_</name></member>
+      <member refid="class_p_i_d_controller_1a2f5d648747f28ddd35f6dc8cf0af51f4" prot="private" virt="non-virtual"><scope>PIDController</scope><name>output_</name></member>
+      <member refid="class_p_i_d_controller_1ac7e26b5f62e8e7d6ee0dda0cd4d127eb" prot="public" virt="non-virtual"><scope>PIDController</scope><name>PIDController</name></member>
+      <member refid="class_p_i_d_controller_1a05058b0a86611c2e02476bc863519515" prot="private" virt="non-virtual"><scope>PIDController</scope><name>prev_error_</name></member>
+      <member refid="class_p_i_d_controller_1a1a0ada2d70e2907bed1618c5a7edc27b" prot="public" virt="non-virtual"><scope>PIDController</scope><name>set_kd</name></member>
+      <member refid="class_p_i_d_controller_1a24f741a6129d568c23f541f6f602fe3b" prot="public" virt="non-virtual"><scope>PIDController</scope><name>set_ki</name></member>
+      <member refid="class_p_i_d_controller_1aca3e1da521c4be6e05ee2ea89a18df86" prot="public" virt="non-virtual"><scope>PIDController</scope><name>set_kp</name></member>
+      <member refid="class_p_i_d_controller_1a4a0a88861adadac85e82a4b3910f8202" prot="public" virt="non-virtual"><scope>PIDController</scope><name>set_target</name></member>
+      <member refid="class_p_i_d_controller_1a7a5b19e2244f9987829ab5f23175c9c9" prot="private" virt="non-virtual"><scope>PIDController</scope><name>target_</name></member>
+      <member refid="class_p_i_d_controller_1a081c1ad40df4ae192b3723d53a7718e7" prot="public" virt="non-virtual"><scope>PIDController</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

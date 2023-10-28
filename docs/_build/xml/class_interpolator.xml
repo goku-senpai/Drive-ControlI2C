@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_interpolator" kind="class" language="C++" prot="public">
+    <compoundname>Interpolator</compoundname>
+    <derivedcompoundref refid="class_linear_interpolator" prot="public" virt="non-virtual">LinearInterpolator</derivedcompoundref>
+    <includes refid="_interpolation_8h" local="no">Interpolation.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_interpolator_1a20c279ea0ebe0b1610d76ccaed1b975e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Interpolator::Interpolator</definition>
+        <argsstring>(const unsigned int count)</argsstring>
+        <name>Interpolator</name>
+        <qualifiedname>Interpolator::Interpolator</qualifiedname>
+        <param>
+          <type>const unsigned int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for a general interpolator <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of points for interpolator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" line="21" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" bodystart="21" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interpolator_1af789feb4bf1dc1a8ba3b027faf45ca32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpolator::setData</definition>
+        <argsstring>(double *dx, double *dy, unsigned int iCount, bool bSort=false)</argsstring>
+        <name>setData</name>
+        <qualifiedname>Interpolator::setData</qualifiedname>
+        <param>
+          <type>double *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>dy</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>iCount</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bSort</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reinitialise interpolator with new dataset <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of x values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of y values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of values in array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if arrays must be sorted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" line="31" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" bodystart="31" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interpolator_1a0e829cc868506e98483317416ec8d848" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpolator::updateData</definition>
+        <argsstring>(double *dx, double *dy, bool bSort=false)</argsstring>
+        <name>updateData</name>
+        <qualifiedname>Interpolator::updateData</qualifiedname>
+        <param>
+          <type>double *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>dy</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bSort</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>update the points in dataset <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of x values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of y values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if arrays must be sorted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" line="45" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" bodystart="45" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interpolator_1abdc12800297b9c69d24ab5f01b968dd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Interpolator::~Interpolator</definition>
+        <argsstring>()</argsstring>
+        <name>~Interpolator</name>
+        <qualifiedname>Interpolator::~Interpolator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>virtual destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" line="61" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interpolator_1aa4752e507f3aa5b8b4c3bac7d946c436" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpolator::operator()</definition>
+        <argsstring>(double dx)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>Interpolator::operator()</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>dx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator overload to get interpolated value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x position to interpolate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" line="69" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" bodystart="69" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for an interpolator </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Interpolator</label>
+        <link refid="class_interpolator"/>
+      </node>
+      <node id="2">
+        <label>LinearInterpolator</label>
+        <link refid="class_linear_interpolator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" line="15" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" bodystart="15" bodyend="97"/>
+    <listofallmembers>
+      <member refid="class_interpolator_1a20c279ea0ebe0b1610d76ccaed1b975e" prot="public" virt="non-virtual"><scope>Interpolator</scope><name>Interpolator</name></member>
+      <member refid="class_interpolator_1aa4752e507f3aa5b8b4c3bac7d946c436" prot="public" virt="non-virtual"><scope>Interpolator</scope><name>operator()</name></member>
+      <member refid="class_interpolator_1af789feb4bf1dc1a8ba3b027faf45ca32" prot="public" virt="non-virtual"><scope>Interpolator</scope><name>setData</name></member>
+      <member refid="class_interpolator_1a0e829cc868506e98483317416ec8d848" prot="public" virt="non-virtual"><scope>Interpolator</scope><name>updateData</name></member>
+      <member refid="class_interpolator_1abdc12800297b9c69d24ab5f01b968dd0" prot="public" virt="virtual"><scope>Interpolator</scope><name>~Interpolator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

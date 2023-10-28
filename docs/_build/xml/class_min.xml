@@ -1,0 +1,961 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_min" kind="class" language="C++" prot="public">
+    <compoundname>Min</compoundname>
+    <basecompoundref refid="class_hardware_u_a_r_t" prot="public" virt="non-virtual">HardwareUART</basecompoundref>
+    <basecompoundref refid="class_connection" prot="public" virt="non-virtual">Connection</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_min_1aadbd4321df81a738a7982dae3feb5be0" prot="private" static="no" strong="no">
+        <type></type>
+        <name>@0</name>
+        <qualifiedname>Min::@0</qualifiedname>
+        <enumvalue id="class_min_1aadbd4321df81a738a7982dae3feb5be0a97afd11f8db3a9d3f597ccd657d366cb" prot="private">
+          <name>HEADER_BYTE</name>
+          <initializer>= 0xaaU</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1aadbd4321df81a738a7982dae3feb5be0a289bce5f73641f4d77f4a593f3445d4c" prot="private">
+          <name>STUFF_BYTE</name>
+          <initializer>= 0x55U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1aadbd4321df81a738a7982dae3feb5be0ad383964765321418c620b588f30ae6f4" prot="private">
+          <name>EOF_BYTE</name>
+          <initializer>= 0x55U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="154" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="154" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81" prot="private" static="no" strong="no">
+        <type></type>
+        <name>@1</name>
+        <qualifiedname>Min::@1</qualifiedname>
+        <enumvalue id="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a16d347e1387ed68935aecd7c1ebaddd6" prot="private">
+          <name>SEARCHING_FOR_SOF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a2ad3279c37a812088213f0fef1ab2e25" prot="private">
+          <name>RECEIVING_ID_CONTROL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a32cae55685097df065c5e6a0442b83b7" prot="private">
+          <name>RECEIVING_SEQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a2b598e97023889670cc301ee1cd1f41c" prot="private">
+          <name>RECEIVING_LENGTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a89191dc01d68beaf8228fc1098f9ad7e" prot="private">
+          <name>RECEIVING_PAYLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a3eb02d5b27cb6f928f71e81e8715cf9e" prot="private">
+          <name>RECEIVING_CHECKSUM_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a93b9b6d4e2657e2c1678fe9001e1b1fc" prot="private">
+          <name>RECEIVING_CHECKSUM_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a9056aba32478ff924d42fd1879119ba1" prot="private">
+          <name>RECEIVING_CHECKSUM_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81abcb79a6a13bb09511d07720d5d14030d" prot="private">
+          <name>RECEIVING_CHECKSUM_0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81aab4654abe270b33b486ec759a1fb84e6" prot="private">
+          <name>RECEIVING_EOF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="161" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="161" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_min_1a9e779a64856c80dce4853bc60cc6dab1" prot="private" static="no" strong="no">
+        <type></type>
+        <name>@2</name>
+        <qualifiedname>Min::@2</qualifiedname>
+        <enumvalue id="class_min_1a9e779a64856c80dce4853bc60cc6dab1ac4522cb28dacf76d7aa0d162a5476859" prot="private">
+          <name>ACK</name>
+          <initializer>= 0xffU</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1a9e779a64856c80dce4853bc60cc6dab1a3c1295a7644784a65a53fcea65b4c310" prot="private">
+          <name>RESET</name>
+          <initializer>= 0xfeU</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_min_1a9e779a64856c80dce4853bc60cc6dab1addc261a85df3fdada074a57ee613427a" prot="private">
+          <name>TRANSPORT_FRAME</name>
+          <initializer>= 0x80U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="174" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="174" bodyend="180"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_min_1a977bc4f5543da07799c647004ab695c5" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t Min::iMaxPayload</definition>
+        <argsstring></argsstring>
+        <name>iMaxPayload</name>
+        <qualifiedname>Min::iMaxPayload</qualifiedname>
+        <initializer>= TRANSPORT_MAX_PAYLOAD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="119" column="19" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_min_1a5054cffdbcafe2974d4182932791d6fd" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_min" kindref="compound">Min</ref> *</type>
+        <definition>Min* Min::pMin</definition>
+        <argsstring></argsstring>
+        <name>pMin</name>
+        <qualifiedname>Min::pMin</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="122" column="23" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_min_1aea5f3b8b0f40ed6c72909cf70836e7eb" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* Min::rx_frame_payload_buf</definition>
+        <argsstring></argsstring>
+        <name>rx_frame_payload_buf</name>
+        <qualifiedname>Min::rx_frame_payload_buf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="140" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1a74c15347758a193917f4e71faad12745" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Min::rx_frame_checksum</definition>
+        <argsstring></argsstring>
+        <name>rx_frame_checksum</name>
+        <qualifiedname>Min::rx_frame_checksum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="141" column="14" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1a2d11488d6f0b74e8b1ff8d39dc5bfb58" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Min::rx_checksum</definition>
+        <argsstring></argsstring>
+        <name>rx_checksum</name>
+        <qualifiedname>Min::rx_checksum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="142" column="14" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1a12308eabe788bd1623c510f5c3fc1e38" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Min::tx_checksum</definition>
+        <argsstring></argsstring>
+        <name>tx_checksum</name>
+        <qualifiedname>Min::tx_checksum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="143" column="14" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1ab576a36e93b4047aad6c0a40b6daa510" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Min::rx_header_bytes_seen</definition>
+        <argsstring></argsstring>
+        <name>rx_header_bytes_seen</name>
+        <qualifiedname>Min::rx_header_bytes_seen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="144" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1a7e561701686294dcf7b93ad2190b2af1" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Min::rx_frame_state</definition>
+        <argsstring></argsstring>
+        <name>rx_frame_state</name>
+        <qualifiedname>Min::rx_frame_state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="145" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1a89c033b9c2ca1483869e338ccc7a94b1" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Min::rx_frame_payload_bytes</definition>
+        <argsstring></argsstring>
+        <name>rx_frame_payload_bytes</name>
+        <qualifiedname>Min::rx_frame_payload_bytes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="146" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1a385a98d6c9b94343421d17175d23e939" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Min::rx_frame_id_control</definition>
+        <argsstring></argsstring>
+        <name>rx_frame_id_control</name>
+        <qualifiedname>Min::rx_frame_id_control</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="147" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1acb08bc6c2a9c17f5f7ae3f693b568bcc" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Min::rx_frame_seq</definition>
+        <argsstring></argsstring>
+        <name>rx_frame_seq</name>
+        <qualifiedname>Min::rx_frame_seq</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="148" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1a99de43cff6de07658e148c8447c380b9" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Min::rx_frame_length</definition>
+        <argsstring></argsstring>
+        <name>rx_frame_length</name>
+        <qualifiedname>Min::rx_frame_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="149" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1a4b6344f3b20af7fbd7d74946b80449d4" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Min::rx_control</definition>
+        <argsstring></argsstring>
+        <name>rx_control</name>
+        <qualifiedname>Min::rx_control</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="150" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1ae056714924320638a1275fa0add9e717" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Min::tx_header_byte_countdown</definition>
+        <argsstring></argsstring>
+        <name>tx_header_byte_countdown</name>
+        <qualifiedname>Min::tx_header_byte_countdown</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="151" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1a62b0ee54c264e02bee101b3283d19bb0" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Min::iMessage[640]</definition>
+        <argsstring>[640]</argsstring>
+        <name>iMessage</name>
+        <qualifiedname>Min::iMessage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="266" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_min_1a06e7da0abc964899335f6734ea850b1a" prot="private" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* Min::application_function) (uint8_t min_id, const uint8_t *min_payload)</definition>
+        <argsstring>)(uint8_t min_id, const uint8_t *min_payload)</argsstring>
+        <name>application_function</name>
+        <qualifiedname>Min::application_function</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="340" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_min_1aedd8b40a5d13422fea5f4c051908c02d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int Min::send</definition>
+        <argsstring>(uint8_t id, const uint8_t *payload, uint8_t len) override</argsstring>
+        <name>send</name>
+        <qualifiedname>Min::send</qualifiedname>
+        <reimplements refid="class_connection_1a862b78a65061e4f21287280efa183411">send</reimplements>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>send a frame to connection <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of frame </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to payload buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of payload buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="76" column="9" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="76" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1a1c9c7682556369ae2873096667cb2461" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Min::registerFrameHandler</definition>
+        <argsstring>(void(*handler)(uint8_t id, const uint8_t *payload)) override</argsstring>
+        <name>registerFrameHandler</name>
+        <qualifiedname>Min::registerFrameHandler</qualifiedname>
+        <reimplements refid="class_connection_1a00be7d0c191feeced5e2b32004619b04">registerFrameHandler</reimplements>
+        <param>
+          <type>void(*)(uint8_t id, const uint8_t *payload)</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>register frame handler to be called by connection upon receiving a valid frame <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function pointer to frame handler </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="85" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1a136258f6eb36642c84deb93ab60be785" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Min::Min</definition>
+        <argsstring>()</argsstring>
+        <name>Min</name>
+        <qualifiedname>Min::Min</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="89" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="89" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1a0d1f545200d4fd0320dd5c6777ea6615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::rx_byte</definition>
+        <argsstring>(uint8_t byte)</argsstring>
+        <name>rx_byte</name>
+        <qualifiedname>Min::rx_byte</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="227" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1a3bc1a6e40dd239ab7f8c1ee52404ae5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::incomingDataHandler</definition>
+        <argsstring>(uint32_t nData, uint8_t *setupPointer=0, size_t setupLen=0)</argsstring>
+        <name>incomingDataHandler</name>
+        <qualifiedname>Min::incomingDataHandler</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>nData</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>setupPointer</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>setupLen</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="229" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="229" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1a5143a3324826e0755c85f5ccf39d53f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::add_application_function</definition>
+        <argsstring>(void(*application_function)(uint8_t min_id, const uint8_t *min_payload))</argsstring>
+        <name>add_application_function</name>
+        <qualifiedname>Min::add_application_function</qualifiedname>
+        <param>
+          <type>void(*)(uint8_t min_id, const uint8_t *min_payload)</type>
+          <declname>application_function</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="328" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="328" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1aa7c9847422c44cd7b2399334879cdcb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::send_frame</definition>
+        <argsstring>(uint8_t min_id, const uint8_t *payload, uint8_t payload_len)</argsstring>
+        <name>send_frame</name>
+        <qualifiedname>Min::send_frame</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>min_id</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>payload_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="333" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="333" bodyend="337"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_min_1a9d73e347bd0a2b81c46581accb42e2bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::crc32_init_context</definition>
+        <argsstring>(uint32_t &amp;checksum)</argsstring>
+        <name>crc32_init_context</name>
+        <qualifiedname>Min::crc32_init_context</qualifiedname>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>checksum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="183" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1af7a162cac15aa2135d52c378cfe6bff3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::crc32_step</definition>
+        <argsstring>(uint32_t &amp;checksum, uint8_t byte)</argsstring>
+        <name>crc32_step</name>
+        <qualifiedname>Min::crc32_step</qualifiedname>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>checksum</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="185" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1a870c58a44cd2b5fed707c07190986232" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Min::crc32_finalize</definition>
+        <argsstring>(uint32_t &amp;checksum)</argsstring>
+        <name>crc32_finalize</name>
+        <qualifiedname>Min::crc32_finalize</qualifiedname>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>checksum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="187" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1a40a1061f51b6ebb038433c77ad0b25d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::stuffed_tx_byte</definition>
+        <argsstring>(uint8_t byte)</argsstring>
+        <name>stuffed_tx_byte</name>
+        <qualifiedname>Min::stuffed_tx_byte</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="189" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1a9303905ae1a5584519c26def18d162d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::on_wire_bytes</definition>
+        <argsstring>(uint8_t id_control, uint8_t seq, const uint8_t *payload_base, uint16_t payload_offset, uint16_t payload_mask, uint8_t payload_len)</argsstring>
+        <name>on_wire_bytes</name>
+        <qualifiedname>Min::on_wire_bytes</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>id_control</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>seq</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>payload_base</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>payload_offset</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>payload_mask</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>payload_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="191" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1acc8e1352a1c122a96ce60206c0a67dac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::initDMA</definition>
+        <argsstring>(void)</argsstring>
+        <name>initDMA</name>
+        <qualifiedname>Min::initDMA</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="268" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="268" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1aa8e1e8b00ff3175ab4447896709f1ab0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::valid_frame_received</definition>
+        <argsstring>()</argsstring>
+        <name>valid_frame_received</name>
+        <qualifiedname>Min::valid_frame_received</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="306" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1a59a41f7d0c30bac8c58a197a78fe65ff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Min::on_wire_size</definition>
+        <argsstring>(uint32_t p)</argsstring>
+        <name>on_wire_size</name>
+        <qualifiedname>Min::on_wire_size</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="308" column="14" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="308" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1a6c35e27526b7b3445a90ca943828569f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::tx_byte</definition>
+        <argsstring>(uint8_t byte)</argsstring>
+        <name>tx_byte</name>
+        <qualifiedname>Min::tx_byte</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="320" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1ac3b5fe338c49bfdfae4511d0d03e7820" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t Min::tx_space</definition>
+        <argsstring>()</argsstring>
+        <name>tx_space</name>
+        <qualifiedname>Min::tx_space</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="322" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1af975e96ee53c840deb75dd58f9f3d48d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Min::application_handler</definition>
+        <argsstring>(uint8_t min_id, uint8_t *min_payload)</argsstring>
+        <name>application_handler</name>
+        <qualifiedname>Min::application_handler</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>min_id</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>min_payload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="324" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_min_1aa8becb286cd318bdf592766010b384c6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Min::uartCallback</definition>
+        <argsstring>(UART_HandleTypeDef *hUart)</argsstring>
+        <name>uartCallback</name>
+        <qualifiedname>Min::uartCallback</qualifiedname>
+        <param>
+          <type>UART_HandleTypeDef *</type>
+          <declname>hUart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="261" column="17" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="261" bodyend="263"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_min_1a8cfdc7d7d1441438a2dbf380fbb41c95" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Min::dmaHTCallback</definition>
+        <argsstring>(UART_HandleTypeDef *hUart)</argsstring>
+        <name>dmaHTCallback</name>
+        <qualifiedname>Min::dmaHTCallback</qualifiedname>
+        <param>
+          <type>UART_HandleTypeDef *</type>
+          <declname>hUart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="298" column="17" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="298" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_min_1aa56650ac91b9714748ce798d2bfcb366" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Min::dmaTCCallback</definition>
+        <argsstring>(UART_HandleTypeDef *hUart)</argsstring>
+        <name>dmaTCCallback</name>
+        <qualifiedname>Min::dmaTCCallback</qualifiedname>
+        <param>
+          <type>UART_HandleTypeDef *</type>
+          <declname>hUart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="302" column="17" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="302" bodyend="304"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>Connection</label>
+        <link refid="class_connection"/>
+      </node>
+      <node id="2">
+        <label>HardwareUART</label>
+        <link refid="class_hardware_u_a_r_t"/>
+      </node>
+      <node id="1">
+        <label>Min</label>
+        <link refid="class_min"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Connection</label>
+        <link refid="class_connection"/>
+      </node>
+      <node id="2">
+        <label>HardwareUART</label>
+        <link refid="class_hardware_u_a_r_t"/>
+      </node>
+      <node id="1">
+        <label>Min</label>
+        <link refid="class_min"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" line="74" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h" bodystart="74" bodyend="342"/>
+    <listofallmembers>
+      <member refid="class_min_1a9e779a64856c80dce4853bc60cc6dab1ac4522cb28dacf76d7aa0d162a5476859" prot="private" virt="non-virtual"><scope>Min</scope><name>ACK</name></member>
+      <member refid="class_min_1a5143a3324826e0755c85f5ccf39d53f3" prot="public" virt="non-virtual"><scope>Min</scope><name>add_application_function</name></member>
+      <member refid="class_min_1a06e7da0abc964899335f6734ea850b1a" prot="private" virt="non-virtual"><scope>Min</scope><name>application_function</name></member>
+      <member refid="class_min_1af975e96ee53c840deb75dd58f9f3d48d" prot="private" virt="non-virtual"><scope>Min</scope><name>application_handler</name></member>
+      <member refid="class_min_1a870c58a44cd2b5fed707c07190986232" prot="private" virt="non-virtual"><scope>Min</scope><name>crc32_finalize</name></member>
+      <member refid="class_min_1a9d73e347bd0a2b81c46581accb42e2bf" prot="private" virt="non-virtual"><scope>Min</scope><name>crc32_init_context</name></member>
+      <member refid="class_min_1af7a162cac15aa2135d52c378cfe6bff3" prot="private" virt="non-virtual"><scope>Min</scope><name>crc32_step</name></member>
+      <member refid="class_min_1a8cfdc7d7d1441438a2dbf380fbb41c95" prot="private" virt="non-virtual"><scope>Min</scope><name>dmaHTCallback</name></member>
+      <member refid="class_min_1aa56650ac91b9714748ce798d2bfcb366" prot="private" virt="non-virtual"><scope>Min</scope><name>dmaTCCallback</name></member>
+      <member refid="class_min_1aadbd4321df81a738a7982dae3feb5be0ad383964765321418c620b588f30ae6f4" prot="private" virt="non-virtual"><scope>Min</scope><name>EOF_BYTE</name></member>
+      <member refid="class_hardware_u_a_r_t_1a93edfecf9941117537e1dea45d864873" prot="public" virt="non-virtual"><scope>Min</scope><name>HardwareUART</name></member>
+      <member refid="class_min_1aadbd4321df81a738a7982dae3feb5be0a97afd11f8db3a9d3f597ccd657d366cb" prot="private" virt="non-virtual"><scope>Min</scope><name>HEADER_BYTE</name></member>
+      <member refid="class_min_1a977bc4f5543da07799c647004ab695c5" prot="public" virt="non-virtual"><scope>Min</scope><name>iMaxPayload</name></member>
+      <member refid="class_min_1a62b0ee54c264e02bee101b3283d19bb0" prot="private" virt="non-virtual"><scope>Min</scope><name>iMessage</name></member>
+      <member refid="class_min_1a3bc1a6e40dd239ab7f8c1ee52404ae5a" prot="public" virt="non-virtual"><scope>Min</scope><name>incomingDataHandler</name></member>
+      <member refid="class_min_1acc8e1352a1c122a96ce60206c0a67dac" prot="private" virt="non-virtual"><scope>Min</scope><name>initDMA</name></member>
+      <member refid="class_min_1a136258f6eb36642c84deb93ab60be785" prot="public" virt="non-virtual"><scope>Min</scope><name>Min</name></member>
+      <member refid="class_min_1a9303905ae1a5584519c26def18d162d9" prot="private" virt="non-virtual"><scope>Min</scope><name>on_wire_bytes</name></member>
+      <member refid="class_min_1a59a41f7d0c30bac8c58a197a78fe65ff" prot="private" virt="non-virtual"><scope>Min</scope><name>on_wire_size</name></member>
+      <member refid="class_min_1a5054cffdbcafe2974d4182932791d6fd" prot="private" virt="non-virtual"><scope>Min</scope><name>pMin</name></member>
+      <member refid="class_hardware_u_a_r_t_1a4a865500e1e8332b34b8aca805c11780" prot="public" virt="non-virtual"><scope>Min</scope><name>read</name></member>
+      <member refid="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81abcb79a6a13bb09511d07720d5d14030d" prot="private" virt="non-virtual"><scope>Min</scope><name>RECEIVING_CHECKSUM_0</name></member>
+      <member refid="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a9056aba32478ff924d42fd1879119ba1" prot="private" virt="non-virtual"><scope>Min</scope><name>RECEIVING_CHECKSUM_1</name></member>
+      <member refid="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a93b9b6d4e2657e2c1678fe9001e1b1fc" prot="private" virt="non-virtual"><scope>Min</scope><name>RECEIVING_CHECKSUM_2</name></member>
+      <member refid="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a3eb02d5b27cb6f928f71e81e8715cf9e" prot="private" virt="non-virtual"><scope>Min</scope><name>RECEIVING_CHECKSUM_3</name></member>
+      <member refid="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81aab4654abe270b33b486ec759a1fb84e6" prot="private" virt="non-virtual"><scope>Min</scope><name>RECEIVING_EOF</name></member>
+      <member refid="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a2ad3279c37a812088213f0fef1ab2e25" prot="private" virt="non-virtual"><scope>Min</scope><name>RECEIVING_ID_CONTROL</name></member>
+      <member refid="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a2b598e97023889670cc301ee1cd1f41c" prot="private" virt="non-virtual"><scope>Min</scope><name>RECEIVING_LENGTH</name></member>
+      <member refid="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a89191dc01d68beaf8228fc1098f9ad7e" prot="private" virt="non-virtual"><scope>Min</scope><name>RECEIVING_PAYLOAD</name></member>
+      <member refid="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a32cae55685097df065c5e6a0442b83b7" prot="private" virt="non-virtual"><scope>Min</scope><name>RECEIVING_SEQ</name></member>
+      <member refid="class_min_1a1c9c7682556369ae2873096667cb2461" prot="public" virt="virtual"><scope>Min</scope><name>registerFrameHandler</name></member>
+      <member refid="class_min_1a9e779a64856c80dce4853bc60cc6dab1a3c1295a7644784a65a53fcea65b4c310" prot="private" virt="non-virtual"><scope>Min</scope><name>RESET</name></member>
+      <member refid="class_min_1a0d1f545200d4fd0320dd5c6777ea6615" prot="public" virt="non-virtual"><scope>Min</scope><name>rx_byte</name></member>
+      <member refid="class_min_1a2d11488d6f0b74e8b1ff8d39dc5bfb58" prot="private" virt="non-virtual"><scope>Min</scope><name>rx_checksum</name></member>
+      <member refid="class_min_1a4b6344f3b20af7fbd7d74946b80449d4" prot="private" virt="non-virtual"><scope>Min</scope><name>rx_control</name></member>
+      <member refid="class_min_1a74c15347758a193917f4e71faad12745" prot="private" virt="non-virtual"><scope>Min</scope><name>rx_frame_checksum</name></member>
+      <member refid="class_min_1a385a98d6c9b94343421d17175d23e939" prot="private" virt="non-virtual"><scope>Min</scope><name>rx_frame_id_control</name></member>
+      <member refid="class_min_1a99de43cff6de07658e148c8447c380b9" prot="private" virt="non-virtual"><scope>Min</scope><name>rx_frame_length</name></member>
+      <member refid="class_min_1aea5f3b8b0f40ed6c72909cf70836e7eb" prot="private" virt="non-virtual"><scope>Min</scope><name>rx_frame_payload_buf</name></member>
+      <member refid="class_min_1a89c033b9c2ca1483869e338ccc7a94b1" prot="private" virt="non-virtual"><scope>Min</scope><name>rx_frame_payload_bytes</name></member>
+      <member refid="class_min_1acb08bc6c2a9c17f5f7ae3f693b568bcc" prot="private" virt="non-virtual"><scope>Min</scope><name>rx_frame_seq</name></member>
+      <member refid="class_min_1a7e561701686294dcf7b93ad2190b2af1" prot="private" virt="non-virtual"><scope>Min</scope><name>rx_frame_state</name></member>
+      <member refid="class_min_1ab576a36e93b4047aad6c0a40b6daa510" prot="private" virt="non-virtual"><scope>Min</scope><name>rx_header_bytes_seen</name></member>
+      <member refid="class_min_1afe8ec9e31d11a36f0b156f3f3eb8eb81a16d347e1387ed68935aecd7c1ebaddd6" prot="private" virt="non-virtual"><scope>Min</scope><name>SEARCHING_FOR_SOF</name></member>
+      <member refid="class_min_1aedd8b40a5d13422fea5f4c051908c02d" prot="public" virt="virtual"><scope>Min</scope><name>send</name></member>
+      <member refid="class_min_1aa7c9847422c44cd7b2399334879cdcb1" prot="public" virt="non-virtual"><scope>Min</scope><name>send_frame</name></member>
+      <member refid="class_min_1aadbd4321df81a738a7982dae3feb5be0a289bce5f73641f4d77f4a593f3445d4c" prot="private" virt="non-virtual"><scope>Min</scope><name>STUFF_BYTE</name></member>
+      <member refid="class_min_1a40a1061f51b6ebb038433c77ad0b25d8" prot="private" virt="non-virtual"><scope>Min</scope><name>stuffed_tx_byte</name></member>
+      <member refid="class_min_1a9e779a64856c80dce4853bc60cc6dab1addc261a85df3fdada074a57ee613427a" prot="private" virt="non-virtual"><scope>Min</scope><name>TRANSPORT_FRAME</name></member>
+      <member refid="class_min_1a6c35e27526b7b3445a90ca943828569f" prot="private" virt="non-virtual"><scope>Min</scope><name>tx_byte</name></member>
+      <member refid="class_min_1a12308eabe788bd1623c510f5c3fc1e38" prot="private" virt="non-virtual"><scope>Min</scope><name>tx_checksum</name></member>
+      <member refid="class_min_1ae056714924320638a1275fa0add9e717" prot="private" virt="non-virtual"><scope>Min</scope><name>tx_header_byte_countdown</name></member>
+      <member refid="class_min_1ac3b5fe338c49bfdfae4511d0d03e7820" prot="private" virt="non-virtual"><scope>Min</scope><name>tx_space</name></member>
+      <member refid="class_hardware_u_a_r_t_1aa2f744cf88ed14212b272fdc80bb2ca6" prot="public" virt="non-virtual"><scope>Min</scope><name>uart_config</name></member>
+      <member refid="class_hardware_u_a_r_t_1a7420ed2f914d2e9a7c2606f6ab865a9a" prot="public" virt="non-virtual"><scope>Min</scope><name>uart_num</name></member>
+      <member refid="class_min_1aa8becb286cd318bdf592766010b384c6" prot="public" virt="non-virtual"><scope>Min</scope><name>uartCallback</name></member>
+      <member refid="class_min_1aa8e1e8b00ff3175ab4447896709f1ab0" prot="private" virt="non-virtual"><scope>Min</scope><name>valid_frame_received</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

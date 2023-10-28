@@ -1,0 +1,11 @@
+Visualization with Django - WebApp
+====================================
+
+.. todo:: change paths if there is a minimal script without webapp
+
+..  rst-class:: bignums
+
+1. Assure the correct IP and Port
+2. Assure the correct folder strucute e.g missing folders or logs
+3. Start the `WebApp <https://git.uibk.ac.at/mechatronik/fertigungstechnik/automatica2022/automatica2022-webapp>`_ 
+

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="timer__initialize_8h" kind="file" language="C++">
+    <compoundname>timer_initialize.h</compoundname>
+    <includes local="yes">stm32f7xx.h</includes>
+    <includes local="yes">stm32f7xx_hal_tim.h</includes>
+    <includedby refid="main_8cpp" local="yes">C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/main.cpp</includedby>
+    <includedby refid="timer__initialize_8cpp" local="yes">C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/timer_initialize.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/timer_initialize.h</label>
+        <link refid="timer__initialize_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stm32f7xx.h</label>
+      </node>
+      <node id="3">
+        <label>stm32f7xx_hal_tim.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_timer__initialize" prot="public">Timer_initialize</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>Palan<sp/>on<sp/>28/07/2023.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>UARTCOMMUNICATION_TIMER_INITIALIZE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UARTCOMMUNICATION_TIMER_INITIALIZE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f7xx.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f7xx_hal_tim.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_timer__initialize" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_timer__initialize" kindref="compound">Timer_initialize</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>TIM_HandleTypeDef<sp/>htim3;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>TIM_HandleTypeDef<sp/>htim4;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer__initialize" kindref="compound">Timer_initialize</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//UARTCOMMUNICATION_TIMER_INITIALIZE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/timer_initialize.h"/>
+  </compounddef>
+</doxygen>

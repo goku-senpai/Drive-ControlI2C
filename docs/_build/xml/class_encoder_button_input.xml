@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_encoder_button_input" kind="class" language="C++" prot="public">
+    <compoundname>EncoderButtonInput</compoundname>
+    <basecompoundref refid="class_button_input" prot="public" virt="non-virtual">ButtonInput</basecompoundref>
+    <includes refid="_button_8h" local="no">Button.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_encoder_button_input_1a7c69c4dcdc64722723d27c9e352b08fc" prot="private" static="no" mutable="no">
+        <type>Adafruit_seesaw *</type>
+        <definition>Adafruit_seesaw* EncoderButtonInput::pEncoder</definition>
+        <argsstring></argsstring>
+        <name>pEncoder</name>
+        <qualifiedname>EncoderButtonInput::pEncoder</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="154" column="21" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_encoder_button_input_1ac899849de94509c487284654ceb03ce2" prot="private" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t EncoderButtonInput::uAddr</definition>
+        <argsstring></argsstring>
+        <name>uAddr</name>
+        <qualifiedname>EncoderButtonInput::uAddr</qualifiedname>
+        <initializer>= 0x3D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="155" column="26" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_encoder_button_input_1a981230b35c4d2d46bd27f99e0ce42c45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EncoderButtonInput::EncoderButtonInput</definition>
+        <argsstring>(int _pin, Adafruit_seesaw *_pEncoder)</argsstring>
+        <name>EncoderButtonInput</name>
+        <qualifiedname>EncoderButtonInput::EncoderButtonInput</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_pin</declname>
+        </param>
+        <param>
+          <type>Adafruit_seesaw *</type>
+          <declname>_pEncoder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="131" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="131" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_button_input_1a1c467296b903ebc8d48fc741f378a60e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EncoderButtonInput::~EncoderButtonInput</definition>
+        <argsstring>()</argsstring>
+        <name>~EncoderButtonInput</name>
+        <qualifiedname>EncoderButtonInput::~EncoderButtonInput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="146" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_button_input_1aa68a480c44b99775463f6ea2e8929c6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool EncoderButtonInput::read</definition>
+        <argsstring>() override</argsstring>
+        <name>read</name>
+        <qualifiedname>EncoderButtonInput::read</qualifiedname>
+        <reimplements refid="class_button_input_1aee02bce6f864e1df65044d08a1703092">read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="148" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="148" bodyend="151"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>input wrapper for encoder based on adafruit seesaw </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ButtonInput</label>
+        <link refid="class_button_input"/>
+      </node>
+      <node id="1">
+        <label>EncoderButtonInput</label>
+        <link refid="class_encoder_button_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ButtonInput</label>
+        <link refid="class_button_input"/>
+      </node>
+      <node id="1">
+        <label>EncoderButtonInput</label>
+        <link refid="class_encoder_button_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="128" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="129" bodyend="156"/>
+    <listofallmembers>
+      <member refid="class_button_input_1a05c951f902e7d44a19977ba1b07ba582" prot="public" virt="non-virtual"><scope>EncoderButtonInput</scope><name>ButtonInput</name></member>
+      <member refid="class_encoder_button_input_1a981230b35c4d2d46bd27f99e0ce42c45" prot="public" virt="non-virtual"><scope>EncoderButtonInput</scope><name>EncoderButtonInput</name></member>
+      <member refid="class_button_input_1a0cd249e8849ce84954a77b90435ade88" prot="public" virt="non-virtual"><scope>EncoderButtonInput</scope><name>getPin</name></member>
+      <member refid="class_button_input_1a80bb9c5440ef13d458858eba7f291dee" prot="protected" virt="non-virtual"><scope>EncoderButtonInput</scope><name>iPin</name></member>
+      <member refid="class_encoder_button_input_1a7c69c4dcdc64722723d27c9e352b08fc" prot="private" virt="non-virtual"><scope>EncoderButtonInput</scope><name>pEncoder</name></member>
+      <member refid="class_encoder_button_input_1aa68a480c44b99775463f6ea2e8929c6f" prot="public" virt="virtual"><scope>EncoderButtonInput</scope><name>read</name></member>
+      <member refid="class_encoder_button_input_1ac899849de94509c487284654ceb03ce2" prot="private" virt="non-virtual"><scope>EncoderButtonInput</scope><name>uAddr</name></member>
+      <member refid="class_button_input_1a4e2d540e3f499e598c87f0568adf93bb" prot="public" virt="virtual"><scope>EncoderButtonInput</scope><name>~ButtonInput</name></member>
+      <member refid="class_encoder_button_input_1a1c467296b903ebc8d48fc741f378a60e" prot="public" virt="non-virtual"><scope>EncoderButtonInput</scope><name>~EncoderButtonInput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

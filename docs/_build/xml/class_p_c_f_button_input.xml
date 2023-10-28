@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_p_c_f_button_input" kind="class" language="C++" prot="public">
+    <compoundname>PCFButtonInput</compoundname>
+    <basecompoundref refid="class_button_input" prot="public" virt="non-virtual">ButtonInput</basecompoundref>
+    <includes refid="_button_8h" local="no">Button.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_p_c_f_button_input_1ad75d1fb8574ba79e439f288530ca4d00" prot="public" static="no" mutable="no">
+        <type>PCF8575 *</type>
+        <definition>PCF8575* PCFButtonInput::pExpanderPCF</definition>
+        <argsstring></argsstring>
+        <name>pExpanderPCF</name>
+        <qualifiedname>PCFButtonInput::pExpanderPCF</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="91" column="13" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_c_f_button_input_1a26baf6b5fb265f4a0d3ece6e8822b347" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PCFButtonInput::PCFButtonInput</definition>
+        <argsstring>(int _pin, PCF8575 *_pExpanderPCF)</argsstring>
+        <name>PCFButtonInput</name>
+        <qualifiedname>PCFButtonInput::PCFButtonInput</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_pin</declname>
+        </param>
+        <param>
+          <type>PCF8575 *</type>
+          <declname>_pExpanderPCF</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="79" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_c_f_button_input_1a7dae5443d49b687846cb3e790a3a0e60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PCFButtonInput::~PCFButtonInput</definition>
+        <argsstring>()</argsstring>
+        <name>~PCFButtonInput</name>
+        <qualifiedname>PCFButtonInput::~PCFButtonInput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="83" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_c_f_button_input_1a90461094c0ba359d0b086895a38ec645" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool PCFButtonInput::read</definition>
+        <argsstring>() override</argsstring>
+        <name>read</name>
+        <qualifiedname>PCFButtonInput::read</qualifiedname>
+        <reimplements refid="class_button_input_1aee02bce6f864e1df65044d08a1703092">read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="85" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="85" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>input wrapper based on PCF8575 I2C-Expander </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>    TODO: implement initialinsing pins as inputs 
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ButtonInput</label>
+        <link refid="class_button_input"/>
+      </node>
+      <node id="1">
+        <label>PCFButtonInput</label>
+        <link refid="class_p_c_f_button_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ButtonInput</label>
+        <link refid="class_button_input"/>
+      </node>
+      <node id="1">
+        <label>PCFButtonInput</label>
+        <link refid="class_p_c_f_button_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="76" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="77" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_button_input_1a05c951f902e7d44a19977ba1b07ba582" prot="public" virt="non-virtual"><scope>PCFButtonInput</scope><name>ButtonInput</name></member>
+      <member refid="class_button_input_1a0cd249e8849ce84954a77b90435ade88" prot="public" virt="non-virtual"><scope>PCFButtonInput</scope><name>getPin</name></member>
+      <member refid="class_button_input_1a80bb9c5440ef13d458858eba7f291dee" prot="protected" virt="non-virtual"><scope>PCFButtonInput</scope><name>iPin</name></member>
+      <member refid="class_p_c_f_button_input_1a26baf6b5fb265f4a0d3ece6e8822b347" prot="public" virt="non-virtual"><scope>PCFButtonInput</scope><name>PCFButtonInput</name></member>
+      <member refid="class_p_c_f_button_input_1ad75d1fb8574ba79e439f288530ca4d00" prot="public" virt="non-virtual"><scope>PCFButtonInput</scope><name>pExpanderPCF</name></member>
+      <member refid="class_p_c_f_button_input_1a90461094c0ba359d0b086895a38ec645" prot="public" virt="virtual"><scope>PCFButtonInput</scope><name>read</name></member>
+      <member refid="class_button_input_1a4e2d540e3f499e598c87f0568adf93bb" prot="public" virt="virtual"><scope>PCFButtonInput</scope><name>~ButtonInput</name></member>
+      <member refid="class_p_c_f_button_input_1a7dae5443d49b687846cb3e790a3a0e60" prot="public" virt="non-virtual"><scope>PCFButtonInput</scope><name>~PCFButtonInput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

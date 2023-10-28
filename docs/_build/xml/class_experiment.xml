@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_experiment" kind="class" language="C++" prot="public">
+    <compoundname>Experiment</compoundname>
+    <includes refid="_experiment_8h" local="no">Experiment.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_experiment_1a32c15e18eaf9b17d5d8ff993f13fb3e3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ExpState</name>
+        <qualifiedname>Experiment::ExpState</qualifiedname>
+        <enumvalue id="class_experiment_1a32c15e18eaf9b17d5d8ff993f13fb3e3aa60f770ca502a6c76fc712c6908466b0" prot="public">
+          <name>IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_experiment_1a32c15e18eaf9b17d5d8ff993f13fb3e3a285c01c58e269a8ea84f68d9df50d413" prot="public">
+          <name>INIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_experiment_1a32c15e18eaf9b17d5d8ff993f13fb3e3a2fa00f729e0bceb040950d071cd7e9e2" prot="public">
+          <name>RUN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_experiment_1a32c15e18eaf9b17d5d8ff993f13fb3e3a647620cc77fb41a96456efb4071a2c19" prot="public">
+          <name>STOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>enum of possible experiment states </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" line="43" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" bodystart="43" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_experiment_1a303e6a05d99f403ff4793495a2fbff58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Experiment::Experiment</definition>
+        <argsstring>()</argsstring>
+        <name>Experiment</name>
+        <qualifiedname>Experiment::Experiment</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the experiment </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" line="21" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_1a7ec8b685ac0e8e0eb63e51dffe26799c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Experiment::registerModules</definition>
+        <argsstring>(ExperimentModule *mod)</argsstring>
+        <name>registerModules</name>
+        <qualifiedname>Experiment::registerModules</qualifiedname>
+        <param>
+          <type><ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref> *</type>
+          <declname>mod</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>register all ExperimentModules in the order they will run <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" line="31" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_1aa196e3688418f7a75221aa18a7bdc6a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Experiment::run</definition>
+        <argsstring>(unsigned long lDt)</argsstring>
+        <name>run</name>
+        <qualifiedname>Experiment::run</qualifiedname>
+        <param>
+          <type>unsigned long</type>
+          <declname>lDt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>run experiment state machine <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lDt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time in ms since last call </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" line="90" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" bodystart="90" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_experiment_1afcd9283bbf0d43c0994b30f98c06e40e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Experiment::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>Experiment::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>stop <ref refid="class_experiment" kindref="compound">Experiment</ref> in emergencies </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" line="38" column="17" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_1a048cef8d36543edc81bcea51894f7234" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>enum <ref refid="class_experiment_1a32c15e18eaf9b17d5d8ff993f13fb3e3" kindref="member">ExpState</ref></type>
+        <definition>static enum ExpState Experiment::getState</definition>
+        <argsstring>()</argsstring>
+        <name>getState</name>
+        <qualifiedname>Experiment::getState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>read current <ref refid="class_experiment" kindref="compound">Experiment</ref> state </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" line="53" column="25" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" bodystart="53" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>General class of an experiment used to control the experiment flow of a test rig. </para>
+    </detaileddescription>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" line="16" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h" bodystart="16" bodyend="145"/>
+    <listofallmembers>
+      <member refid="class_experiment_1a303e6a05d99f403ff4793495a2fbff58" prot="public" virt="non-virtual"><scope>Experiment</scope><name>Experiment</name></member>
+      <member refid="class_experiment_1a32c15e18eaf9b17d5d8ff993f13fb3e3" prot="public" virt="non-virtual"><scope>Experiment</scope><name>ExpState</name></member>
+      <member refid="class_experiment_1a048cef8d36543edc81bcea51894f7234" prot="public" virt="non-virtual"><scope>Experiment</scope><name>getState</name></member>
+      <member refid="class_experiment_1a32c15e18eaf9b17d5d8ff993f13fb3e3aa60f770ca502a6c76fc712c6908466b0" prot="public" virt="non-virtual"><scope>Experiment</scope><name>IDLE</name></member>
+      <member refid="class_experiment_1a32c15e18eaf9b17d5d8ff993f13fb3e3a285c01c58e269a8ea84f68d9df50d413" prot="public" virt="non-virtual"><scope>Experiment</scope><name>INIT</name></member>
+      <member refid="class_experiment_1a7ec8b685ac0e8e0eb63e51dffe26799c" prot="public" virt="non-virtual"><scope>Experiment</scope><name>registerModules</name></member>
+      <member refid="class_experiment_1a32c15e18eaf9b17d5d8ff993f13fb3e3a2fa00f729e0bceb040950d071cd7e9e2" prot="public" virt="non-virtual"><scope>Experiment</scope><name>RUN</name></member>
+      <member refid="class_experiment_1aa196e3688418f7a75221aa18a7bdc6a8" prot="public" virt="non-virtual"><scope>Experiment</scope><name>run</name></member>
+      <member refid="class_experiment_1a32c15e18eaf9b17d5d8ff993f13fb3e3a647620cc77fb41a96456efb4071a2c19" prot="public" virt="non-virtual"><scope>Experiment</scope><name>STOP</name></member>
+      <member refid="class_experiment_1afcd9283bbf0d43c0994b30f98c06e40e" prot="public" virt="non-virtual"><scope>Experiment</scope><name>stop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

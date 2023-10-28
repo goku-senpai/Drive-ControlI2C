@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_s_m_c_valve_driver" kind="class" language="C++" prot="public">
+    <compoundname>SMCValveDriver</compoundname>
+    <includes refid="_valve_driver_8h" local="no">ValveDriver.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_m_c_valve_driver_1a56afc8a9e0e1cbb932337e4b91920052" prot="public" static="no" mutable="no">
+        <type><ref refid="class_p_w_m" kindref="compound">PWM</ref></type>
+        <definition>PWM SMCValveDriver::pwm</definition>
+        <argsstring></argsstring>
+        <name>pwm</name>
+        <qualifiedname>SMCValveDriver::pwm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="114" column="7" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_m_c_valve_driver_1a95a584b23bb0f7df04298da0aa58d331" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SMCValveDriver::dFlow</definition>
+        <argsstring></argsstring>
+        <name>dFlow</name>
+        <qualifiedname>SMCValveDriver::dFlow</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="135" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_m_c_valve_driver_1a872810ba0a5b22255a26e8ccc926fe5b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SMCValveDriver::dCurrent</definition>
+        <argsstring></argsstring>
+        <name>dCurrent</name>
+        <qualifiedname>SMCValveDriver::dCurrent</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="136" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_m_c_valve_driver_1a6c3a9ba842ebcab996c1355d407144ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SMCValveDriver::SMCValveDriver</definition>
+        <argsstring>()</argsstring>
+        <name>SMCValveDriver</name>
+        <qualifiedname>SMCValveDriver::SMCValveDriver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="116" column="3" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_m_c_valve_driver_1aabe259a286cb08c57208164e9d909767" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SMCValveDriver::~SMCValveDriver</definition>
+        <argsstring>()</argsstring>
+        <name>~SMCValveDriver</name>
+        <qualifiedname>SMCValveDriver::~SMCValveDriver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="120" column="3" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_m_c_valve_driver_1aa66ca196fa967ead4600712874e9e380" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SMCValveDriver::setFlow</definition>
+        <argsstring>(const double dFlow)</argsstring>
+        <name>setFlow</name>
+        <qualifiedname>SMCValveDriver::setFlow</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>dFlow</declname>
+        </param>
+        <briefdescription>
+<para>Set the current flow of the valve. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dFlow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="127" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="127" bodyend="132"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_s_m_c_valve_driver_1a5b24da390ce5a274a785d8002030d62d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SMCValveDriver::calcCurrent</definition>
+        <argsstring>(const double dFlow)</argsstring>
+        <name>calcCurrent</name>
+        <qualifiedname>SMCValveDriver::calcCurrent</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>dFlow</declname>
+        </param>
+        <briefdescription>
+<para>calc the required current in [A] to achieve the requested flow in [bar] </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dFlow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[-1,1] , which limits </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="143" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="143" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>basic driver class to control SMC valves set current to limit flow conti. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>PWM</label>
+        <link refid="class_p_w_m"/>
+      </node>
+      <node id="1">
+        <label>SMCValveDriver</label>
+        <link refid="class_s_m_c_valve_driver"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>pwm</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="111" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="112" bodyend="147"/>
+    <listofallmembers>
+      <member refid="class_s_m_c_valve_driver_1a5b24da390ce5a274a785d8002030d62d" prot="private" virt="non-virtual"><scope>SMCValveDriver</scope><name>calcCurrent</name></member>
+      <member refid="class_s_m_c_valve_driver_1a872810ba0a5b22255a26e8ccc926fe5b" prot="private" virt="non-virtual"><scope>SMCValveDriver</scope><name>dCurrent</name></member>
+      <member refid="class_s_m_c_valve_driver_1a95a584b23bb0f7df04298da0aa58d331" prot="private" virt="non-virtual"><scope>SMCValveDriver</scope><name>dFlow</name></member>
+      <member refid="class_s_m_c_valve_driver_1a56afc8a9e0e1cbb932337e4b91920052" prot="public" virt="non-virtual"><scope>SMCValveDriver</scope><name>pwm</name></member>
+      <member refid="class_s_m_c_valve_driver_1aa66ca196fa967ead4600712874e9e380" prot="public" virt="non-virtual"><scope>SMCValveDriver</scope><name>setFlow</name></member>
+      <member refid="class_s_m_c_valve_driver_1a6c3a9ba842ebcab996c1355d407144ac" prot="public" virt="non-virtual"><scope>SMCValveDriver</scope><name>SMCValveDriver</name></member>
+      <member refid="class_s_m_c_valve_driver_1aabe259a286cb08c57208164e9d909767" prot="public" virt="non-virtual"><scope>SMCValveDriver</scope><name>~SMCValveDriver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

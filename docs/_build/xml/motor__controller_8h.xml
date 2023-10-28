@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="motor__controller_8h" kind="file" language="C++">
+    <compoundname>motor_controller.h</compoundname>
+    <includes refid="constants_8h" local="yes">constants.h</includes>
+    <includes local="yes">stm32f7xx_hal.h</includes>
+    <includes local="yes">stm32f7xx_hal_tim.h</includes>
+    <includes refid="pid__controller_8h" local="yes">pid_controller.h</includes>
+    <includedby refid="main_8cpp" local="yes">C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/main.cpp</includedby>
+    <includedby refid="motor__controller_8cpp" local="yes">C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>constants.h</label>
+        <link refid="constants_8h_source"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h</label>
+        <link refid="motor__controller_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>pid_controller.h</label>
+        <link refid="pid__controller_8h_source"/>
+      </node>
+      <node id="3">
+        <label>stm32f7xx_hal.h</label>
+      </node>
+      <node id="4">
+        <label>stm32f7xx_hal_tim.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h</label>
+        <link refid="motor__controller_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp</label>
+        <link refid="motor__controller_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_motor_controller" prot="public">MotorController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MOTOR_CONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_CONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f7xx_hal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f7xx_hal_tim.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pid_controller.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Include<sp/>the<sp/>PID<sp/>controller<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_motor_controller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_motor_controller" kindref="compound">MotorController</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_motor_controller" kindref="compound">MotorController</ref>(TIM_HandleTypeDef*<sp/>htim_pwm,<sp/>uint32_t<sp/>channel_pwm,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_TypeDef*<sp/>gpio_pwm,<sp/>uint32_t<sp/>pin_pwm,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max_output,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max_integral,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>target_start,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_speed_controller);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motor_controller_1a3413ae9abcf748a58c58db974051105a" kindref="member">set_direction</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>direction_fwd,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>direction_bwd);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motor_controller_1a1c5d87810b12a740121d540b51663966" kindref="member">set_target</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dSetpoint);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motor_controller_1a46a7d8fdad02c45a062b9138f16d86d6" kindref="member">update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sample_time,<sp/>int32_t<sp/>encoder_value,<sp/>uint8_t<sp/>bFreewheel,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dKp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dKi,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dKd);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>TIM_HandleTypeDef*<sp/>htim_pwm_;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>channel_pwm_;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_TypeDef*<sp/>gpio_pwm_;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>pin_pwm_;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_TypeDef*<sp/>gpio_dir_fwd_;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>pin_direction_fwd_;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_TypeDef*<sp/>gpio_dir_bwd_;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>pin_direction_bwd_;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_speed_controller_;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>current_position_;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>current_output_;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>prev_encoder_value_;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Member<sp/>variables<sp/>for<sp/>control<sp/>mode,<sp/>PID<sp/>gains,<sp/>and<sp/>PID<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>control_mode_;<sp/></highlight><highlight class="comment">//<sp/>Store<sp/>control<sp/>mode<sp/>(bFreewheel<sp/>or<sp/>bPosition)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dKp_;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>PID<sp/>proportional<sp/>gain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dKi_;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>PID<sp/>integral<sp/>gain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dKd_;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>PID<sp/>derivative<sp/>gain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_p_i_d_controller" kindref="compound">PIDController</ref><sp/>pid_controller_;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>PID<sp/>controller<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h"/>
+  </compounddef>
+</doxygen>

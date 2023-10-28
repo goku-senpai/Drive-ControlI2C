@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="transport__min__exp_modules_8cpp" kind="file" language="C++">
+    <compoundname>transport_min_expModules.cpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="pwm_8h" local="no">esp32/pwm.h</includes>
+    <includes refid="gpio_8h" local="no">esp32/gpio.h</includes>
+    <includes refid="timer_8h" local="no">esp32/timer.h</includes>
+    <includes local="yes">utils/Experiment.h</includes>
+    <includes local="yes">utils/Tick.h</includes>
+    <includes local="yes">Min.h</includes>
+    <includes local="yes">utils/Transport.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="4">
+        <label>esp32/gpio.h</label>
+        <link refid="gpio_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>esp32/pwm.h</label>
+        <link refid="pwm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>esp32/timer.h</label>
+        <link refid="timer_8h"/>
+      </node>
+      <node id="1">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp</label>
+        <link refid="transport__min__exp_modules_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Min.h</label>
+      </node>
+      <node id="6">
+        <label>utils/Experiment.h</label>
+      </node>
+      <node id="7">
+        <label>utils/Tick.h</label>
+      </node>
+      <node id="9">
+        <label>utils/Transport.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="transport__min__exp_modules_8cpp_1a7eb3c53681813d26c6fbe28cd7ed9fc4" prot="public" static="no" mutable="no">
+        <type>Experiment *</type>
+        <definition>Experiment* experiment</definition>
+        <argsstring></argsstring>
+        <name>experiment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" line="20" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="transport__min__exp_modules_8cpp_1adedb0f4641b7b425776dbacb23a96576" prot="public" static="no" mutable="no">
+        <type>portMUX_TYPE</type>
+        <definition>portMUX_TYPE timerMux</definition>
+        <argsstring></argsstring>
+        <name>timerMux</name>
+        <initializer>= portMUX_INITIALIZER_UNLOCKED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" line="23" column="14" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="transport__min__exp_modules_8cpp_1ab9a3e537600d89986066629e99dfec7f" prot="public" static="no" mutable="no">
+        <type><ref refid="class_hardware_timer" kindref="compound">HardwareTimer</ref></type>
+        <definition>HardwareTimer timer(EXP_TIMER_ID, EXP_TIMER_PRESCALAR, EXP_TIMER_PERIOD)</definition>
+        <argsstring>(EXP_TIMER_ID, EXP_TIMER_PRESCALAR, EXP_TIMER_PERIOD)</argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" line="24" column="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="transport__min__exp_modules_8cpp_1a805a171df3dab3aac6562f20fd4cfd8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void IRAM_ATTR</type>
+        <definition>void IRAM_ATTR updateHeartBeat</definition>
+        <argsstring>()</argsstring>
+        <name>updateHeartBeat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" line="29" column="16" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="transport__min__exp_modules_8cpp_1af5576fc86a080666123ca3ff05bf0a09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateMainTick</definition>
+        <argsstring>()</argsstring>
+        <name>updateMainTick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" line="40" column="6" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="transport__min__exp_modules_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" line="45" column="6" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" bodystart="45" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="transport__min__exp_modules_8cpp_1afe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" line="81" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp" bodystart="81" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Currently<sp/>not<sp/>working<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>complicated<sp/>due<sp/>to<sp/>dma<sp/>acess<sp/>to<sp/>uart<sp/>in<sp/>newest<sp/>stm<sp/>implementation<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="pwm_8h" kindref="compound">esp32/pwm.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gpio_8h" kindref="compound">esp32/gpio.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="timer_8h" kindref="compound">esp32/timer.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;utils/Experiment.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;utils/Tick.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Min.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;utils/Transport.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">Experiment<sp/>*experiment;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Hardware<sp/>Timer<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">portMUX_TYPE<sp/>timerMux<sp/>=<sp/>portMUX_INITIALIZER_UNLOCKED;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="class_hardware_timer" kindref="compound">HardwareTimer</ref><sp/>timer(<ref refid="group___l_u_c_y_1ga688c8c4f93073bb1608cf95f229609e0" kindref="member">EXP_TIMER_ID</ref>,EXP_TIMER_PRESCALAR,<ref refid="group___l_u_c_y_1ga1e19c35dc2be7361bb38fe95c9162442" kindref="member">EXP_TIMER_PERIOD</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Status<sp/>LED<sp/><sp/>best<sp/>onboard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//DIO<sp/>debugLED(EXP_DEBUG_LED,OUTPUT);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>IRAM_ATTR<sp/>updateHeartBeat()<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>portENTER_CRITICAL_ISR(&amp;timerMux);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>experiment-&gt;run();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>portEXIT_CRITICAL_ISR(&amp;timerMux);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>update<sp/>main<sp/>tick<sp/>server</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>TODO::<sp/>check<sp/>how<sp/>to<sp/>measure<sp/>correctly<sp/>or<sp/>just<sp/>use<sp/>other<sp/>timer</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>only<sp/>needed<sp/>when<sp/>using<sp/>tick<sp/>server<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateMainTick()<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>TickServer::msCall(uwTickFreq);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>uwTick<sp/>+=<sp/>uwTickFreq;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setup()<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>configure<sp/>Experiment<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>Min<sp/>MIN;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>Transport<sp/>transport(&amp;MIN);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>modules</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ExpRig<sp/>rig;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/>ExpTrajectory<sp/>traj;</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/>ExpLucyController<sp/>ctrl;</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>ExpImuObserver<sp/>imuObsv;</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"></highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>connect<sp/>modules</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/>rig.registerModules(&amp;ctrl);</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/>ctrl.registerModules(&amp;traj,<sp/>&amp;rig,<sp/>&amp;imuObsv);</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/>imuObsv.registerModules(&amp;rig);</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>up<sp/>experiment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>experiment<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Experiment(1);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>experiment-&gt;registerModules(&amp;rig);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>currently<sp/>only<sp/>one<sp/>modules<sp/>registered<sp/>-&gt;<sp/>to<sp/>validate<sp/>communication</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/>experiment-&gt;registerModules(&amp;traj);</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/>experiment-&gt;registerModules(&amp;ctrl);</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/>experiment-&gt;registerModules(&amp;rig);</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/>experiment-&gt;registerModules(&amp;imuObsv);</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>up<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>timer.<ref refid="class_hardware_timer_1a01b687bda6159f35cc5a3238e7860cba" kindref="member">setCallback</ref>(&amp;updateHeartBeat);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>timer.<ref refid="class_hardware_timer_1af11b73a57af629b8082eb49799caf9ec" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loop(){</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>TRANSPORT_PROTOCOL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Min::poll();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_remote" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Remote</compoundname>
+    <derivedcompoundref refid="class_neo_pixel_remote" prot="public" virt="non-virtual">NeoPixelRemote</derivedcompoundref>
+    <includes refid="_remote_8h" local="no">Remote.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_remote_1aaf28ca55be03a9706db0c3d288cbaae5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Remote::Remote</definition>
+        <argsstring>()</argsstring>
+        <name>Remote</name>
+        <qualifiedname>Remote::Remote</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" line="20" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_remote_1a4dd4fbb1f1556d8dc35ae29e9a2ed15a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type></type>
+        <definition>virtual Remote::~Remote</definition>
+        <argsstring>()=0</argsstring>
+        <name>~Remote</name>
+        <qualifiedname>Remote::~Remote</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" line="21" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_remote_1a8bd4ee7495bd2be80615453430f28ef6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Remote::get</definition>
+        <argsstring>()=0</argsstring>
+        <name>get</name>
+        <qualifiedname>Remote::get</qualifiedname>
+        <reimplementedby refid="class_neo_pixel_remote_1ad21442e8009ddcdd51dda69de8ca4fd9">get</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" line="25" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_remote_1a36a00797b464a896ad36d2e5c8fd5e75" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Remote::updateDisplay</definition>
+        <argsstring>()=0</argsstring>
+        <name>updateDisplay</name>
+        <qualifiedname>Remote::updateDisplay</qualifiedname>
+        <reimplementedby refid="class_neo_pixel_remote_1a653ba6cd711d8a4e72ea7a01c45a76bb">updateDisplay</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" line="27" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TODO: think if this-&gt;get() is even useful? or just make buttons public and acess in control loop with remote.buttonX.get() <linebreak/>
+ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>NeoPixelRemote</label>
+        <link refid="class_neo_pixel_remote"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Remote</label>
+        <link refid="class_remote"/>
+      </node>
+    </inheritancegraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" line="17" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" bodystart="18" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_remote_1a8bd4ee7495bd2be80615453430f28ef6" prot="protected" virt="pure-virtual"><scope>Remote</scope><name>get</name></member>
+      <member refid="class_remote_1aaf28ca55be03a9706db0c3d288cbaae5" prot="public" virt="non-virtual"><scope>Remote</scope><name>Remote</name></member>
+      <member refid="class_remote_1a36a00797b464a896ad36d2e5c8fd5e75" prot="protected" virt="pure-virtual"><scope>Remote</scope><name>updateDisplay</name></member>
+      <member refid="class_remote_1a4dd4fbb1f1556d8dc35ae29e9a2ed15a" prot="public" virt="pure-virtual"><scope>Remote</scope><name>~Remote</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

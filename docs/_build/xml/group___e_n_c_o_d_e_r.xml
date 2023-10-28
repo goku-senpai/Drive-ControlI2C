@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="group___e_n_c_o_d_e_r" kind="group">
+    <compoundname>ENCODER</compoundname>
+    <title>Analogencoder</title>
+    <innergroup refid="group___p_i_d">pidcontroller</innergroup>
+    <innergroup refid="group___l_e_d">Led</innergroup>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1ga8cdc17f43c9f3850f60d04f98216fc13" prot="public" static="no">
+        <name>ENCODER_RESOLUTION</name>
+        <initializer>8384.0f</initializer>
+        <briefdescription>
+<para>analog <ref refid="class_encoder" kindref="compound">Encoder</ref> Resolution </para>
+        </briefdescription>
+        <detaileddescription>
+<para>131(Übersetzung) *16 (Encoderauflösung) *4( 2*Rise and Fall flag) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="39" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1ga4ca42a805c3457c0e526509494b19829" prot="public" static="no">
+        <name>ENCODER_M1_A_PIN</name>
+        <initializer>GPIO_PIN_0</initializer>
+        <briefdescription>
+<para>analog <ref refid="class_encoder" kindref="compound">Encoder</ref> A PIN </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="42" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1gac7c2dbd4eac88a97728a455a7bc95e15" prot="public" static="no">
+        <name>ENCODER_M1_A_PORT</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+<para>analog <ref refid="class_encoder" kindref="compound">Encoder</ref> A PORT </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="43" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1ga7cf45819f081d07e1acfc2b4d0d60ae7" prot="public" static="no">
+        <name>ENCODER_M1_A_ALTERNATE</name>
+        <initializer>GPIO_AF2_TIM4</initializer>
+        <briefdescription>
+<para>analog <ref refid="class_encoder" kindref="compound">Encoder</ref> A TIM </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="44" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1ga201322766762341c34054321eccfc0f3" prot="public" static="no">
+        <name>ENCODER_M1_B_PIN</name>
+        <initializer>GPIO_PIN_1</initializer>
+        <briefdescription>
+<para>analog <ref refid="class_encoder" kindref="compound">Encoder</ref> B PIN </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="46" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1ga409addbaf122fc11b920116beb937d86" prot="public" static="no">
+        <name>ENCODER_M1_B_PORT</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+<para>analog <ref refid="class_encoder" kindref="compound">Encoder</ref> B Port </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="47" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1gab93e11bf3eab18c24e9a0edd77435c97" prot="public" static="no">
+        <name>ENCODER_M1_B_ALTERNATE</name>
+        <initializer>GPIO_AF2_TIM4</initializer>
+        <briefdescription>
+<para>analog <ref refid="class_encoder" kindref="compound">Encoder</ref> B TIM </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="48" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1ga7efb643ea6e0ad93c82f35a04199ed0d" prot="public" static="no">
+        <name>POS_KP</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>PID Kp value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="55" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1ga7490c5cda802d0f32484ebcd44f27187" prot="public" static="no">
+        <name>POS_KI</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>PID Kp value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="56" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1ga78ca3aae210f6a0724a2214a98ee1831" prot="public" static="no">
+        <name>POS_KD</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>PID Kp value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="57" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1ga5fbf1b31edd4728f53e0deb6a7ac9c76" prot="public" static="no">
+        <name>DEFAULT_TARGET_START</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>PID Start. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="59" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_n_c_o_d_e_r_1gaecfa9c9559b05987c25fcf12731b394d" prot="public" static="no">
+        <name>DEFAULT_MAX_INTEGRAL</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>Max Integral. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="60" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

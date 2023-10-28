@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_onboard_button_input" kind="class" language="C++" prot="public">
+    <compoundname>OnboardButtonInput</compoundname>
+    <basecompoundref refid="class_button_input" prot="public" virt="non-virtual">ButtonInput</basecompoundref>
+    <includes refid="_button_8h" local="no">Button.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_onboard_button_input_1ae38998aa2a60bf369520d0a7b7736439" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_i_o" kindref="compound">DIO</ref></type>
+        <definition>DIO OnboardButtonInput::espPin</definition>
+        <argsstring></argsstring>
+        <name>espPin</name>
+        <qualifiedname>OnboardButtonInput::espPin</qualifiedname>
+        <briefdescription>
+<para>generic gpio pin </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="67" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_onboard_button_input_1aceee2fb46ff6545293197821b54e3a83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>OnboardButtonInput::OnboardButtonInput</definition>
+        <argsstring>(int _pin)</argsstring>
+        <name>OnboardButtonInput</name>
+        <qualifiedname>OnboardButtonInput::OnboardButtonInput</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="59" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="59" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_onboard_button_input_1a470397406bedc819e6005646820a7eb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>OnboardButtonInput::~OnboardButtonInput</definition>
+        <argsstring>()</argsstring>
+        <name>~OnboardButtonInput</name>
+        <qualifiedname>OnboardButtonInput::~OnboardButtonInput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="61" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_onboard_button_input_1a7e44aa3a0cfac7238578af54740356d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool OnboardButtonInput::read</definition>
+        <argsstring>() override</argsstring>
+        <name>read</name>
+        <qualifiedname>OnboardButtonInput::read</qualifiedname>
+        <reimplements refid="class_button_input_1aee02bce6f864e1df65044d08a1703092">read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="63" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="63" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>input wrapper based on a direct gpio pin TODO: implement gpio Mode switch between pullup and none </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ButtonInput</label>
+        <link refid="class_button_input"/>
+      </node>
+      <node id="1">
+        <label>OnboardButtonInput</label>
+        <link refid="class_onboard_button_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ButtonInput</label>
+        <link refid="class_button_input"/>
+      </node>
+      <node id="3">
+        <label>DIO</label>
+        <link refid="class_d_i_o"/>
+      </node>
+      <node id="1">
+        <label>OnboardButtonInput</label>
+        <link refid="class_onboard_button_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>espPin</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="56" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="57" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_button_input_1a05c951f902e7d44a19977ba1b07ba582" prot="public" virt="non-virtual"><scope>OnboardButtonInput</scope><name>ButtonInput</name></member>
+      <member refid="class_onboard_button_input_1ae38998aa2a60bf369520d0a7b7736439" prot="public" virt="non-virtual"><scope>OnboardButtonInput</scope><name>espPin</name></member>
+      <member refid="class_button_input_1a0cd249e8849ce84954a77b90435ade88" prot="public" virt="non-virtual"><scope>OnboardButtonInput</scope><name>getPin</name></member>
+      <member refid="class_button_input_1a80bb9c5440ef13d458858eba7f291dee" prot="protected" virt="non-virtual"><scope>OnboardButtonInput</scope><name>iPin</name></member>
+      <member refid="class_onboard_button_input_1aceee2fb46ff6545293197821b54e3a83" prot="public" virt="non-virtual"><scope>OnboardButtonInput</scope><name>OnboardButtonInput</name></member>
+      <member refid="class_onboard_button_input_1a7e44aa3a0cfac7238578af54740356d0" prot="public" virt="virtual"><scope>OnboardButtonInput</scope><name>read</name></member>
+      <member refid="class_button_input_1a4e2d540e3f499e598c87f0568adf93bb" prot="public" virt="virtual"><scope>OnboardButtonInput</scope><name>~ButtonInput</name></member>
+      <member refid="class_onboard_button_input_1a470397406bedc819e6005646820a7eb9" prot="public" virt="non-virtual"><scope>OnboardButtonInput</scope><name>~OnboardButtonInput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

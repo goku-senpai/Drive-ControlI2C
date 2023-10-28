@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electronics &mdash; lucy-esp 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Software" href="../software-doc/software-doc.html" />
+    <link rel="prev" title="Mechanical" href="mechanical-doc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            lucy-esp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Project Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-doc/install-doc.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="hardware-doc.html">Hardware</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mechanical-doc.html">Mechanical</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Electronics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">SeeSaw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">PCF8575</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#part-list">Part List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software-doc/software-doc.html">Software</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">lucy-esp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="hardware-doc.html">Hardware</a></li>
+      <li class="breadcrumb-item active">Electronics</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/hardware-doc/electrical-doc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="electronics">
+<h1>Electronics<a class="headerlink" href="#electronics" title="Permalink to this heading"></a></h1>
+<p>A basic list of all special chips used in the projects are shortly presented.</p>
+<section id="id1">
+<h2><a class="reference external" href="https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout?view=all">SeeSaw</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>Adafruit seesaw is a near-universal converter framework which allows you to add and extend hardware support to any I2C-capable microcontroller or microcomputer.
+Instead of getting separate I2C GPIO expanders, ADCs, PWM drivers, etc, seesaw can be configured to give a wide range of capabilities
+The corresponding <a class="reference external" href="https://github.com/adafruit/Adafruit_Seesaw">github-repo</a> contains useful information.</p>
+<p>For example, the ATSAMD09 breakout with seesaw gives you:</p>
+<ul class="simple">
+<li><p>3 x 12-bit ADC inputs</p></li>
+<li><p>3 x 8-bit PWM outputs</p></li>
+<li><p>7 x GPIO with selectable pullup or pulldown</p></li>
+<li><p>1 x NeoPixel output (up to 170 pixels)</p></li>
+<li><p>1 x EEPROM with 64 byte of NVM memory (handy for storing small access tokens or MAC addresses)</p></li>
+<li><p>1 x Interrupt output that can be triggered by any of the accessories</p></li>
+<li><p>2 x I2C address selection pins</p></li>
+<li><p>1 x Activity LED</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2><a class="reference external" href="https://github.com/xreef/PCF8575_library">PCF8575</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>PCF8575 is a 16bit digital expander with i2c interface.
+It has a variable adress range 0x20 to 0x27.</p>
+<p>The PCF8575 has an interrupt output line (INT) to notify an MCU that one of the input lines has changed.
+This can be used to prevent active polling of the PCF8575, which can be more efficient.</p>
+</section>
+<section id="part-list">
+<h2>Part List<a class="headerlink" href="#part-list" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Part List Electornics</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 17%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Description</p></th>
+<th class="head"><p>Partnumber</p></th>
+<th class="head"><p>Quantity</p></th>
+<th class="head"><p>Price</p></th>
+<th class="head"><p>Datasheet</p></th>
+<th class="head"><p>Link</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>I2C Multiplexer</p></td>
+<td><p>MCP23017-E/SS</p></td>
+<td><p>1</p></td>
+<td><p>2€</p></td>
+<td><p><a class="reference external" href="https://www.adafruit.com/product/732">MCP23017</a></p></td>
+<td><p><a class="reference download internal" download="" href="../_downloads/11a36c5ac1530cad93e0e2db70e37a3a/esp32_datasheet_en.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>modular I2C interface</p></td>
+<td><p>ATSAMD09</p></td>
+<td><p>1</p></td>
+<td><p>4€</p></td>
+<td><p><a class="reference external" href="https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout?view=all">ATSAMD09</a></p></td>
+<td><p><a class="reference download internal" download="" href="../_downloads/9a5493bd65a069993b256f2d3558be04/seesaw.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p>ESP 32</p></td>
+<td><p>ATSAMD09</p></td>
+<td><p>1</p></td>
+<td><p>6€</p></td>
+<td><p><a class="reference external" href="https://www.az-delivery.de/products/nodemcu-esp-32s-kit">ESP32</a></p></td>
+<td><p><a class="reference download internal" download="" href="../_downloads/11a36c5ac1530cad93e0e2db70e37a3a/esp32_datasheet_en.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mechanical-doc.html" class="btn btn-neutral float-left" title="Mechanical" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../software-doc/software-doc.html" class="btn btn-neutral float-right" title="Software" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Fertigungstechnik UIBK.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

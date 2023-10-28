@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group___i2_c" kind="group">
+    <compoundname>I2C</compoundname>
+    <title>I2C</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___i2_c_1ga2cade698267beb86ccaa38c14d35ab0f" prot="public" static="no">
+        <name>I2C_SDA_PIN</name>
+        <initializer>21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="31" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___i2_c_1ga0e4e08bab2fb484136d18b067bef372c" prot="public" static="no">
+        <name>I2C_SCL_PIN</name>
+        <initializer>22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="32" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

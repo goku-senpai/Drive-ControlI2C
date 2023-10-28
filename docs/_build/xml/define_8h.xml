@@ -1,0 +1,844 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="define_8h" kind="file" language="C++">
+    <compoundname>define.h</compoundname>
+    <includedby refid="_b_n0055_8h" local="yes">D:/git/fertigung/lucy-esp/software/microcontroller/include/BN0055.h</includedby>
+    <includedby refid="_controller_8h" local="yes">D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h</includedby>
+    <includedby refid="_lucy_8h" local="yes">D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h</includedby>
+    <includedby refid="_trajectory_8h" local="yes">D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/BN0055.h</label>
+        <link refid="_b_n0055_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h</label>
+        <link refid="_controller_8h_source"/>
+      </node>
+      <node id="5">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h</label>
+        <link refid="_lucy_8h"/>
+      </node>
+      <node id="6">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h</label>
+        <link refid="_trajectory_8h"/>
+      </node>
+      <node id="1">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h</label>
+        <link refid="define_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___l_u_c_y_1ga688c8c4f93073bb1608cf95f229609e0" prot="public" static="no">
+        <name>EXP_TIMER_ID</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Timer0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>sampling time of controller in ms </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="13" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1ga749f29a88b9f1efe5994648a598bd2a4" prot="public" static="no">
+        <name>EXP_TIMER_PRESCALAR</name>
+        <initializer>80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="14" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1ga1e19c35dc2be7361bb38fe95c9162442" prot="public" static="no">
+        <name>EXP_TIMER_PERIOD</name>
+        <initializer>50000</initializer>
+        <briefdescription>
+<para>with a prescalar of 80 the period is in µs so 50000µs = 50ms </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="15" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1ga8c676c6fc3dab66c542a0ccb008a0912" prot="public" static="no">
+        <name>EXP_DT</name>
+        <initializer><ref refid="group___l_u_c_y_1ga1e19c35dc2be7361bb38fe95c9162442" kindref="member">EXP_TIMER_PERIOD</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="17" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1gade206713ffeebe2847de33a1c51f3ba3" prot="public" static="no">
+        <name>EXP_DT_S</name>
+        <initializer>EXP_DT / 1000.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="18" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1gae71449b1cc6e6250b91f539153a7a0d3" prot="public" static="no">
+        <name>M_PI</name>
+        <initializer>3.14159265358979323846</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="20" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1ga00978ca9e8220475258dcbbbb7d29129" prot="public" static="no">
+        <name>ADC_RESOLUTION</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="21" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___i2_c_1ga2cade698267beb86ccaa38c14d35ab0f" prot="public" static="no">
+        <name>I2C_SDA_PIN</name>
+        <initializer>21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="31" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___i2_c_1ga0e4e08bab2fb484136d18b067bef372c" prot="public" static="no">
+        <name>I2C_SCL_PIN</name>
+        <initializer>22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="32" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___i_m_u_1gaf2b5d9887f01ba501074831dc30e716f" prot="public" static="no">
+        <name>IMU_X</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="41" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___i_m_u_1gac138ec3ddde4a74c49f94645b26f6c5f" prot="public" static="no">
+        <name>IMU_Y</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="42" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___i_m_u_1ga171e6d58d3c25068ed2741c1e652b201" prot="public" static="no">
+        <name>IMU_Z</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="43" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_i_1ga8e94c3dd127b0b902445db6ed7058ade" prot="public" static="no">
+        <name>UI_LED_YELLOW_PIN</name>
+        <initializer>27</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pin of blue led </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="54" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_i_1ga22e9df0267287ddccae7d5edfb12b879" prot="public" static="no">
+        <name>UI_POTI_PIN</name>
+        <initializer>14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pin of poti <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="57" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_i_1ga4790a817bd3a8df8ac851249345036ba" prot="public" static="no">
+        <name>UI_POTI_DIR</name>
+        <initializer>true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="58" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___v_a_l_v_e_1ga5c052546a8e44b87f132c57e4adc5218" prot="public" static="no">
+        <name>VALVE_LEFT_PIN_A</name>
+        <initializer>26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="68" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___v_a_l_v_e_1ga3d3cf10f2cb4004cd08abda2d24bb08b" prot="public" static="no">
+        <name>VALVE_LEFT_PIN_B</name>
+        <initializer>25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="69" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___v_a_l_v_e_1ga06e5a6eb15380dab29031c92a9205017" prot="public" static="no">
+        <name>VALVE_RIGHT_PIN_A</name>
+        <initializer>33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="71" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___v_a_l_v_e_1ga9a560424f3ee7359c9f60a547019a913" prot="public" static="no">
+        <name>VALVE_RIGHT_PIN_B</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="72" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gaa81f5570bd48914884577d7e8af066cd" prot="public" static="no">
+        <name>PRESSURE_SENSOR_PIN_LEFT</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="83" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga5537d94182e1832bf857649885407039" prot="public" static="no">
+        <name>PRESSURE_SENSOR_PIN_RIGHT</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="84" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga214df8a3e912c4b6e7249b41a87c2d83" prot="public" static="no">
+        <name>PRESSURE_SENSOR_PIN_SUPPLY</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="85" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga72356426b7c13201bd8cd8df056f1dc6" prot="public" static="no">
+        <name>PRESSURE_SENSOR_PIN_TANK</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="86" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga18582ec8c41f2d28eeb0c74896bbc6ad" prot="public" static="no">
+        <name>PRESSURE_SENSOR_SLOPE</name>
+        <initializer>0.00133816662</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="89" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga414a43e4a1794574a1e628625b1ffd87" prot="public" static="no">
+        <name>PRESSURE_SENSOR_OFFSET</name>
+        <initializer>-1.65</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="90" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gaad62efebb7002ebba5980acffc3239be" prot="public" static="no">
+        <name>PRESSURE_MAX_HARDWARE</name>
+        <initializer>8.5</initializer>
+        <briefdescription>
+<para>maximum pressure before hardware breaks </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="94" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gac227a36330af30773686946ac2c087fe" prot="public" static="no">
+        <name>PRESSURE_MAX_UI</name>
+        <initializer>6.5</initializer>
+        <briefdescription>
+<para>max. target pressure for UI input at 100% </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="95" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga8819fd42232ef601b6ee560028782a8c" prot="public" static="no">
+        <name>PRESSURE_MIN_UI</name>
+        <initializer>0.0</initializer>
+        <briefdescription>
+<para>min. target pressure for UI input at 0% </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="96" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga0aa3fc0afc12a4a54b3e52af1a6c0444" prot="public" static="no">
+        <name>PRESSURE_DEADZONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>minimum pressure difference between traget pressure and actual pressure to activate; not essential </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="98" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gabeb3061d608c36ec8f1c41be1d1d8e78" prot="public" static="no">
+        <name>PRESSURE_MIN_NICE</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para>minimum supply pressure for system to work as expected; essential </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="100" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga57fec8c4dc337bf505cf2bde9fc6f39d" prot="public" static="no">
+        <name>PRESSURE_MIN_SUPPY</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para>minimum supply pressure for system to work as expected; essential </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="101" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga14ba699806218d25c321556290a7ab50" prot="public" static="no">
+        <name>PRESSURE_NEGLECTABLE</name>
+        <initializer>0.1</initializer>
+        <briefdescription>
+<para>in case of insuficient supply pressure, the pressure in the cylinders will be reduced to less than neglectable pressure </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="102" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga455802e0dd8dd60b7b148047240278ff" prot="public" static="no">
+        <name>PRESSURE_TARGET_REDUCTION</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>to avoid target pressure being higher than supply pressure due to small short term pressure drops; not essential </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="104" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga033b33df92554d5bd4135c3566ea9870" prot="public" static="no">
+        <name>PRESSURE_ADJUST_MODE</name>
+        <initializer>false</initializer>
+        <briefdescription>
+<para>prolongs open valve times in low supply pressure scenarios; not recommendet with regular 8bar supply </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="105" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga759cd32eaca0f1511cc6a50804c9da80" prot="public" static="no">
+        <name>PRESSURE_MAX_CYCLE_TIME</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para>avoiding long unresponsive system periods in [ms] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="107" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga86785264843a2025c45cf4c9057f26f4" prot="public" static="no">
+        <name>PRESSURE_MIN_CYCLE_TIME</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para>too fast for valves to make a real change [ms] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="108" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga2d6da9d902837a0237d0f97e4bd5ef41" prot="public" static="no">
+        <name>PRESSURE_BETA_IN_1</name>
+        <initializer>0.347</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="111" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga767862f9e824eccba209821272506830" prot="public" static="no">
+        <name>PRESSURE_BETA_IN_2</name>
+        <initializer>0.0052</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="112" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga508cb4a9a3fbcd17f719169c01c82192" prot="public" static="no">
+        <name>PRESSURE_BETA_IN_3</name>
+        <initializer>3.71e-5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="113" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gafa738b6910b9d9dc99b03d097ff0fee6" prot="public" static="no">
+        <name>PRESSURE_BETA_IN_4</name>
+        <initializer>-9.28e-8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="114" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga51da635df42703f5eb2fbcb45ac4f19e" prot="public" static="no">
+        <name>PRESSURE_BETA_OUT_1</name>
+        <initializer>0.04667</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="117" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1ga7f0b5df2982a50b3ec16d7b3c57c4df3" prot="public" static="no">
+        <name>PRESSURE_BETA_OUT_2</name>
+        <initializer>0.01795</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="118" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_r_e_s_s_u_r_e_1gaf270f48994cb12e75c65ed6797727541" prot="public" static="no">
+        <name>PRESSURE_BETA_OUT_3</name>
+        <initializer>-0.0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="119" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_n_g_l_e_1ga4fed337d63fda75a7ac60beef1af1f73" prot="public" static="no">
+        <name>ANGLE_POTI_PIN_LEFT</name>
+        <initializer>14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="128" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_n_g_l_e_1ga9aeb152f45e4c7a8ea33da016aba5fc9" prot="public" static="no">
+        <name>ANGLE_POTI_DIR_LEFT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="129" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_n_g_l_e_1ga489113b893ce924f69c33fb7cb673303" prot="public" static="no">
+        <name>ANGLE_POTI_OFFSET_LEFT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="130" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_n_g_l_e_1gaba97d3a4c562235a56a244441a3c5575" prot="public" static="no">
+        <name>ANGLE_POTI_SLOPE_LEFT</name>
+        <initializer>0.3396226415</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="131" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_n_g_l_e_1gaa54e50e5e1435534bb153410091aca54" prot="public" static="no">
+        <name>ANGLE_POTI_PIN_RIGHT</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="133" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_n_g_l_e_1gac7b0a981611e5032d18de69ef269074b" prot="public" static="no">
+        <name>ANGLE_POTI_DIR_RIGHT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="134" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_n_g_l_e_1gabb546fcad8383cfc5d9ee3151e3f2272" prot="public" static="no">
+        <name>ANGLE_POTI_OFFSET_RIGHT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="135" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___a_n_g_l_e_1ga52060440eeabbc25fe76b4147c46fed6" prot="public" static="no">
+        <name>ANGLE_POTI_SLOPE_RIGHT</name>
+        <initializer>0.3396226415</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="136" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1ga3af3a45598a5c08e102fce262068a854" prot="public" static="no">
+        <name>TRAJECTORY_RAMP_ANGLE_START_1</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="146" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gae616bcdb28514fdd07a8298573f2431c" prot="public" static="no">
+        <name>TRAJECTORY_RAMP_ANGLE_END_1</name>
+        <initializer>25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="147" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gacd9c19ffe7dd6b01d54be08efa172607" prot="public" static="no">
+        <name>TRAJECTORY_RAMP_ANGLE_START_2</name>
+        <initializer>45</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="149" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gaad3b7d94992d62a290700da64cdf7fab" prot="public" static="no">
+        <name>TRAJECTORY_RAMP_ANGLE_END_2</name>
+        <initializer>85</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="150" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gade517ee50f168c0b2d702922cb151bd1" prot="public" static="no">
+        <name>TRAJECTORY_VELOCITY_REDUCTION</name>
+        <initializer>0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="152" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1ga51d8d0a7b2990bd4760b765fb224d1da" prot="public" static="no">
+        <name>TRAJECTORY_MAX_LOWERING_V</name>
+        <initializer>-100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="153" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gaee62829517cffa1375039ea9a21ed1d8" prot="public" static="no">
+        <name>TRAJECTORY_ORIGINAL_LUCY</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="155" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gaab6c89cfa385297de4436046e49d617b" prot="public" static="no">
+        <name>TRAJECTORY_FLATTEN_TRAJECTORY</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="156" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1ga8d7a74bbe5054a73872487f72e4e9dba" prot="public" static="no">
+        <name>TRAJECTORY_FORCE_REDUCTION</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="157" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1ga75e369504ed9ca6c9b2355da88964a64" prot="public" static="no">
+        <name>TRAJECTORY_FORCE_CURVE</name>
+        <initializer>TRAJECTORY_ORIGINAL_LUCY</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="159" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DEFINE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFINE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="group___l_u_c_y_1ga688c8c4f93073bb1608cf95f229609e0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXP_TIMER_ID<sp/>1<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXP_TIMER_PRESCALAR<sp/>80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="group___l_u_c_y_1ga1e19c35dc2be7361bb38fe95c9162442" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXP_TIMER_PERIOD<sp/>50000<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXP_DT<sp/>EXP_TIMER_PERIOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXP_DT_S<sp/>EXP_DT<sp/>/<sp/>1000.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M_PI<sp/>3.14159265358979323846</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_RESOLUTION<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_SDA_PIN<sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_SCL_PIN<sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IMU_X<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IMU_Y<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IMU_Z<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="group___u_i_1ga8e94c3dd127b0b902445db6ed7058ade" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UI_LED_YELLOW_PIN<sp/>27</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="group___u_i_1ga22e9df0267287ddccae7d5edfb12b879" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UI_POTI_PIN<sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UI_POTI_DIR<sp/>true<sp/></highlight><highlight class="comment">//<sp/>should<sp/>start<sp/>at<sp/>max.<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALVE_LEFT_PIN_A<sp/>26</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALVE_LEFT_PIN_B<sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALVE_RIGHT_PIN_A<sp/>33</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALVE_RIGHT_PIN_B<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>old<sp/>pin<sp/>defs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_SENSOR_PIN_LEFT<sp/>5<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_SENSOR_PIN_RIGHT<sp/>6<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_SENSOR_PIN_SUPPLY<sp/>10<sp/></highlight><highlight class="comment">//<sp/>A0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_SENSOR_PIN_TANK<sp/>2<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_SENSOR_SLOPE<sp/>0.00133816662</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_SENSOR_OFFSET<sp/>-1.65</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="group___p_r_e_s_s_u_r_e_1gaad62efebb7002ebba5980acffc3239be" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_MAX_HARDWARE<sp/>8.5<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="group___p_r_e_s_s_u_r_e_1gac227a36330af30773686946ac2c087fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_MAX_UI<sp/>6.5<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="group___p_r_e_s_s_u_r_e_1ga8819fd42232ef601b6ee560028782a8c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_MIN_UI<sp/>0.0<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="group___p_r_e_s_s_u_r_e_1ga0aa3fc0afc12a4a54b3e52af1a6c0444" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_DEADZONE<sp/>0<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>MIN_NICE_PRESSURE<sp/>not<sp/>defined??<sp/>in<sp/>LUCYCODE_BASE<sp/>,<sp/>definition<sp/>not<sp/>found<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="group___p_r_e_s_s_u_r_e_1gabeb3061d608c36ec8f1c41be1d1d8e78" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_MIN_NICE<sp/>6<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="group___p_r_e_s_s_u_r_e_1ga57fec8c4dc337bf505cf2bde9fc6f39d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_MIN_SUPPY<sp/>4<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="group___p_r_e_s_s_u_r_e_1ga14ba699806218d25c321556290a7ab50" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_NEGLECTABLE<sp/>0.1<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="group___p_r_e_s_s_u_r_e_1ga455802e0dd8dd60b7b148047240278ff" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_TARGET_REDUCTION<sp/>1<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="group___p_r_e_s_s_u_r_e_1ga033b33df92554d5bd4135c3566ea9870" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_ADJUST_MODE<sp/>false<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="group___p_r_e_s_s_u_r_e_1ga759cd32eaca0f1511cc6a50804c9da80" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_MAX_CYCLE_TIME<sp/>20<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="group___p_r_e_s_s_u_r_e_1ga86785264843a2025c45cf4c9057f26f4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_MIN_CYCLE_TIME<sp/>7<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//<sp/>pressure<sp/>increase,<sp/>dependant<sp/>of<sp/>angle<sp/>(pressure<sp/>mechanically<sp/>regulated)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_BETA_IN_1<sp/>0.347</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_BETA_IN_2<sp/>0.0052</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_BETA_IN_3<sp/>3.71e-5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_BETA_IN_4<sp/>-9.28e-8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/>pressure<sp/>decrease,<sp/>dependant<sp/>of<sp/>angle<sp/>and<sp/>pressure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_BETA_OUT_1<sp/>0.04667</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_BETA_OUT_2<sp/>0.01795</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRESSURE_BETA_OUT_3<sp/>-0.0004</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANGLE_POTI_PIN_LEFT<sp/>14<sp/></highlight><highlight class="comment">//<sp/>A2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANGLE_POTI_DIR_LEFT<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANGLE_POTI_OFFSET_LEFT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANGLE_POTI_SLOPE_LEFT<sp/>0.3396226415<sp/></highlight><highlight class="comment">//<sp/>#define<sp/>ANGLE_POTI_SLOPE_LEFT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(90/262.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANGLE_POTI_PIN_RIGHT<sp/>5<sp/></highlight><highlight class="comment">//<sp/>A11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANGLE_POTI_DIR_RIGHT<sp/>0<sp/><sp/></highlight><highlight class="comment">//<sp/>direction<sp/>should<sp/>be<sp/>solved<sp/>via<sp/>interpolation?<sp/>mx<sp/>+d<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANGLE_POTI_OFFSET_RIGHT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANGLE_POTI_SLOPE_RIGHT<sp/>0.3396226415</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAJECTORY_RAMP_ANGLE_START_1<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAJECTORY_RAMP_ANGLE_END_1<sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAJECTORY_RAMP_ANGLE_START_2<sp/>45</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAJECTORY_RAMP_ANGLE_END_2<sp/>85</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAJECTORY_VELOCITY_REDUCTION<sp/>0.5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAJECTORY_MAX_LOWERING_V<sp/>-100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAJECTORY_ORIGINAL_LUCY<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAJECTORY_FLATTEN_TRAJECTORY<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAJECTORY_FORCE_REDUCTION<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAJECTORY_FORCE_CURVE<sp/>TRAJECTORY_ORIGINAL_LUCY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ALT_PINS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>ANGLE_POTI_PIN_RIGHT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>VALVE_LEFT_PIN_A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>VALVE_RIGHT_PIN_A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANGLE_POTI_PIN_RIGHT<sp/>8<sp/></highlight><highlight class="comment">//<sp/>A10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALVE_LEFT_PIN_A<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALVE_RIGHT_PIN_A<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DEFINE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h"/>
+  </compounddef>
+</doxygen>

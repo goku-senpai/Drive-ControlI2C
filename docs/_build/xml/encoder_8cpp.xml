@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="encoder_8cpp" kind="file" language="C++">
+    <compoundname>encoder.cpp</compoundname>
+    <includes refid="encoder_8h" local="yes">encoder.h</includes>
+    <includes refid="constants_8h" local="yes">constants.h</includes>
+    <includes local="yes">stm32f7xx_hal_tim.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>constants.h</label>
+        <link refid="constants_8h_source"/>
+      </node>
+      <node id="2">
+        <label>encoder.h</label>
+        <link refid="encoder_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp</label>
+        <link refid="encoder_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stm32f7xx_hal.h</label>
+      </node>
+      <node id="4">
+        <label>stm32f7xx_hal_tim.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="encoder_8cpp_1af7b2c26e44dadaaa798a5c3d82914ba7" prot="public" static="no" mutable="no">
+        <type>I2C_HandleTypeDef</type>
+        <definition>I2C_HandleTypeDef hi2c1</definition>
+        <argsstring></argsstring>
+        <name>hi2c1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" line="13" column="26" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/main.cpp" bodystart="74" bodyend="-1" declfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" declline="13" declcolumn="26"/>
+      </memberdef>
+      <memberdef kind="variable" id="encoder_8cpp_1a3f210c1631b7915c5f5be447f1fec378" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t i2c_adress</definition>
+        <argsstring></argsstring>
+        <name>i2c_adress</name>
+        <initializer>= 0x6C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" line="14" column="22" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="encoder_8cpp_1aafcb94cb7d5be7c3d502b80ca215ab7f" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float convertValue</definition>
+        <argsstring></argsstring>
+        <name>convertValue</name>
+        <initializer>= 0.08789f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" line="16" column="20" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="encoder_8cpp_1a14bf41b5d21bbffbfa6d8df229d1045b" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t angleAdress</definition>
+        <argsstring></argsstring>
+        <name>angleAdress</name>
+        <initializer>=0x0C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" line="17" column="22" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="encoder_8cpp_1a3c3330f3a693a4bb9ce788f61043fb98" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t statusAdress</definition>
+        <argsstring></argsstring>
+        <name>statusAdress</name>
+        <initializer>=0x0B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" line="18" column="22" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="encoder_8cpp_1ad21b97d3d5a0a03e27b9850757932e88" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t rawData</definition>
+        <argsstring></argsstring>
+        <name>rawData</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" line="19" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="encoder_8cpp_1ade818037fd6c985038ff29656089758d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" line="20" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="encoder_8cpp_1ab8ef1bf8a70cc07c6d55823c390a7e76" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" line="21" column="7" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="encoder_8cpp_1a645e2bfaab58ae5f59f9adb824951528" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t data[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" line="22" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="encoder_8cpp_1a4c31b1aeb2e9d4ab22c6acc7d1430406" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t buff[20]</definition>
+        <argsstring>[20]</argsstring>
+        <name>buff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" line="23" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="encoder_8cpp_1a569e2fb39e3d7ec662aff1a92942b75f" prot="public" static="no" mutable="no">
+        <type>HAL_StatusTypeDef</type>
+        <definition>HAL_StatusTypeDef ret</definition>
+        <argsstring></argsstring>
+        <name>ret</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" line="24" column="26" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/main.cpp" bodystart="82" bodyend="-1" declfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" declline="24" declcolumn="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_encoder" kindref="compound">Encoder</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;encoder.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f7xx_hal_tim.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>I2C<sp/>variable<sp/>declaration</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>I2C_HandleTypeDef<sp/>hi2c1;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>i2c_adress<sp/>=<sp/>0x6C;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//static<sp/>const<sp/>uint8_t<sp/>i2c_adress=0x36;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>convertValue<sp/>=<sp/>0.08789f;<sp/><sp/></highlight><highlight class="comment">//12bit<sp/>in<sp/>winkel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>angleAdress=0x0C;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>statusAdress=0x0B;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">uint16_t<sp/>rawData<sp/>=0;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">uint8_t<sp/>status<sp/>=0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>angle<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">uint8_t<sp/>data[5];<sp/></highlight><highlight class="comment">//data<sp/>i<sp/>recieve<sp/>from<sp/>i2c<sp/>encoder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">uint8_t<sp/>buff[20];<sp/></highlight><highlight class="comment">//rx<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>HAL_StatusTypeDef<sp/>ret;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//This<sp/>should<sp/>work<sp/>with<sp/>a<sp/>normal<sp/>encoder,<sp/>for<sp/>this<sp/>project,<sp/>a<sp/>AS5600<sp/>I2C<sp/>encoder<sp/>is<sp/>used</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"></highlight><highlight class="normal"><ref refid="class_encoder_1ac3bb736c35541ed71ef2d2c6250a0177" kindref="member">Encoder::Encoder</ref>(TIM_HandleTypeDef*<sp/>htim,<sp/>GPIO_TypeDef*<sp/>portA,<sp/>uint16_t<sp/>pinA,<sp/>GPIO_TypeDef*<sp/>portB,<sp/>uint16_t<sp/>pinB)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;_htim<sp/>=<sp/>htim;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;_portA<sp/>=<sp/>portA;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;_pinA<sp/>=<sp/>pinA;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;_portB<sp/>=<sp/>portB;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;_pinB<sp/>=<sp/>pinB;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_encoder_1a3abe1d3cb71cf77aa2469d62f91287f9" kindref="member">Encoder:: get_positionI2C</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>data[0]<sp/>=<sp/>angleAdress;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>HAL_I2C_Master_Transmit(&amp;hi2c1,<sp/>i2c_adress,<sp/>data,<sp/>1,<sp/>10);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>==<sp/>HAL_OK)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>HAL_I2C_Master_Receive(&amp;hi2c1,<sp/>i2c_adress,<sp/>data,<sp/>2,<sp/>10);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>==<sp/>HAL_OK)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rawData<sp/>=<sp/>data[0]<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rawData<sp/>|=<sp/>data[1];</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>angle<sp/>=<sp/>(float)<sp/>rawData<sp/>*<sp/>convertValue;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//HAL_GPIO_WritePin(LED_RED_PORT,LED_RED_PIN,GPIO_PIN_SET);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(LED_RED_PORT,<ref refid="group___l_e_d_1gab9824ab080c30006c1baaa0dd7e863c5" kindref="member">LED_RED_PIN</ref>,GPIO_PIN_SET);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>angle;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_encoder_1a01e97423efe4bdd957c53f8d59fe2b74" kindref="member">Encoder::init</ref>()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>the<sp/>timer<sp/>for<sp/>the<sp/>Encoder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitTypeDef<sp/>GPIO_InitStruct<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>Pin<sp/>A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pin<sp/>=<sp/>_pinA;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Mode<sp/>=<sp/>GPIO_MODE_AF_PP;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pull<sp/>=<sp/>GPIO_PULLUP;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Speed<sp/>=<sp/>GPIO_SPEED_FREQ_HIGH;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Alternate<sp/>=<sp/><ref refid="group___e_n_c_o_d_e_r_1ga7cf45819f081d07e1acfc2b4d0d60ae7" kindref="member">ENCODER_M1_A_ALTERNATE</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(_portA,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>Pin<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pin<sp/>=<sp/>_pinB;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Mode<sp/>=<sp/>GPIO_MODE_AF_PP;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pull<sp/>=<sp/>GPIO_PULLUP;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Speed<sp/>=<sp/>GPIO_SPEED_FREQ_HIGH;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Alternate<sp/>=<sp/><ref refid="group___e_n_c_o_d_e_r_1gab93e11bf3eab18c24e9a0edd77435c97" kindref="member">ENCODER_M1_B_ALTERNATE</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(_portB,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_TIM_Encoder_Start(_htim,<sp/>TIM_CHANNEL_ALL);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">int32_t<sp/><ref refid="class_encoder_1a801fef5c9b8085dc463c18196b4a1c83" kindref="member">Encoder::get_count</ref>()</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(int32_t)<sp/>__HAL_TIM_GET_COUNTER(_htim);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_encoder_1a866c82e886dd10619a75a39167c12f33" kindref="member">Encoder::reset_count</ref>()</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>__HAL_TIM_SET_COUNTER(_htim,<sp/>0);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_encoder_1aa0e90fc58f27bcdf40791e6bb05e28ec" kindref="member">Encoder::get_position</ref>()</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>count<sp/>=<sp/><ref refid="class_encoder_1a801fef5c9b8085dc463c18196b4a1c83" kindref="member">get_count</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>position<sp/>=<sp/>(float)count<sp/>/<sp/><ref refid="group___e_n_c_o_d_e_r_1ga8cdc17f43c9f3850f60d04f98216fc13" kindref="member">ENCODER_RESOLUTION</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>position;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp"/>
+  </compounddef>
+</doxygen>

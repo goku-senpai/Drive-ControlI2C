@@ -1,0 +1,37 @@
+Mechanical
+============
+Maybe just some images of the constructed main parts. 
+give information how to open the designed files. 
+
+- which program is needed
+- where are the files
+- how to export schematics
+
+
+
+Part List 
+----------
+
+.. list-table:: Part List Mechanical
+   :header-rows: 1
+
+   * - Description
+     - Partnumber
+     - Quantity
+     - Price
+     - Datasheet
+     - Link
+   * - Dummy
+     - 1012d
+     - 2
+     - 4€
+     - 
+     - 
+   * - test
+     - 12df2
+     - 1
+     - 2€
+     - link to source file  in 3d software
+     -  :download:`stl <../../hardware/mechanical/dummyPartA/dummyPartA.stl>`
+
+

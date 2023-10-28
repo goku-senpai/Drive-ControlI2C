@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="gpio_8h" kind="file" language="C++">
+    <compoundname>gpio.h</compoundname>
+    <includes local="yes">Arduino.h</includes>
+    <includedby refid="_button_8h" local="yes">D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h</includedby>
+    <includedby refid="_lucy_8h" local="yes">D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h</includedby>
+    <includedby refid="_valve_driver_8h" local="no">D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h</includedby>
+    <includedby refid="main_8cpp" local="no">D:/git/fertigung/lucy-esp/software/microcontroller/src/main.cpp</includedby>
+    <includedby refid="adc__gpio__pwm__i2c_8cpp" local="no">D:/git/fertigung/lucy-esp/software/microcontroller/test/adc_gpio_pwm_i2c.cpp</includedby>
+    <includedby refid="timer_8cpp" local="no">D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp</includedby>
+    <includedby refid="transport__min__exp_modules_8cpp" local="no">D:/git/fertigung/lucy-esp/software/microcontroller/test/transport_min_expModules.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="1">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h</label>
+        <link refid="gpio_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h</label>
+        <link refid="_button_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h</label>
+        <link refid="_controller_8h_source"/>
+      </node>
+      <node id="5">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h</label>
+        <link refid="_lucy_8h"/>
+      </node>
+      <node id="3">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h</label>
+        <link refid="_remote_8h_source"/>
+      </node>
+      <node id="6">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h</label>
+        <link refid="_valve_driver_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h</label>
+        <link refid="gpio_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_d_i_o" prot="public">DIO</innerclass>
+    <innerclass refid="class_a_i" prot="public">AI</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="gpio_8h_1a00978ca9e8220475258dcbbbb7d29129" prot="public" static="no">
+        <name>ADC_RESOLUTION</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="69" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio_8h_1a4d15bcff5e669868f4c73a7148089ca0" prot="public" static="no">
+        <name>ADC_MAX_BITS</name>
+        <initializer>ADC_RESOLUTION^2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="72" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ESP32_GPIO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP32_GPIO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_d_i_o" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_d_i_o" kindref="compound">DIO</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_num_t<sp/>pin;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_mode_t<sp/>pinMode;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_pull_mode_t<sp/>pullMode;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bState<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_i_o" kindref="compound">DIO</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_iPin):<sp/>pin((gpio_num_t)_iPin),<sp/>pinMode(GPIO_MODE_INPUT_OUTPUT)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_direction(<sp/>this-&gt;pin,<sp/>this-&gt;pinMode);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level(<sp/>this-&gt;pin,<sp/>this-&gt;bState);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_i_o" kindref="compound">DIO</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_iPin,<sp/>gpio_mode_t<sp/>pinMode,<sp/>gpio_pull_mode_t<sp/>_pullMode):<sp/>pin((gpio_num_t)_iPin),<sp/>pinMode(pinMode),<sp/>pullMode(_pullMode)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_pull_mode(this-&gt;pin,<sp/>this-&gt;pullMode);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_direction(<sp/>this-&gt;pin,<sp/>this-&gt;pinMode);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level(<sp/>this-&gt;pin,<sp/>this-&gt;bState);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_i_o" kindref="compound">~DIO</ref>(){}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" kindref="member">set</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_bState)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;bState<sp/>=<sp/>_bState;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level(this-&gt;pin,<sp/>this-&gt;bState);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_d_i_o_1aca561fc9bf48b3db38b557672d207fe0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_d_i_o_1aca561fc9bf48b3db38b557672d207fe0" kindref="member">get</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;bState<sp/>=<sp/>gpio_get_level(this-&gt;pin);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;bState;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="class_d_i_o_1a727bcda55147f93d2c6b5f0e2d3a561f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_i_o_1a727bcda55147f93d2c6b5f0e2d3a561f" kindref="member">toggle</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;bState<sp/>=<sp/>!this-&gt;bState;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level(this-&gt;pin,<sp/>this-&gt;bState);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ADC_RESOLUTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_RESOLUTION<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ADC_MAX_BITS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_MAX_BITS<sp/>ADC_RESOLUTION^2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_a_i" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_i" kindref="compound">AI</ref><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>iPin;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dSlope<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dOffset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="86"><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_a_i" kindref="compound">AI</ref>(uint8_t<sp/>pin,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_dSlope<sp/>=<sp/>1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_dOffset<sp/>=<sp/>0):<sp/>iPin(pin),<sp/>dSlope(_dSlope),dOffset(_dOffset)<sp/>{}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_a_i" kindref="compound">~AI</ref>(){}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_a_i_1af16068eacbfcc20282b98ca6ca61d0df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_a_i_1af16068eacbfcc20282b98ca6ca61d0df" kindref="member">get</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>analogRead(this-&gt;iPin);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="class_a_i_1aedf89d83e550a15382d9f6d6ab2f8395" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_i_1aedf89d83e550a15382d9f6d6ab2f8395" kindref="member">setLinearInterpolation</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dSlope<sp/>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dOffset){</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;dSlope<sp/>=<sp/>dSlope;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;dOffset<sp/>=<sp/>dOffset;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="class_a_i_1a0d3b203ca87cf25222ac4d430179412b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_a_i_1a0d3b203ca87cf25222ac4d430179412b" kindref="member">getLinearInterpolation</ref>(){</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)<sp/>this-&gt;<ref refid="class_a_i_1af16068eacbfcc20282b98ca6ca61d0df" kindref="member">get</ref>())*this-&gt;dSlope<sp/>+<sp/>this-&gt;dOffset;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="class_a_i_1a487031c550f10aadfa170a751d38ef4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_i_1a487031c550f10aadfa170a751d38ef4f" kindref="member">setResolution</ref>(uint8_t<sp/>iResolution){</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(iResolution<sp/>&lt;<sp/>9<sp/>||<sp/>iResolution<sp/>&gt;<sp/>12){</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;AI&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;setting<sp/>adc<sp/>resolution<sp/>failed:<sp/>iResolution<sp/>=<sp/>%d<sp/><sp/>should<sp/>be<sp/>in<sp/>[9,12]<sp/>Bits<sp/>&quot;</highlight><highlight class="normal">,iResolution);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGW(</highlight><highlight class="stringliteral">&quot;AI&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;setting<sp/>adc<sp/>resolution<sp/>failed:<sp/>default<sp/>iResolution<sp/>=<sp/>12<sp/>Bits<sp/>set&quot;</highlight><highlight class="normal">,iResolution);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>analogReadResolution(iResolution);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//ESP32_GPIO_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_connection" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Connection</compoundname>
+    <derivedcompoundref refid="class_min" prot="public" virt="non-virtual">Min</derivedcompoundref>
+    <includes refid="_transport_8h" local="no">Transport.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_connection_1a862b78a65061e4f21287280efa183411" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int Connection::send</definition>
+        <argsstring>(uint8_t id, const uint8_t *payload, uint8_t len)=0</argsstring>
+        <name>send</name>
+        <qualifiedname>Connection::send</qualifiedname>
+        <reimplementedby refid="class_min_1aedd8b40a5d13422fea5f4c051908c02d">send</reimplementedby>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>send a frame to connection <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of frame </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to payload buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of payload buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" line="23" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_connection_1a00be7d0c191feeced5e2b32004619b04" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Connection::registerFrameHandler</definition>
+        <argsstring>(void(*handler)(uint8_t id, const uint8_t *payload))=0</argsstring>
+        <name>registerFrameHandler</name>
+        <qualifiedname>Connection::registerFrameHandler</qualifiedname>
+        <reimplementedby refid="class_min_1a1c9c7682556369ae2873096667cb2461">registerFrameHandler</reimplementedby>
+        <param>
+          <type>void(*)(uint8_t id, const uint8_t *payload)</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>register frame handler to be called by connection upon receiving a valid frame <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function pointer to frame handler </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" line="30" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generic abstraction of a frame based connection. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Connection</label>
+        <link refid="class_connection"/>
+      </node>
+      <node id="2">
+        <label>Min</label>
+        <link refid="class_min"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" line="15" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" bodystart="15" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_connection_1a00be7d0c191feeced5e2b32004619b04" prot="public" virt="pure-virtual"><scope>Connection</scope><name>registerFrameHandler</name></member>
+      <member refid="class_connection_1a862b78a65061e4f21287280efa183411" prot="public" virt="pure-virtual"><scope>Connection</scope><name>send</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

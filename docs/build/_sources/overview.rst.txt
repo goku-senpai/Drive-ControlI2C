@@ -1,0 +1,10 @@
+Project Description
+===================
+this project contains all information based on the testbench named lucy.
+It is powered via pressured air and is a supportive exoskeleton
+
+Literature
+------------
+ TODO: add old bachelor thesis , master thesis or other papers regarding this project 
+
+ 

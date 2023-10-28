@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group___t_i_c_k_e_r" kind="group">
+    <compoundname>TICKER</compoundname>
+    <title>TICKER</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___t_i_c_k_e_r_1ga689775b65d9e784db109c631f0638307" prot="public" static="no">
+        <name>TICK_MAX_CLIENTS</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="55" column="9" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_i_c_k_e_r_1ga3d0e2402dc3d7f0f6e1ea969e0284b94" prot="public" static="no">
+        <name>TICK_TIMER_ID</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="56" column="9" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_i_c_k_e_r_1ga7bb908cda5989fe5cd256bc67a154c76" prot="public" static="no">
+        <name>TICK_TIMER_PRESCALAR</name>
+        <initializer>80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="57" column="9" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>custom settings for TickerServer </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

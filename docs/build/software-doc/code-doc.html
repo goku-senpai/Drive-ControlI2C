@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Implementation ESP32 &mdash; lucy-esp 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Visualization with Django - WebApp" href="visu-doc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            lucy-esp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Project Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-doc/install-doc.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware-doc/hardware-doc.html">Hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="software-doc.html">Software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="structure-doc.html">Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visu-doc.html">Visualization with Django - WebApp</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Software Implementation ESP32</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lucy">Lucy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#valvedriver">ValveDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#imu-bn0055">IMU - BN0055</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#trajectory">Trajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#controller">Controller</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#parameters-groups-in-define-h">Parameters Groups in <strong>define.h</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Lucy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ui">UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i2c">I2C</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#valve">Valve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pressure">Pressure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Trajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mainboard">Mainboard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">lucy-esp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="software-doc.html">Software</a></li>
+      <li class="breadcrumb-item active">Software Implementation ESP32</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/software-doc/code-doc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="software-implementation-esp32">
+<h1>Software Implementation ESP32<a class="headerlink" href="#software-implementation-esp32" title="Permalink to this heading"></a></h1>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h2>
+<section id="lucy">
+<h3>Lucy<a class="headerlink" href="#lucy" title="Permalink to this heading"></a></h3>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv44Lucy">
+<span id="_CPPv34Lucy"></span><span id="_CPPv24Lucy"></span><span id="Lucy"></span><span class="target" id="class_lucy"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Lucy</span></span></span><a class="headerlink" href="#_CPPv44Lucy" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy4LucyEv">
+<span id="_CPPv3N4Lucy4LucyEv"></span><span id="_CPPv2N4Lucy4LucyEv"></span><span id="Lucy::Lucy"></span><span class="target" id="class_lucy_1ad707574a59e5d36d0bafa60d4406aac6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Lucy</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4Lucy4LucyEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#class_lucy"><span class="std std-ref">Lucy</span></a> object pass parameters declared in “define.h”. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy4initEv">
+<span id="_CPPv3N4Lucy4initEv"></span><span id="_CPPv2N4Lucy4initEv"></span><span id="Lucy::init"></span><span class="target" id="class_lucy_1aa63564d3960ef1f8c9d00e23876b6d1b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4Lucy4initEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>calibrate sensors </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy7computeEv">
+<span id="_CPPv3N4Lucy7computeEv"></span><span id="_CPPv2N4Lucy7computeEv"></span><span id="Lucy::compute"></span><span class="target" id="class_lucy_1a796987d87b314e8148f3e623df1ee3bf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4Lucy7computeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>update sensor values and combine controls TODO: maybe move to another LucyController </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy6setBUIEb">
+<span id="_CPPv3N4Lucy6setBUIEb"></span><span id="_CPPv2N4Lucy6setBUIEb"></span><span id="Lucy::setBUI__b"></span><span class="target" id="class_lucy_1a5b8f0916a91bc67d09371a6204e7a919"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBUI</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bVal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4Lucy6setBUIEb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>set general param</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bUI</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy4stopEv">
+<span id="_CPPv3N4Lucy4stopEv"></span><span id="_CPPv2N4Lucy4stopEv"></span><span id="Lucy::stop"></span><span class="target" id="class_lucy_1a457e14bf1838603ef19a559529244c41"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4Lucy4stopEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>basic stop function </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy22validateSupplyPressureEb">
+<span id="_CPPv3N4Lucy22validateSupplyPressureEb"></span><span id="_CPPv2N4Lucy22validateSupplyPressureEb"></span><span id="Lucy::validateSupplyPressure__b"></span><span class="target" id="class_lucy_1a10412da3a7c084af5aa37c1ab4ad8a18"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validateSupplyPressure</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bLeft</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4Lucy22validateSupplyPressureEb" title="Permalink to this definition"></a><br /></dt>
+<dd><p><ol class="lowerroman simple">
+<li><p>release air</p></li>
+<li><p>close valves if supply pressure is insufficient</p></li>
+<li><p>pressure in cylinders will be reduced to less than neglectable pressure</p></li>
+</ol>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bLeft</strong> – which Side to check , true = left side | false = right side </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy12checkSensorsEv">
+<span id="_CPPv3N4Lucy12checkSensorsEv"></span><span id="_CPPv2N4Lucy12checkSensorsEv"></span><span id="Lucy::checkSensors"></span><span class="target" id="class_lucy_1ac85cf2b94328aab4634f5099c97baa92"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">checkSensors</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4Lucy12checkSensorsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>validate that all sensors provide correct information </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>false </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy13dPressureLeftE">
+<span id="_CPPv3N4Lucy13dPressureLeftE"></span><span id="_CPPv2N4Lucy13dPressureLeftE"></span><span id="Lucy::dPressureLeft__double"></span><span class="target" id="class_lucy_1a7b29dcf9cdc6908e16023fd46679a408"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dPressureLeft</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N4Lucy13dPressureLeftE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy14dPressureRightE">
+<span id="_CPPv3N4Lucy14dPressureRightE"></span><span id="_CPPv2N4Lucy14dPressureRightE"></span><span id="Lucy::dPressureRight__double"></span><span class="target" id="class_lucy_1ae1efc768cb1169e5e104ba2ff4feea69"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dPressureRight</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N4Lucy14dPressureRightE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy15dPressureSupplyE">
+<span id="_CPPv3N4Lucy15dPressureSupplyE"></span><span id="_CPPv2N4Lucy15dPressureSupplyE"></span><span id="Lucy::dPressureSupply__double"></span><span class="target" id="class_lucy_1a864e43d13d818b15ef46411a51d057de"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dPressureSupply</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N4Lucy15dPressureSupplyE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy9valveLeftE">
+<span id="_CPPv3N4Lucy9valveLeftE"></span><span id="_CPPv2N4Lucy9valveLeftE"></span><span id="Lucy::valveLeft__ValveDriver"></span><span class="target" id="class_lucy_1a22cd3c75cce25dc359106c51694b176e"></span><a class="reference internal" href="#_CPPv411ValveDriver" title="ValveDriver"><span class="n"><span class="pre">ValveDriver</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valveLeft</span></span></span><a class="headerlink" href="#_CPPv4N4Lucy9valveLeftE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy10valveRightE">
+<span id="_CPPv3N4Lucy10valveRightE"></span><span id="_CPPv2N4Lucy10valveRightE"></span><span id="Lucy::valveRight__ValveDriver"></span><span class="target" id="class_lucy_1a95c543493a5fc07822b3ce57dfeb7ad7"></span><a class="reference internal" href="#_CPPv411ValveDriver" title="ValveDriver"><span class="n"><span class="pre">ValveDriver</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valveRight</span></span></span><a class="headerlink" href="#_CPPv4N4Lucy10valveRightE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy18pressureSensorLeftE">
+<span id="_CPPv3N4Lucy18pressureSensorLeftE"></span><span id="_CPPv2N4Lucy18pressureSensorLeftE"></span><span id="Lucy::pressureSensorLeft__AI"></span><span class="target" id="class_lucy_1a16d364e93b16bb8198ea94b66a7441fb"></span><span class="n"><span class="pre">AI</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pressureSensorLeft</span></span></span><a class="headerlink" href="#_CPPv4N4Lucy18pressureSensorLeftE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy19pressureSensorRightE">
+<span id="_CPPv3N4Lucy19pressureSensorRightE"></span><span id="_CPPv2N4Lucy19pressureSensorRightE"></span><span id="Lucy::pressureSensorRight__AI"></span><span class="target" id="class_lucy_1a66fd492d6701558402cac9722d89033b"></span><span class="n"><span class="pre">AI</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pressureSensorRight</span></span></span><a class="headerlink" href="#_CPPv4N4Lucy19pressureSensorRightE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy20pressureSensorSupplyE">
+<span id="_CPPv3N4Lucy20pressureSensorSupplyE"></span><span id="_CPPv2N4Lucy20pressureSensorSupplyE"></span><span id="Lucy::pressureSensorSupply__AI"></span><span class="target" id="class_lucy_1aad40eb891024488dccd41c115402f707"></span><span class="n"><span class="pre">AI</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pressureSensorSupply</span></span></span><a class="headerlink" href="#_CPPv4N4Lucy20pressureSensorSupplyE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy18pressureSensorTankE">
+<span id="_CPPv3N4Lucy18pressureSensorTankE"></span><span id="_CPPv2N4Lucy18pressureSensorTankE"></span><span id="Lucy::pressureSensorTank__AI"></span><span class="target" id="class_lucy_1afd4750d124e8ceb87739226c8ac10192"></span><span class="n"><span class="pre">AI</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pressureSensorTank</span></span></span><a class="headerlink" href="#_CPPv4N4Lucy18pressureSensorTankE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy8potiLeftE">
+<span id="_CPPv3N4Lucy8potiLeftE"></span><span id="_CPPv2N4Lucy8potiLeftE"></span><span id="Lucy::potiLeft__AI"></span><span class="target" id="class_lucy_1a0e59c85870801a32c5229791b3e02368"></span><span class="n"><span class="pre">AI</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">potiLeft</span></span></span><a class="headerlink" href="#_CPPv4N4Lucy8potiLeftE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy9potiRightE">
+<span id="_CPPv3N4Lucy9potiRightE"></span><span id="_CPPv2N4Lucy9potiRightE"></span><span id="Lucy::potiRight__AI"></span><span class="target" id="class_lucy_1affd78172c0f2486c46bafd2f4ae97a65"></span><span class="n"><span class="pre">AI</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">potiRight</span></span></span><a class="headerlink" href="#_CPPv4N4Lucy9potiRightE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4Lucy3bUIE">
+<span id="_CPPv3N4Lucy3bUIE"></span><span id="_CPPv2N4Lucy3bUIE"></span><span id="Lucy::bUI__b"></span><span class="target" id="class_lucy_1a4ab65bc13c3bdcca1fdbecb62c8994c7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bUI</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N4Lucy3bUIE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="valvedriver">
+<h3>ValveDriver<a class="headerlink" href="#valvedriver" title="Permalink to this heading"></a></h3>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv410ValveState">
+<span id="_CPPv310ValveState"></span><span id="_CPPv210ValveState"></span><span class="target" id="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValveState</span></span></span><a class="headerlink" href="#_CPPv410ValveState" title="Permalink to this definition"></a><br /></dt>
+<dd><p>different states for valves clean up NONE and STOP </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N10ValveState6AIR_INE">
+<span id="_CPPv3N10ValveState6AIR_INE"></span><span id="_CPPv2N10ValveState6AIR_INE"></span><span class="target" id="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806ae7df84b17ab7a7855c48b9a5a8f95dda"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AIR_IN</span></span></span><a class="headerlink" href="#_CPPv4N10ValveState6AIR_INE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N10ValveState7AIR_OUTE">
+<span id="_CPPv3N10ValveState7AIR_OUTE"></span><span id="_CPPv2N10ValveState7AIR_OUTE"></span><span class="target" id="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806a993cc2a6f9931bbc36a60f91bc20f745"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AIR_OUT</span></span></span><a class="headerlink" href="#_CPPv4N10ValveState7AIR_OUTE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N10ValveState8AIR_STOPE">
+<span id="_CPPv3N10ValveState8AIR_STOPE"></span><span id="_CPPv2N10ValveState8AIR_STOPE"></span><span class="target" id="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806ad97d13e4820d9d952d671f28f4203156"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AIR_STOP</span></span></span><a class="headerlink" href="#_CPPv4N10ValveState8AIR_STOPE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv46Driver">
+<span id="_CPPv36Driver"></span><span id="_CPPv26Driver"></span><span id="Driver"></span><span class="target" id="class_driver"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Driver</span></span></span><a class="headerlink" href="#_CPPv46Driver" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;ValveDriver.h&gt;</em></div>
+<p>General description of a valve driver for press air. </p>
+<p>Subclassed by <a class="reference internal" href="#class_valve_driver"><span class="std std-ref">ValveDriver</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Driver6DriverEv">
+<span id="_CPPv3N6Driver6DriverEv"></span><span id="_CPPv2N6Driver6DriverEv"></span><span id="Driver::Driver"></span><span class="target" id="class_driver_1af0658d103e3e810a8e9ef0a53bb2e261"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Driver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Driver6DriverEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6DriverD0Ev">
+<span id="_CPPv3N6DriverD0Ev"></span><span id="_CPPv2N6DriverD0Ev"></span><span id="Driver::~Driver"></span><span class="target" id="class_driver_1a2864fd05273f30e23aa959c92ef8a5b9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Driver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6DriverD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Driver8getStateEv">
+<span id="_CPPv3N6Driver8getStateEv"></span><span id="_CPPv2N6Driver8getStateEv"></span><span id="Driver::getState"></span><span class="target" id="class_driver_1a81f2e7082d0b84ae421870a41611cfb4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410ValveState" title="ValveState"><span class="n"><span class="pre">ValveState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getState</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Driver8getStateEv" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>current ValveState </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6Driver6vStateE">
+<span id="_CPPv3N6Driver6vStateE"></span><span id="_CPPv2N6Driver6vStateE"></span><span id="Driver::vState__ValveState"></span><span class="target" id="class_driver_1a281515695ed747b81b373682b525022f"></span><a class="reference internal" href="#_CPPv410ValveState" title="ValveState"><span class="n"><span class="pre">ValveState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vState</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N10ValveState8AIR_STOPE" title="AIR_STOP"><span class="n"><span class="pre">AIR_STOP</span></span></a><a class="headerlink" href="#_CPPv4N6Driver6vStateE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>current state of the valve </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv411ValveDriver">
+<span id="_CPPv311ValveDriver"></span><span id="_CPPv211ValveDriver"></span><span id="ValveDriver"></span><span class="target" id="class_valve_driver"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValveDriver</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">private</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv46Driver" title="Driver"><span class="n"><span class="pre">Driver</span></span></a><a class="headerlink" href="#_CPPv411ValveDriver" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;ValveDriver.h&gt;</em></div>
+<p>General description of a valve driver for press air. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11ValveDriver11ValveDriverE7uint8_t7uint8_t">
+<span id="_CPPv3N11ValveDriver11ValveDriverE7uint8_t7uint8_t"></span><span id="_CPPv2N11ValveDriver11ValveDriverE7uint8_t7uint8_t"></span><span id="ValveDriver::ValveDriver__uint8_t.uint8_t"></span><span class="target" id="class_valve_driver_1a1204804f20be929a27847b29d9fea9e4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValveDriver</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iPinA</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iPinB</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ValveDriver11ValveDriverE7uint8_t7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11ValveDriver4stopEv">
+<span id="_CPPv3N11ValveDriver4stopEv"></span><span id="_CPPv2N11ValveDriver4stopEv"></span><span id="ValveDriver::stop"></span><span class="target" id="class_valve_driver_1a4b2b1528a7b9a2d2eddb9be708d7b2f1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ValveDriver4stopEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>basic function to disable all outputs </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11ValveDriver3setEd">
+<span id="_CPPv3N11ValveDriver3setEd"></span><span id="_CPPv2N11ValveDriver3setEd"></span><span id="ValveDriver::set__double"></span><span class="target" id="class_valve_driver_1a4fd9ab4133ec682ea81e3673ccd332bf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">targetPressure</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ValveDriver3setEd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>move into <a class="reference internal" href="#class_valve_controller"><span class="std std-ref">ValveController</span></a> update output of valve based on input pressure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>targetPressure</strong> – new setPoint </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11ValveDriver8setStateE10ValveState">
+<span id="_CPPv3N11ValveDriver8setStateE10ValveState"></span><span id="_CPPv2N11ValveDriver8setStateE10ValveState"></span><span id="ValveDriver::setState__ValveState"></span><span class="target" id="class_valve_driver_1af549e6a3e70480ed191b6f89ec18bb90"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setState</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410ValveState" title="ValveState"><span class="n"><span class="pre">ValveState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ValveDriver8setStateE10ValveState" title="Permalink to this definition"></a><br /></dt>
+<dd><p>set new state </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11ValveDriver4pinAE">
+<span id="_CPPv3N11ValveDriver4pinAE"></span><span id="_CPPv2N11ValveDriver4pinAE"></span><span id="ValveDriver::pinA__DIO"></span><span class="target" id="class_valve_driver_1ad4f20d0c8e15e3fdfcc0129304318089"></span><span class="n"><span class="pre">DIO</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pinA</span></span></span><a class="headerlink" href="#_CPPv4N11ValveDriver4pinAE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11ValveDriver4pinBE">
+<span id="_CPPv3N11ValveDriver4pinBE"></span><span id="_CPPv2N11ValveDriver4pinBE"></span><span id="ValveDriver::pinB__DIO"></span><span class="target" id="class_valve_driver_1a36567e64aeb7be95122965f505ae1fb8"></span><span class="n"><span class="pre">DIO</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pinB</span></span></span><a class="headerlink" href="#_CPPv4N11ValveDriver4pinBE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv414SMCValveDriver">
+<span id="_CPPv314SMCValveDriver"></span><span id="_CPPv214SMCValveDriver"></span><span id="SMCValveDriver"></span><span class="target" id="class_s_m_c_valve_driver"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SMCValveDriver</span></span></span><a class="headerlink" href="#_CPPv414SMCValveDriver" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;ValveDriver.h&gt;</em></div>
+<p>basic driver class to control SMC valves set current to limit flow conti. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14SMCValveDriver14SMCValveDriverEv">
+<span id="_CPPv3N14SMCValveDriver14SMCValveDriverEv"></span><span id="_CPPv2N14SMCValveDriver14SMCValveDriverEv"></span><span id="SMCValveDriver::SMCValveDriver"></span><span class="target" id="class_s_m_c_valve_driver_1a6c3a9ba842ebcab996c1355d407144ac"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SMCValveDriver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14SMCValveDriver14SMCValveDriverEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14SMCValveDriverD0Ev">
+<span id="_CPPv3N14SMCValveDriverD0Ev"></span><span id="_CPPv2N14SMCValveDriverD0Ev"></span><span id="SMCValveDriver::~SMCValveDriver"></span><span class="target" id="class_s_m_c_valve_driver_1aabe259a286cb08c57208164e9d909767"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~SMCValveDriver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14SMCValveDriverD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14SMCValveDriver7setFlowEKd">
+<span id="_CPPv3N14SMCValveDriver7setFlowEKd"></span><span id="_CPPv2N14SMCValveDriver7setFlowEKd"></span><span id="SMCValveDriver::setFlow__doubleC"></span><span class="target" id="class_s_m_c_valve_driver_1aa66ca196fa967ead4600712874e9e380"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFlow</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dFlow</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14SMCValveDriver7setFlowEKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set the current flow of the valve. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dFlow</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14SMCValveDriver3pwmE">
+<span id="_CPPv3N14SMCValveDriver3pwmE"></span><span id="_CPPv2N14SMCValveDriver3pwmE"></span><span id="SMCValveDriver::pwm__PWM"></span><span class="target" id="class_s_m_c_valve_driver_1a56afc8a9e0e1cbb932337e4b91920052"></span><span class="n"><span class="pre">PWM</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pwm</span></span></span><a class="headerlink" href="#_CPPv4N14SMCValveDriver3pwmE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14SMCValveDriver11calcCurrentEKd">
+<span id="_CPPv3N14SMCValveDriver11calcCurrentEKd"></span><span id="_CPPv2N14SMCValveDriver11calcCurrentEKd"></span><span id="SMCValveDriver::calcCurrent__doubleC"></span><span class="target" id="class_s_m_c_valve_driver_1a5b24da390ce5a274a785d8002030d62d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calcCurrent</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dFlow</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14SMCValveDriver11calcCurrentEKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>calc the required current in [A] to achieve the requested flow in [bar] </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dFlow</strong> – [-1,1] , which limits </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14SMCValveDriver5dFlowE">
+<span id="_CPPv3N14SMCValveDriver5dFlowE"></span><span id="_CPPv2N14SMCValveDriver5dFlowE"></span><span id="SMCValveDriver::dFlow__double"></span><span class="target" id="class_s_m_c_valve_driver_1a95a584b23bb0f7df04298da0aa58d331"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dFlow</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N14SMCValveDriver5dFlowE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14SMCValveDriver8dCurrentE">
+<span id="_CPPv3N14SMCValveDriver8dCurrentE"></span><span id="_CPPv2N14SMCValveDriver8dCurrentE"></span><span id="SMCValveDriver::dCurrent__double"></span><span class="target" id="class_s_m_c_valve_driver_1a872810ba0a5b22255a26e8ccc926fe5b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dCurrent</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N14SMCValveDriver8dCurrentE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="imu-bn0055">
+<h3>IMU - BN0055<a class="headerlink" href="#imu-bn0055" title="Permalink to this heading"></a></h3>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.BN0055_H">
+<span class="target" id="_b_n0055_8h_1a85e0be59f771eb694505b20c553e723d"></span><span class="sig-name descname"><span class="n"><span class="pre">BN0055_H</span></span></span><a class="headerlink" href="#c.BN0055_H" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.IMU_I2C_ADDR">
+<span class="target" id="_b_n0055_8h_1a09bd4f09dcff3bef9c86cdf829a527c0"></span><span class="sig-name descname"><span class="n"><span class="pre">IMU_I2C_ADDR</span></span></span><a class="headerlink" href="#c.IMU_I2C_ADDR" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.IMU_ADAFRUIT_ID">
+<span class="target" id="_b_n0055_8h_1a2de30e10c1bf3b4d05b81089a0181529"></span><span class="sig-name descname"><span class="n"><span class="pre">IMU_ADAFRUIT_ID</span></span></span><a class="headerlink" href="#c.IMU_ADAFRUIT_ID" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.IMU_RAD2DEG">
+<span class="target" id="_b_n0055_8h_1a47c0f63782f1693a8f412d23b6a02768"></span><span class="sig-name descname"><span class="n"><span class="pre">IMU_RAD2DEG</span></span></span><a class="headerlink" href="#c.IMU_RAD2DEG" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv46BN0055">
+<span id="_CPPv36BN0055"></span><span id="_CPPv26BN0055"></span><span id="BN0055"></span><span class="target" id="class_b_n0055"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BN0055</span></span></span><a class="headerlink" href="#_CPPv46BN0055" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00555ErrorE">
+<span id="_CPPv3N6BN00555ErrorE"></span><span id="_CPPv2N6BN00555ErrorE"></span><span class="target" id="class_b_n0055_1a9ef24a4396aaa11fe9c5bb00c1978374"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Error</span></span></span><a class="headerlink" href="#_CPPv4N6BN00555ErrorE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00555Error8NO_ERRORE">
+<span id="_CPPv3N6BN00555Error8NO_ERRORE"></span><span id="_CPPv2N6BN00555Error8NO_ERRORE"></span><span class="target" id="class_b_n0055_1a9ef24a4396aaa11fe9c5bb00c1978374ab824a84c0975d4e69778352d4085b968"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NO_ERROR</span></span></span><a class="headerlink" href="#_CPPv4N6BN00555Error8NO_ERRORE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>default state </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00555Error10LOW_SIGNALE">
+<span id="_CPPv3N6BN00555Error10LOW_SIGNALE"></span><span id="_CPPv2N6BN00555Error10LOW_SIGNALE"></span><span class="target" id="class_b_n0055_1a9ef24a4396aaa11fe9c5bb00c1978374abafcbe5c5535eab55401711297407de7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LOW_SIGNAL</span></span></span><a class="headerlink" href="#_CPPv4N6BN00555Error10LOW_SIGNALE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>SCL pin or SDA pin are low - if so, the line is faulty. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00555Error7NO_DATAE">
+<span id="_CPPv3N6BN00555Error7NO_DATAE"></span><span id="_CPPv2N6BN00555Error7NO_DATAE"></span><span class="target" id="class_b_n0055_1a9ef24a4396aaa11fe9c5bb00c1978374af12e9a2a2680f4f6d0620c8cb6398c5d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NO_DATA</span></span></span><a class="headerlink" href="#_CPPv4N6BN00555Error7NO_DATAE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>no real data is transmitted - if so, the line is faulty (most likely ground wire) </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00555Error11INIT_FAILEDE">
+<span id="_CPPv3N6BN00555Error11INIT_FAILEDE"></span><span id="_CPPv2N6BN00555Error11INIT_FAILEDE"></span><span class="target" id="class_b_n0055_1a9ef24a4396aaa11fe9c5bb00c1978374a56872dfaacb3017aa26c0c7e68cacc7b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INIT_FAILED</span></span></span><a class="headerlink" href="#_CPPv4N6BN00555Error11INIT_FAILEDE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>IMU setup failed. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00556BN0055Ev">
+<span id="_CPPv3N6BN00556BN0055Ev"></span><span id="_CPPv2N6BN00556BN0055Ev"></span><span id="BN0055::BN0055"></span><span class="target" id="class_b_n0055_1a95528ee0b1dc71edb4237fa354de09cb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BN0055</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6BN00556BN0055Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN0055D0Ev">
+<span id="_CPPv3N6BN0055D0Ev"></span><span id="_CPPv2N6BN0055D0Ev"></span><span id="BN0055::~BN0055"></span><span class="target" id="class_b_n0055_1abb19746800631dffed7adf3d8075ceba"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~BN0055</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6BN0055D0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00554initEv">
+<span id="_CPPv3N6BN00554initEv"></span><span id="_CPPv2N6BN00554initEv"></span><span id="BN0055::init"></span><span class="target" id="class_b_n0055_1a59e2e62e8e563d183d7294ba567ec91b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6BN00554initEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>initialize the Sensor and set bIMUState correctly </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00558validateEv">
+<span id="_CPPv3N6BN00558validateEv"></span><span id="_CPPv2N6BN00558validateEv"></span><span id="BN0055::validate"></span><span class="target" id="class_b_n0055_1a384b9de758f6eef7ad4b8746bba8c5c1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6BN00558validateEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>validate Connections of IMU TODO:: add ESP_LOG statements for error states </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN005526calcSupportReductionFactorE7uint8_tbd">
+<span id="_CPPv3N6BN005526calcSupportReductionFactorE7uint8_tbd"></span><span id="_CPPv2N6BN005526calcSupportReductionFactorE7uint8_tbd"></span><span id="BN0055::calcSupportReductionFactor__uint8_t.b.double"></span><span class="target" id="class_b_n0055_1aea8ff918d85163baf0910164c9b3d54d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calcSupportReductionFactor</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iAxis</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bInvert</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dOffset</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6BN005526calcSupportReductionFactorE7uint8_tbd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>calculate <strong>dReduction</strong> Paramter based on IMU Values and <a class="reference internal" href="#class_trajectory"><span class="std std-ref">Trajectory</span></a> Data TODO: this should be moved into the <a class="reference internal" href="#class_trajectory"><span class="std std-ref">Trajectory</span></a> maybe </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iAxis</strong> – </p></li>
+<li><p><strong>bInvert</strong> – </p></li>
+<li><p><strong>dOffset</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>double </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN005513getQuaternionEv">
+<span id="_CPPv3N6BN005513getQuaternionEv"></span><span id="_CPPv2N6BN005513getQuaternionEv"></span><span id="BN0055::getQuaternion"></span><span class="target" id="class_b_n0055_1a4a3179a6acf268c581c1e298b5df28f1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6BN00553imuE" title="BN0055::imu"><span class="n"><span class="pre">imu</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Quaternion</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getQuaternion</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6BN005513getQuaternionEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the Quaternion object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>imu::Quaternion </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00559getStatesEv">
+<span id="_CPPv3N6BN00559getStatesEv"></span><span id="_CPPv2N6BN00559getStatesEv"></span><span id="BN0055::getStates"></span><span class="target" id="class_b_n0055_1af46f348cf1a8d9616fd379b5dbbd10a6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getStates</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6BN00559getStatesEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the current states : [w,x,y,z] with units [rad,deg,deg,deg]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>double* </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN005513getErrorStateEv">
+<span id="_CPPv3N6BN005513getErrorStateEv"></span><span id="_CPPv2N6BN005513getErrorStateEv"></span><span id="BN0055::getErrorState"></span><span class="target" id="class_b_n0055_1ae25b6509e913fdf2481880bd78a6f1fc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6BN00555ErrorE" title="BN0055::Error"><span class="n"><span class="pre">Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getErrorState</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6BN005513getErrorStateEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the Error State object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#class_b_n0055_1a9ef24a4396aaa11fe9c5bb00c1978374"><span class="std std-ref">BN0055::Error</span></a> </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00553imuE">
+<span id="_CPPv3N6BN00553imuE"></span><span id="_CPPv2N6BN00553imuE"></span><span id="BN0055::imu__Adafruit_BNO055"></span><span class="target" id="class_b_n0055_1aa9b0270d9af61177dfa49a734ef8c235"></span><span class="n"><span class="pre">Adafruit_BNO055</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">imu</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">Adafruit_BNO055</span></span><span class="p"><span class="pre">(</span></span><span class="m"><span class="pre">55</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0x28</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N6BN00553imuE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN005515iRampAngleStartE">
+<span id="_CPPv3N6BN005515iRampAngleStartE"></span><span id="_CPPv2N6BN005515iRampAngleStartE"></span><span id="BN0055::iRampAngleStart__i"></span><span class="target" id="class_b_n0055_1a5ed70618ce32a88341bfcdc51ee76749"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">iRampAngleStart</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">20</span></span><a class="headerlink" href="#_CPPv4N6BN005515iRampAngleStartE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN005513iRampAngleEndE">
+<span id="_CPPv3N6BN005513iRampAngleEndE"></span><span id="_CPPv2N6BN005513iRampAngleEndE"></span><span id="BN0055::iRampAngleEnd__i"></span><span class="target" id="class_b_n0055_1ade363eaf4c6d1bda92e7b55bdc7c10a3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">iRampAngleEnd</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">50</span></span><a class="headerlink" href="#_CPPv4N6BN005513iRampAngleEndE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN005521iMaxVerticalDeviationE">
+<span id="_CPPv3N6BN005521iMaxVerticalDeviationE"></span><span id="_CPPv2N6BN005521iMaxVerticalDeviationE"></span><span id="BN0055::iMaxVerticalDeviation__i"></span><span class="target" id="class_b_n0055_1ae3da299d36523195e2f6f8fc38a07b83"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">iMaxVerticalDeviation</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">100</span></span><a class="headerlink" href="#_CPPv4N6BN005521iMaxVerticalDeviationE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00556eStateE">
+<span id="_CPPv3N6BN00556eStateE"></span><span id="_CPPv2N6BN00556eStateE"></span><span id="BN0055::eState__Error"></span><span class="target" id="class_b_n0055_1a4762838c3b5ed8ea9a10d08844341d08"></span><a class="reference internal" href="#_CPPv4N6BN00555ErrorE" title="BN0055::Error"><span class="n"><span class="pre">Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eState</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6BN00555Error11INIT_FAILEDE" title="BN0055::INIT_FAILED"><span class="n"><span class="pre">INIT_FAILED</span></span></a><a class="headerlink" href="#_CPPv4N6BN00556eStateE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>current error State </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6BN00556statesE">
+<span id="_CPPv3N6BN00556statesE"></span><span id="_CPPv2N6BN00556statesE"></span><span id="BN0055::states__doubleA"></span><span class="target" id="class_b_n0055_1a855e0cdd2aad5f0a0d7224fce0f815c2"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">states</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N6BN00556statesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>tmp variables | quat w [rad] - x,y,z in [deg] </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="trajectory">
+<h3>Trajectory<a class="headerlink" href="#trajectory" title="Permalink to this heading"></a></h3>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv410Trajectory">
+<span id="_CPPv310Trajectory"></span><span id="_CPPv210Trajectory"></span><span id="Trajectory"></span><span class="target" id="class_trajectory"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Trajectory</span></span></span><a class="headerlink" href="#_CPPv410Trajectory" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Trajectory.h&gt;</em></div>
+<p>Base class to represent a <a class="reference internal" href="#class_trajectory"><span class="std std-ref">Trajectory</span></a> dependent on a measurend angle. </p>
+<p>Subclassed by <a class="reference internal" href="#class_none_trajectory"><span class="std std-ref">NoneTrajectory</span></a>, <a class="reference internal" href="#class_ramp_trajectory"><span class="std std-ref">RampTrajectory</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10Trajectory7computeERKd">
+<span id="_CPPv3N10Trajectory7computeERKd"></span><span id="_CPPv2N10Trajectory7computeERKd"></span><span id="Trajectory::compute__doubleCR"></span><span class="target" id="class_trajectory_1ab56a8ae8ef699cdbe05a318cd1c37c7c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurInput</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N10Trajectory7computeERKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Method that </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dCurInput</strong> – current input value </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10Trajectory9getOutputEv">
+<span id="_CPPv3N10Trajectory9getOutputEv"></span><span id="_CPPv2N10Trajectory9getOutputEv"></span><span id="Trajectory::getOutput"></span><span class="target" id="class_trajectory_1a0b9f423b728e422c0da1af625b7e0be4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getOutput</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10Trajectory9getOutputEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Method that returns the last calculated output of the trajectory. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dOut calculated output value </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10Trajectory10TrajectoryEv">
+<span id="_CPPv3N10Trajectory10TrajectoryEv"></span><span id="_CPPv2N10Trajectory10TrajectoryEv"></span><span id="Trajectory::Trajectory"></span><span class="target" id="class_trajectory_1aa340ba80f1f4d1aa39f19f069d5d8089"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Trajectory</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10Trajectory10TrajectoryEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>default constructor </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10TrajectoryD0Ev">
+<span id="_CPPv3N10TrajectoryD0Ev"></span><span id="_CPPv2N10TrajectoryD0Ev"></span><span id="Trajectory::~Trajectory"></span><span class="target" id="class_trajectory_1a3244e64a4c0eaf7c86fb1d985223227c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Trajectory</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TrajectoryD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>virtual destructor to make deleting derived classes from a base class pointer work </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10Trajectory13setRampParamsEdddd">
+<span id="_CPPv3N10Trajectory13setRampParamsEdddd"></span><span id="_CPPv2N10Trajectory13setRampParamsEdddd"></span><span id="Trajectory::setRampParams__double.double.double.double"></span><span class="target" id="class_trajectory_1a82f0282097198990bb508d4c6cd1ef94"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRampParams</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dRampAngleStart1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dRampAngleEnd1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dRampAngleStart2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dRampAngleEnd2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10Trajectory13setRampParamsEdddd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>set new Params for the Ramp <a class="reference internal" href="#class_trajectory"><span class="std std-ref">Trajectory</span></a> </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dRampAngleStart1</strong> – </p></li>
+<li><p><strong>dRampAngleEnd1</strong> – </p></li>
+<li><p><strong>dRampAngleStart2</strong> – </p></li>
+<li><p><strong>dRampAngleEnd2</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10Trajectory4dOutE">
+<span id="_CPPv3N10Trajectory4dOutE"></span><span id="_CPPv2N10Trajectory4dOutE"></span><span id="Trajectory::dOut__double"></span><span class="target" id="class_trajectory_1a828f96b61ad907a03e0aa7d484c80747"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dOut</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N10Trajectory4dOutE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>last calculated output </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10Trajectory15dRampAngleStartE">
+<span id="_CPPv3N10Trajectory15dRampAngleStartE"></span><span id="_CPPv2N10Trajectory15dRampAngleStartE"></span><span id="Trajectory::dRampAngleStart__doubleA"></span><span class="target" id="class_trajectory_1ac9369873bb7ff479cba63e098050b657"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dRampAngleStart</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N10Trajectory15dRampAngleStartE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10Trajectory13dRampAngleEndE">
+<span id="_CPPv3N10Trajectory13dRampAngleEndE"></span><span id="_CPPv2N10Trajectory13dRampAngleEndE"></span><span id="Trajectory::dRampAngleEnd__doubleA"></span><span class="target" id="class_trajectory_1a38daac3e65bdd4a306670f83e43fd8b2"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dRampAngleEnd</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N10Trajectory13dRampAngleEndE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv414NoneTrajectory">
+<span id="_CPPv314NoneTrajectory"></span><span id="_CPPv214NoneTrajectory"></span><span id="NoneTrajectory"></span><span class="target" id="class_none_trajectory"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NoneTrajectory</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410Trajectory" title="Trajectory"><span class="n"><span class="pre">Trajectory</span></span></a><a class="headerlink" href="#_CPPv414NoneTrajectory" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14NoneTrajectory7computeERKd">
+<span id="_CPPv3N14NoneTrajectory7computeERKd"></span><span id="_CPPv2N14NoneTrajectory7computeERKd"></span><span id="NoneTrajectory::compute__doubleCR"></span><span class="target" id="class_none_trajectory_1a2a001251bba4b43a1c065b99d9f9cbb5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurInput</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14NoneTrajectory7computeERKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Method that </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dCurInput</strong> – current input value </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv414RampTrajectory">
+<span id="_CPPv314RampTrajectory"></span><span id="_CPPv214RampTrajectory"></span><span id="RampTrajectory"></span><span class="target" id="class_ramp_trajectory"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RampTrajectory</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410Trajectory" title="Trajectory"><span class="n"><span class="pre">Trajectory</span></span></a><a class="headerlink" href="#_CPPv414RampTrajectory" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Trajectory.h&gt;</em></div>
+<p>Base class to represent a <a class="reference internal" href="#class_trajectory"><span class="std std-ref">Trajectory</span></a> dependent on a measurend angle. </p>
+<p>Subclassed by <a class="reference internal" href="#class_force_reduction_trajectory"><span class="std std-ref">ForceReductionTrajectory</span></a>, <a class="reference internal" href="#class_original_lucy_trajectory"><span class="std std-ref">OriginalLucyTrajectory</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14RampTrajectory14RampTrajectoryEv">
+<span id="_CPPv3N14RampTrajectory14RampTrajectoryEv"></span><span id="_CPPv2N14RampTrajectory14RampTrajectoryEv"></span><span id="RampTrajectory::RampTrajectory"></span><span class="target" id="class_ramp_trajectory_1af55818e282d1a219356733715e7602e8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RampTrajectory</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14RampTrajectory14RampTrajectoryEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>default constructor </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14RampTrajectoryD0Ev">
+<span id="_CPPv3N14RampTrajectoryD0Ev"></span><span id="_CPPv2N14RampTrajectoryD0Ev"></span><span id="RampTrajectory::~RampTrajectory"></span><span class="target" id="class_ramp_trajectory_1a80b594da3bb33ff6b433c41958ed5a4b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~RampTrajectory</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14RampTrajectoryD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>virtual destructor to make deleting derived classes from a base class pointer work </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14RampTrajectory13setRampParamsEdd">
+<span id="_CPPv3N14RampTrajectory13setRampParamsEdd"></span><span id="_CPPv2N14RampTrajectory13setRampParamsEdd"></span><span id="RampTrajectory::setRampParams__double.double"></span><span class="target" id="class_ramp_trajectory_1af1e8baa7f49fed3a6ade1ed25d9d9070"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRampParams</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dRampAngleStart</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dRampAngleEnd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14RampTrajectory13setRampParamsEdd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>set new Params for the Ramp <a class="reference internal" href="#class_trajectory"><span class="std std-ref">Trajectory</span></a> </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dRampAngleStart</strong> – </p></li>
+<li><p><strong>dRampAngleEnd</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14RampTrajectory10dRampAngleE">
+<span id="_CPPv3N14RampTrajectory10dRampAngleE"></span><span id="_CPPv2N14RampTrajectory10dRampAngleE"></span><span id="RampTrajectory::dRampAngle__doubleA"></span><span class="target" id="class_ramp_trajectory_1ab1da1130dbe8dd901d975f9575cf734e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dRampAngle</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N14RampTrajectory10dRampAngleE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv422OriginalLucyTrajectory">
+<span id="_CPPv322OriginalLucyTrajectory"></span><span id="_CPPv222OriginalLucyTrajectory"></span><span id="OriginalLucyTrajectory"></span><span class="target" id="class_original_lucy_trajectory"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OriginalLucyTrajectory</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv414RampTrajectory" title="RampTrajectory"><span class="n"><span class="pre">RampTrajectory</span></span></a><a class="headerlink" href="#_CPPv422OriginalLucyTrajectory" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Trajectory.h&gt;</em></div>
+<p>Basic <a class="reference internal" href="#class_trajectory"><span class="std std-ref">Trajectory</span></a> Class replaces the Force_Curve Function which returns the TargetPoint </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N22OriginalLucyTrajectory7computeERKd">
+<span id="_CPPv3N22OriginalLucyTrajectory7computeERKd"></span><span id="_CPPv2N22OriginalLucyTrajectory7computeERKd"></span><span id="OriginalLucyTrajectory::compute__doubleCR"></span><span class="target" id="class_original_lucy_trajectory_1ae9462d349df217d917e708a16b60ea8b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurInput</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N22OriginalLucyTrajectory7computeERKd" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dCurInput</strong> – current Angle </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>dTargetPoint </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv424ForceReductionTrajectory">
+<span id="_CPPv324ForceReductionTrajectory"></span><span id="_CPPv224ForceReductionTrajectory"></span><span id="ForceReductionTrajectory"></span><span class="target" id="class_force_reduction_trajectory"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ForceReductionTrajectory</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv414RampTrajectory" title="RampTrajectory"><span class="n"><span class="pre">RampTrajectory</span></span></a><a class="headerlink" href="#_CPPv424ForceReductionTrajectory" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Trajectory.h&gt;</em></div>
+<p>FlattenTrajectory -&gt; is not a own <a class="reference internal" href="#class_trajectory"><span class="std std-ref">Trajectory</span></a> only other Params acutally no class needed replaces the Force_Curve Function which returns the TargetPoint Force Reduction <a class="reference internal" href="#class_trajectory"><span class="std std-ref">Trajectory</span></a> replaces the Force_Curve Function which returns the TargetPoint </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24ForceReductionTrajectory7computeERKd">
+<span id="_CPPv3N24ForceReductionTrajectory7computeERKd"></span><span id="_CPPv2N24ForceReductionTrajectory7computeERKd"></span><span id="ForceReductionTrajectory::compute__doubleCR"></span><span class="target" id="class_force_reduction_trajectory_1acb9ca93a2aac7d8036195e5092b54656"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurInput</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N24ForceReductionTrajectory7computeERKd" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dCurInput</strong> – current Angle </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>dTargetPoint </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24ForceReductionTrajectory21calcVelocityReductionERKd">
+<span id="_CPPv3N24ForceReductionTrajectory21calcVelocityReductionERKd"></span><span id="_CPPv2N24ForceReductionTrajectory21calcVelocityReductionERKd"></span><span id="ForceReductionTrajectory::calcVelocityReduction__doubleCR"></span><span class="target" id="class_force_reduction_trajectory_1aaf938ce816721e02ba26253c8a451d7e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calcVelocityReduction</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurInput</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N24ForceReductionTrajectory21calcVelocityReductionERKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>calculates current velocity </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dCurInput</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24ForceReductionTrajectory18dVelocityReductionE">
+<span id="_CPPv3N24ForceReductionTrajectory18dVelocityReductionE"></span><span id="_CPPv2N24ForceReductionTrajectory18dVelocityReductionE"></span><span id="ForceReductionTrajectory::dVelocityReduction__double"></span><span class="target" id="class_force_reduction_trajectory_1a919cb99af49a7fd37311081ec5cb5b32"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dVelocityReduction</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span><a class="headerlink" href="#_CPPv4N24ForceReductionTrajectory18dVelocityReductionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24ForceReductionTrajectory12dMaxVelocityE">
+<span id="_CPPv3N24ForceReductionTrajectory12dMaxVelocityE"></span><span id="_CPPv2N24ForceReductionTrajectory12dMaxVelocityE"></span><span id="ForceReductionTrajectory::dMaxVelocity__double"></span><span class="target" id="class_force_reduction_trajectory_1ae9399def2f52759fd443d38a111ec3ba"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dMaxVelocity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">100</span></span><a class="headerlink" href="#_CPPv4N24ForceReductionTrajectory12dMaxVelocityE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24ForceReductionTrajectory9dOldInputE">
+<span id="_CPPv3N24ForceReductionTrajectory9dOldInputE"></span><span id="_CPPv2N24ForceReductionTrajectory9dOldInputE"></span><span id="ForceReductionTrajectory::dOldInput__double"></span><span class="target" id="class_force_reduction_trajectory_1af508195a70fa3f5365183bdcc59ab2a2"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dOldInput</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N24ForceReductionTrajectory9dOldInputE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24ForceReductionTrajectory2dVE">
+<span id="_CPPv3N24ForceReductionTrajectory2dVE"></span><span id="_CPPv2N24ForceReductionTrajectory2dVE"></span><span id="ForceReductionTrajectory::dV__double"></span><span class="target" id="class_force_reduction_trajectory_1aae6f2396d0137a9cdb1ddf741288b739"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dV</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N24ForceReductionTrajectory2dVE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="controller">
+<h3>Controller<a class="headerlink" href="#controller" title="Permalink to this heading"></a></h3>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.VALVECONTROLLER_H">
+<span class="target" id="_controller_8h_1a08cbb13121161b35d8480e1a05b8efb2"></span><span class="sig-name descname"><span class="n"><span class="pre">VALVECONTROLLER_H</span></span></span><a class="headerlink" href="#c.VALVECONTROLLER_H" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv415ValveController">
+<span id="_CPPv315ValveController"></span><span id="_CPPv215ValveController"></span><span id="ValveController"></span><span class="target" id="class_valve_controller"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValveController</span></span></span><a class="headerlink" href="#_CPPv415ValveController" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Controller.h&gt;</em></div>
+<p>Base controller class that can used to derive a P, PI, PD or PID controller. </p>
+<p>Subclassed by <a class="reference internal" href="#class_cont_valve_controller"><span class="std std-ref">ContValveController</span></a>, <a class="reference internal" href="#class_discrete_valve_controller"><span class="std std-ref">DiscreteValveController</span></a>, <a class="reference internal" href="#class_none_valve_controller"><span class="std std-ref">NoneValveController</span></a>, <a class="reference internal" href="#class_p_i_d_controller"><span class="std std-ref">PIDController</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15ValveController7computeERKdRKd">
+<span id="_CPPv3N15ValveController7computeERKdRKd"></span><span id="_CPPv2N15ValveController7computeERKdRKd"></span><span id="ValveController::compute__doubleCR.doubleCR"></span><span class="target" id="class_valve_controller_1aed45a8df64216ef44bbeedb4a453ac6d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurInput</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurSetpoint</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N15ValveController7computeERKdRKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Method, that computes the controller output of the current time step for the given input value and set-point </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dCurInput</strong> – current input value </p></li>
+<li><p><strong>dCurSetpoint</strong> – current setpoint </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>controller output in the range of min and max output </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15ValveController9getOutputEv">
+<span id="_CPPv3N15ValveController9getOutputEv"></span><span id="_CPPv2N15ValveController9getOutputEv"></span><span id="ValveController::getOutput"></span><span class="target" id="class_valve_controller_1a1ec02658c934ea8d80d3dd090c1a5344"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getOutput</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15ValveController9getOutputEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Method that returns the last calculated output of the controller. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dOut calculated output value </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15ValveController15ValveControllerEv">
+<span id="_CPPv3N15ValveController15ValveControllerEv"></span><span id="_CPPv2N15ValveController15ValveControllerEv"></span><span id="ValveController::ValveController"></span><span class="target" id="class_valve_controller_1a02177382e16681476d4b792367af4f30"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValveController</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15ValveController15ValveControllerEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>default constructor to set dSampleTime from define.h </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15ValveControllerD0Ev">
+<span id="_CPPv3N15ValveControllerD0Ev"></span><span id="_CPPv2N15ValveControllerD0Ev"></span><span id="ValveController::~ValveController"></span><span class="target" id="class_valve_controller_1ab36f41bebdb7816915ca0c446fb87f67"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ValveController</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15ValveControllerD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>virtual destructor to make deleting derived classes from a base class pointer work </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15ValveController5clampEv">
+<span id="_CPPv3N15ValveController5clampEv"></span><span id="_CPPv2N15ValveController5clampEv"></span><span id="ValveController::clamp"></span><span class="target" id="class_valve_controller_1ac6dfdae7c7a3d138b0fc5590ae6640c0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clamp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15ValveController5clampEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>clamp the output signal to specified bounds </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15ValveController10dOutputMinE">
+<span id="_CPPv3N15ValveController10dOutputMinE"></span><span id="_CPPv2N15ValveController10dOutputMinE"></span><span id="ValveController::dOutputMin__double"></span><span class="target" id="class_valve_controller_1a3cb0e85d6f24d2b3f68ca53b1c7e0732"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dOutputMin</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N15ValveController10dOutputMinE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Minimal value for the calculated output. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15ValveController10dOutputMaxE">
+<span id="_CPPv3N15ValveController10dOutputMaxE"></span><span id="_CPPv2N15ValveController10dOutputMaxE"></span><span id="ValveController::dOutputMax__double"></span><span class="target" id="class_valve_controller_1aaaa9cb35072c7f2c4f2d4805c435b4d8"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dOutputMax</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">255.0</span></span><a class="headerlink" href="#_CPPv4N15ValveController10dOutputMaxE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Maximal value for the calculated output. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15ValveController11dSampleTimeE">
+<span id="_CPPv3N15ValveController11dSampleTimeE"></span><span id="_CPPv2N15ValveController11dSampleTimeE"></span><span id="ValveController::dSampleTime__double"></span><span class="target" id="class_valve_controller_1a8fd9342fc9ed545b0dd991cc7f7de786"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dSampleTime</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N15ValveController11dSampleTimeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sample time of the controller in s. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15ValveController9dLinInputE">
+<span id="_CPPv3N15ValveController9dLinInputE"></span><span id="_CPPv2N15ValveController9dLinInputE"></span><span id="ValveController::dLinInput__double"></span><span class="target" id="class_valve_controller_1adfa0b07df3cd2a5292a919d546481ed3"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dLinInput</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N15ValveController9dLinInputE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Linearization part of input. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15ValveController4dOutE">
+<span id="_CPPv3N15ValveController4dOutE"></span><span id="_CPPv2N15ValveController4dOutE"></span><span id="ValveController::dOut__double"></span><span class="target" id="class_valve_controller_1af707465bdb18b66f0d60c66c862265e5"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dOut</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N15ValveController4dOutE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>last calculated output of controller </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv419NoneValveController">
+<span id="_CPPv319NoneValveController"></span><span id="_CPPv219NoneValveController"></span><span id="NoneValveController"></span><span class="target" id="class_none_valve_controller"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NoneValveController</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv415ValveController" title="ValveController"><span class="n"><span class="pre">ValveController</span></span></a><a class="headerlink" href="#_CPPv419NoneValveController" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19NoneValveController7computeERKdRKd">
+<span id="_CPPv3N19NoneValveController7computeERKdRKd"></span><span id="_CPPv2N19NoneValveController7computeERKdRKd"></span><span id="NoneValveController::compute__doubleCR.doubleCR"></span><span class="target" id="class_none_valve_controller_1aeb795ddea329897fb612d0c4564af5f9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurInput</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurSetpoint</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19NoneValveController7computeERKdRKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Method, that computes the controller output of the current time step for the given input value and set-point </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dCurInput</strong> – current input value </p></li>
+<li><p><strong>dCurSetpoint</strong> – current setpoint </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>controller output in the range of min and max output </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv423DiscreteValveController">
+<span id="_CPPv323DiscreteValveController"></span><span id="_CPPv223DiscreteValveController"></span><span id="DiscreteValveController"></span><span class="target" id="class_discrete_valve_controller"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DiscreteValveController</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv415ValveController" title="ValveController"><span class="n"><span class="pre">ValveController</span></span></a><a class="headerlink" href="#_CPPv423DiscreteValveController" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Controller.h&gt;</em></div>
+<p>valve Controller for discrete valves with 2 Digital Pins </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23DiscreteValveController23DiscreteValveControllerEv">
+<span id="_CPPv3N23DiscreteValveController23DiscreteValveControllerEv"></span><span id="_CPPv2N23DiscreteValveController23DiscreteValveControllerEv"></span><span id="DiscreteValveController::DiscreteValveController"></span><span class="target" id="class_discrete_valve_controller_1ac2b7e4264734714919faa05dca2323b6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DiscreteValveController</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23DiscreteValveController23DiscreteValveControllerEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23DiscreteValveControllerD0Ev">
+<span id="_CPPv3N23DiscreteValveControllerD0Ev"></span><span id="_CPPv2N23DiscreteValveControllerD0Ev"></span><span id="DiscreteValveController::~DiscreteValveController"></span><span class="target" id="class_discrete_valve_controller_1af7444f2be5e8567968e71b69b2413e2f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~DiscreteValveController</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23DiscreteValveControllerD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23DiscreteValveController7computeERKdRKdRKd">
+<span id="_CPPv3N23DiscreteValveController7computeERKdRKdRKd"></span><span id="_CPPv2N23DiscreteValveController7computeERKdRKdRKd"></span><span id="DiscreteValveController::compute__doubleCR.doubleCR.doubleCR"></span><span class="target" id="class_discrete_valve_controller_1ac45a54f941c3d913b31c5f704bf5c37c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurInput</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurPressureUI</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurSetpoint</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23DiscreteValveController7computeERKdRKdRKd" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dCurInput</strong> – current Pressure </p></li>
+<li><p><strong>dCurPressureUI</strong> – current potentiometer value from UI Remote converted into Pressure UI.get()*PRESSURE_MAX </p></li>
+<li><p><strong>dCurSetpoint</strong> – current TargetPressure </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23DiscreteValveController19calcActiveValveTimeEv">
+<span id="_CPPv3N23DiscreteValveController19calcActiveValveTimeEv"></span><span id="_CPPv2N23DiscreteValveController19calcActiveValveTimeEv"></span><span id="DiscreteValveController::calcActiveValveTime"></span><span class="target" id="class_discrete_valve_controller_1a47adcf5dae7586fbacd9f28ae39d80c3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calcActiveValveTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23DiscreteValveController19calcActiveValveTimeEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23DiscreteValveController16dActiveCycleTimeE">
+<span id="_CPPv3N23DiscreteValveController16dActiveCycleTimeE"></span><span id="_CPPv2N23DiscreteValveController16dActiveCycleTimeE"></span><span id="DiscreteValveController::dActiveCycleTime__double"></span><span class="target" id="class_discrete_valve_controller_1a62e4885aee8dc75df5c004fbb753b539"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dActiveCycleTime</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N23DiscreteValveController16dActiveCycleTimeE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23DiscreteValveController13dPressureDiffE">
+<span id="_CPPv3N23DiscreteValveController13dPressureDiffE"></span><span id="_CPPv2N23DiscreteValveController13dPressureDiffE"></span><span id="DiscreteValveController::dPressureDiff__double"></span><span class="target" id="class_discrete_valve_controller_1a4a7183b8855876dea3d66059743bbbbd"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dPressureDiff</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N23DiscreteValveController13dPressureDiffE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23DiscreteValveController14dPressurePerMsE">
+<span id="_CPPv3N23DiscreteValveController14dPressurePerMsE"></span><span id="_CPPv2N23DiscreteValveController14dPressurePerMsE"></span><span id="DiscreteValveController::dPressurePerMs__double"></span><span class="target" id="class_discrete_valve_controller_1a7af5d1b597f6bc11428b46bb208ba6de"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dPressurePerMs</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N23DiscreteValveController14dPressurePerMsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23DiscreteValveController10valveStateE">
+<span id="_CPPv3N23DiscreteValveController10valveStateE"></span><span id="_CPPv2N23DiscreteValveController10valveStateE"></span><span id="DiscreteValveController::valveState__ValveState"></span><span class="target" id="class_discrete_valve_controller_1a1bd9ddf0b18621d153653c9bb6bd5211"></span><a class="reference internal" href="#_CPPv410ValveState" title="ValveState"><span class="n"><span class="pre">ValveState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valveState</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410ValveState" title="ValveState"><span class="n"><span class="pre">ValveState</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N10ValveState8AIR_STOPE" title="ValveState::AIR_STOP"><span class="n"><span class="pre">AIR_STOP</span></span></a><a class="headerlink" href="#_CPPv4N23DiscreteValveController10valveStateE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv419ContValveController">
+<span id="_CPPv319ContValveController"></span><span id="_CPPv219ContValveController"></span><span id="ContValveController"></span><span class="target" id="class_cont_valve_controller"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ContValveController</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv415ValveController" title="ValveController"><span class="n"><span class="pre">ValveController</span></span></a><a class="headerlink" href="#_CPPv419ContValveController" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Controller.h&gt;</em></div>
+<p><a class="reference internal" href="#class_valve_controller"><span class="std std-ref">ValveController</span></a> to set a target Pressure based on the Continuos SMC Valves with one pwm pin. </p>
+<p>PI Controller with Histeresis </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19ContValveController19ContValveControllerEv">
+<span id="_CPPv3N19ContValveController19ContValveControllerEv"></span><span id="_CPPv2N19ContValveController19ContValveControllerEv"></span><span id="ContValveController::ContValveController"></span><span class="target" id="class_cont_valve_controller_1a81dcbbdf50261cf8543460cea6d175f7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ContValveController</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19ContValveController19ContValveControllerEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19ContValveControllerD0Ev">
+<span id="_CPPv3N19ContValveControllerD0Ev"></span><span id="_CPPv2N19ContValveControllerD0Ev"></span><span id="ContValveController::~ContValveController"></span><span class="target" id="class_cont_valve_controller_1a5eddd074037e24a6cc151643d76db755"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ContValveController</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19ContValveControllerD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N19ContValveController7computeERKdRKdRKd">
+<span id="_CPPv3N19ContValveController7computeERKdRKdRKd"></span><span id="_CPPv2N19ContValveController7computeERKdRKdRKd"></span><span id="ContValveController::compute__doubleCR.doubleCR.doubleCR"></span><span class="target" id="class_cont_valve_controller_1ad6152074978080229b6748dc6ba6ed3d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurInput</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurPressureUI</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurSetpoint</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19ContValveController7computeERKdRKdRKd" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dCurInput</strong> – current Pressure </p></li>
+<li><p><strong>dCurPressureUI</strong> – current potentiometer value from UI Remote converted into Pressure UI.get()*PRESSURE_MAX </p></li>
+<li><p><strong>dCurSetpoint</strong> – current TargetPressure </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv413PIDController">
+<span id="_CPPv313PIDController"></span><span id="_CPPv213PIDController"></span><span id="PIDController"></span><span class="target" id="class_p_i_d_controller"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PIDController</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv415ValveController" title="ValveController"><span class="n"><span class="pre">ValveController</span></span></a><a class="headerlink" href="#_CPPv413PIDController" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Controller.h&gt;</em></div>
+<p>PID Controller. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController13PIDControllerEv">
+<span id="_CPPv3N13PIDController13PIDControllerEv"></span><span id="_CPPv2N13PIDController13PIDControllerEv"></span><span id="PIDController::PIDController"></span><span class="target" id="class_p_i_d_controller_1a67cc314aa5b3b4e9c47ac414b3a4c008"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PIDController</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PIDController13PIDControllerEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDControllerD0Ev">
+<span id="_CPPv3N13PIDControllerD0Ev"></span><span id="_CPPv2N13PIDControllerD0Ev"></span><span id="PIDController::~PIDController"></span><span class="target" id="class_p_i_d_controller_1a690e7ad4796e5c5143aa4b90f2f6677b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~PIDController</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PIDControllerD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController7computeERKdRKdRKd">
+<span id="_CPPv3N13PIDController7computeERKdRKdRKd"></span><span id="_CPPv2N13PIDController7computeERKdRKdRKd"></span><span id="PIDController::compute__doubleCR.doubleCR.doubleCR"></span><span class="target" id="class_p_i_d_controller_1afb715e551d455bdd3740867911dd51aa"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurInput</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurPressureUI</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dCurSetpoint</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PIDController7computeERKdRKdRKd" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dCurInput</strong> – current Pressure </p></li>
+<li><p><strong>dCurPressureUI</strong> – current potentiometer value from UI Remote converted into Pressure UI.get()*PRESSURE_MAX </p></li>
+<li><p><strong>dCurSetpoint</strong> – current TargetPressure </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController5resetEv">
+<span id="_CPPv3N13PIDController5resetEv"></span><span id="_CPPv2N13PIDController5resetEv"></span><span id="PIDController::reset"></span><span class="target" id="class_p_i_d_controller_1ab6adfbffa30414f0a83b95ba999a2fea"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PIDController5resetEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController3dKpE">
+<span id="_CPPv3N13PIDController3dKpE"></span><span id="_CPPv2N13PIDController3dKpE"></span><span id="PIDController::dKp__double"></span><span class="target" id="class_p_i_d_controller_1a95a7c6d8a70d4e864a61ffd4a34eca88"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dKp</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N13PIDController3dKpE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController3dKiE">
+<span id="_CPPv3N13PIDController3dKiE"></span><span id="_CPPv2N13PIDController3dKiE"></span><span id="PIDController::dKi__double"></span><span class="target" id="class_p_i_d_controller_1a1bf1603579274da8fce141a05a243e42"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dKi</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N13PIDController3dKiE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController3dKdE">
+<span id="_CPPv3N13PIDController3dKdE"></span><span id="_CPPv2N13PIDController3dKdE"></span><span id="PIDController::dKd__double"></span><span class="target" id="class_p_i_d_controller_1a612520cdeecb1d8d347e7e909f78db2a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dKd</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N13PIDController3dKdE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController9dIntegralE">
+<span id="_CPPv3N13PIDController9dIntegralE"></span><span id="_CPPv2N13PIDController9dIntegralE"></span><span id="PIDController::dIntegral__double"></span><span class="target" id="class_p_i_d_controller_1a833c6a47dca71cbf8713dcd6424e8e96"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dIntegral</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N13PIDController9dIntegralE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController10dLastInputE">
+<span id="_CPPv3N13PIDController10dLastInputE"></span><span id="_CPPv2N13PIDController10dLastInputE"></span><span id="PIDController::dLastInput__double"></span><span class="target" id="class_p_i_d_controller_1add6b2f6f9ac64879d5b2c90fd7063ca1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dLastInput</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N13PIDController10dLastInputE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="parameters-groups-in-define-h">
+<h2>Parameters Groups in <strong>define.h</strong><a class="headerlink" href="#parameters-groups-in-define-h" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3>Lucy<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___l_u_c_y"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">LUCY</span></span></dt>
+<dd><p>various defines regarding lucy </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.EXP_TIMER_ID">
+<span class="target" id="group___l_u_c_y_1ga688c8c4f93073bb1608cf95f229609e0"></span><span class="sig-name descname"><span class="n"><span class="pre">EXP_TIMER_ID</span></span></span><a class="headerlink" href="#c.EXP_TIMER_ID" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Timer0. </p>
+<p>sampling time of controller in ms </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.EXP_TIMER_PRESCALAR">
+<span class="target" id="group___l_u_c_y_1ga749f29a88b9f1efe5994648a598bd2a4"></span><span class="sig-name descname"><span class="n"><span class="pre">EXP_TIMER_PRESCALAR</span></span></span><a class="headerlink" href="#c.EXP_TIMER_PRESCALAR" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.EXP_TIMER_PERIOD">
+<span class="target" id="group___l_u_c_y_1ga1e19c35dc2be7361bb38fe95c9162442"></span><span class="sig-name descname"><span class="n"><span class="pre">EXP_TIMER_PERIOD</span></span></span><a class="headerlink" href="#c.EXP_TIMER_PERIOD" title="Permalink to this definition"></a><br /></dt>
+<dd><p>with a prescalar of 80 the period is in µs so 50000µs = 50ms </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.EXP_DT">
+<span class="target" id="group___l_u_c_y_1ga8c676c6fc3dab66c542a0ccb008a0912"></span><span class="sig-name descname"><span class="n"><span class="pre">EXP_DT</span></span></span><a class="headerlink" href="#c.EXP_DT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.EXP_DT_S">
+<span class="target" id="group___l_u_c_y_1gade206713ffeebe2847de33a1c51f3ba3"></span><span class="sig-name descname"><span class="n"><span class="pre">EXP_DT_S</span></span></span><a class="headerlink" href="#c.EXP_DT_S" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.M_PI">
+<span class="target" id="group___l_u_c_y_1gae71449b1cc6e6250b91f539153a7a0d3"></span><span class="sig-name descname"><span class="n"><span class="pre">M_PI</span></span></span><a class="headerlink" href="#c.M_PI" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ADC_RESOLUTION">
+<span class="target" id="group___l_u_c_y_1ga00978ca9e8220475258dcbbbb7d29129"></span><span class="sig-name descname"><span class="n"><span class="pre">ADC_RESOLUTION</span></span></span><a class="headerlink" href="#c.ADC_RESOLUTION" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="ui">
+<h3>UI<a class="headerlink" href="#ui" title="Permalink to this heading"></a></h3>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___u_i"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">UI</span></span></dt>
+<dd><p>various defines regarding the manual remote with integrated leds and potentiometer</p>
+<p>PORTS are curently not used </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UI_LED_YELLOW_PIN">
+<span class="target" id="group___u_i_1ga8e94c3dd127b0b902445db6ed7058ade"></span><span class="sig-name descname"><span class="n"><span class="pre">UI_LED_YELLOW_PIN</span></span></span><a class="headerlink" href="#c.UI_LED_YELLOW_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd><p>pin of blue led </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UI_POTI_PIN">
+<span class="target" id="group___u_i_1ga22e9df0267287ddccae7d5edfb12b879"></span><span class="sig-name descname"><span class="n"><span class="pre">UI_POTI_PIN</span></span></span><a class="headerlink" href="#c.UI_POTI_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd><p>pin of poti </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UI_POTI_DIR">
+<span class="target" id="group___u_i_1ga4790a817bd3a8df8ac851249345036ba"></span><span class="sig-name descname"><span class="n"><span class="pre">UI_POTI_DIR</span></span></span><a class="headerlink" href="#c.UI_POTI_DIR" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="i2c">
+<h3>I2C<a class="headerlink" href="#i2c" title="Permalink to this heading"></a></h3>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___i2_c"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">I2C</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.I2C_SDA_PIN">
+<span class="target" id="group___i2_c_1ga2cade698267beb86ccaa38c14d35ab0f"></span><span class="sig-name descname"><span class="n"><span class="pre">I2C_SDA_PIN</span></span></span><a class="headerlink" href="#c.I2C_SDA_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.I2C_SCL_PIN">
+<span class="target" id="group___i2_c_1ga0e4e08bab2fb484136d18b067bef372c"></span><span class="sig-name descname"><span class="n"><span class="pre">I2C_SCL_PIN</span></span></span><a class="headerlink" href="#c.I2C_SCL_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="valve">
+<h3>Valve<a class="headerlink" href="#valve" title="Permalink to this heading"></a></h3>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___v_a_l_v_e"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">VALVE</span></span></dt>
+<dd><p>Valve wiring defines </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.VALVE_LEFT_PIN_A">
+<span class="target" id="group___v_a_l_v_e_1ga5c052546a8e44b87f132c57e4adc5218"></span><span class="sig-name descname"><span class="n"><span class="pre">VALVE_LEFT_PIN_A</span></span></span><a class="headerlink" href="#c.VALVE_LEFT_PIN_A" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.VALVE_LEFT_PIN_B">
+<span class="target" id="group___v_a_l_v_e_1ga3d3cf10f2cb4004cd08abda2d24bb08b"></span><span class="sig-name descname"><span class="n"><span class="pre">VALVE_LEFT_PIN_B</span></span></span><a class="headerlink" href="#c.VALVE_LEFT_PIN_B" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.VALVE_RIGHT_PIN_A">
+<span class="target" id="group___v_a_l_v_e_1ga06e5a6eb15380dab29031c92a9205017"></span><span class="sig-name descname"><span class="n"><span class="pre">VALVE_RIGHT_PIN_A</span></span></span><a class="headerlink" href="#c.VALVE_RIGHT_PIN_A" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.VALVE_RIGHT_PIN_B">
+<span class="target" id="group___v_a_l_v_e_1ga9a560424f3ee7359c9f60a547019a913"></span><span class="sig-name descname"><span class="n"><span class="pre">VALVE_RIGHT_PIN_B</span></span></span><a class="headerlink" href="#c.VALVE_RIGHT_PIN_B" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="pressure">
+<h3>Pressure<a class="headerlink" href="#pressure" title="Permalink to this heading"></a></h3>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___p_r_e_s_s_u_r_e"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">PRESSURE</span></span></dt>
+<dd><p>various defines for pressure related stuff </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_SENSOR_PIN_LEFT">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1gaa81f5570bd48914884577d7e8af066cd"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_SENSOR_PIN_LEFT</span></span></span><a class="headerlink" href="#c.PRESSURE_SENSOR_PIN_LEFT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_SENSOR_PIN_RIGHT">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga5537d94182e1832bf857649885407039"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_SENSOR_PIN_RIGHT</span></span></span><a class="headerlink" href="#c.PRESSURE_SENSOR_PIN_RIGHT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_SENSOR_PIN_SUPPLY">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga214df8a3e912c4b6e7249b41a87c2d83"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_SENSOR_PIN_SUPPLY</span></span></span><a class="headerlink" href="#c.PRESSURE_SENSOR_PIN_SUPPLY" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_SENSOR_PIN_TANK">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga72356426b7c13201bd8cd8df056f1dc6"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_SENSOR_PIN_TANK</span></span></span><a class="headerlink" href="#c.PRESSURE_SENSOR_PIN_TANK" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_SENSOR_SLOPE">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga18582ec8c41f2d28eeb0c74896bbc6ad"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_SENSOR_SLOPE</span></span></span><a class="headerlink" href="#c.PRESSURE_SENSOR_SLOPE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_SENSOR_OFFSET">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga414a43e4a1794574a1e628625b1ffd87"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_SENSOR_OFFSET</span></span></span><a class="headerlink" href="#c.PRESSURE_SENSOR_OFFSET" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_MAX_HARDWARE">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1gaad62efebb7002ebba5980acffc3239be"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_MAX_HARDWARE</span></span></span><a class="headerlink" href="#c.PRESSURE_MAX_HARDWARE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>maximum pressure before hardware breaks </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_MAX_UI">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1gac227a36330af30773686946ac2c087fe"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_MAX_UI</span></span></span><a class="headerlink" href="#c.PRESSURE_MAX_UI" title="Permalink to this definition"></a><br /></dt>
+<dd><p>max. target pressure for UI input at 100% </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_MIN_UI">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga8819fd42232ef601b6ee560028782a8c"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_MIN_UI</span></span></span><a class="headerlink" href="#c.PRESSURE_MIN_UI" title="Permalink to this definition"></a><br /></dt>
+<dd><p>min. target pressure for UI input at 0% </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_DEADZONE">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga0aa3fc0afc12a4a54b3e52af1a6c0444"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_DEADZONE</span></span></span><a class="headerlink" href="#c.PRESSURE_DEADZONE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>minimum pressure difference between traget pressure and actual pressure to activate; not essential </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_MIN_NICE">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1gabeb3061d608c36ec8f1c41be1d1d8e78"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_MIN_NICE</span></span></span><a class="headerlink" href="#c.PRESSURE_MIN_NICE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>minimum supply pressure for system to work as expected; essential </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_MIN_SUPPY">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga57fec8c4dc337bf505cf2bde9fc6f39d"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_MIN_SUPPY</span></span></span><a class="headerlink" href="#c.PRESSURE_MIN_SUPPY" title="Permalink to this definition"></a><br /></dt>
+<dd><p>minimum supply pressure for system to work as expected; essential </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_NEGLECTABLE">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga14ba699806218d25c321556290a7ab50"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_NEGLECTABLE</span></span></span><a class="headerlink" href="#c.PRESSURE_NEGLECTABLE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>in case of insuficient supply pressure, the pressure in the cylinders will be reduced to less than neglectable pressure </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_TARGET_REDUCTION">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga455802e0dd8dd60b7b148047240278ff"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_TARGET_REDUCTION</span></span></span><a class="headerlink" href="#c.PRESSURE_TARGET_REDUCTION" title="Permalink to this definition"></a><br /></dt>
+<dd><p>to avoid target pressure being higher than supply pressure due to small short term pressure drops; not essential </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_ADJUST_MODE">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga033b33df92554d5bd4135c3566ea9870"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_ADJUST_MODE</span></span></span><a class="headerlink" href="#c.PRESSURE_ADJUST_MODE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>prolongs open valve times in low supply pressure scenarios; not recommendet with regular 8bar supply </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_MAX_CYCLE_TIME">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga759cd32eaca0f1511cc6a50804c9da80"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_MAX_CYCLE_TIME</span></span></span><a class="headerlink" href="#c.PRESSURE_MAX_CYCLE_TIME" title="Permalink to this definition"></a><br /></dt>
+<dd><p>avoiding long unresponsive system periods in [ms] </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_MIN_CYCLE_TIME">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga86785264843a2025c45cf4c9057f26f4"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_MIN_CYCLE_TIME</span></span></span><a class="headerlink" href="#c.PRESSURE_MIN_CYCLE_TIME" title="Permalink to this definition"></a><br /></dt>
+<dd><p>too fast for valves to make a real change [ms] </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_BETA_IN_1">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga2d6da9d902837a0237d0f97e4bd5ef41"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_BETA_IN_1</span></span></span><a class="headerlink" href="#c.PRESSURE_BETA_IN_1" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_BETA_IN_2">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga767862f9e824eccba209821272506830"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_BETA_IN_2</span></span></span><a class="headerlink" href="#c.PRESSURE_BETA_IN_2" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_BETA_IN_3">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga508cb4a9a3fbcd17f719169c01c82192"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_BETA_IN_3</span></span></span><a class="headerlink" href="#c.PRESSURE_BETA_IN_3" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_BETA_IN_4">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1gafa738b6910b9d9dc99b03d097ff0fee6"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_BETA_IN_4</span></span></span><a class="headerlink" href="#c.PRESSURE_BETA_IN_4" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_BETA_OUT_1">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga51da635df42703f5eb2fbcb45ac4f19e"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_BETA_OUT_1</span></span></span><a class="headerlink" href="#c.PRESSURE_BETA_OUT_1" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_BETA_OUT_2">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1ga7f0b5df2982a50b3ec16d7b3c57c4df3"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_BETA_OUT_2</span></span></span><a class="headerlink" href="#c.PRESSURE_BETA_OUT_2" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRESSURE_BETA_OUT_3">
+<span class="target" id="group___p_r_e_s_s_u_r_e_1gaf270f48994cb12e75c65ed6797727541"></span><span class="sig-name descname"><span class="n"><span class="pre">PRESSURE_BETA_OUT_3</span></span></span><a class="headerlink" href="#c.PRESSURE_BETA_OUT_3" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id3">
+<h3>Trajectory<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___t_r_a_j_e_c_t_o_r_y"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">TRAJECTORY</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TRAJECTORY_RAMP_ANGLE_START_1">
+<span class="target" id="group___t_r_a_j_e_c_t_o_r_y_1ga3af3a45598a5c08e102fce262068a854"></span><span class="sig-name descname"><span class="n"><span class="pre">TRAJECTORY_RAMP_ANGLE_START_1</span></span></span><a class="headerlink" href="#c.TRAJECTORY_RAMP_ANGLE_START_1" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TRAJECTORY_RAMP_ANGLE_END_1">
+<span class="target" id="group___t_r_a_j_e_c_t_o_r_y_1gae616bcdb28514fdd07a8298573f2431c"></span><span class="sig-name descname"><span class="n"><span class="pre">TRAJECTORY_RAMP_ANGLE_END_1</span></span></span><a class="headerlink" href="#c.TRAJECTORY_RAMP_ANGLE_END_1" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TRAJECTORY_RAMP_ANGLE_START_2">
+<span class="target" id="group___t_r_a_j_e_c_t_o_r_y_1gacd9c19ffe7dd6b01d54be08efa172607"></span><span class="sig-name descname"><span class="n"><span class="pre">TRAJECTORY_RAMP_ANGLE_START_2</span></span></span><a class="headerlink" href="#c.TRAJECTORY_RAMP_ANGLE_START_2" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TRAJECTORY_RAMP_ANGLE_END_2">
+<span class="target" id="group___t_r_a_j_e_c_t_o_r_y_1gaad3b7d94992d62a290700da64cdf7fab"></span><span class="sig-name descname"><span class="n"><span class="pre">TRAJECTORY_RAMP_ANGLE_END_2</span></span></span><a class="headerlink" href="#c.TRAJECTORY_RAMP_ANGLE_END_2" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TRAJECTORY_VELOCITY_REDUCTION">
+<span class="target" id="group___t_r_a_j_e_c_t_o_r_y_1gade517ee50f168c0b2d702922cb151bd1"></span><span class="sig-name descname"><span class="n"><span class="pre">TRAJECTORY_VELOCITY_REDUCTION</span></span></span><a class="headerlink" href="#c.TRAJECTORY_VELOCITY_REDUCTION" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TRAJECTORY_MAX_LOWERING_V">
+<span class="target" id="group___t_r_a_j_e_c_t_o_r_y_1ga51d8d0a7b2990bd4760b765fb224d1da"></span><span class="sig-name descname"><span class="n"><span class="pre">TRAJECTORY_MAX_LOWERING_V</span></span></span><a class="headerlink" href="#c.TRAJECTORY_MAX_LOWERING_V" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TRAJECTORY_ORIGINAL_LUCY">
+<span class="target" id="group___t_r_a_j_e_c_t_o_r_y_1gaee62829517cffa1375039ea9a21ed1d8"></span><span class="sig-name descname"><span class="n"><span class="pre">TRAJECTORY_ORIGINAL_LUCY</span></span></span><a class="headerlink" href="#c.TRAJECTORY_ORIGINAL_LUCY" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TRAJECTORY_FLATTEN_TRAJECTORY">
+<span class="target" id="group___t_r_a_j_e_c_t_o_r_y_1gaab6c89cfa385297de4436046e49d617b"></span><span class="sig-name descname"><span class="n"><span class="pre">TRAJECTORY_FLATTEN_TRAJECTORY</span></span></span><a class="headerlink" href="#c.TRAJECTORY_FLATTEN_TRAJECTORY" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TRAJECTORY_FORCE_REDUCTION">
+<span class="target" id="group___t_r_a_j_e_c_t_o_r_y_1ga8d7a74bbe5054a73872487f72e4e9dba"></span><span class="sig-name descname"><span class="n"><span class="pre">TRAJECTORY_FORCE_REDUCTION</span></span></span><a class="headerlink" href="#c.TRAJECTORY_FORCE_REDUCTION" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TRAJECTORY_FORCE_CURVE">
+<span class="target" id="group___t_r_a_j_e_c_t_o_r_y_1ga75e369504ed9ca6c9b2355da88964a64"></span><span class="sig-name descname"><span class="n"><span class="pre">TRAJECTORY_FORCE_CURVE</span></span></span><a class="headerlink" href="#c.TRAJECTORY_FORCE_CURVE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="mainboard">
+<h3>Mainboard<a class="headerlink" href="#mainboard" title="Permalink to this heading"></a></h3>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___b_o_a_r_d"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">BOARD</span></span></dt>
+<dd><p>if another environment is chosen -&gt; compiling for another mainboard changing pins currently like this alternative is using a extra file for pin definitions and include the correct one </p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="visu-doc.html" class="btn btn-neutral float-left" title="Visualization with Django - WebApp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Fertigungstechnik UIBK.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

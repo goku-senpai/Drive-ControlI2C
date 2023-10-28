@@ -1,0 +1,784 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="main_8h" kind="file" language="C++">
+    <compoundname>main.h</compoundname>
+    <includes local="yes">stm32f7xx_hal.h</includes>
+    <includes local="yes">stdbool.h</includes>
+    <includedby refid="main_8cpp" local="yes">C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/main.cpp</includedby>
+    <includedby refid="stm32f7xx__hal__msp_8c" local="yes">C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/stm32f7xx_hal_msp.c</includedby>
+    <includedby refid="stm32f7xx__it_8c" local="yes">C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/stm32f7xx_it.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stm32f7xx_hal.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/stm32f7xx_hal_msp.c</label>
+        <link refid="stm32f7xx__hal__msp_8c"/>
+      </node>
+      <node id="3">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/stm32f7xx_it.c</label>
+        <link refid="stm32f7xx__it_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="main_8h_1a9ddc054768a8315b2a997ad15a7e89ae" prot="public" static="no">
+        <name>USER_Btn_Pin</name>
+        <initializer>GPIO_PIN_13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="62" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ad6e307989b29ec5e1417d8a7f74f5b09" prot="public" static="no">
+        <name>USER_Btn_GPIO_Port</name>
+        <initializer>GPIOC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="63" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a1a9a753e892d0c27036cb8929cc9c547" prot="public" static="no">
+        <name>MCO_Pin</name>
+        <initializer>GPIO_PIN_0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="64" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1abd06dd7ec64336dc256720eb6fb94817" prot="public" static="no">
+        <name>MCO_GPIO_Port</name>
+        <initializer>GPIOH</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="65" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1afa5f3c1b1c190b27bd2d75ebe05f89a5" prot="public" static="no">
+        <name>RMII_MDC_Pin</name>
+        <initializer>GPIO_PIN_1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="66" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1aa0175330c9e9b6ee5a9fc4e2bcda4a55" prot="public" static="no">
+        <name>RMII_MDC_GPIO_Port</name>
+        <initializer>GPIOC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="67" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ad907d78ba4c74b87a38713ac0abd94e4" prot="public" static="no">
+        <name>RMII_REF_CLK_Pin</name>
+        <initializer>GPIO_PIN_1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="68" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a1f838f9736d319e22a5434eca67d20c6" prot="public" static="no">
+        <name>RMII_REF_CLK_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="69" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1acf77057aa54e355b956bd6d5cafc0b19" prot="public" static="no">
+        <name>RMII_MDIO_Pin</name>
+        <initializer>GPIO_PIN_2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="70" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1adcd7bbf23aef637fb610fafddfe4f516" prot="public" static="no">
+        <name>RMII_MDIO_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="71" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ade243165f5d976d8dff74752c4a97f0f" prot="public" static="no">
+        <name>RMII_CRS_DV_Pin</name>
+        <initializer>GPIO_PIN_7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="72" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a297b0c7b7592c08c7896e94ccf2ac1e2" prot="public" static="no">
+        <name>RMII_CRS_DV_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="73" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ab7389bae0ff0d1ac0e52932833daf522" prot="public" static="no">
+        <name>RMII_RXD0_Pin</name>
+        <initializer>GPIO_PIN_4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="74" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a986be58078ca5e807871d83702443fe8" prot="public" static="no">
+        <name>RMII_RXD0_GPIO_Port</name>
+        <initializer>GPIOC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="75" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ae12c799456376a83914b7c4d888fd7ea" prot="public" static="no">
+        <name>RMII_RXD1_Pin</name>
+        <initializer>GPIO_PIN_5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="76" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1aa86c095324f6842a8e8b831c22c7f570" prot="public" static="no">
+        <name>RMII_RXD1_GPIO_Port</name>
+        <initializer>GPIOC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="77" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a6eff34015a2021110f6c96c0e1450e92" prot="public" static="no">
+        <name>LD1_Pin</name>
+        <initializer>GPIO_PIN_0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="78" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a3f6e18ed6195e2cc7716cc40013791ac" prot="public" static="no">
+        <name>LD1_GPIO_Port</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="79" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a582c2513143fe834c57d3db2ee7b7dc4" prot="public" static="no">
+        <name>RMII_TXD1_Pin</name>
+        <initializer>GPIO_PIN_13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="80" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a9886aa40b6e29ccd801b6b10c165bd7d" prot="public" static="no">
+        <name>RMII_TXD1_GPIO_Port</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="81" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a71154fae0eacbdf882bd1481164f0652" prot="public" static="no">
+        <name>LD3_Pin</name>
+        <initializer>GPIO_PIN_14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="82" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ae851c2d6146e6d4fac9f4a9983f5cf1f" prot="public" static="no">
+        <name>LD3_GPIO_Port</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="83" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a391e95202d83d58334fd059e558d4190" prot="public" static="no">
+        <name>STLK_RX_Pin</name>
+        <initializer>GPIO_PIN_8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="84" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a5ec4cad3c4d5196e1a47e06f1d871d08" prot="public" static="no">
+        <name>STLK_RX_GPIO_Port</name>
+        <initializer>GPIOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="85" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a83e767e1089a8c6eb2dba32adeffae6b" prot="public" static="no">
+        <name>STLK_TX_Pin</name>
+        <initializer>GPIO_PIN_9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="86" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ad51bb4ae2872f736c94ad6015126d700" prot="public" static="no">
+        <name>STLK_TX_GPIO_Port</name>
+        <initializer>GPIOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="87" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ac6a2dc0fb5b4c97982241561d055071b" prot="public" static="no">
+        <name>USB_PowerSwitchOn_Pin</name>
+        <initializer>GPIO_PIN_6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="88" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a5db7c0806ce6c115745ed14f60ab2adc" prot="public" static="no">
+        <name>USB_PowerSwitchOn_GPIO_Port</name>
+        <initializer>GPIOG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="89" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a5f694023cd08d58c51d1180acdf9f23e" prot="public" static="no">
+        <name>USB_OverCurrent_Pin</name>
+        <initializer>GPIO_PIN_7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="90" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a1829ecac7848b602aa65b3b4015c27e3" prot="public" static="no">
+        <name>USB_OverCurrent_GPIO_Port</name>
+        <initializer>GPIOG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="91" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a827884915b2f7093d441d4ddf5631f35" prot="public" static="no">
+        <name>USB_SOF_Pin</name>
+        <initializer>GPIO_PIN_8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="92" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a39617e0cf8f64ea036f5045f5cd91ba8" prot="public" static="no">
+        <name>USB_SOF_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="93" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a1ce85a590e1d720a478d0c7bd9c8c40e" prot="public" static="no">
+        <name>USB_VBUS_Pin</name>
+        <initializer>GPIO_PIN_9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="94" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a2215a8eb7ae97f4115da4aafa1c4ec5b" prot="public" static="no">
+        <name>USB_VBUS_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="95" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a3f10fd877d95494ea09daac63e9a619d" prot="public" static="no">
+        <name>USB_ID_Pin</name>
+        <initializer>GPIO_PIN_10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="96" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a6ed4d9d9fcde53571358db4d7904c9ca" prot="public" static="no">
+        <name>USB_ID_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="97" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a86ea22a45a3f5ae4fea56c9641190942" prot="public" static="no">
+        <name>USB_DM_Pin</name>
+        <initializer>GPIO_PIN_11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="98" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1af0eef56ae214a412b286a70e088dadf3" prot="public" static="no">
+        <name>USB_DM_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="99" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a45a2d5ed538d75f095d08e2c71c42672" prot="public" static="no">
+        <name>USB_DP_Pin</name>
+        <initializer>GPIO_PIN_12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="100" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1afc89a5c865e93f7e9e2646d2446d4cbf" prot="public" static="no">
+        <name>USB_DP_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="101" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1af2c8a7a0746106e52f6f415b8921c21b" prot="public" static="no">
+        <name>TMS_Pin</name>
+        <initializer>GPIO_PIN_13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="102" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1affce477a22cc940d3962932cb33ec422" prot="public" static="no">
+        <name>TMS_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="103" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a9e21d9bed16b0275ff16a864ffb2ab6e" prot="public" static="no">
+        <name>TCK_Pin</name>
+        <initializer>GPIO_PIN_14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="104" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a1541f23b870848a43f0274857badd175" prot="public" static="no">
+        <name>TCK_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="105" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a36389cf67d4a80347f399f93613ea2fc" prot="public" static="no">
+        <name>RMII_TX_EN_Pin</name>
+        <initializer>GPIO_PIN_11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="106" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ae246c86239045e51fa305b7010885cb9" prot="public" static="no">
+        <name>RMII_TX_EN_GPIO_Port</name>
+        <initializer>GPIOG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="107" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a0e984c5c86e61480d27a0373cdc5e7ab" prot="public" static="no">
+        <name>RMII_TXD0_Pin</name>
+        <initializer>GPIO_PIN_13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="108" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ab298954b023a6690e943184451ba01b2" prot="public" static="no">
+        <name>RMII_TXD0_GPIO_Port</name>
+        <initializer>GPIOG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="109" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a92aba89301afeefb00b6dfbc6e874027" prot="public" static="no">
+        <name>SWO_Pin</name>
+        <initializer>GPIO_PIN_3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="110" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a1540b1bd5614d42feb933c5b943263c0" prot="public" static="no">
+        <name>SWO_GPIO_Port</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="111" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1af17a94dd613cff35c699b06c7c6a2820" prot="public" static="no">
+        <name>LD2_Pin</name>
+        <initializer>GPIO_PIN_7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="112" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a5aff6ddf7fe557e53b048115ad322aa0" prot="public" static="no">
+        <name>LD2_GPIO_Port</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="113" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8h_1ae70bce6c39d0b570a7523b86738cec4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_TIM_MspPostInit</definition>
+        <argsstring>(TIM_HandleTypeDef *htim)</argsstring>
+        <name>HAL_TIM_MspPostInit</name>
+        <param>
+          <type>TIM_HandleTypeDef *</type>
+          <declname>htim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>TIM4 GPIO Configuration PD12 ---<mdash/>&gt; TIM4_CH1</para>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="52" column="6" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/stm32f7xx_hal_msp.c" bodystart="290" bodyend="315" declfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" declline="52" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8h_1a1730ffe1e560465665eb47d9264826f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Error_Handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>Error_Handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function is executed in case of error occurrence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" line="55" column="6" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/main.cpp" bodystart="728" bodyend="737" declfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h" declline="55" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>: Header for main.c file. This file contains the common defines of the application. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="attention"><para></para>
+</simplesect>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>Header<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>Header<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__MAIN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__MAIN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f7xx_hal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stdbool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>includes<sp/>----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>Includes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>Includes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>types<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>ET<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>ET<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>constants<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>EC<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>EC<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>macro<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>EM<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>EM<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8h_1ae70bce6c39d0b570a7523b86738cec4b" kindref="member">HAL_TIM_MspPostInit</ref>(TIM_HandleTypeDef<sp/>*htim);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>functions<sp/>prototypes<sp/>---------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8h_1a1730ffe1e560465665eb47d9264826f9" kindref="member">Error_Handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>EFP<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>EFP<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>defines<sp/>-----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USER_Btn_Pin<sp/>GPIO_PIN_13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USER_Btn_GPIO_Port<sp/>GPIOC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MCO_Pin<sp/>GPIO_PIN_0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MCO_GPIO_Port<sp/>GPIOH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_MDC_Pin<sp/>GPIO_PIN_1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_MDC_GPIO_Port<sp/>GPIOC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_REF_CLK_Pin<sp/>GPIO_PIN_1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_REF_CLK_GPIO_Port<sp/>GPIOA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_MDIO_Pin<sp/>GPIO_PIN_2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_MDIO_GPIO_Port<sp/>GPIOA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_CRS_DV_Pin<sp/>GPIO_PIN_7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_CRS_DV_GPIO_Port<sp/>GPIOA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_RXD0_Pin<sp/>GPIO_PIN_4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_RXD0_GPIO_Port<sp/>GPIOC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_RXD1_Pin<sp/>GPIO_PIN_5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_RXD1_GPIO_Port<sp/>GPIOC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LD1_Pin<sp/>GPIO_PIN_0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LD1_GPIO_Port<sp/>GPIOB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_TXD1_Pin<sp/>GPIO_PIN_13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_TXD1_GPIO_Port<sp/>GPIOB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LD3_Pin<sp/>GPIO_PIN_14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LD3_GPIO_Port<sp/>GPIOB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STLK_RX_Pin<sp/>GPIO_PIN_8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STLK_RX_GPIO_Port<sp/>GPIOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STLK_TX_Pin<sp/>GPIO_PIN_9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STLK_TX_GPIO_Port<sp/>GPIOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_PowerSwitchOn_Pin<sp/>GPIO_PIN_6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_PowerSwitchOn_GPIO_Port<sp/>GPIOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_OverCurrent_Pin<sp/>GPIO_PIN_7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_OverCurrent_GPIO_Port<sp/>GPIOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_SOF_Pin<sp/>GPIO_PIN_8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_SOF_GPIO_Port<sp/>GPIOA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_VBUS_Pin<sp/>GPIO_PIN_9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_VBUS_GPIO_Port<sp/>GPIOA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_ID_Pin<sp/>GPIO_PIN_10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_ID_GPIO_Port<sp/>GPIOA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_DM_Pin<sp/>GPIO_PIN_11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_DM_GPIO_Port<sp/>GPIOA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_DP_Pin<sp/>GPIO_PIN_12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_DP_GPIO_Port<sp/>GPIOA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TMS_Pin<sp/>GPIO_PIN_13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TMS_GPIO_Port<sp/>GPIOA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TCK_Pin<sp/>GPIO_PIN_14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TCK_GPIO_Port<sp/>GPIOA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_TX_EN_Pin<sp/>GPIO_PIN_11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_TX_EN_GPIO_Port<sp/>GPIOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_TXD0_Pin<sp/>GPIO_PIN_13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMII_TXD0_GPIO_Port<sp/>GPIOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWO_Pin<sp/>GPIO_PIN_3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWO_GPIO_Port<sp/>GPIOB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LD2_Pin<sp/>GPIO_PIN_7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LD2_GPIO_Port<sp/>GPIOB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>Private<sp/>defines<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>Private<sp/>defines<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__MAIN_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/main.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_ring_buffer" kind="class" language="C++" prot="public">
+    <compoundname>RingBuffer</compoundname>
+    <includes refid="_ring_buffer_8h" local="no">RingBuffer.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ring_buffer_1aed30267d21b5aa29ed97fc119444c68b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RingBuffer&lt; T, N &gt;::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <qualifiedname>RingBuffer::operator()</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator overload to return the value at the current set position. <simplesect kind="return"><para>the current value as double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" line="20" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_buffer_1abeac60d2e20b4091c8cbbf15c2399178" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RingBuffer&lt; T, N &gt;::getCurrent</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrent</name>
+        <qualifiedname>RingBuffer::getCurrent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator overload to return the value of last set position. <simplesect kind="return"><para>the current value as double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" line="28" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_buffer_1a2e31957f98fc4dce0ce91a6318ee2edc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t RingBuffer&lt; T, N &gt;::getCurrentIndex</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrentIndex</name>
+        <qualifiedname>RingBuffer::getCurrentIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current index of the ringbuffer. <simplesect kind="return"><para>index as int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" line="36" column="14" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_buffer_1af8ec5dfd81e89a9ad920c13907aac648" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RingBuffer&lt; T, N &gt;::getAt</definition>
+        <argsstring>(unsigned int iIndex)</argsstring>
+        <name>getAt</name>
+        <qualifiedname>RingBuffer::getAt</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value at the given index. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index as int </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the value at the index as double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" line="45" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" bodystart="45" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_buffer_1a279077094c9609654eb4c3e80015a08a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RingBuffer&lt; T, N &gt;::operator()</definition>
+        <argsstring>(T tSample)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>RingBuffer::operator()</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>tSample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator overload to add a new value to the filter. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tSample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" line="59" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_buffer_1a749aa3f6eafe0ee1feca998df26f2ca5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RingBuffer&lt; T, N &gt;::reset</definition>
+        <argsstring>(T tResetValue)</argsstring>
+        <name>reset</name>
+        <qualifiedname>RingBuffer::reset</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>tResetValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resets the ringbuffer to given value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" line="68" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" bodystart="68" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Template class that implements a ring buffer. <parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type of the ring buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the ring buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" line="14" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/RingBuffer.h" bodystart="14" bodyend="81"/>
+    <listofallmembers>
+      <member refid="class_ring_buffer_1af8ec5dfd81e89a9ad920c13907aac648" prot="public" virt="non-virtual"><scope>RingBuffer</scope><name>getAt</name></member>
+      <member refid="class_ring_buffer_1abeac60d2e20b4091c8cbbf15c2399178" prot="public" virt="non-virtual"><scope>RingBuffer</scope><name>getCurrent</name></member>
+      <member refid="class_ring_buffer_1a2e31957f98fc4dce0ce91a6318ee2edc" prot="public" virt="non-virtual"><scope>RingBuffer</scope><name>getCurrentIndex</name></member>
+      <member refid="class_ring_buffer_1aed30267d21b5aa29ed97fc119444c68b" prot="public" virt="non-virtual"><scope>RingBuffer</scope><name>operator()</name></member>
+      <member refid="class_ring_buffer_1a279077094c9609654eb4c3e80015a08a" prot="public" virt="non-virtual"><scope>RingBuffer</scope><name>operator()</name></member>
+      <member refid="class_ring_buffer_1a749aa3f6eafe0ee1feca998df26f2ca5" prot="public" virt="non-virtual"><scope>RingBuffer</scope><name>reset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_neo_pixel_remote" kind="class" language="C++" prot="public">
+    <compoundname>NeoPixelRemote</compoundname>
+    <basecompoundref refid="class_remote" prot="public" virt="non-virtual">Remote</basecompoundref>
+    <includes refid="_remote_8h" local="no">Remote.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_neo_pixel_remote_1a49c6b1cf4dfe6e565bd4ad593c9cf907" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NeoPixelRemote::NeoPixelRemote</definition>
+        <argsstring>()</argsstring>
+        <name>NeoPixelRemote</name>
+        <qualifiedname>NeoPixelRemote::NeoPixelRemote</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" line="44" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_neo_pixel_remote_1adc69646964eb322f16f13c5f855546fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NeoPixelRemote::~NeoPixelRemote</definition>
+        <argsstring>()</argsstring>
+        <name>~NeoPixelRemote</name>
+        <qualifiedname>NeoPixelRemote::~NeoPixelRemote</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" line="45" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_neo_pixel_remote_1ad21442e8009ddcdd51dda69de8ca4fd9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void NeoPixelRemote::get</definition>
+        <argsstring>() override</argsstring>
+        <name>get</name>
+        <qualifiedname>NeoPixelRemote::get</qualifiedname>
+        <reimplements refid="class_remote_1a8bd4ee7495bd2be80615453430f28ef6">get</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" line="47" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_neo_pixel_remote_1a653ba6cd711d8a4e72ea7a01c45a76bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void NeoPixelRemote::updateDisplay</definition>
+        <argsstring>() override</argsstring>
+        <name>updateDisplay</name>
+        <qualifiedname>NeoPixelRemote::updateDisplay</qualifiedname>
+        <reimplements refid="class_remote_1a36a00797b464a896ad36d2e5c8fd5e75">updateDisplay</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" line="51" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_remote" kindref="compound">Remote</ref> class with included NeoPixel RGB. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>NeoPixelRemote</label>
+        <link refid="class_neo_pixel_remote"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Remote</label>
+        <link refid="class_remote"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>NeoPixelRemote</label>
+        <link refid="class_neo_pixel_remote"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Remote</label>
+        <link refid="class_remote"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" line="35" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Remote.h" bodystart="36" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_neo_pixel_remote_1ad21442e8009ddcdd51dda69de8ca4fd9" prot="public" virt="virtual"><scope>NeoPixelRemote</scope><name>get</name></member>
+      <member refid="class_neo_pixel_remote_1a49c6b1cf4dfe6e565bd4ad593c9cf907" prot="public" virt="non-virtual"><scope>NeoPixelRemote</scope><name>NeoPixelRemote</name></member>
+      <member refid="class_remote_1aaf28ca55be03a9706db0c3d288cbaae5" prot="public" virt="non-virtual"><scope>NeoPixelRemote</scope><name>Remote</name></member>
+      <member refid="class_neo_pixel_remote_1a653ba6cd711d8a4e72ea7a01c45a76bb" prot="public" virt="virtual"><scope>NeoPixelRemote</scope><name>updateDisplay</name></member>
+      <member refid="class_neo_pixel_remote_1adc69646964eb322f16f13c5f855546fa" prot="public" virt="non-virtual"><scope>NeoPixelRemote</scope><name>~NeoPixelRemote</name></member>
+      <member refid="class_remote_1a4dd4fbb1f1556d8dc35ae29e9a2ed15a" prot="public" virt="pure-virtual"><scope>NeoPixelRemote</scope><name>~Remote</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,69 @@
+Electronics
+=============
+
+A basic list of all special chips used in the projects are shortly presented. 
+
+
+`SeeSaw <https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout?view=all>`_ 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Adafruit seesaw is a near-universal converter framework which allows you to add and extend hardware support to any I2C-capable microcontroller or microcomputer.
+Instead of getting separate I2C GPIO expanders, ADCs, PWM drivers, etc, seesaw can be configured to give a wide range of capabilities
+The corresponding `github-repo <https://github.com/adafruit/Adafruit_Seesaw>`_ contains useful information.
+
+
+For example, the ATSAMD09 breakout with seesaw gives you:
+
+- 3 x 12-bit ADC inputs
+- 3 x 8-bit PWM outputs
+- 7 x GPIO with selectable pullup or pulldown
+- 1 x NeoPixel output (up to 170 pixels)
+- 1 x EEPROM with 64 byte of NVM memory (handy for storing small access tokens or MAC addresses)
+- 1 x Interrupt output that can be triggered by any of the accessories
+- 2 x I2C address selection pins
+- 1 x Activity LED
+
+`PCF8575 <https://github.com/xreef/PCF8575_library>`_ 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PCF8575 is a 16bit digital expander with i2c interface.
+It has a variable adress range 0x20 to 0x27. 
+
+The PCF8575 has an interrupt output line (INT) to notify an MCU that one of the input lines has changed.
+This can be used to prevent active polling of the PCF8575, which can be more efficient.
+
+Part List 
+--------------
+
+
+.. list-table:: Part List Electornics
+   :widths: 40 20 10 10 20 20 
+   :header-rows: 1
+
+   * - Description
+     - Partnumber
+     - Quantity
+     - Price
+     - Datasheet
+     - Link
+   * - I2C Multiplexer 
+     - MCP23017-E/SS
+     - 1
+     - 2€
+     - `MCP23017 <https://www.adafruit.com/product/732>`_ 
+     - :download:`pdf <../../datasheets/microcontroller/esp32_datasheet_en.pdf>`
+
+   * - modular I2C interface
+     - ATSAMD09 
+     - 1
+     - 4€
+     - `ATSAMD09  <https://learn.adafruit.com/adafruit-seesaw-atsamd09-breakout?view=all>`_
+     - :download:`pdf <../../datasheets/seesaw.pdf>`
+     
+   * - ESP 32
+     - ATSAMD09 
+     - 1
+     - 6€
+     - `ESP32 <https://www.az-delivery.de/products/nodemcu-esp-32s-kit>`_
+     - :download:`pdf <../../datasheets/microcontroller/esp32_datasheet_en.pdf>`
+

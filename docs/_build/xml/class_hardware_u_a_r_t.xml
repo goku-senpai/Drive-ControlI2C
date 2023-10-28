@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_hardware_u_a_r_t" kind="class" language="C++" prot="public">
+    <compoundname>HardwareUART</compoundname>
+    <includes refid="uart_8h" local="no">uart.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_hardware_u_a_r_t_1a7420ed2f914d2e9a7c2606f6ab865a9a" prot="public" static="no" mutable="no">
+        <type>const uart_port_t</type>
+        <definition>const uart_port_t HardwareUART::uart_num</definition>
+        <argsstring></argsstring>
+        <name>uart_num</name>
+        <qualifiedname>HardwareUART::uart_num</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/uart.h" line="54" column="23" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/uart.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hardware_u_a_r_t_1aa2f744cf88ed14212b272fdc80bb2ca6" prot="public" static="no" mutable="no">
+        <type>uart_config_t</type>
+        <definition>uart_config_t HardwareUART::uart_config</definition>
+        <argsstring></argsstring>
+        <name>uart_config</name>
+        <qualifiedname>HardwareUART::uart_config</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/uart.h" line="55" column="19" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/uart.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hardware_u_a_r_t_1a93edfecf9941117537e1dea45d864873" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HardwareUART::HardwareUART</definition>
+        <argsstring>(uint8_t iPort, uint32_t iBaudRate)</argsstring>
+        <name>HardwareUART</name>
+        <qualifiedname>HardwareUART::HardwareUART</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>iPort</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>iBaudRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the peripheral</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dUsart</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>definition of used UART </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iBaudRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>baud rate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/uart.h" line="24" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/uart.h" bodystart="24" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hardware_u_a_r_t_1a4a865500e1e8332b34b8aca805c11780" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HardwareUART::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <qualifiedname>HardwareUART::read</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/uart.h" line="45" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/uart.h" bodystart="45" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Template class for hardware based UART derivations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/uart.h" line="15" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/uart.h" bodystart="15" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_hardware_u_a_r_t_1a93edfecf9941117537e1dea45d864873" prot="public" virt="non-virtual"><scope>HardwareUART</scope><name>HardwareUART</name></member>
+      <member refid="class_hardware_u_a_r_t_1a4a865500e1e8332b34b8aca805c11780" prot="public" virt="non-virtual"><scope>HardwareUART</scope><name>read</name></member>
+      <member refid="class_hardware_u_a_r_t_1aa2f744cf88ed14212b272fdc80bb2ca6" prot="public" virt="non-virtual"><scope>HardwareUART</scope><name>uart_config</name></member>
+      <member refid="class_hardware_u_a_r_t_1a7420ed2f914d2e9a7c2606f6ab865a9a" prot="public" virt="non-virtual"><scope>HardwareUART</scope><name>uart_num</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

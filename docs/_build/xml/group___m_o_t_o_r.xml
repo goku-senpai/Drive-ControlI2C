@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="group___m_o_t_o_r" kind="group">
+    <compoundname>MOTOR</compoundname>
+    <title>setup</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___m_o_t_o_r_1ga5e37a71039edab10b6684764dfd32e44" prot="public" static="no">
+        <name>MOTOR_TIM_A</name>
+        <initializer>TIM_CHANNEL_1</initializer>
+        <briefdescription>
+<para>Motor Timer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="21" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___m_o_t_o_r_1ga39d700e1d00a5530d97d9b27dd5115af" prot="public" static="no">
+        <name>MOTOR_ENA1_PORT</name>
+        <initializer>GPIOD</initializer>
+        <briefdescription>
+<para>Motor PWM Port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="22" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___m_o_t_o_r_1ga729854312c1ab33d0ba3fd0304e1f4ce" prot="public" static="no">
+        <name>MOTOR_ENA1_PIN</name>
+        <initializer>GPIO_PIN_13</initializer>
+        <briefdescription>
+<para>Motor PWM Pin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="23" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___m_o_t_o_r_1gae6efc05cbbe93f86a2c495adadefba18" prot="public" static="no">
+        <name>IN1_PIN</name>
+        <initializer>GPIO_PIN_2</initializer>
+        <briefdescription>
+<para>Motor dir1 Port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="25" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___m_o_t_o_r_1gab7f19a7f5c8e92b8b8beb3746393c1de" prot="public" static="no">
+        <name>IN1_PORT</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+<para>Motor dir1 Pin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="26" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___m_o_t_o_r_1gaaa7c2af8811ab06c6c58108a0c757b71" prot="public" static="no">
+        <name>IN2_PIN</name>
+        <initializer>GPIO_PIN_6</initializer>
+        <briefdescription>
+<para>Motor dir2 Port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="27" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___m_o_t_o_r_1ga96ffd9255b585afcea7f1d8a439385ee" prot="public" static="no">
+        <name>IN2_PORT</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+<para>Moroe dir2 Pin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="28" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___m_o_t_o_r_1ga43aff93624bc76c795080739a445c9dc" prot="public" static="no">
+        <name>POSITION_TOLERANCE</name>
+        <initializer>0.05</initializer>
+        <briefdescription>
+<para>Motor constant to adjust the output offset for control. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="30" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

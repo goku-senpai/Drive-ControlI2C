@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_exp_u_i_obsv" kind="class" language="C++" prot="public">
+    <compoundname>ExpUIObsv</compoundname>
+    <basecompoundref refid="class_experiment_module" prot="public" virt="non-virtual">ExperimentModule</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_exp_u_i_obsv_1a9f5c46631c29061f2d8efb03fbcd0801" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExpUIObsv::bDir</definition>
+        <argsstring></argsstring>
+        <name>bDir</name>
+        <qualifiedname>ExpUIObsv::bDir</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="354" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_exp_u_i_obsv_1a4693fa06a13c86fd0af1a34515cf0956" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_d_i_o" kindref="compound">DIO</ref></type>
+        <definition>DIO ExpUIObsv::led</definition>
+        <argsstring>(REMOTE_LED_YELLOW_PIN)</argsstring>
+        <name>led</name>
+        <qualifiedname>ExpUIObsv::led</qualifiedname>
+        <param>
+          <type>REMOTE_LED_YELLOW_PIN</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="355" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_u_i_obsv_1a74eb454e1ba376da4c92a53ef19f1a29" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_a_i" kindref="compound">AI</ref></type>
+        <definition>AI ExpUIObsv::poti</definition>
+        <argsstring>(REMOTE_POTI_PIN)</argsstring>
+        <name>poti</name>
+        <qualifiedname>ExpUIObsv::poti</qualifiedname>
+        <param>
+          <type>REMOTE_POTI_PIN</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="356" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_exp_u_i_obsv_1a5031d87d30401fe81055a77e95e739b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpUIObsv::deactivate</definition>
+        <argsstring>()</argsstring>
+        <name>deactivate</name>
+        <qualifiedname>ExpUIObsv::deactivate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="360" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="360" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_u_i_obsv_1a610b1dbb7c91cae5b2531110679b4da5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ExpUIObsv::compute</definition>
+        <argsstring>(uint32_t lTime) override</argsstring>
+        <name>compute</name>
+        <qualifiedname>ExpUIObsv::compute</qualifiedname>
+        <reimplements refid="class_experiment_module_1a812c5ce3fc52525e6ee9d4f260a5936a">compute</reimplements>
+        <param>
+          <type>uint32_t</type>
+          <declname>lTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>function is called regularly in EXP_DT ms intervals <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current experiment time in ms </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="364" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="364" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_u_i_obsv_1a63d9e6c60f7ad41a55b666bb3586ad72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ExpUIObsv::ExpUIObsv</definition>
+        <argsstring>()</argsstring>
+        <name>ExpUIObsv</name>
+        <qualifiedname>ExpUIObsv::ExpUIObsv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="371" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="371" bodyend="373"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ExpUIObsv</label>
+        <link refid="class_exp_u_i_obsv"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExperimentModule</label>
+        <link refid="class_experiment_module"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ExpUIObsv</label>
+        <link refid="class_exp_u_i_obsv"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExperimentModule</label>
+        <link refid="class_experiment_module"/>
+      </node>
+    </collaborationgraph>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="351" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="351" bodyend="374"/>
+    <listofallmembers>
+      <member refid="class_exp_u_i_obsv_1a9f5c46631c29061f2d8efb03fbcd0801" prot="private" virt="non-virtual"><scope>ExpUIObsv</scope><name>bDir</name></member>
+      <member refid="class_exp_u_i_obsv_1a610b1dbb7c91cae5b2531110679b4da5" prot="public" virt="virtual"><scope>ExpUIObsv</scope><name>compute</name></member>
+      <member refid="class_exp_u_i_obsv_1a5031d87d30401fe81055a77e95e739b8" prot="public" virt="non-virtual"><scope>ExpUIObsv</scope><name>deactivate</name></member>
+      <member refid="class_experiment_module_1a8dc870b13ef7b6013dc2ab5aa7f5ffe7" prot="public" virt="non-virtual"><scope>ExpUIObsv</scope><name>ExperimentModule</name></member>
+      <member refid="class_exp_u_i_obsv_1a63d9e6c60f7ad41a55b666bb3586ad72" prot="public" virt="non-virtual"><scope>ExpUIObsv</scope><name>ExpUIObsv</name></member>
+      <member refid="class_experiment_module_1ac2f139ac6c26181fd2a7a7343c855eee" prot="public" virt="non-virtual"><scope>ExpUIObsv</scope><name>getOutput</name></member>
+      <member refid="class_experiment_module_1acf4101354fe002c105da75892d220dc7" prot="public" virt="non-virtual"><scope>ExpUIObsv</scope><name>getState</name></member>
+      <member refid="class_experiment_module_1a74fa6d8dbe61a4351135082d2f288da4" prot="public" virt="virtual"><scope>ExpUIObsv</scope><name>handleFrame</name></member>
+      <member refid="class_experiment_module_1ab8628df2b6883cdf92f55c5b067430d2" prot="public" virt="virtual"><scope>ExpUIObsv</scope><name>init</name></member>
+      <member refid="class_exp_u_i_obsv_1a4693fa06a13c86fd0af1a34515cf0956" prot="private" virt="non-virtual"><scope>ExpUIObsv</scope><name>led</name></member>
+      <member refid="class_experiment_module_1af7cddd22f46a142c197203da7130ffdf" prot="protected" virt="non-virtual"><scope>ExpUIObsv</scope><name>outputs</name></member>
+      <member refid="class_exp_u_i_obsv_1a74eb454e1ba376da4c92a53ef19f1a29" prot="private" virt="non-virtual"><scope>ExpUIObsv</scope><name>poti</name></member>
+      <member refid="class_experiment_module_1a7d7697d611871d8f054b618080769dcc" prot="public" virt="virtual"><scope>ExpUIObsv</scope><name>registerModules</name></member>
+      <member refid="class_experiment_module_1aabbf45990fca2a3b0a50644c7741004f" prot="public" virt="virtual"><scope>ExpUIObsv</scope><name>sendFrame</name></member>
+      <member refid="class_experiment_module_1a6286b09a3f2e24144534321a7e5ef2c2" prot="protected" virt="non-virtual"><scope>ExpUIObsv</scope><name>states</name></member>
+      <member refid="class_experiment_module_1a63415ccd081a94e842487e48dadbd8c0" prot="public" virt="virtual"><scope>ExpUIObsv</scope><name>stop</name></member>
+      <member refid="class_experiment_module_1a909d236cad2e09e23f479a4263cbd1e9" prot="public" virt="non-virtual"><scope>ExpUIObsv</scope><name>~ExperimentModule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

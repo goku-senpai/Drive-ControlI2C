@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="motor__controller_8cpp" kind="file" language="C++">
+    <compoundname>motor_controller.cpp</compoundname>
+    <includes refid="motor__controller_8h" local="yes">motor_controller.h</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">sstream</includes>
+    <includes local="yes">string.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>constants.h</label>
+        <link refid="constants_8h_source"/>
+      </node>
+      <node id="2">
+        <label>motor_controller.h</label>
+        <link refid="motor__controller_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pid_controller.h</label>
+        <link refid="pid__controller_8h_source"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp</label>
+        <link refid="motor__controller_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="8">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>stm32f7xx_hal.h</label>
+      </node>
+      <node id="5">
+        <label>stm32f7xx_hal_tim.h</label>
+      </node>
+      <node id="9">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="motor__controller_8cpp_1a09d7e79f8255cbbaef94e500a0e0fbd8" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t CONTROL_MODE_FREEWHEEL</definition>
+        <argsstring></argsstring>
+        <name>CONTROL_MODE_FREEWHEEL</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" line="12" column="15" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="motor__controller_8cpp_1a6e613304dbc51eec8a0a545d287a6d1f" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t CONTROL_MODE_POSITION</definition>
+        <argsstring></argsstring>
+        <name>CONTROL_MODE_POSITION</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" line="13" column="15" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="motor__controller_8cpp_1a4cc77d93d9acd83f7eb7045947721800" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t uartdebugBuffer[UART_RX_BUFFER_SIZE]</definition>
+        <argsstring>[UART_RX_BUFFER_SIZE]</argsstring>
+        <name>uartdebugBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" line="14" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="motor__controller_8cpp_1ab7c63c1b0f65db92b6a4ea19edf957e1" prot="public" static="no" mutable="no">
+        <type>UART_HandleTypeDef</type>
+        <definition>UART_HandleTypeDef huart3</definition>
+        <argsstring></argsstring>
+        <name>huart3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" line="16" column="27" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/main.cpp" bodystart="78" bodyend="-1" declfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" declline="16" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="motor__controller_8cpp_1a8325fe751ea48d8fcdb885bf965ff561" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Motor_Simulation</definition>
+        <argsstring></argsstring>
+        <name>Motor_Simulation</name>
+        <initializer>=false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" line="19" column="6" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Motor controller. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;motor_controller.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;string.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Define<sp/>constants<sp/>for<sp/>control<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>CONTROL_MODE_FREEWHEEL<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>CONTROL_MODE_POSITION<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">uint8_t<sp/>uartdebugBuffer[UART_RX_BUFFER_SIZE];</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>UART_HandleTypeDef<sp/>huart3;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Motor_Simulation=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>motor<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">MotorController::MotorController(TIM_HandleTypeDef*<sp/>htim_pwm,<sp/>uint32_t<sp/>channel_pwm,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_TypeDef*<sp/>gpio_pwm,<sp/>uint32_t<sp/>pin_pwm,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max_output,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max_integral,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>target_start,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_speed_controller)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>htim_pwm_(htim_pwm),<sp/>channel_pwm_(channel_pwm),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_pwm_(gpio_pwm),<sp/>pin_pwm_(pin_pwm),<sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>provided<sp/>gpio_pwm<sp/>and<sp/>pin_pwm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pid_controller_(0.0,<sp/>0.0,<sp/>0.0,<sp/>max_output,<sp/>max_integral,<sp/>target_start),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_position_(0),<sp/>current_output_(0),</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is_speed_controller_(is_speed_controller),</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>control_mode_(CONTROL_MODE_FREEWHEEL)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motor_controller_1a3413ae9abcf748a58c58db974051105a" kindref="member">MotorController::set_direction</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>direction_fwd,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>direction_bwd)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction_fwd)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>IN1<sp/>and<sp/>IN2<sp/>for<sp/>forward<sp/>motion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(<ref refid="group___m_o_t_o_r_1gab7f19a7f5c8e92b8b8beb3746393c1de" kindref="member">IN1_PORT</ref>,<sp/><ref refid="group___m_o_t_o_r_1gae6efc05cbbe93f86a2c495adadefba18" kindref="member">IN1_PIN</ref>,<sp/>GPIO_PIN_SET);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(<ref refid="group___m_o_t_o_r_1ga96ffd9255b585afcea7f1d8a439385ee" kindref="member">IN2_PORT</ref>,<sp/><ref refid="group___m_o_t_o_r_1gaaa7c2af8811ab06c6c58108a0c757b71" kindref="member">IN2_PIN</ref>,<sp/>GPIO_PIN_RESET);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction_bwd)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>IN1<sp/>and<sp/>IN2<sp/>for<sp/>backward<sp/>motion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(<ref refid="group___m_o_t_o_r_1gab7f19a7f5c8e92b8b8beb3746393c1de" kindref="member">IN1_PORT</ref>,<sp/><ref refid="group___m_o_t_o_r_1gae6efc05cbbe93f86a2c495adadefba18" kindref="member">IN1_PIN</ref>,<sp/>GPIO_PIN_RESET);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(<ref refid="group___m_o_t_o_r_1ga96ffd9255b585afcea7f1d8a439385ee" kindref="member">IN2_PORT</ref>,<sp/><ref refid="group___m_o_t_o_r_1gaaa7c2af8811ab06c6c58108a0c757b71" kindref="member">IN2_PIN</ref>,<sp/>GPIO_PIN_SET);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction_bwd<sp/>&amp;&amp;<sp/>direction_fwd)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>IN1<sp/>and<sp/>IN2<sp/>STOP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(<ref refid="group___m_o_t_o_r_1gab7f19a7f5c8e92b8b8beb3746393c1de" kindref="member">IN1_PORT</ref>,<sp/><ref refid="group___m_o_t_o_r_1gae6efc05cbbe93f86a2c495adadefba18" kindref="member">IN1_PIN</ref>,<sp/>GPIO_PIN_SET);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(<ref refid="group___m_o_t_o_r_1ga96ffd9255b585afcea7f1d8a439385ee" kindref="member">IN2_PORT</ref>,<sp/><ref refid="group___m_o_t_o_r_1gaaa7c2af8811ab06c6c58108a0c757b71" kindref="member">IN2_PIN</ref>,<sp/>GPIO_PIN_SET);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Both<sp/>IN1<sp/>and<sp/>IN2<sp/>should<sp/>be<sp/>off<sp/>for<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(<ref refid="group___m_o_t_o_r_1gab7f19a7f5c8e92b8b8beb3746393c1de" kindref="member">IN1_PORT</ref>,<sp/><ref refid="group___m_o_t_o_r_1gae6efc05cbbe93f86a2c495adadefba18" kindref="member">IN1_PIN</ref>,<sp/>GPIO_PIN_RESET);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(<ref refid="group___m_o_t_o_r_1ga96ffd9255b585afcea7f1d8a439385ee" kindref="member">IN2_PORT</ref>,<sp/><ref refid="group___m_o_t_o_r_1gaaa7c2af8811ab06c6c58108a0c757b71" kindref="member">IN2_PIN</ref>,<sp/>GPIO_PIN_RESET);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motor_controller_1a46a7d8fdad02c45a062b9138f16d86d6" kindref="member">MotorController::update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sample_time,<sp/>int32_t<sp/>encoder_value,<sp/>uint8_t<sp/>bFreewheel,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dKp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dKi,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dKd)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>control<sp/>mode<sp/>based<sp/>on<sp/>received<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>control_mode_<sp/>=<sp/>bFreewheel<sp/>?<sp/>CONTROL_MODE_FREEWHEEL<sp/>:<sp/>CONTROL_MODE_POSITION;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>PID<sp/>gains<sp/>based<sp/>on<sp/>received<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>pid_controller_.set_kp(dKp);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>pid_controller_.set_ki(dKi);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>pid_controller_.set_kd(dKd);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_speed_controller_)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>motor<sp/>output<sp/>based<sp/>on<sp/>PID<sp/>controller<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_output_<sp/>=<sp/>pid_controller_.get_output();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>PID<sp/>controller<sp/>with<sp/>current<sp/>speed<sp/>and<sp/>time<sp/>delta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>current_speed<sp/>=<sp/>(encoder_value<sp/>-<sp/>prev_encoder_value_)<sp/>/<sp/>(sample_time<sp/>*<sp/><ref refid="group___e_n_c_o_d_e_r_1ga8cdc17f43c9f3850f60d04f98216fc13" kindref="member">ENCODER_RESOLUTION</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pid_controller_.<ref refid="class_p_i_d_controller_1a081c1ad40df4ae192b3723d53a7718e7" kindref="member">update</ref>(current_speed,<sp/>sample_time);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>motor<sp/>direction<sp/>based<sp/>on<sp/>output<sp/>sign</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(current_output_<sp/>&gt;=<sp/>pid_controller_.get_target())<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_motor_controller_1a3413ae9abcf748a58c58db974051105a" kindref="member">set_direction</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Forward</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_motor_controller_1a3413ae9abcf748a58c58db974051105a" kindref="member">set_direction</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Backward</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>target<sp/>is<sp/>reached</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fabs(current_output_)<sp/>&gt;=<sp/>fabs(pid_controller_.get_target()))<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stop<sp/>the<sp/>motor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_output_<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>motor<sp/>output<sp/>based<sp/>on<sp/>PID<sp/>controller<sp/>output<sp/>and<sp/>current<sp/>speed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_output_<sp/>=<sp/>pid_controller_.get_output()<sp/>+<sp/>current_speed<sp/>*<sp/>SPEED_KF;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>PID<sp/>controller<sp/>with<sp/>current<sp/>position<sp/>and<sp/>time<sp/>delta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sample_time<sp/>&lt;=<sp/>0.0)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(current_output_<sp/>&gt;=<sp/>pid_controller_.get_target())<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_motor_controller_1a3413ae9abcf748a58c58db974051105a" kindref="member">set_direction</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Forward</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pid_controller_.<ref refid="class_p_i_d_controller_1a081c1ad40df4ae192b3723d53a7718e7" kindref="member">update</ref>(current_position_,<sp/>sample_time);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_motor_controller_1a3413ae9abcf748a58c58db974051105a" kindref="member">set_direction</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Forward</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pid_controller_.<ref refid="class_p_i_d_controller_1a081c1ad40df4ae192b3723d53a7718e7" kindref="member">update</ref>(current_position_,<sp/>sample_time);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>target<sp/>is<sp/>reached</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fabs(current_position_<sp/>-<sp/>pid_controller_.get_target())<sp/>&lt;=<sp/><ref refid="group___m_o_t_o_r_1ga43aff93624bc76c795080739a445c9dc" kindref="member">POSITION_TOLERANCE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stop<sp/>the<sp/>motor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_output_<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_motor_controller_1a3413ae9abcf748a58c58db974051105a" kindref="member">set_direction</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Forward</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>output<sp/>magnitude<sp/>to<sp/>PWM<sp/>duty<sp/>cycle<sp/>and<sp/>write<sp/>to<sp/>PWM<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>duty_cycle<sp/>=<sp/>(uint32_t)<sp/>(fabs(current_output_)<sp/>*<sp/>MAX_OUTPUT<sp/>/<sp/>100);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_cycle<sp/>&gt;=<sp/>DUTYCYCLE_MAX)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIM4-&gt;CCR1<sp/>=<sp/>DUTYCYCLE_MAX;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(LED_BLUE_PORT,<sp/>LED_BLUE_PIN,<sp/>GPIO_PIN_SET);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(LED_RED_PORT,<sp/><ref refid="group___l_e_d_1gab9824ab080c30006c1baaa0dd7e863c5" kindref="member">LED_RED_PIN</ref>,<sp/>GPIO_PIN_RESET);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_cycle<sp/>&lt;=<sp/>DUTYCYCLE_MIN){</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIM4-&gt;CCR1<sp/>=<sp/>DUTYCYCLE_MIN;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(LED_BLUE_PORT,<sp/>LED_BLUE_PIN,<sp/>GPIO_PIN_RESET);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(LED_RED_PORT,<sp/><ref refid="group___l_e_d_1gab9824ab080c30006c1baaa0dd7e863c5" kindref="member">LED_RED_PIN</ref>,<sp/>GPIO_PIN_SET);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIM4-&gt;CCR1<sp/>=<sp/>duty_cycle;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>previous<sp/>encoder<sp/>value<sp/>for<sp/>speed<sp/>calculation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>prev_encoder_value_<sp/>=<sp/>encoder_value;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motor_controller_1a1c5d87810b12a740121d540b51663966" kindref="member">MotorController::set_target</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dSetpoint)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>pid_controller_.set_target(dSetpoint);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp"/>
+  </compounddef>
+</doxygen>

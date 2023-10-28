@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_cont_valve_controller" kind="class" language="C++" prot="public">
+    <compoundname>ContValveController</compoundname>
+    <basecompoundref refid="class_valve_controller" prot="public" virt="non-virtual">ValveController</basecompoundref>
+    <includes refid="_controller_8h" local="no">Controller.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cont_valve_controller_1a81dcbbdf50261cf8543460cea6d175f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ContValveController::ContValveController</definition>
+        <argsstring>()</argsstring>
+        <name>ContValveController</name>
+        <qualifiedname>ContValveController::ContValveController</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="160" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="160" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cont_valve_controller_1a5eddd074037e24a6cc151643d76db755" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ContValveController::~ContValveController</definition>
+        <argsstring>()</argsstring>
+        <name>~ContValveController</name>
+        <qualifiedname>ContValveController::~ContValveController</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="161" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="161" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cont_valve_controller_1ad6152074978080229b6748dc6ba6ed3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double *</type>
+        <definition>double * ContValveController::compute</definition>
+        <argsstring>(const double &amp;dCurInput, const double &amp;dCurPressureUI, const double &amp;dCurSetpoint)</argsstring>
+        <name>compute</name>
+        <qualifiedname>ContValveController::compute</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurInput</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurPressureUI</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurSetpoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dCurInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current Pressure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dCurPressureUI</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current potentiometer value from UI <ref refid="class_remote" kindref="compound">Remote</ref> converted into Pressure UI.get()*PRESSURE_MAX </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dCurSetpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current TargetPressure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="170" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="170" bodyend="177"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_valve_controller" kindref="compound">ValveController</ref> to set a target Pressure based on the Continuos SMC Valves with one pwm pin. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>PI Controller with Histeresis <linebreak/>
+ </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ContValveController</label>
+        <link refid="class_cont_valve_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ValveController</label>
+        <link refid="class_valve_controller"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ContValveController</label>
+        <link refid="class_cont_valve_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ValveController</label>
+        <link refid="class_valve_controller"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="156" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="156" bodyend="178"/>
+    <listofallmembers>
+      <member refid="class_valve_controller_1ac6dfdae7c7a3d138b0fc5590ae6640c0" prot="public" virt="non-virtual"><scope>ContValveController</scope><name>clamp</name></member>
+      <member refid="class_cont_valve_controller_1ad6152074978080229b6748dc6ba6ed3d" prot="public" virt="non-virtual"><scope>ContValveController</scope><name>compute</name></member>
+      <member refid="class_valve_controller_1aed45a8df64216ef44bbeedb4a453ac6d" prot="public" virt="pure-virtual" ambiguityscope="ValveController::"><scope>ContValveController</scope><name>compute</name></member>
+      <member refid="class_cont_valve_controller_1a81dcbbdf50261cf8543460cea6d175f7" prot="public" virt="non-virtual"><scope>ContValveController</scope><name>ContValveController</name></member>
+      <member refid="class_valve_controller_1adfa0b07df3cd2a5292a919d546481ed3" prot="protected" virt="non-virtual"><scope>ContValveController</scope><name>dLinInput</name></member>
+      <member refid="class_valve_controller_1af707465bdb18b66f0d60c66c862265e5" prot="protected" virt="non-virtual"><scope>ContValveController</scope><name>dOut</name></member>
+      <member refid="class_valve_controller_1aaaa9cb35072c7f2c4f2d4805c435b4d8" prot="protected" virt="non-virtual"><scope>ContValveController</scope><name>dOutputMax</name></member>
+      <member refid="class_valve_controller_1a3cb0e85d6f24d2b3f68ca53b1c7e0732" prot="protected" virt="non-virtual"><scope>ContValveController</scope><name>dOutputMin</name></member>
+      <member refid="class_valve_controller_1a8fd9342fc9ed545b0dd991cc7f7de786" prot="protected" virt="non-virtual"><scope>ContValveController</scope><name>dSampleTime</name></member>
+      <member refid="class_valve_controller_1a1ec02658c934ea8d80d3dd090c1a5344" prot="public" virt="non-virtual"><scope>ContValveController</scope><name>getOutput</name></member>
+      <member refid="class_valve_controller_1a02177382e16681476d4b792367af4f30" prot="public" virt="non-virtual"><scope>ContValveController</scope><name>ValveController</name></member>
+      <member refid="class_cont_valve_controller_1a5eddd074037e24a6cc151643d76db755" prot="public" virt="non-virtual"><scope>ContValveController</scope><name>~ContValveController</name></member>
+      <member refid="class_valve_controller_1ab36f41bebdb7816915ca0c446fb87f67" prot="public" virt="virtual"><scope>ContValveController</scope><name>~ValveController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

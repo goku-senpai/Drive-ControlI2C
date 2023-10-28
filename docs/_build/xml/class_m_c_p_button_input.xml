@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_m_c_p_button_input" kind="class" language="C++" prot="public">
+    <compoundname>MCPButtonInput</compoundname>
+    <basecompoundref refid="class_button_input" prot="public" virt="non-virtual">ButtonInput</basecompoundref>
+    <includes refid="_button_8h" local="no">Button.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_c_p_button_input_1a35c696a83382f93255f955572c2ca2a2" prot="private" static="no" mutable="no">
+        <type>Adafruit_MCP23X08 *</type>
+        <definition>Adafruit_MCP23X08* MCPButtonInput::pExpanderMCP</definition>
+        <argsstring></argsstring>
+        <name>pExpanderMCP</name>
+        <qualifiedname>MCPButtonInput::pExpanderMCP</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="120" column="23" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_m_c_p_button_input_1a5a7db125dd662411184e887ceffd72d9" prot="private" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t MCPButtonInput::uAddr</definition>
+        <argsstring></argsstring>
+        <name>uAddr</name>
+        <qualifiedname>MCPButtonInput::uAddr</qualifiedname>
+        <initializer>= 34</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="121" column="26" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_c_p_button_input_1a6f706390f63420e274e5ea544f085744" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MCPButtonInput::MCPButtonInput</definition>
+        <argsstring>(int _pin, Adafruit_MCP23X08 *_pExpanderMCP)</argsstring>
+        <name>MCPButtonInput</name>
+        <qualifiedname>MCPButtonInput::MCPButtonInput</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_pin</declname>
+        </param>
+        <param>
+          <type>Adafruit_MCP23X08 *</type>
+          <declname>_pExpanderMCP</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="101" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="101" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_c_p_button_input_1aeaaa116275a6858619d6dffdf931f8c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MCPButtonInput::~MCPButtonInput</definition>
+        <argsstring>()</argsstring>
+        <name>~MCPButtonInput</name>
+        <qualifiedname>MCPButtonInput::~MCPButtonInput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="112" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_c_p_button_input_1af8398124c3c9dcbca6b7a5598a3a5f4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool MCPButtonInput::read</definition>
+        <argsstring>() override</argsstring>
+        <name>read</name>
+        <qualifiedname>MCPButtonInput::read</qualifiedname>
+        <reimplements refid="class_button_input_1aee02bce6f864e1df65044d08a1703092">read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="114" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="114" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>input wrapper based on adafruit mcp23x08 </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ButtonInput</label>
+        <link refid="class_button_input"/>
+      </node>
+      <node id="1">
+        <label>MCPButtonInput</label>
+        <link refid="class_m_c_p_button_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ButtonInput</label>
+        <link refid="class_button_input"/>
+      </node>
+      <node id="1">
+        <label>MCPButtonInput</label>
+        <link refid="class_m_c_p_button_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="98" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="99" bodyend="122"/>
+    <listofallmembers>
+      <member refid="class_button_input_1a05c951f902e7d44a19977ba1b07ba582" prot="public" virt="non-virtual"><scope>MCPButtonInput</scope><name>ButtonInput</name></member>
+      <member refid="class_button_input_1a0cd249e8849ce84954a77b90435ade88" prot="public" virt="non-virtual"><scope>MCPButtonInput</scope><name>getPin</name></member>
+      <member refid="class_button_input_1a80bb9c5440ef13d458858eba7f291dee" prot="protected" virt="non-virtual"><scope>MCPButtonInput</scope><name>iPin</name></member>
+      <member refid="class_m_c_p_button_input_1a6f706390f63420e274e5ea544f085744" prot="public" virt="non-virtual"><scope>MCPButtonInput</scope><name>MCPButtonInput</name></member>
+      <member refid="class_m_c_p_button_input_1a35c696a83382f93255f955572c2ca2a2" prot="private" virt="non-virtual"><scope>MCPButtonInput</scope><name>pExpanderMCP</name></member>
+      <member refid="class_m_c_p_button_input_1af8398124c3c9dcbca6b7a5598a3a5f4c" prot="public" virt="virtual"><scope>MCPButtonInput</scope><name>read</name></member>
+      <member refid="class_m_c_p_button_input_1a5a7db125dd662411184e887ceffd72d9" prot="private" virt="non-virtual"><scope>MCPButtonInput</scope><name>uAddr</name></member>
+      <member refid="class_button_input_1a4e2d540e3f499e598c87f0568adf93bb" prot="public" virt="virtual"><scope>MCPButtonInput</scope><name>~ButtonInput</name></member>
+      <member refid="class_m_c_p_button_input_1aeaaa116275a6858619d6dffdf931f8c1" prot="public" virt="non-virtual"><scope>MCPButtonInput</scope><name>~MCPButtonInput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespaceget_firmware_version" kind="namespace" language="Python">
+    <compoundname>getFirmwareVersion</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="get_firmware_version_8py_1a653159d48cbb429de8028156539d1469" prot="public" static="no" mutable="no">
+        <type>dict</type>
+        <definition>dict getFirmwareVersion.required_pkgs</definition>
+        <argsstring></argsstring>
+        <name>required_pkgs</name>
+        <qualifiedname>getFirmwareVersion.required_pkgs</qualifiedname>
+        <initializer>=  {&apos;gitpython&apos;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" line="3" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="get_firmware_version_8py_1a4bfc6f9fffa938ccee029bf2acbc1bf2" prot="public" static="no" mutable="no">
+        <type>dict</type>
+        <definition>dict getFirmwareVersion.installed_pkgs</definition>
+        <argsstring></argsstring>
+        <name>installed_pkgs</name>
+        <qualifiedname>getFirmwareVersion.installed_pkgs</qualifiedname>
+        <initializer>=  {pkg.key for pkg in pkg_resources.working_set}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" line="4" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="get_firmware_version_8py_1ab7bef2b863d25b4522e6950390087a03" prot="public" static="no" mutable="no">
+        <type>dict</type>
+        <definition>dict getFirmwareVersion.missing_pkgs</definition>
+        <argsstring></argsstring>
+        <name>missing_pkgs</name>
+        <qualifiedname>getFirmwareVersion.missing_pkgs</qualifiedname>
+        <initializer>=  required_pkgs - installed_pkgs</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" line="5" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="get_firmware_version_8py_1a155eb588fc1ecf87ec94a734cbba8540" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>getFirmwareVersion.try</definition>
+        <argsstring></argsstring>
+        <name>try</name>
+        <qualifiedname>getFirmwareVersion.try</qualifiedname>
+        <initializer>:</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" line="12" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="get_firmware_version_8py_1abf508252296e7a1ef452174d251a9178" prot="public" static="no" mutable="no">
+        <type>git</type>
+        <definition>git getFirmwareVersion.repo</definition>
+        <argsstring></argsstring>
+        <name>repo</name>
+        <qualifiedname>getFirmwareVersion.repo</qualifiedname>
+        <initializer>=  git.Repo(search_parent_directories=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" line="18" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="get_firmware_version_8py_1a224fcf12b96f530c95ba8461c9a55eab" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>getFirmwareVersion.else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <qualifiedname>getFirmwareVersion.else</qualifiedname>
+        <initializer>:</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" line="22" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="get_firmware_version_8py_1a14fe11abb2e285c683a698761f0b461c" prot="public" static="no" mutable="no">
+        <type>git</type>
+        <definition>git getFirmwareVersion.sha</definition>
+        <argsstring></argsstring>
+        <name>sha</name>
+        <qualifiedname>getFirmwareVersion.sha</qualifiedname>
+        <initializer>=  repo.head.object.hexsha</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" line="23" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="get_firmware_version_8py_1aeb92a8e7dafc7230ece32843ab33cdcc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>getFirmwareVersion.BUILD_FLAGS</definition>
+        <argsstring></argsstring>
+        <name>BUILD_FLAGS</name>
+        <qualifiedname>getFirmwareVersion.BUILD_FLAGS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" line="33" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="get_firmware_version_8py_1a9af065bd23f8de12e8cb8f5de959f99a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def getFirmwareVersion.get_firmware_specifier_build_flag</definition>
+        <argsstring>()</argsstring>
+        <name>get_firmware_specifier_build_flag</name>
+        <qualifiedname>getFirmwareVersion.get_firmware_specifier_build_flag</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" line="25" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" bodystart="25" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/getFirmwareVersion.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

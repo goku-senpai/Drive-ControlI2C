@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_tick_client" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>TickClient</compoundname>
+    <includes refid="_tick_8h" local="no">Tick.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tick_client_1a4c0a9ed4474049ef6cfcd11aadd74d52" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void TickClient::tick</definition>
+        <argsstring>()=0</argsstring>
+        <name>tick</name>
+        <qualifiedname>TickClient::tick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method is called cyclically by tick server. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Tick.h" line="21" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class describing a client to the <ref refid="class_tick_server" kindref="compound">TickServer</ref>.</para>
+<para>provides a method to be called cyclically by the server. </para>
+    </detaileddescription>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Tick.h" line="16" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Tick.h" bodystart="16" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_tick_client_1a4c0a9ed4474049ef6cfcd11aadd74d52" prot="public" virt="pure-virtual"><scope>TickClient</scope><name>tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

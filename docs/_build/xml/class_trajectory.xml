@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_trajectory" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Trajectory</compoundname>
+    <derivedcompoundref refid="class_none_trajectory" prot="public" virt="non-virtual">NoneTrajectory</derivedcompoundref>
+    <derivedcompoundref refid="class_ramp_trajectory" prot="public" virt="non-virtual">RampTrajectory</derivedcompoundref>
+    <includes refid="_trajectory_8h" local="no">Trajectory.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_trajectory_1a828f96b61ad907a03e0aa7d484c80747" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Trajectory::dOut</definition>
+        <argsstring></argsstring>
+        <name>dOut</name>
+        <qualifiedname>Trajectory::dOut</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>last calculated output </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="61" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trajectory_1ac9369873bb7ff479cba63e098050b657" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Trajectory::dRampAngleStart[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>dRampAngleStart</name>
+        <qualifiedname>Trajectory::dRampAngleStart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="62" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trajectory_1a38daac3e65bdd4a306670f83e43fd8b2" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Trajectory::dRampAngleEnd[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>dRampAngleEnd</name>
+        <qualifiedname>Trajectory::dRampAngleEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="63" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_trajectory_1ab56a8ae8ef699cdbe05a318cd1c37c7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double *</type>
+        <definition>virtual double * Trajectory::compute</definition>
+        <argsstring>(const double &amp;dCurInput)=0</argsstring>
+        <name>compute</name>
+        <qualifiedname>Trajectory::compute</qualifiedname>
+        <reimplementedby refid="class_none_trajectory_1a2a001251bba4b43a1c065b99d9f9cbb5">compute</reimplementedby>
+        <reimplementedby refid="class_original_lucy_trajectory_1ae9462d349df217d917e708a16b60ea8b">compute</reimplementedby>
+        <reimplementedby refid="class_force_reduction_trajectory_1acb9ca93a2aac7d8036195e5092b54656">compute</reimplementedby>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dCurInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current input value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="18" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trajectory_1a0b9f423b728e422c0da1af625b7e0be4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double *</type>
+        <definition>double * Trajectory::getOutput</definition>
+        <argsstring>()</argsstring>
+        <name>getOutput</name>
+        <qualifiedname>Trajectory::getOutput</qualifiedname>
+        <briefdescription>
+<para>Method that returns the last calculated output of the trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>dOut calculated output value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="24" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trajectory_1aa340ba80f1f4d1aa39f19f069d5d8089" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Trajectory::Trajectory</definition>
+        <argsstring>()</argsstring>
+        <name>Trajectory</name>
+        <qualifiedname>Trajectory::Trajectory</qualifiedname>
+        <briefdescription>
+<para>default constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="31" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trajectory_1a3244e64a4c0eaf7c86fb1d985223227c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Trajectory::~Trajectory</definition>
+        <argsstring>()</argsstring>
+        <name>~Trajectory</name>
+        <qualifiedname>Trajectory::~Trajectory</qualifiedname>
+        <briefdescription>
+<para>virtual destructor to make deleting derived classes from a base class pointer work </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="40" column="13" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trajectory_1a82f0282097198990bb508d4c6cd1ef94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trajectory::setRampParams</definition>
+        <argsstring>(double dRampAngleStart1, double dRampAngleEnd1, double dRampAngleStart2, double dRampAngleEnd2)</argsstring>
+        <name>setRampParams</name>
+        <qualifiedname>Trajectory::setRampParams</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>dRampAngleStart1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dRampAngleEnd1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dRampAngleStart2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dRampAngleEnd2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set new Params for the Ramp <ref refid="class_trajectory" kindref="compound">Trajectory</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dRampAngleStart1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dRampAngleEnd1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dRampAngleStart2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dRampAngleEnd2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="51" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="51" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class to represent a <ref refid="class_trajectory" kindref="compound">Trajectory</ref> dependent on a measurend angle. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>ForceReductionTrajectory</label>
+        <link refid="class_force_reduction_trajectory"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NoneTrajectory</label>
+        <link refid="class_none_trajectory"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>OriginalLucyTrajectory</label>
+        <link refid="class_original_lucy_trajectory"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>RampTrajectory</label>
+        <link refid="class_ramp_trajectory"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Trajectory</label>
+        <link refid="class_trajectory"/>
+      </node>
+    </inheritancegraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="11" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="11" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_trajectory_1ab56a8ae8ef699cdbe05a318cd1c37c7c" prot="public" virt="pure-virtual"><scope>Trajectory</scope><name>compute</name></member>
+      <member refid="class_trajectory_1a828f96b61ad907a03e0aa7d484c80747" prot="protected" virt="non-virtual"><scope>Trajectory</scope><name>dOut</name></member>
+      <member refid="class_trajectory_1a38daac3e65bdd4a306670f83e43fd8b2" prot="protected" virt="non-virtual"><scope>Trajectory</scope><name>dRampAngleEnd</name></member>
+      <member refid="class_trajectory_1ac9369873bb7ff479cba63e098050b657" prot="protected" virt="non-virtual"><scope>Trajectory</scope><name>dRampAngleStart</name></member>
+      <member refid="class_trajectory_1a0b9f423b728e422c0da1af625b7e0be4" prot="public" virt="non-virtual"><scope>Trajectory</scope><name>getOutput</name></member>
+      <member refid="class_trajectory_1a82f0282097198990bb508d4c6cd1ef94" prot="public" virt="non-virtual"><scope>Trajectory</scope><name>setRampParams</name></member>
+      <member refid="class_trajectory_1aa340ba80f1f4d1aa39f19f069d5d8089" prot="public" virt="non-virtual"><scope>Trajectory</scope><name>Trajectory</name></member>
+      <member refid="class_trajectory_1a3244e64a4c0eaf7c86fb1d985223227c" prot="public" virt="virtual"><scope>Trajectory</scope><name>~Trajectory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

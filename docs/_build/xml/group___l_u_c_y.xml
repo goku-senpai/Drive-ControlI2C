@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group___l_u_c_y" kind="group">
+    <compoundname>LUCY</compoundname>
+    <title>LUCY</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___l_u_c_y_1ga688c8c4f93073bb1608cf95f229609e0" prot="public" static="no">
+        <name>EXP_TIMER_ID</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Timer0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>sampling time of controller in ms </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="13" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1ga749f29a88b9f1efe5994648a598bd2a4" prot="public" static="no">
+        <name>EXP_TIMER_PRESCALAR</name>
+        <initializer>80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="14" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1ga1e19c35dc2be7361bb38fe95c9162442" prot="public" static="no">
+        <name>EXP_TIMER_PERIOD</name>
+        <initializer>50000</initializer>
+        <briefdescription>
+<para>with a prescalar of 80 the period is in µs so 50000µs = 50ms </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="15" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1ga8c676c6fc3dab66c542a0ccb008a0912" prot="public" static="no">
+        <name>EXP_DT</name>
+        <initializer><ref refid="group___l_u_c_y_1ga1e19c35dc2be7361bb38fe95c9162442" kindref="member">EXP_TIMER_PERIOD</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="17" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1gade206713ffeebe2847de33a1c51f3ba3" prot="public" static="no">
+        <name>EXP_DT_S</name>
+        <initializer>EXP_DT / 1000.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="18" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1gae71449b1cc6e6250b91f539153a7a0d3" prot="public" static="no">
+        <name>M_PI</name>
+        <initializer>3.14159265358979323846</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="20" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_u_c_y_1ga00978ca9e8220475258dcbbbb7d29129" prot="public" static="no">
+        <name>ADC_RESOLUTION</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="21" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>various defines regarding lucy </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

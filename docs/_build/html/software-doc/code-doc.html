@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Implementation STM32 &mdash; Antriebsregelung 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Visualization with Python" href="visu-doc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Antriebsregelung
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Project Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-doc/install-doc.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware-doc/hardware-doc.html">Hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="software-doc.html">Software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="structure-doc.html">Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visu-doc.html">Visualization with Python</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Software Implementation STM32</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#encoder">Encoder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pid-controller">PID-Controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#motor">Motor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#parameters-groups-in-define-h">Parameters Groups in <strong>define.h</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">ENCODER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">MOTOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#led">LED</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Antriebsregelung</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="software-doc.html">Software</a></li>
+      <li class="breadcrumb-item active">Software Implementation STM32</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/software-doc/code-doc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="software-implementation-stm32">
+<h1>Software Implementation STM32<a class="headerlink" href="#software-implementation-stm32" title="Permalink to this heading"></a></h1>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h2>
+<section id="encoder">
+<h3>Encoder<a class="headerlink" href="#encoder" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="#class_encoder"><span class="std std-ref">Encoder</span></a> class. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv45hi2c1">
+<span id="_CPPv35hi2c1"></span><span id="_CPPv25hi2c1"></span><span id="hi2c1__I2C_HandleTypeDef"></span><span class="target" id="encoder_8cpp_1af7b2c26e44dadaaa798a5c3d82914ba7"></span><span class="n"><span class="pre">I2C_HandleTypeDef</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hi2c1</span></span></span><a class="headerlink" href="#_CPPv45hi2c1" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv410i2c_adress">
+<span id="_CPPv310i2c_adress"></span><span id="_CPPv210i2c_adress"></span><span id="i2c_adress__uint8_tC"></span><span class="target" id="encoder_8cpp_1a3f210c1631b7915c5f5be447f1fec378"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">i2c_adress</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x6C</span></span><a class="headerlink" href="#_CPPv410i2c_adress" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv412convertValue">
+<span id="_CPPv312convertValue"></span><span id="_CPPv212convertValue"></span><span id="convertValue__floatC"></span><span class="target" id="encoder_8cpp_1aafcb94cb7d5be7c3d502b80ca215ab7f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">convertValue</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.08789f</span></span><a class="headerlink" href="#_CPPv412convertValue" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv411angleAdress">
+<span id="_CPPv311angleAdress"></span><span id="_CPPv211angleAdress"></span><span id="angleAdress__uint8_tC"></span><span class="target" id="encoder_8cpp_1a14bf41b5d21bbffbfa6d8df229d1045b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">angleAdress</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0C</span></span><a class="headerlink" href="#_CPPv411angleAdress" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv412statusAdress">
+<span id="_CPPv312statusAdress"></span><span id="_CPPv212statusAdress"></span><span id="statusAdress__uint8_tC"></span><span class="target" id="encoder_8cpp_1a3c3330f3a693a4bb9ce788f61043fb98"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">statusAdress</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0B</span></span><a class="headerlink" href="#_CPPv412statusAdress" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv47rawData">
+<span id="_CPPv37rawData"></span><span id="_CPPv27rawData"></span><span id="rawData__uint16_t"></span><span class="target" id="encoder_8cpp_1ad21b97d3d5a0a03e27b9850757932e88"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rawData</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv47rawData" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv46status">
+<span id="_CPPv36status"></span><span id="_CPPv26status"></span><span id="status__uint8_t"></span><span class="target" id="encoder_8cpp_1ade818037fd6c985038ff29656089758d"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">status</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv46status" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv45angle">
+<span id="_CPPv35angle"></span><span id="_CPPv25angle"></span><span id="angle__float"></span><span class="target" id="encoder_8cpp_1ab8ef1bf8a70cc07c6d55823c390a7e76"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">angle</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv45angle" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv44data">
+<span id="_CPPv34data"></span><span id="_CPPv24data"></span><span id="data__uint8_tA"></span><span class="target" id="encoder_8cpp_1a645e2bfaab58ae5f59f9adb824951528"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">5</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv44data" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv44buff">
+<span id="_CPPv34buff"></span><span id="_CPPv24buff"></span><span id="buff__uint8_tA"></span><span class="target" id="encoder_8cpp_1a4c31b1aeb2e9d4ab22c6acc7d1430406"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">buff</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">20</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv44buff" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv43ret">
+<span id="_CPPv33ret"></span><span id="_CPPv23ret"></span><span id="ret__HAL_StatusTypeDef"></span><span class="target" id="encoder_8cpp_1a569e2fb39e3d7ec662aff1a92942b75f"></span><span class="n"><span class="pre">HAL_StatusTypeDef</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ret</span></span></span><a class="headerlink" href="#_CPPv43ret" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv47Encoder">
+<span id="_CPPv37Encoder"></span><span id="_CPPv27Encoder"></span><span id="Encoder"></span><span class="target" id="class_encoder"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Encoder</span></span></span><a class="headerlink" href="#_CPPv47Encoder" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7Encoder7EncoderEP17TIM_HandleTypeDefP12GPIO_TypeDef8uint16_tP12GPIO_TypeDef8uint16_t">
+<span id="_CPPv3N7Encoder7EncoderEP17TIM_HandleTypeDefP12GPIO_TypeDef8uint16_tP12GPIO_TypeDef8uint16_t"></span><span id="_CPPv2N7Encoder7EncoderEP17TIM_HandleTypeDefP12GPIO_TypeDef8uint16_tP12GPIO_TypeDef8uint16_t"></span><span id="Encoder::Encoder__TIM_HandleTypeDefP.GPIO_TypeDefP.uint16_t.GPIO_TypeDefP.uint16_t"></span><span class="target" id="class_encoder_1ac3bb736c35541ed71ef2d2c6250a0177"></span><span class="sig-name descname"><span class="n"><span class="pre">Encoder</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TIM_HandleTypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">htim</span></span>, <span class="n"><span class="pre">GPIO_TypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">portA</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pinA</span></span>, <span class="n"><span class="pre">GPIO_TypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">portB</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pinB</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7Encoder7EncoderEP17TIM_HandleTypeDefP12GPIO_TypeDef8uint16_tP12GPIO_TypeDef8uint16_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#class_encoder"><span class="std std-ref">Encoder</span></a>:: <a class="reference internal" href="#class_encoder"><span class="std std-ref">Encoder</span></a> object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>htim</strong> – </p></li>
+<li><p><strong>portA</strong> – </p></li>
+<li><p><strong>pinA</strong> – </p></li>
+<li><p><strong>portB</strong> – </p></li>
+<li><p><strong>pinB</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7Encoder4initEv">
+<span id="_CPPv3N7Encoder4initEv"></span><span id="_CPPv2N7Encoder4initEv"></span><span id="Encoder::init"></span><span class="target" id="class_encoder_1a01e97423efe4bdd957c53f8d59fe2b74"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7Encoder4initEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>analogEncoder init </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7Encoder9get_countEv">
+<span id="_CPPv3N7Encoder9get_countEv"></span><span id="_CPPv2N7Encoder9get_countEv"></span><span id="Encoder::get_count"></span><span class="target" id="class_encoder_1a801fef5c9b8085dc463c18196b4a1c83"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_count</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7Encoder9get_countEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>analogEncoder counter </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t counts </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7Encoder11reset_countEv">
+<span id="_CPPv3N7Encoder11reset_countEv"></span><span id="_CPPv2N7Encoder11reset_countEv"></span><span id="Encoder::reset_count"></span><span class="target" id="class_encoder_1a866c82e886dd10619a75a39167c12f33"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset_count</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7Encoder11reset_countEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>analogEncoder resetcounter </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7Encoder12get_positionEv">
+<span id="_CPPv3N7Encoder12get_positionEv"></span><span id="_CPPv2N7Encoder12get_positionEv"></span><span id="Encoder::get_position"></span><span class="target" id="class_encoder_1aa0e90fc58f27bcdf40791e6bb05e28ec"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_position</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7Encoder12get_positionEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>analogEncoder getpos </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t position </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7Encoder15get_positionI2CEv">
+<span id="_CPPv3N7Encoder15get_positionI2CEv"></span><span id="_CPPv2N7Encoder15get_positionI2CEv"></span><span id="Encoder::get_positionI2C"></span><span class="target" id="class_encoder_1a3abe1d3cb71cf77aa2469d62f91287f9"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_positionI2C</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7Encoder15get_positionI2CEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>I2CEncoder. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>position </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7Encoder5_htimE">
+<span id="_CPPv3N7Encoder5_htimE"></span><span id="_CPPv2N7Encoder5_htimE"></span><span id="Encoder::_htim__TIM_HandleTypeDefP"></span><span class="target" id="class_encoder_1a121e5a14592a3b35ab6c98b365743519"></span><span class="n"><span class="pre">TIM_HandleTypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_htim</span></span></span><a class="headerlink" href="#_CPPv4N7Encoder5_htimE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7Encoder6_portAE">
+<span id="_CPPv3N7Encoder6_portAE"></span><span id="_CPPv2N7Encoder6_portAE"></span><span id="Encoder::_portA__GPIO_TypeDefP"></span><span class="target" id="class_encoder_1a6215c7291f621289040bcb23bc0a8a2a"></span><span class="n"><span class="pre">GPIO_TypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_portA</span></span></span><a class="headerlink" href="#_CPPv4N7Encoder6_portAE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7Encoder5_pinAE">
+<span id="_CPPv3N7Encoder5_pinAE"></span><span id="_CPPv2N7Encoder5_pinAE"></span><span id="Encoder::_pinA__uint16_t"></span><span class="target" id="class_encoder_1a8fed9cc06697224d9bcd08796ccc696f"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_pinA</span></span></span><a class="headerlink" href="#_CPPv4N7Encoder5_pinAE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7Encoder6_portBE">
+<span id="_CPPv3N7Encoder6_portBE"></span><span id="_CPPv2N7Encoder6_portBE"></span><span id="Encoder::_portB__GPIO_TypeDefP"></span><span class="target" id="class_encoder_1a8c0d4972d34670bd6c47b179048487da"></span><span class="n"><span class="pre">GPIO_TypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_portB</span></span></span><a class="headerlink" href="#_CPPv4N7Encoder6_portBE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7Encoder5_pinBE">
+<span id="_CPPv3N7Encoder5_pinBE"></span><span id="_CPPv2N7Encoder5_pinBE"></span><span id="Encoder::_pinB__uint16_t"></span><span class="target" id="class_encoder_1adf7daf71a157322a39713b61c3781377"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_pinB</span></span></span><a class="headerlink" href="#_CPPv4N7Encoder5_pinBE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="pid-controller">
+<h3>PID-Controller<a class="headerlink" href="#pid-controller" title="Permalink to this heading"></a></h3>
+<p>PID controller. </p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv413PIDController">
+<span id="_CPPv313PIDController"></span><span id="_CPPv213PIDController"></span><span id="PIDController"></span><span class="target" id="class_p_i_d_controller"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PIDController</span></span></span><a class="headerlink" href="#_CPPv413PIDController" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController13PIDControllerEffffff">
+<span id="_CPPv3N13PIDController13PIDControllerEffffff"></span><span id="_CPPv2N13PIDController13PIDControllerEffffff"></span><span id="PIDController::PIDController__float.float.float.float.float.float"></span><span class="target" id="class_p_i_d_controller_1ac7e26b5f62e8e7d6ee0dda0cd4d127eb"></span><span class="sig-name descname"><span class="n"><span class="pre">PIDController</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">kp</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ki</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">kd</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max_output</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max_integral</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">target</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PIDController13PIDControllerEffffff" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController6updateEff">
+<span id="_CPPv3N13PIDController6updateEff"></span><span id="_CPPv2N13PIDController6updateEff"></span><span id="PIDController::update__float.float"></span><span class="target" id="class_p_i_d_controller_1a081c1ad40df4ae192b3723d53a7718e7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">current_value</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sample_time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PIDController6updateEff" title="Permalink to this definition"></a><br /></dt>
+<dd><p>update function </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>current_value</strong> – </p></li>
+<li><p><strong>sample_time</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController6set_kpEf">
+<span id="_CPPv3N13PIDController6set_kpEf"></span><span id="_CPPv2N13PIDController6set_kpEf"></span><span id="PIDController::set_kp__float"></span><span class="target" id="class_p_i_d_controller_1aca3e1da521c4be6e05ee2ea89a18df86"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_kp</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">kp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PIDController6set_kpEf" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController6set_kiEf">
+<span id="_CPPv3N13PIDController6set_kiEf"></span><span id="_CPPv2N13PIDController6set_kiEf"></span><span id="PIDController::set_ki__float"></span><span class="target" id="class_p_i_d_controller_1a24f741a6129d568c23f541f6f602fe3b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_ki</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ki</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PIDController6set_kiEf" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController6set_kdEf">
+<span id="_CPPv3N13PIDController6set_kdEf"></span><span id="_CPPv2N13PIDController6set_kdEf"></span><span id="PIDController::set_kd__float"></span><span class="target" id="class_p_i_d_controller_1a1a0ada2d70e2907bed1618c5a7edc27b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_kd</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">kd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PIDController6set_kdEf" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController10set_targetEf">
+<span id="_CPPv3N13PIDController10set_targetEf"></span><span id="_CPPv2N13PIDController10set_targetEf"></span><span id="PIDController::set_target__float"></span><span class="target" id="class_p_i_d_controller_1a4a0a88861adadac85e82a4b3910f8202"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_target</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">target</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PIDController10set_targetEf" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13PIDController10get_outputEv">
+<span id="_CPPv3NK13PIDController10get_outputEv"></span><span id="_CPPv2NK13PIDController10get_outputEv"></span><span id="PIDController::get_outputC"></span><span class="target" id="class_p_i_d_controller_1add79b8cd9ba95018cfed8c663972cc24"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_output</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13PIDController10get_outputEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13PIDController10get_targetEv">
+<span id="_CPPv3NK13PIDController10get_targetEv"></span><span id="_CPPv2NK13PIDController10get_targetEv"></span><span id="PIDController::get_targetC"></span><span class="target" id="class_p_i_d_controller_1aaed9d19e5e06a2a83cebb45ad494a622"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_target</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13PIDController10get_targetEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController3kp_E">
+<span id="_CPPv3N13PIDController3kp_E"></span><span id="_CPPv2N13PIDController3kp_E"></span><span id="PIDController::kp___float"></span><span class="target" id="class_p_i_d_controller_1a7abe8e43b88d28f7df05fc4a338ea69a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kp_</span></span></span><a class="headerlink" href="#_CPPv4N13PIDController3kp_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController3ki_E">
+<span id="_CPPv3N13PIDController3ki_E"></span><span id="_CPPv2N13PIDController3ki_E"></span><span id="PIDController::ki___float"></span><span class="target" id="class_p_i_d_controller_1a29a4b35864f64ed29e65398417b48da8"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ki_</span></span></span><a class="headerlink" href="#_CPPv4N13PIDController3ki_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController3kd_E">
+<span id="_CPPv3N13PIDController3kd_E"></span><span id="_CPPv2N13PIDController3kd_E"></span><span id="PIDController::kd___float"></span><span class="target" id="class_p_i_d_controller_1a97fc1422b5bd43d3c6a1ca395427c458"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kd_</span></span></span><a class="headerlink" href="#_CPPv4N13PIDController3kd_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController11max_output_E">
+<span id="_CPPv3N13PIDController11max_output_E"></span><span id="_CPPv2N13PIDController11max_output_E"></span><span id="PIDController::max_output___float"></span><span class="target" id="class_p_i_d_controller_1a5cff53760fb7872603064b391d33bd3e"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_output_</span></span></span><a class="headerlink" href="#_CPPv4N13PIDController11max_output_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController13max_integral_E">
+<span id="_CPPv3N13PIDController13max_integral_E"></span><span id="_CPPv2N13PIDController13max_integral_E"></span><span id="PIDController::max_integral___float"></span><span class="target" id="class_p_i_d_controller_1a599643de052eb427aa4b3730626ecb06"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_integral_</span></span></span><a class="headerlink" href="#_CPPv4N13PIDController13max_integral_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController7target_E">
+<span id="_CPPv3N13PIDController7target_E"></span><span id="_CPPv2N13PIDController7target_E"></span><span id="PIDController::target___float"></span><span class="target" id="class_p_i_d_controller_1a7a5b19e2244f9987829ab5f23175c9c9"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">target_</span></span></span><a class="headerlink" href="#_CPPv4N13PIDController7target_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController9integral_E">
+<span id="_CPPv3N13PIDController9integral_E"></span><span id="_CPPv2N13PIDController9integral_E"></span><span id="PIDController::integral___float"></span><span class="target" id="class_p_i_d_controller_1ad0a5e91ca64b72411f077b5d658295ce"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">integral_</span></span></span><a class="headerlink" href="#_CPPv4N13PIDController9integral_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController11prev_error_E">
+<span id="_CPPv3N13PIDController11prev_error_E"></span><span id="_CPPv2N13PIDController11prev_error_E"></span><span id="PIDController::prev_error___float"></span><span class="target" id="class_p_i_d_controller_1a05058b0a86611c2e02476bc863519515"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">prev_error_</span></span></span><a class="headerlink" href="#_CPPv4N13PIDController11prev_error_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PIDController7output_E">
+<span id="_CPPv3N13PIDController7output_E"></span><span id="_CPPv2N13PIDController7output_E"></span><span id="PIDController::output___float"></span><span class="target" id="class_p_i_d_controller_1a2f5d648747f28ddd35f6dc8cf0af51f4"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output_</span></span></span><a class="headerlink" href="#_CPPv4N13PIDController7output_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="motor">
+<h3>Motor<a class="headerlink" href="#motor" title="Permalink to this heading"></a></h3>
+<p>Motor controller. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv422CONTROL_MODE_FREEWHEEL">
+<span id="_CPPv322CONTROL_MODE_FREEWHEEL"></span><span id="_CPPv222CONTROL_MODE_FREEWHEEL"></span><span id="CONTROL_MODE_FREEWHEEL__uint8_tC"></span><span class="target" id="motor__controller_8cpp_1a09d7e79f8255cbbaef94e500a0e0fbd8"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONTROL_MODE_FREEWHEEL</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv422CONTROL_MODE_FREEWHEEL" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv421CONTROL_MODE_POSITION">
+<span id="_CPPv321CONTROL_MODE_POSITION"></span><span id="_CPPv221CONTROL_MODE_POSITION"></span><span id="CONTROL_MODE_POSITION__uint8_tC"></span><span class="target" id="motor__controller_8cpp_1a6e613304dbc51eec8a0a545d287a6d1f"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONTROL_MODE_POSITION</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv421CONTROL_MODE_POSITION" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv415uartdebugBuffer">
+<span id="_CPPv315uartdebugBuffer"></span><span id="_CPPv215uartdebugBuffer"></span><span id="uartdebugBuffer__uint8_tA"></span><span class="target" id="motor__controller_8cpp_1a4cc77d93d9acd83f7eb7045947721800"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">uartdebugBuffer</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">UART_RX_BUFFER_SIZE</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv415uartdebugBuffer" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv46huart3">
+<span id="_CPPv36huart3"></span><span id="_CPPv26huart3"></span><span id="huart3__UART_HandleTypeDef"></span><span class="target" id="motor__controller_8cpp_1ab7c63c1b0f65db92b6a4ea19edf957e1"></span><span class="n"><span class="pre">UART_HandleTypeDef</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">huart3</span></span></span><a class="headerlink" href="#_CPPv46huart3" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv416Motor_Simulation">
+<span id="_CPPv316Motor_Simulation"></span><span id="_CPPv216Motor_Simulation"></span><span id="Motor_Simulation__b"></span><span class="target" id="motor__controller_8cpp_1a8325fe751ea48d8fcdb885bf965ff561"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_Simulation</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv416Motor_Simulation" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv415MotorController">
+<span id="_CPPv315MotorController"></span><span id="_CPPv215MotorController"></span><span id="MotorController"></span><span class="target" id="class_motor_controller"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MotorController</span></span></span><a class="headerlink" href="#_CPPv415MotorController" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController15MotorControllerEP17TIM_HandleTypeDef8uint32_tP12GPIO_TypeDef8uint32_tfffb">
+<span id="_CPPv3N15MotorController15MotorControllerEP17TIM_HandleTypeDef8uint32_tP12GPIO_TypeDef8uint32_tfffb"></span><span id="_CPPv2N15MotorController15MotorControllerEP17TIM_HandleTypeDef8uint32_tP12GPIO_TypeDef8uint32_tfffb"></span><span id="MotorController::MotorController__TIM_HandleTypeDefP.uint32_t.GPIO_TypeDefP.uint32_t.float.float.float.b"></span><span class="target" id="class_motor_controller_1a16a19e929df0774c97a4479e75609291"></span><span class="sig-name descname"><span class="n"><span class="pre">MotorController</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TIM_HandleTypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">htim_pwm</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">channel_pwm</span></span>, <span class="n"><span class="pre">GPIO_TypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">gpio_pwm</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin_pwm</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max_output</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max_integral</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">target_start</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">is_speed_controller</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15MotorController15MotorControllerEP17TIM_HandleTypeDef8uint32_tP12GPIO_TypeDef8uint32_tfffb" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController13set_directionEbb">
+<span id="_CPPv3N15MotorController13set_directionEbb"></span><span id="_CPPv2N15MotorController13set_directionEbb"></span><span id="MotorController::set_direction__b.b"></span><span class="target" id="class_motor_controller_1a3413ae9abcf748a58c58db974051105a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_direction</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">direction_fwd</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">direction_bwd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15MotorController13set_directionEbb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>setter direction </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>direction_fwd</strong> – </p></li>
+<li><p><strong>direction_bwd</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController10set_targetEf">
+<span id="_CPPv3N15MotorController10set_targetEf"></span><span id="_CPPv2N15MotorController10set_targetEf"></span><span id="MotorController::set_target__float"></span><span class="target" id="class_motor_controller_1a1c5d87810b12a740121d540b51663966"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_target</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dSetpoint</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15MotorController10set_targetEf" title="Permalink to this definition"></a><br /></dt>
+<dd><p>setter for Setpoint </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dSetpoint</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController6updateEf7int32_t7uint8_tfff">
+<span id="_CPPv3N15MotorController6updateEf7int32_t7uint8_tfff"></span><span id="_CPPv2N15MotorController6updateEf7int32_t7uint8_tfff"></span><span id="MotorController::update__float.int32_t.uint8_t.float.float.float"></span><span class="target" id="class_motor_controller_1a46a7d8fdad02c45a062b9138f16d86d6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sample_time</span></span>, <span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">encoder_value</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bFreewheel</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dKp</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dKi</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dKd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15MotorController6updateEf7int32_t7uint8_tfff" title="Permalink to this definition"></a><br /></dt>
+<dd><p>update function for Motor controller </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sample_time</strong> – </p></li>
+<li><p><strong>encoder_value</strong> – </p></li>
+<li><p><strong>bFreewheel</strong> – </p></li>
+<li><p><strong>dKp</strong> – </p></li>
+<li><p><strong>dKi</strong> – </p></li>
+<li><p><strong>dKd</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController9htim_pwm_E">
+<span id="_CPPv3N15MotorController9htim_pwm_E"></span><span id="_CPPv2N15MotorController9htim_pwm_E"></span><span id="MotorController::htim_pwm___TIM_HandleTypeDefP"></span><span class="target" id="class_motor_controller_1a396ac4f679915258f1ea5e6d74dd3e7a"></span><span class="n"><span class="pre">TIM_HandleTypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">htim_pwm_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController9htim_pwm_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController12channel_pwm_E">
+<span id="_CPPv3N15MotorController12channel_pwm_E"></span><span id="_CPPv2N15MotorController12channel_pwm_E"></span><span id="MotorController::channel_pwm___uint32_t"></span><span class="target" id="class_motor_controller_1ab7f8c735c39e747657dbf387a57dadbb"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">channel_pwm_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController12channel_pwm_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController9gpio_pwm_E">
+<span id="_CPPv3N15MotorController9gpio_pwm_E"></span><span id="_CPPv2N15MotorController9gpio_pwm_E"></span><span id="MotorController::gpio_pwm___GPIO_TypeDefP"></span><span class="target" id="class_motor_controller_1a80b594313e7a9cd40319a4d6eda7d9d5"></span><span class="n"><span class="pre">GPIO_TypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">gpio_pwm_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController9gpio_pwm_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController8pin_pwm_E">
+<span id="_CPPv3N15MotorController8pin_pwm_E"></span><span id="_CPPv2N15MotorController8pin_pwm_E"></span><span id="MotorController::pin_pwm___uint32_t"></span><span class="target" id="class_motor_controller_1a33ca4fdefb6df3b92f357fcf9f764ab9"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pin_pwm_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController8pin_pwm_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController13gpio_dir_fwd_E">
+<span id="_CPPv3N15MotorController13gpio_dir_fwd_E"></span><span id="_CPPv2N15MotorController13gpio_dir_fwd_E"></span><span id="MotorController::gpio_dir_fwd___GPIO_TypeDefP"></span><span class="target" id="class_motor_controller_1a6185cdd13c853ebcc107d75d912d16ac"></span><span class="n"><span class="pre">GPIO_TypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">gpio_dir_fwd_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController13gpio_dir_fwd_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController18pin_direction_fwd_E">
+<span id="_CPPv3N15MotorController18pin_direction_fwd_E"></span><span id="_CPPv2N15MotorController18pin_direction_fwd_E"></span><span id="MotorController::pin_direction_fwd___uint32_t"></span><span class="target" id="class_motor_controller_1abc7548a7e90f7ca743e2600eb75f6347"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pin_direction_fwd_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController18pin_direction_fwd_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController13gpio_dir_bwd_E">
+<span id="_CPPv3N15MotorController13gpio_dir_bwd_E"></span><span id="_CPPv2N15MotorController13gpio_dir_bwd_E"></span><span id="MotorController::gpio_dir_bwd___GPIO_TypeDefP"></span><span class="target" id="class_motor_controller_1a03e285556b372d3ac41628cd9a61970e"></span><span class="n"><span class="pre">GPIO_TypeDef</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">gpio_dir_bwd_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController13gpio_dir_bwd_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController18pin_direction_bwd_E">
+<span id="_CPPv3N15MotorController18pin_direction_bwd_E"></span><span id="_CPPv2N15MotorController18pin_direction_bwd_E"></span><span id="MotorController::pin_direction_bwd___uint32_t"></span><span class="target" id="class_motor_controller_1aadbfecd8a2863dfbcca7ad5b8b502a08"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pin_direction_bwd_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController18pin_direction_bwd_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController20is_speed_controller_E">
+<span id="_CPPv3N15MotorController20is_speed_controller_E"></span><span id="_CPPv2N15MotorController20is_speed_controller_E"></span><span id="MotorController::is_speed_controller___b"></span><span class="target" id="class_motor_controller_1aa9e156f17ca5b0e640a399ae87655a9e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_speed_controller_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController20is_speed_controller_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController17current_position_E">
+<span id="_CPPv3N15MotorController17current_position_E"></span><span id="_CPPv2N15MotorController17current_position_E"></span><span id="MotorController::current_position___uint32_t"></span><span class="target" id="class_motor_controller_1a7fca3330df8fa7f7592b7b3accbd361e"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">current_position_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController17current_position_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController15current_output_E">
+<span id="_CPPv3N15MotorController15current_output_E"></span><span id="_CPPv2N15MotorController15current_output_E"></span><span id="MotorController::current_output___float"></span><span class="target" id="class_motor_controller_1ab775ae1b04a7a521a5a55f328aa65095"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">current_output_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController15current_output_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController19prev_encoder_value_E">
+<span id="_CPPv3N15MotorController19prev_encoder_value_E"></span><span id="_CPPv2N15MotorController19prev_encoder_value_E"></span><span id="MotorController::prev_encoder_value___uint32_t"></span><span class="target" id="class_motor_controller_1afae2d254302c6c5d1ed0492cb8e44bf6"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">prev_encoder_value_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController19prev_encoder_value_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController13control_mode_E">
+<span id="_CPPv3N15MotorController13control_mode_E"></span><span id="_CPPv2N15MotorController13control_mode_E"></span><span id="MotorController::control_mode___uint8_t"></span><span class="target" id="class_motor_controller_1a165299db373925df0f2e8bc7555c1e24"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">control_mode_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController13control_mode_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController4dKp_E">
+<span id="_CPPv3N15MotorController4dKp_E"></span><span id="_CPPv2N15MotorController4dKp_E"></span><span id="MotorController::dKp___float"></span><span class="target" id="class_motor_controller_1a1c2467bea13c547a690535f2a4e2c228"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dKp_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController4dKp_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController4dKi_E">
+<span id="_CPPv3N15MotorController4dKi_E"></span><span id="_CPPv2N15MotorController4dKi_E"></span><span id="MotorController::dKi___float"></span><span class="target" id="class_motor_controller_1ab896ec8a9dc9a05e0354ae91e90a8b12"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dKi_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController4dKi_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController4dKd_E">
+<span id="_CPPv3N15MotorController4dKd_E"></span><span id="_CPPv2N15MotorController4dKd_E"></span><span id="MotorController::dKd___float"></span><span class="target" id="class_motor_controller_1aaa5566c4406c4a18b53a7a8586f077a1"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dKd_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController4dKd_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15MotorController15pid_controller_E">
+<span id="_CPPv3N15MotorController15pid_controller_E"></span><span id="_CPPv2N15MotorController15pid_controller_E"></span><span id="MotorController::pid_controller___PIDController"></span><span class="target" id="class_motor_controller_1a7dd451db5c22130836c94edd8631e171"></span><a class="reference internal" href="#_CPPv413PIDController" title="PIDController"><span class="n"><span class="pre">PIDController</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pid_controller_</span></span></span><a class="headerlink" href="#_CPPv4N15MotorController15pid_controller_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="parameters-groups-in-define-h">
+<h2>Parameters Groups in <strong>define.h</strong><a class="headerlink" href="#parameters-groups-in-define-h" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3>ENCODER<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___e_n_c_o_d_e_r"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">ENCODER</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ENCODER_RESOLUTION">
+<span class="target" id="group___e_n_c_o_d_e_r_1ga8cdc17f43c9f3850f60d04f98216fc13"></span><span class="sig-name descname"><span class="n"><span class="pre">ENCODER_RESOLUTION</span></span></span><a class="headerlink" href="#c.ENCODER_RESOLUTION" title="Permalink to this definition"></a><br /></dt>
+<dd><p>analog <a class="reference internal" href="#class_encoder"><span class="std std-ref">Encoder</span></a> Resolution </p>
+<p>131(Übersetzung) *16 (Encoderauflösung) *4( 2*Rise and Fall flag) </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ENCODER_M1_A_PIN">
+<span class="target" id="group___e_n_c_o_d_e_r_1ga4ca42a805c3457c0e526509494b19829"></span><span class="sig-name descname"><span class="n"><span class="pre">ENCODER_M1_A_PIN</span></span></span><a class="headerlink" href="#c.ENCODER_M1_A_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd><p>analog <a class="reference internal" href="#class_encoder"><span class="std std-ref">Encoder</span></a> A PIN </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ENCODER_M1_A_PORT">
+<span class="target" id="group___e_n_c_o_d_e_r_1gac7c2dbd4eac88a97728a455a7bc95e15"></span><span class="sig-name descname"><span class="n"><span class="pre">ENCODER_M1_A_PORT</span></span></span><a class="headerlink" href="#c.ENCODER_M1_A_PORT" title="Permalink to this definition"></a><br /></dt>
+<dd><p>analog <a class="reference internal" href="#class_encoder"><span class="std std-ref">Encoder</span></a> A PORT </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ENCODER_M1_A_ALTERNATE">
+<span class="target" id="group___e_n_c_o_d_e_r_1ga7cf45819f081d07e1acfc2b4d0d60ae7"></span><span class="sig-name descname"><span class="n"><span class="pre">ENCODER_M1_A_ALTERNATE</span></span></span><a class="headerlink" href="#c.ENCODER_M1_A_ALTERNATE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>analog <a class="reference internal" href="#class_encoder"><span class="std std-ref">Encoder</span></a> A TIM </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ENCODER_M1_B_PIN">
+<span class="target" id="group___e_n_c_o_d_e_r_1ga201322766762341c34054321eccfc0f3"></span><span class="sig-name descname"><span class="n"><span class="pre">ENCODER_M1_B_PIN</span></span></span><a class="headerlink" href="#c.ENCODER_M1_B_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd><p>analog <a class="reference internal" href="#class_encoder"><span class="std std-ref">Encoder</span></a> B PIN </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ENCODER_M1_B_PORT">
+<span class="target" id="group___e_n_c_o_d_e_r_1ga409addbaf122fc11b920116beb937d86"></span><span class="sig-name descname"><span class="n"><span class="pre">ENCODER_M1_B_PORT</span></span></span><a class="headerlink" href="#c.ENCODER_M1_B_PORT" title="Permalink to this definition"></a><br /></dt>
+<dd><p>analog <a class="reference internal" href="#class_encoder"><span class="std std-ref">Encoder</span></a> B Port </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ENCODER_M1_B_ALTERNATE">
+<span class="target" id="group___e_n_c_o_d_e_r_1gab93e11bf3eab18c24e9a0edd77435c97"></span><span class="sig-name descname"><span class="n"><span class="pre">ENCODER_M1_B_ALTERNATE</span></span></span><a class="headerlink" href="#c.ENCODER_M1_B_ALTERNATE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>analog <a class="reference internal" href="#class_encoder"><span class="std std-ref">Encoder</span></a> B TIM </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.POS_KP">
+<span class="target" id="group___e_n_c_o_d_e_r_1ga7efb643ea6e0ad93c82f35a04199ed0d"></span><span class="sig-name descname"><span class="n"><span class="pre">POS_KP</span></span></span><a class="headerlink" href="#c.POS_KP" title="Permalink to this definition"></a><br /></dt>
+<dd><p>PID Kp value. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.POS_KI">
+<span class="target" id="group___e_n_c_o_d_e_r_1ga7490c5cda802d0f32484ebcd44f27187"></span><span class="sig-name descname"><span class="n"><span class="pre">POS_KI</span></span></span><a class="headerlink" href="#c.POS_KI" title="Permalink to this definition"></a><br /></dt>
+<dd><p>PID Kp value. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.POS_KD">
+<span class="target" id="group___e_n_c_o_d_e_r_1ga78ca3aae210f6a0724a2214a98ee1831"></span><span class="sig-name descname"><span class="n"><span class="pre">POS_KD</span></span></span><a class="headerlink" href="#c.POS_KD" title="Permalink to this definition"></a><br /></dt>
+<dd><p>PID Kp value. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.DEFAULT_TARGET_START">
+<span class="target" id="group___e_n_c_o_d_e_r_1ga5fbf1b31edd4728f53e0deb6a7ac9c76"></span><span class="sig-name descname"><span class="n"><span class="pre">DEFAULT_TARGET_START</span></span></span><a class="headerlink" href="#c.DEFAULT_TARGET_START" title="Permalink to this definition"></a><br /></dt>
+<dd><p>PID Start. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.DEFAULT_MAX_INTEGRAL">
+<span class="target" id="group___e_n_c_o_d_e_r_1gaecfa9c9559b05987c25fcf12731b394d"></span><span class="sig-name descname"><span class="n"><span class="pre">DEFAULT_MAX_INTEGRAL</span></span></span><a class="headerlink" href="#c.DEFAULT_MAX_INTEGRAL" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Max Integral. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id3">
+<h3>MOTOR<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___m_o_t_o_r"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">MOTOR</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MOTOR_TIM_A">
+<span class="target" id="group___m_o_t_o_r_1ga5e37a71039edab10b6684764dfd32e44"></span><span class="sig-name descname"><span class="n"><span class="pre">MOTOR_TIM_A</span></span></span><a class="headerlink" href="#c.MOTOR_TIM_A" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Motor Timer. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MOTOR_ENA1_PORT">
+<span class="target" id="group___m_o_t_o_r_1ga39d700e1d00a5530d97d9b27dd5115af"></span><span class="sig-name descname"><span class="n"><span class="pre">MOTOR_ENA1_PORT</span></span></span><a class="headerlink" href="#c.MOTOR_ENA1_PORT" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Motor PWM Port. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MOTOR_ENA1_PIN">
+<span class="target" id="group___m_o_t_o_r_1ga729854312c1ab33d0ba3fd0304e1f4ce"></span><span class="sig-name descname"><span class="n"><span class="pre">MOTOR_ENA1_PIN</span></span></span><a class="headerlink" href="#c.MOTOR_ENA1_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Motor PWM Pin. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.IN1_PIN">
+<span class="target" id="group___m_o_t_o_r_1gae6efc05cbbe93f86a2c495adadefba18"></span><span class="sig-name descname"><span class="n"><span class="pre">IN1_PIN</span></span></span><a class="headerlink" href="#c.IN1_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Motor dir1 Port. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.IN1_PORT">
+<span class="target" id="group___m_o_t_o_r_1gab7f19a7f5c8e92b8b8beb3746393c1de"></span><span class="sig-name descname"><span class="n"><span class="pre">IN1_PORT</span></span></span><a class="headerlink" href="#c.IN1_PORT" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Motor dir1 Pin. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.IN2_PIN">
+<span class="target" id="group___m_o_t_o_r_1gaaa7c2af8811ab06c6c58108a0c757b71"></span><span class="sig-name descname"><span class="n"><span class="pre">IN2_PIN</span></span></span><a class="headerlink" href="#c.IN2_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Motor dir2 Port. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.IN2_PORT">
+<span class="target" id="group___m_o_t_o_r_1ga96ffd9255b585afcea7f1d8a439385ee"></span><span class="sig-name descname"><span class="n"><span class="pre">IN2_PORT</span></span></span><a class="headerlink" href="#c.IN2_PORT" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Moroe dir2 Pin. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.POSITION_TOLERANCE">
+<span class="target" id="group___m_o_t_o_r_1ga43aff93624bc76c795080739a445c9dc"></span><span class="sig-name descname"><span class="n"><span class="pre">POSITION_TOLERANCE</span></span></span><a class="headerlink" href="#c.POSITION_TOLERANCE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Motor constant to adjust the output offset for control. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="led">
+<h3>LED<a class="headerlink" href="#led" title="Permalink to this heading"></a></h3>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___l_e_d"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">LED</span></span></dt>
+<dd><p>Onbooard LED defines </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.LED_RED_PIN">
+<span class="target" id="group___l_e_d_1gab9824ab080c30006c1baaa0dd7e863c5"></span><span class="sig-name descname"><span class="n"><span class="pre">LED_RED_PIN</span></span></span><a class="headerlink" href="#c.LED_RED_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd><p>pin of leds </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.LED_BLUE_PIN">
+<span class="target" id="group___l_e_d_1ga5aec9d3b503fb1a30a21b16c7be86cff"></span><span class="sig-name descname"><span class="n"><span class="pre">LED_BLUE_PIN</span></span></span><a class="headerlink" href="#c.LED_BLUE_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.LED_GREEN_PIN">
+<span class="target" id="group___l_e_d_1ga0539be032702009fb24beec89c6fa0c0"></span><span class="sig-name descname"><span class="n"><span class="pre">LED_GREEN_PIN</span></span></span><a class="headerlink" href="#c.LED_GREEN_PIN" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.LED_GREEN_PORT">
+<span class="target" id="group___l_e_d_1ga3ed8b1ac183679013d04fa3ebe0e44e5"></span><span class="sig-name descname"><span class="n"><span class="pre">LED_GREEN_PORT</span></span></span><a class="headerlink" href="#c.LED_GREEN_PORT" title="Permalink to this definition"></a><br /></dt>
+<dd><p>port of leds </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.LED_RED_PORT">
+<span class="target" id="group___l_e_d_1ga7959a54f2383757d0007ee4b96071186"></span><span class="sig-name descname"><span class="n"><span class="pre">LED_RED_PORT</span></span></span><a class="headerlink" href="#c.LED_RED_PORT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.LED_BLUE_PORT">
+<span class="target" id="group___l_e_d_1gaf221b8e5f51eca1e53070bd462fff271"></span><span class="sig-name descname"><span class="n"><span class="pre">LED_BLUE_PORT</span></span></span><a class="headerlink" href="#c.LED_BLUE_PORT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="visu-doc.html" class="btn btn-neutral float-left" title="Visualization with Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, IPEL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

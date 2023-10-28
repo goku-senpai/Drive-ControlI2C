@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_experiment_module" kind="class" language="C++" prot="public">
+    <compoundname>ExperimentModule</compoundname>
+    <derivedcompoundref refid="class_exp_angle_obsv" prot="public" virt="non-virtual">ExpAngleObsv</derivedcompoundref>
+    <derivedcompoundref refid="class_exp_controller" prot="public" virt="non-virtual">ExpController</derivedcompoundref>
+    <derivedcompoundref refid="class_exp_imu_obsv" prot="public" virt="non-virtual">ExpImuObsv</derivedcompoundref>
+    <derivedcompoundref refid="class_exp_rig" prot="public" virt="non-virtual">ExpRig</derivedcompoundref>
+    <derivedcompoundref refid="class_exp_trajectory" prot="public" virt="non-virtual">ExpTrajectory</derivedcompoundref>
+    <derivedcompoundref refid="class_exp_u_i_obsv" prot="public" virt="non-virtual">ExpUIObsv</derivedcompoundref>
+    <includes refid="_experiment_module_8h" local="no">ExperimentModule.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_experiment_module_1af7cddd22f46a142c197203da7130ffdf" prot="protected" static="no" mutable="no">
+        <type>double *</type>
+        <definition>double* ExperimentModule::outputs</definition>
+        <argsstring></argsstring>
+        <name>outputs</name>
+        <qualifiedname>ExperimentModule::outputs</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="92" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_experiment_module_1a6286b09a3f2e24144534321a7e5ef2c2" prot="protected" static="no" mutable="no">
+        <type>double *</type>
+        <definition>double* ExperimentModule::states</definition>
+        <argsstring></argsstring>
+        <name>states</name>
+        <qualifiedname>ExperimentModule::states</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="93" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_experiment_module_1a812c5ce3fc52525e6ee9d4f260a5936a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ExperimentModule::compute</definition>
+        <argsstring>(uint32_t lTime)</argsstring>
+        <name>compute</name>
+        <qualifiedname>ExperimentModule::compute</qualifiedname>
+        <reimplementedby refid="class_exp_rig_1a591cbbe953495283fbaf19eb3bafa3b4">compute</reimplementedby>
+        <reimplementedby refid="class_exp_imu_obsv_1a85e7c6be45a1189c989923f4ed40b830">compute</reimplementedby>
+        <reimplementedby refid="class_exp_angle_obsv_1ab3bdc13044b626b14eda2f2ba6fdca9c">compute</reimplementedby>
+        <reimplementedby refid="class_exp_u_i_obsv_1a610b1dbb7c91cae5b2531110679b4da5">compute</reimplementedby>
+        <reimplementedby refid="class_exp_trajectory_1aee1447adc02de065444d16cfdac48ccd">compute</reimplementedby>
+        <param>
+          <type>uint32_t</type>
+          <declname>lTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>function is called regularly in EXP_DT ms intervals <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current experiment time in ms </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="19" column="18" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_module_1a74fa6d8dbe61a4351135082d2f288da4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ExperimentModule::handleFrame</definition>
+        <argsstring>(uint8_t id)</argsstring>
+        <name>handleFrame</name>
+        <qualifiedname>ExperimentModule::handleFrame</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>incoming Frame</para>
+<para>called from class: <ref refid="class_transport" kindref="compound">Transport</ref> if <ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref> registered for at least one id. gets called for every registered id separately <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of current frame to be unpacked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="28" column="18" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_module_1aabbf45990fca2a3b0a50644c7741004f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ExperimentModule::sendFrame</definition>
+        <argsstring>(uint8_t id, uint32_t lTime)</argsstring>
+        <name>sendFrame</name>
+        <qualifiedname>ExperimentModule::sendFrame</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>lTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>outgoing Frame</para>
+<para>called from class: <ref refid="class_transport" kindref="compound">Transport</ref> if <ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref> registered for at least one id. gets called for every registered id separately <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of current frame to be packed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current experiment time in ms </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="38" column="18" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_module_1a7d7697d611871d8f054b618080769dcc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ExperimentModule::registerModules</definition>
+        <argsstring>(ExperimentModule *mod,...)</argsstring>
+        <name>registerModules</name>
+        <qualifiedname>ExperimentModule::registerModules</qualifiedname>
+        <reimplementedby refid="class_exp_rig_1ade78775543d8a79954601f4ba43a92b0">registerModules</reimplementedby>
+        <param>
+          <type><ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref> *</type>
+          <declname>mod</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>used for connecting experiment modules.</para>
+<para>is called from class: <ref refid="class_experiment" kindref="compound">Experiment</ref> upon initialization.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first module that the called modules needs data from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>...</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of modules that the called module needs data from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="48" column="18" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_module_1ac2f139ac6c26181fd2a7a7343c855eee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double *</type>
+        <definition>double * ExperimentModule::getOutput</definition>
+        <argsstring>()</argsstring>
+        <name>getOutput</name>
+        <qualifiedname>ExperimentModule::getOutput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return list of the module&apos;s outputs. <simplesect kind="return"><para>class: List of output variables </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="54" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_module_1acf4101354fe002c105da75892d220dc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double *</type>
+        <definition>double * ExperimentModule::getState</definition>
+        <argsstring>()</argsstring>
+        <name>getState</name>
+        <qualifiedname>ExperimentModule::getState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return list of the module&apos;s states. <simplesect kind="return"><para>class: List of state variables </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="60" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_module_1ab8628df2b6883cdf92f55c5b067430d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool ExperimentModule::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>ExperimentModule::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>initialize. called cyclically in the <ref refid="class_experiment" kindref="compound">Experiment</ref> INIT state, until all Modules signal no need for preprocessing <simplesect kind="return"><para>false if ready </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="68" column="18" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_module_1a63415ccd081a94e842487e48dadbd8c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ExperimentModule::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>ExperimentModule::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>stop <ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref>. called upon <ref refid="class_experiment" kindref="compound">Experiment</ref> STOP </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="74" column="18" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_module_1a8dc870b13ef7b6013dc2ab5aa7f5ffe7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ExperimentModule::ExperimentModule</definition>
+        <argsstring>(int outputs, int states)</argsstring>
+        <name>ExperimentModule</name>
+        <qualifiedname>ExperimentModule::ExperimentModule</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>outputs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>states</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for allocating state and output lists <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of outputs for this <ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>states</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of states for this <ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="81" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_experiment_module_1a909d236cad2e09e23f479a4263cbd1e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ExperimentModule::~ExperimentModule</definition>
+        <argsstring>()</argsstring>
+        <name>~ExperimentModule</name>
+        <qualifiedname>ExperimentModule::~ExperimentModule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="86" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="86" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>class describing a generic experiment module </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ExpAngleObsv</label>
+        <link refid="class_exp_angle_obsv"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ExpController</label>
+        <link refid="class_exp_controller"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ExpImuObsv</label>
+        <link refid="class_exp_imu_obsv"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ExpRig</label>
+        <link refid="class_exp_rig"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ExpTrajectory</label>
+        <link refid="class_exp_trajectory"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ExpUIObsv</label>
+        <link refid="class_exp_u_i_obsv"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ExperimentModule</label>
+        <link refid="class_experiment_module"/>
+      </node>
+    </inheritancegraph>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" line="13" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h" bodystart="13" bodyend="94"/>
+    <listofallmembers>
+      <member refid="class_experiment_module_1a812c5ce3fc52525e6ee9d4f260a5936a" prot="public" virt="virtual"><scope>ExperimentModule</scope><name>compute</name></member>
+      <member refid="class_experiment_module_1a8dc870b13ef7b6013dc2ab5aa7f5ffe7" prot="public" virt="non-virtual"><scope>ExperimentModule</scope><name>ExperimentModule</name></member>
+      <member refid="class_experiment_module_1ac2f139ac6c26181fd2a7a7343c855eee" prot="public" virt="non-virtual"><scope>ExperimentModule</scope><name>getOutput</name></member>
+      <member refid="class_experiment_module_1acf4101354fe002c105da75892d220dc7" prot="public" virt="non-virtual"><scope>ExperimentModule</scope><name>getState</name></member>
+      <member refid="class_experiment_module_1a74fa6d8dbe61a4351135082d2f288da4" prot="public" virt="virtual"><scope>ExperimentModule</scope><name>handleFrame</name></member>
+      <member refid="class_experiment_module_1ab8628df2b6883cdf92f55c5b067430d2" prot="public" virt="virtual"><scope>ExperimentModule</scope><name>init</name></member>
+      <member refid="class_experiment_module_1af7cddd22f46a142c197203da7130ffdf" prot="protected" virt="non-virtual"><scope>ExperimentModule</scope><name>outputs</name></member>
+      <member refid="class_experiment_module_1a7d7697d611871d8f054b618080769dcc" prot="public" virt="virtual"><scope>ExperimentModule</scope><name>registerModules</name></member>
+      <member refid="class_experiment_module_1aabbf45990fca2a3b0a50644c7741004f" prot="public" virt="virtual"><scope>ExperimentModule</scope><name>sendFrame</name></member>
+      <member refid="class_experiment_module_1a6286b09a3f2e24144534321a7e5ef2c2" prot="protected" virt="non-virtual"><scope>ExperimentModule</scope><name>states</name></member>
+      <member refid="class_experiment_module_1a63415ccd081a94e842487e48dadbd8c0" prot="public" virt="virtual"><scope>ExperimentModule</scope><name>stop</name></member>
+      <member refid="class_experiment_module_1a909d236cad2e09e23f479a4263cbd1e9" prot="public" virt="non-virtual"><scope>ExperimentModule</scope><name>~ExperimentModule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

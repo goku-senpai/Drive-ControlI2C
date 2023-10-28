@@ -1,0 +1,40 @@
+===========
+Structure
+===========
+
+
+ESP-32 Standalone Version 
+===========================
+Paremeters are currently hardcoded in "/software/microcontroller/define.h"
+sensor data is sent to external processing unit.
+
+System Loop 
+----------------------
+- each valve type needs custom valve controller included histeresis 
+- PID control for SMC valves
+- a lucy controller which sets the targetpressures 
+- trajectory which calcs new target pressure based on imu and sensor values 
+- apply new dTargetPressures to controler ( underlying controller handles histereisis)
+- send current values 
+
+Flowcharts
+----------------------
+
+
+
+ESP-32 machine learning implemenation 
+=======================================
+implement machine learning model on the esp e.g with tensorflow lite.
+
+System Loop 
+----------------------
+- use trained model on esp to calc new params.
+- apply the params for next control step .
+- send data back to pc .
+- train model. 
+- send new weights to esp 
+
+
+Flowcharts 
+----------------------
+

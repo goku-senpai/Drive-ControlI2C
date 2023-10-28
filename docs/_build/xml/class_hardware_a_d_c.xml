@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_hardware_a_d_c" kind="class" language="C++" prot="public">
+    <compoundname>HardwareADC</compoundname>
+    <includes refid="gpio_8h" local="no">gpio.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hardware_a_d_c_1a4e39c6b53784c2f50949505a072e3bc2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HardwareADC::HardwareADC</definition>
+        <argsstring>()</argsstring>
+        <name>HardwareADC</name>
+        <qualifiedname>HardwareADC::HardwareADC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="106" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hardware_a_d_c_1a46b6da213044137573029d31edb20295" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HardwareADC::~HardwareADC</definition>
+        <argsstring>()</argsstring>
+        <name>~HardwareADC</name>
+        <qualifiedname>HardwareADC::~HardwareADC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="108" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hardware_a_d_c_1a16d9d43620bd0066db49416bb6411538" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HardwareADC::setResolution</definition>
+        <argsstring>(uint8_t iResolution)</argsstring>
+        <name>setResolution</name>
+        <qualifiedname>HardwareADC::setResolution</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>iResolution</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set new Resolution Range: 9 (0-511) - 12 bits (0-4095) Default : 12 bit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="115" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="115" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hardware_a_d_c_1a40c503678327432b2a5a12eb301fb741" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HardwareADC::setCycles</definition>
+        <argsstring>(uint8_t iCycles)</argsstring>
+        <name>setCycles</name>
+        <qualifiedname>HardwareADC::setCycles</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>iCycles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set current number of cycles per sample Range: 1 - 255 Default : 8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="127" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hardware_a_d_c_1a7fe3dad0b5a15dafa93d718c52a73e5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HardwareADC::setClockDiv</definition>
+        <argsstring>(uint8_t iClockDiv)</argsstring>
+        <name>setClockDiv</name>
+        <qualifiedname>HardwareADC::setClockDiv</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>iClockDiv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set current ClockDivider for the ADC clock Range: 1 - 255 Default: 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="137" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hardware_a_d_c_1af5e469b450c6b64b22f4bc32bf7141bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t HardwareADC::getResolution</definition>
+        <argsstring>()</argsstring>
+        <name>getResolution</name>
+        <qualifiedname>HardwareADC::getResolution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get current Resolution <simplesect kind="return"><para>bits </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="146" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="146" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hardware_a_d_c_1a2858154ae7ba086bb76f9f3329bac7ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t HardwareADC::getCycles</definition>
+        <argsstring>()</argsstring>
+        <name>getCycles</name>
+        <qualifiedname>HardwareADC::getCycles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get current Cycles <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="154" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hardware_a_d_c_1a6fc82657ff7850a96dcc58501f84ff1e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t HardwareADC::getClockDiv</definition>
+        <argsstring>()</argsstring>
+        <name>getClockDiv</name>
+        <qualifiedname>HardwareADC::getClockDiv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get current ClockDivider <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="162" column="13" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="162" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Wrapper class for generic ADC ESP 32 has two ADCS with 9 channels each The Arduino Functions seem to set the ClockDivider and Resolution for both ADCs since there is no way to specify which one TODO: will may be changed with direct register acess </para>
+    </detaileddescription>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="96" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="96" bodyend="165"/>
+    <listofallmembers>
+      <member refid="class_hardware_a_d_c_1a6fc82657ff7850a96dcc58501f84ff1e" prot="public" virt="non-virtual"><scope>HardwareADC</scope><name>getClockDiv</name></member>
+      <member refid="class_hardware_a_d_c_1a2858154ae7ba086bb76f9f3329bac7ee" prot="public" virt="non-virtual"><scope>HardwareADC</scope><name>getCycles</name></member>
+      <member refid="class_hardware_a_d_c_1af5e469b450c6b64b22f4bc32bf7141bf" prot="public" virt="non-virtual"><scope>HardwareADC</scope><name>getResolution</name></member>
+      <member refid="class_hardware_a_d_c_1a4e39c6b53784c2f50949505a072e3bc2" prot="public" virt="non-virtual"><scope>HardwareADC</scope><name>HardwareADC</name></member>
+      <member refid="class_hardware_a_d_c_1a7fe3dad0b5a15dafa93d718c52a73e5a" prot="public" virt="non-virtual"><scope>HardwareADC</scope><name>setClockDiv</name></member>
+      <member refid="class_hardware_a_d_c_1a40c503678327432b2a5a12eb301fb741" prot="public" virt="non-virtual"><scope>HardwareADC</scope><name>setCycles</name></member>
+      <member refid="class_hardware_a_d_c_1a16d9d43620bd0066db49416bb6411538" prot="public" virt="non-virtual"><scope>HardwareADC</scope><name>setResolution</name></member>
+      <member refid="class_hardware_a_d_c_1a46b6da213044137573029d31edb20295" prot="public" virt="non-virtual"><scope>HardwareADC</scope><name>~HardwareADC</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

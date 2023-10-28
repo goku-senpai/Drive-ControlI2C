@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_valve_driver" kind="class" language="C++" prot="public">
+    <compoundname>ValveDriver</compoundname>
+    <basecompoundref refid="class_driver" prot="private" virt="non-virtual">Driver</basecompoundref>
+    <includes refid="_valve_driver_8h" local="no">ValveDriver.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_valve_driver_1ad4f20d0c8e15e3fdfcc0129304318089" prot="private" static="no" mutable="no">
+        <type><ref refid="class_d_i_o" kindref="compound">DIO</ref></type>
+        <definition>DIO ValveDriver::pinA</definition>
+        <argsstring></argsstring>
+        <name>pinA</name>
+        <qualifiedname>ValveDriver::pinA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="47" column="7" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_valve_driver_1a36567e64aeb7be95122965f505ae1fb8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_d_i_o" kindref="compound">DIO</ref></type>
+        <definition>DIO ValveDriver::pinB</definition>
+        <argsstring></argsstring>
+        <name>pinB</name>
+        <qualifiedname>ValveDriver::pinB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="48" column="7" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_valve_driver_1a1204804f20be929a27847b29d9fea9e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ValveDriver::ValveDriver</definition>
+        <argsstring>(uint8_t iPinA, uint8_t iPinB)</argsstring>
+        <name>ValveDriver</name>
+        <qualifiedname>ValveDriver::ValveDriver</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>iPinA</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>iPinB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="51" column="3" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="51" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_valve_driver_1a4b2b1528a7b9a2d2eddb9be708d7b2f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValveDriver::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>ValveDriver::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>basic function to disable all outputs </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="60" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="60" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_valve_driver_1a4fd9ab4133ec682ea81e3673ccd332bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValveDriver::set</definition>
+        <argsstring>(double targetPressure)</argsstring>
+        <name>set</name>
+        <qualifiedname>ValveDriver::set</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>targetPressure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>move into <ref refid="class_valve_controller" kindref="compound">ValveController</ref> update output of valve based on input pressure</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>targetPressure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new setPoint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="73" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_valve_driver_1af549e6a3e70480ed191b6f89ec18bb90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValveDriver::setState</definition>
+        <argsstring>(ValveState state)</argsstring>
+        <name>setState</name>
+        <qualifiedname>ValveDriver::setState</qualifiedname>
+        <param>
+          <type><ref refid="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806" kindref="member">ValveState</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set new state <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="82" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="82" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>General description of a valve driver for press air. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Driver</label>
+        <link refid="class_driver"/>
+      </node>
+      <node id="1">
+        <label>ValveDriver</label>
+        <link refid="class_valve_driver"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Driver</label>
+        <link refid="class_driver"/>
+      </node>
+      <node id="1">
+        <label>ValveDriver</label>
+        <link refid="class_valve_driver"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="44" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="45" bodyend="104"/>
+    <listofallmembers>
+      <member refid="class_valve_driver_1ad4f20d0c8e15e3fdfcc0129304318089" prot="private" virt="non-virtual"><scope>ValveDriver</scope><name>pinA</name></member>
+      <member refid="class_valve_driver_1a36567e64aeb7be95122965f505ae1fb8" prot="private" virt="non-virtual"><scope>ValveDriver</scope><name>pinB</name></member>
+      <member refid="class_valve_driver_1a4fd9ab4133ec682ea81e3673ccd332bf" prot="public" virt="non-virtual"><scope>ValveDriver</scope><name>set</name></member>
+      <member refid="class_valve_driver_1af549e6a3e70480ed191b6f89ec18bb90" prot="public" virt="non-virtual"><scope>ValveDriver</scope><name>setState</name></member>
+      <member refid="class_valve_driver_1a4b2b1528a7b9a2d2eddb9be708d7b2f1" prot="public" virt="non-virtual"><scope>ValveDriver</scope><name>stop</name></member>
+      <member refid="class_valve_driver_1a1204804f20be929a27847b29d9fea9e4" prot="public" virt="non-virtual"><scope>ValveDriver</scope><name>ValveDriver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

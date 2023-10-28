@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group___t_r_a_j_e_c_t_o_r_y" kind="group">
+    <compoundname>TRAJECTORY</compoundname>
+    <title>TRAJECTORY</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1ga3af3a45598a5c08e102fce262068a854" prot="public" static="no">
+        <name>TRAJECTORY_RAMP_ANGLE_START_1</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="146" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gae616bcdb28514fdd07a8298573f2431c" prot="public" static="no">
+        <name>TRAJECTORY_RAMP_ANGLE_END_1</name>
+        <initializer>25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="147" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gacd9c19ffe7dd6b01d54be08efa172607" prot="public" static="no">
+        <name>TRAJECTORY_RAMP_ANGLE_START_2</name>
+        <initializer>45</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="149" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gaad3b7d94992d62a290700da64cdf7fab" prot="public" static="no">
+        <name>TRAJECTORY_RAMP_ANGLE_END_2</name>
+        <initializer>85</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="150" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gade517ee50f168c0b2d702922cb151bd1" prot="public" static="no">
+        <name>TRAJECTORY_VELOCITY_REDUCTION</name>
+        <initializer>0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="152" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1ga51d8d0a7b2990bd4760b765fb224d1da" prot="public" static="no">
+        <name>TRAJECTORY_MAX_LOWERING_V</name>
+        <initializer>-100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="153" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gaee62829517cffa1375039ea9a21ed1d8" prot="public" static="no">
+        <name>TRAJECTORY_ORIGINAL_LUCY</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="155" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1gaab6c89cfa385297de4436046e49d617b" prot="public" static="no">
+        <name>TRAJECTORY_FLATTEN_TRAJECTORY</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="156" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1ga8d7a74bbe5054a73872487f72e4e9dba" prot="public" static="no">
+        <name>TRAJECTORY_FORCE_REDUCTION</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="157" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_r_a_j_e_c_t_o_r_y_1ga75e369504ed9ca6c9b2355da88964a64" prot="public" static="no">
+        <name>TRAJECTORY_FORCE_CURVE</name>
+        <initializer>TRAJECTORY_ORIGINAL_LUCY</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" line="159" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/define.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

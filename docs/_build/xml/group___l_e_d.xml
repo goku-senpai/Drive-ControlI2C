@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="group___l_e_d" kind="group">
+    <compoundname>LED</compoundname>
+    <title>Led</title>
+    <innergroup refid="group___c_o_n_s_t_a_n_t_s">CONSTANTS</innergroup>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___l_e_d_1gab9824ab080c30006c1baaa0dd7e863c5" prot="public" static="no">
+        <name>LED_RED_PIN</name>
+        <initializer>GPIO_PIN_14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pin of leds </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="70" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_e_d_1ga5aec9d3b503fb1a30a21b16c7be86cff" prot="public" static="no">
+        <name>LED_BLUE_PIN</name>
+        <initializer>GPIO_PIN_7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="71" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_e_d_1ga0539be032702009fb24beec89c6fa0c0" prot="public" static="no">
+        <name>LED_GREEN_PIN</name>
+        <initializer>GPIO_PIN_0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="72" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_e_d_1ga3ed8b1ac183679013d04fa3ebe0e44e5" prot="public" static="no">
+        <name>LED_GREEN_PORT</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>port of leds </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="74" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_e_d_1ga7959a54f2383757d0007ee4b96071186" prot="public" static="no">
+        <name>LED_RED_PORT</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="75" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___l_e_d_1gaf221b8e5f51eca1e53070bd462fff271" prot="public" static="no">
+        <name>LED_BLUE_PORT</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" line="76" column="9" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/constants.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Onbooard LED defines </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

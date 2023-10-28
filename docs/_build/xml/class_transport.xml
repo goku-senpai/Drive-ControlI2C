@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_transport" kind="class" language="C++" prot="public">
+    <compoundname>Transport</compoundname>
+    <includes refid="_transport_8h" local="no">Transport.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_transport_1ab3b3993f7515fd79fc5d9e976d745f5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Transport::Transport</definition>
+        <argsstring>(Connection *conn, uint8_t maxPayload=80)</argsstring>
+        <name>Transport</name>
+        <qualifiedname>Transport::Transport</qualifiedname>
+        <param>
+          <type><ref refid="class_connection" kindref="compound">Connection</ref> *</type>
+          <declname>conn</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>maxPayload</declname>
+          <defval>80</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor, that initialize the min protocol </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" line="45" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" bodystart="45" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transport_1ac8e15d1b37e63e2d9020579c28813525" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Transport::handleFrame</definition>
+        <argsstring>(uint8_t id, const uint8_t *p)</argsstring>
+        <name>handleFrame</name>
+        <qualifiedname>Transport::handleFrame</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles incoming data frames. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame identifier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame data as pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" line="68" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" bodystart="68" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_transport_1a8753ca46ab425714be14e3b23df00998" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Transport::registerModule</definition>
+        <argsstring>(ExperimentModule *expM, uint8_t id)</argsstring>
+        <name>registerModule</name>
+        <qualifiedname>Transport::registerModule</qualifiedname>
+        <param>
+          <type><ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref> *</type>
+          <declname>expM</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" line="55" column="17" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transport_1a979e80693add1aca622fa8e5988d53ff" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Transport::registerHandler</definition>
+        <argsstring>(uint8_t id, void(*fun)())</argsstring>
+        <name>registerHandler</name>
+        <qualifiedname>Transport::registerHandler</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>void(*)()</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" line="59" column="17" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transport_1a38e891ca8953e415d87d9b22c77623a0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Transport::sendData</definition>
+        <argsstring>(uint32_t lTime)</argsstring>
+        <name>sendData</name>
+        <qualifiedname>Transport::sendData</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>lTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function for sending the <computeroutput>benchData</computeroutput> to the Host </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" line="80" column="17" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" bodystart="80" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transport_1ac28e15286dc298514c394146a61a5a5e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void Transport::pack</definition>
+        <argsstring>(T value)</argsstring>
+        <name>pack</name>
+        <qualifiedname>Transport::pack</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" line="94" column="17" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transport_1af0f3767b6c6db0b5401d3c6586b7d2c7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void Transport::unPack</definition>
+        <argsstring>(T &amp;value)</argsstring>
+        <name>unPack</name>
+        <qualifiedname>Transport::unPack</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" line="100" column="17" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" bodystart="100" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Layer class for the min protocol communication between the host and the microcontroller. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" line="40" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h" bodystart="40" bodyend="134"/>
+    <listofallmembers>
+      <member refid="class_transport_1ac8e15d1b37e63e2d9020579c28813525" prot="public" virt="non-virtual"><scope>Transport</scope><name>handleFrame</name></member>
+      <member refid="class_transport_1ac28e15286dc298514c394146a61a5a5e" prot="public" virt="non-virtual"><scope>Transport</scope><name>pack</name></member>
+      <member refid="class_transport_1a979e80693add1aca622fa8e5988d53ff" prot="public" virt="non-virtual"><scope>Transport</scope><name>registerHandler</name></member>
+      <member refid="class_transport_1a8753ca46ab425714be14e3b23df00998" prot="public" virt="non-virtual"><scope>Transport</scope><name>registerModule</name></member>
+      <member refid="class_transport_1a38e891ca8953e415d87d9b22c77623a0" prot="public" virt="non-virtual"><scope>Transport</scope><name>sendData</name></member>
+      <member refid="class_transport_1ab3b3993f7515fd79fc5d9e976d745f5d" prot="public" virt="non-virtual"><scope>Transport</scope><name>Transport</name></member>
+      <member refid="class_transport_1af0f3767b6c6db0b5401d3c6586b7d2c7" prot="public" virt="non-virtual"><scope>Transport</scope><name>unPack</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

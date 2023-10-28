@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_timer__initialize" kind="class" language="C++" prot="public">
+    <compoundname>Timer_initialize</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_timer__initialize_1ae4f1a81ce7b11e3afc25efb86a27d744" prot="public" static="no" mutable="no">
+        <type>TIM_HandleTypeDef</type>
+        <definition>TIM_HandleTypeDef Timer_initialize::htim3</definition>
+        <argsstring></argsstring>
+        <name>htim3</name>
+        <qualifiedname>Timer_initialize::htim3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/timer_initialize.h" line="14" column="23" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/timer_initialize.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_timer__initialize_1afb0c03e928f24918e8f8ed0e590e0dfa" prot="public" static="no" mutable="no">
+        <type>TIM_HandleTypeDef</type>
+        <definition>TIM_HandleTypeDef Timer_initialize::htim4</definition>
+        <argsstring></argsstring>
+        <name>htim4</name>
+        <qualifiedname>Timer_initialize::htim4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/timer_initialize.h" line="15" column="23" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/timer_initialize.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_timer__initialize_1a36ff3fa395a284903a483b3ab639d600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Timer_initialize::Timer_initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Timer_initialize</name>
+        <qualifiedname>Timer_initialize::Timer_initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/timer_initialize.h" line="17" column="5" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/timer_initialize.cpp" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_timer__initialize_1a0ee1c682d96a668d25680e0c71b9fc67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Timer_initialize::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>Timer_initialize::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/timer_initialize.h" line="18" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/timer_initialize.cpp" bodystart="10" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/timer_initialize.h" line="11" column="1" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/timer_initialize.h" bodystart="11" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_timer__initialize_1ae4f1a81ce7b11e3afc25efb86a27d744" prot="public" virt="non-virtual"><scope>Timer_initialize</scope><name>htim3</name></member>
+      <member refid="class_timer__initialize_1afb0c03e928f24918e8f8ed0e590e0dfa" prot="public" virt="non-virtual"><scope>Timer_initialize</scope><name>htim4</name></member>
+      <member refid="class_timer__initialize_1a0ee1c682d96a668d25680e0c71b9fc67" prot="public" virt="non-virtual"><scope>Timer_initialize</scope><name>init</name></member>
+      <member refid="class_timer__initialize_1a36ff3fa395a284903a483b3ab639d600" prot="public" virt="non-virtual"><scope>Timer_initialize</scope><name>Timer_initialize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

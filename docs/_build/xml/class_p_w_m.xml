@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_p_w_m" kind="class" language="C++" prot="public">
+    <compoundname>PWM</compoundname>
+    <includes refid="pwm_8h" local="no">pwm.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_w_m_1a284e41e54260145c527f7b1f10854403" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t PWM::channel</definition>
+        <argsstring></argsstring>
+        <name>channel</name>
+        <qualifiedname>PWM::channel</qualifiedname>
+        <briefdescription>
+<para>selected channel </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="113" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_w_m_1afaa78414c9c5a4c66c00fca1815c53cc" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t PWM::frequency</definition>
+        <argsstring></argsstring>
+        <name>frequency</name>
+        <qualifiedname>PWM::frequency</qualifiedname>
+        <briefdescription>
+<para>selected frequency </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="114" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_w_m_1a871d017f23ecf6d92c38dad414848511" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t PWM::resolution</definition>
+        <argsstring></argsstring>
+        <name>resolution</name>
+        <qualifiedname>PWM::resolution</qualifiedname>
+        <briefdescription>
+<para>selected resolution </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="115" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_w_m_1ab3333b13b539a7dc1c712a73a53bbd3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PWM::PWM</definition>
+        <argsstring>()</argsstring>
+        <name>PWM</name>
+        <qualifiedname>PWM::PWM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="20" column="3" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1a0cb06d92d74370a7c24660bf6d7f2fd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PWM::PWM</definition>
+        <argsstring>(uint8_t channel, uint16_t frequency, uint8_t resolution=8)</argsstring>
+        <name>PWM</name>
+        <qualifiedname>PWM::PWM</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>frequency</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>resolution</declname>
+          <defval>8</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="22" column="3" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1a903377c1da3618530f999d77297406af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PWM::~PWM</definition>
+        <argsstring>()</argsstring>
+        <name>~PWM</name>
+        <qualifiedname>PWM::~PWM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="27" column="3" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1a2930a6f9f872a5754537d2dc67bf7e9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>PWM::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="29" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1af66606fd29070ee4a009b26fc461a38e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::set</definition>
+        <argsstring>(int duty)</argsstring>
+        <name>set</name>
+        <qualifiedname>PWM::set</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>duty</declname>
+        </param>
+        <briefdescription>
+<para>set dutycycle of channel Todo: think about correct datatype since resolution is a variable </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>duty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="39" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1a77313d48ed9948d56e6a66fa6edb5e7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::setFrequency</definition>
+        <argsstring>(uint16_t frequency)</argsstring>
+        <name>setFrequency</name>
+        <qualifiedname>PWM::setFrequency</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>frequency</declname>
+        </param>
+        <briefdescription>
+<para>Set the Frequency object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="48" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1a57a0062e25ce97ef7d380e6b5391a6ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::setResolution</definition>
+        <argsstring>(uint32_t resolution)</argsstring>
+        <name>setResolution</name>
+        <qualifiedname>PWM::setResolution</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>resolution</declname>
+        </param>
+        <briefdescription>
+<para>Set the Resolution object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resolution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="58" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1a3986ddacd733c0850c6d4ef8ac31e141" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t PWM::getFrequency</definition>
+        <argsstring>()</argsstring>
+        <name>getFrequency</name>
+        <qualifiedname>PWM::getFrequency</qualifiedname>
+        <briefdescription>
+<para>Get the Frequency object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint16_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="68" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1aec6a3c754b65dd81fcc80768093ef878" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t PWM::getResolution</definition>
+        <argsstring>()</argsstring>
+        <name>getResolution</name>
+        <qualifiedname>PWM::getResolution</qualifiedname>
+        <briefdescription>
+<para>Get the Resolution object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint32_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="75" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1a67c5c054e4cb65744abff00a6655bcff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t PWM::getChannel</definition>
+        <argsstring>()</argsstring>
+        <name>getChannel</name>
+        <qualifiedname>PWM::getChannel</qualifiedname>
+        <briefdescription>
+<para>Get the Channel object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint8_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="82" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1ac55c5446376eb306212f8d4d4c9ea4c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::detatchPin</definition>
+        <argsstring>(uint8_t iPin)</argsstring>
+        <name>detatchPin</name>
+        <qualifiedname>PWM::detatchPin</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>iPin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="89" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1a821f233640f30489bdd08040d07f0de3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::attachPin</definition>
+        <argsstring>(uint8_t iPin)</argsstring>
+        <name>attachPin</name>
+        <qualifiedname>PWM::attachPin</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>iPin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="99" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_w_m_1a229ff9e8dd725ad8e2f036c06f2731f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String PWM::print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <qualifiedname>PWM::print</qualifiedname>
+        <briefdescription>
+<para>basic wrapper for pretty console printing </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="106" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="106" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Template class for hardware based <ref refid="class_p_w_m" kindref="compound">PWM</ref> outputs. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>select a specific channel from 0-15 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired frequency in [Hz] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>resolution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in [bits] of the pwm signal </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" line="18" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/pwm.h" bodystart="18" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_p_w_m_1a821f233640f30489bdd08040d07f0de3" prot="public" virt="non-virtual"><scope>PWM</scope><name>attachPin</name></member>
+      <member refid="class_p_w_m_1a284e41e54260145c527f7b1f10854403" prot="private" virt="non-virtual"><scope>PWM</scope><name>channel</name></member>
+      <member refid="class_p_w_m_1ac55c5446376eb306212f8d4d4c9ea4c7" prot="public" virt="non-virtual"><scope>PWM</scope><name>detatchPin</name></member>
+      <member refid="class_p_w_m_1afaa78414c9c5a4c66c00fca1815c53cc" prot="private" virt="non-virtual"><scope>PWM</scope><name>frequency</name></member>
+      <member refid="class_p_w_m_1a67c5c054e4cb65744abff00a6655bcff" prot="public" virt="non-virtual"><scope>PWM</scope><name>getChannel</name></member>
+      <member refid="class_p_w_m_1a3986ddacd733c0850c6d4ef8ac31e141" prot="public" virt="non-virtual"><scope>PWM</scope><name>getFrequency</name></member>
+      <member refid="class_p_w_m_1aec6a3c754b65dd81fcc80768093ef878" prot="public" virt="non-virtual"><scope>PWM</scope><name>getResolution</name></member>
+      <member refid="class_p_w_m_1a2930a6f9f872a5754537d2dc67bf7e9e" prot="public" virt="non-virtual"><scope>PWM</scope><name>init</name></member>
+      <member refid="class_p_w_m_1a229ff9e8dd725ad8e2f036c06f2731f1" prot="public" virt="non-virtual"><scope>PWM</scope><name>print</name></member>
+      <member refid="class_p_w_m_1ab3333b13b539a7dc1c712a73a53bbd3b" prot="public" virt="non-virtual"><scope>PWM</scope><name>PWM</name></member>
+      <member refid="class_p_w_m_1a0cb06d92d74370a7c24660bf6d7f2fd7" prot="public" virt="non-virtual"><scope>PWM</scope><name>PWM</name></member>
+      <member refid="class_p_w_m_1a871d017f23ecf6d92c38dad414848511" prot="private" virt="non-virtual"><scope>PWM</scope><name>resolution</name></member>
+      <member refid="class_p_w_m_1af66606fd29070ee4a009b26fc461a38e" prot="public" virt="non-virtual"><scope>PWM</scope><name>set</name></member>
+      <member refid="class_p_w_m_1a77313d48ed9948d56e6a66fa6edb5e7c" prot="public" virt="non-virtual"><scope>PWM</scope><name>setFrequency</name></member>
+      <member refid="class_p_w_m_1a57a0062e25ce97ef7d380e6b5391a6ce" prot="public" virt="non-virtual"><scope>PWM</scope><name>setResolution</name></member>
+      <member refid="class_p_w_m_1a903377c1da3618530f999d77297406af" prot="public" virt="non-virtual"><scope>PWM</scope><name>~PWM</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

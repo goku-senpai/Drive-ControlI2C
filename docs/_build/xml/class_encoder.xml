@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_encoder" kind="class" language="C++" prot="public">
+    <compoundname>Encoder</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_encoder_1a121e5a14592a3b35ab6c98b365743519" prot="private" static="no" mutable="no">
+        <type>TIM_HandleTypeDef *</type>
+        <definition>TIM_HandleTypeDef* Encoder::_htim</definition>
+        <argsstring></argsstring>
+        <name>_htim</name>
+        <qualifiedname>Encoder::_htim</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="18" column="23" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_1a6215c7291f621289040bcb23bc0a8a2a" prot="private" static="no" mutable="no">
+        <type>GPIO_TypeDef *</type>
+        <definition>GPIO_TypeDef* Encoder::_portA</definition>
+        <argsstring></argsstring>
+        <name>_portA</name>
+        <qualifiedname>Encoder::_portA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="19" column="18" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_1a8fed9cc06697224d9bcd08796ccc696f" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Encoder::_pinA</definition>
+        <argsstring></argsstring>
+        <name>_pinA</name>
+        <qualifiedname>Encoder::_pinA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="20" column="14" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_1a8c0d4972d34670bd6c47b179048487da" prot="private" static="no" mutable="no">
+        <type>GPIO_TypeDef *</type>
+        <definition>GPIO_TypeDef* Encoder::_portB</definition>
+        <argsstring></argsstring>
+        <name>_portB</name>
+        <qualifiedname>Encoder::_portB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="21" column="18" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_encoder_1adf7daf71a157322a39713b61c3781377" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Encoder::_pinB</definition>
+        <argsstring></argsstring>
+        <name>_pinB</name>
+        <qualifiedname>Encoder::_pinB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="22" column="14" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_encoder_1ac3bb736c35541ed71ef2d2c6250a0177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Encoder::Encoder</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, GPIO_TypeDef *portA, uint16_t pinA, GPIO_TypeDef *portB, uint16_t pinB)</argsstring>
+        <name>Encoder</name>
+        <qualifiedname>Encoder::Encoder</qualifiedname>
+        <param>
+          <type>TIM_HandleTypeDef *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>GPIO_TypeDef *</type>
+          <declname>portA</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>pinA</declname>
+        </param>
+        <param>
+          <type>GPIO_TypeDef *</type>
+          <declname>portB</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>pinB</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_encoder" kindref="compound">Encoder</ref>:: <ref refid="class_encoder" kindref="compound">Encoder</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>htim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>portA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pinA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>portB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pinB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="9" column="5" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="36" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_1a01e97423efe4bdd957c53f8d59fe2b74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Encoder::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>Encoder::init</qualifiedname>
+        <briefdescription>
+<para>analogEncoder init </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="10" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="71" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_1a801fef5c9b8085dc463c18196b4a1c83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t Encoder::get_count</definition>
+        <argsstring>()</argsstring>
+        <name>get_count</name>
+        <qualifiedname>Encoder::get_count</qualifiedname>
+        <briefdescription>
+<para>analogEncoder counter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int32_t counts </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="11" column="13" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_1a866c82e886dd10619a75a39167c12f33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Encoder::reset_count</definition>
+        <argsstring>()</argsstring>
+        <name>reset_count</name>
+        <qualifiedname>Encoder::reset_count</qualifiedname>
+        <briefdescription>
+<para>analogEncoder resetcounter </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="12" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_1aa0e90fc58f27bcdf40791e6bb05e28ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Encoder::get_position</definition>
+        <argsstring>()</argsstring>
+        <name>get_position</name>
+        <qualifiedname>Encoder::get_position</qualifiedname>
+        <briefdescription>
+<para>analogEncoder getpos </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int32_t position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="13" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="118" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_encoder_1a3abe1d3cb71cf77aa2469d62f91287f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Encoder::get_positionI2C</definition>
+        <argsstring>()</argsstring>
+        <name>get_positionI2C</name>
+        <qualifiedname>Encoder::get_positionI2C</qualifiedname>
+        <briefdescription>
+<para>I2CEncoder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="15" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/encoder.cpp" bodystart="49" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" line="7" column="1" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/encoder.h" bodystart="7" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_encoder_1a121e5a14592a3b35ab6c98b365743519" prot="private" virt="non-virtual"><scope>Encoder</scope><name>_htim</name></member>
+      <member refid="class_encoder_1a8fed9cc06697224d9bcd08796ccc696f" prot="private" virt="non-virtual"><scope>Encoder</scope><name>_pinA</name></member>
+      <member refid="class_encoder_1adf7daf71a157322a39713b61c3781377" prot="private" virt="non-virtual"><scope>Encoder</scope><name>_pinB</name></member>
+      <member refid="class_encoder_1a6215c7291f621289040bcb23bc0a8a2a" prot="private" virt="non-virtual"><scope>Encoder</scope><name>_portA</name></member>
+      <member refid="class_encoder_1a8c0d4972d34670bd6c47b179048487da" prot="private" virt="non-virtual"><scope>Encoder</scope><name>_portB</name></member>
+      <member refid="class_encoder_1ac3bb736c35541ed71ef2d2c6250a0177" prot="public" virt="non-virtual"><scope>Encoder</scope><name>Encoder</name></member>
+      <member refid="class_encoder_1a801fef5c9b8085dc463c18196b4a1c83" prot="public" virt="non-virtual"><scope>Encoder</scope><name>get_count</name></member>
+      <member refid="class_encoder_1aa0e90fc58f27bcdf40791e6bb05e28ec" prot="public" virt="non-virtual"><scope>Encoder</scope><name>get_position</name></member>
+      <member refid="class_encoder_1a3abe1d3cb71cf77aa2469d62f91287f9" prot="public" virt="non-virtual"><scope>Encoder</scope><name>get_positionI2C</name></member>
+      <member refid="class_encoder_1a01e97423efe4bdd957c53f8d59fe2b74" prot="public" virt="non-virtual"><scope>Encoder</scope><name>init</name></member>
+      <member refid="class_encoder_1a866c82e886dd10619a75a39167c12f33" prot="public" virt="non-virtual"><scope>Encoder</scope><name>reset_count</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

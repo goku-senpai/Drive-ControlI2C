@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_lucy" kind="class" language="C++" prot="public">
+    <compoundname>Lucy</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_lucy_1a4ab65bc13c3bdcca1fdbecb62c8994c7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Lucy::bUI</definition>
+        <argsstring></argsstring>
+        <name>bUI</name>
+        <qualifiedname>Lucy::bUI</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="15" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_lucy_1a7b29dcf9cdc6908e16023fd46679a408" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Lucy::dPressureLeft</definition>
+        <argsstring></argsstring>
+        <name>dPressureLeft</name>
+        <qualifiedname>Lucy::dPressureLeft</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="19" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lucy_1ae1efc768cb1169e5e104ba2ff4feea69" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Lucy::dPressureRight</definition>
+        <argsstring></argsstring>
+        <name>dPressureRight</name>
+        <qualifiedname>Lucy::dPressureRight</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="20" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lucy_1a864e43d13d818b15ef46411a51d057de" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Lucy::dPressureSupply</definition>
+        <argsstring></argsstring>
+        <name>dPressureSupply</name>
+        <qualifiedname>Lucy::dPressureSupply</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="21" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lucy_1a22cd3c75cce25dc359106c51694b176e" prot="public" static="no" mutable="no">
+        <type><ref refid="class_valve_driver" kindref="compound">ValveDriver</ref></type>
+        <definition>ValveDriver Lucy::valveLeft</definition>
+        <argsstring></argsstring>
+        <name>valveLeft</name>
+        <qualifiedname>Lucy::valveLeft</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="24" column="17" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lucy_1a95c543493a5fc07822b3ce57dfeb7ad7" prot="public" static="no" mutable="no">
+        <type><ref refid="class_valve_driver" kindref="compound">ValveDriver</ref></type>
+        <definition>ValveDriver Lucy::valveRight</definition>
+        <argsstring></argsstring>
+        <name>valveRight</name>
+        <qualifiedname>Lucy::valveRight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="25" column="17" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lucy_1a16d364e93b16bb8198ea94b66a7441fb" prot="public" static="no" mutable="no">
+        <type><ref refid="class_a_i" kindref="compound">AI</ref></type>
+        <definition>AI Lucy::pressureSensorLeft</definition>
+        <argsstring></argsstring>
+        <name>pressureSensorLeft</name>
+        <qualifiedname>Lucy::pressureSensorLeft</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="27" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lucy_1a66fd492d6701558402cac9722d89033b" prot="public" static="no" mutable="no">
+        <type><ref refid="class_a_i" kindref="compound">AI</ref></type>
+        <definition>AI Lucy::pressureSensorRight</definition>
+        <argsstring></argsstring>
+        <name>pressureSensorRight</name>
+        <qualifiedname>Lucy::pressureSensorRight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="28" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lucy_1aad40eb891024488dccd41c115402f707" prot="public" static="no" mutable="no">
+        <type><ref refid="class_a_i" kindref="compound">AI</ref></type>
+        <definition>AI Lucy::pressureSensorSupply</definition>
+        <argsstring></argsstring>
+        <name>pressureSensorSupply</name>
+        <qualifiedname>Lucy::pressureSensorSupply</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="29" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lucy_1afd4750d124e8ceb87739226c8ac10192" prot="public" static="no" mutable="no">
+        <type><ref refid="class_a_i" kindref="compound">AI</ref></type>
+        <definition>AI Lucy::pressureSensorTank</definition>
+        <argsstring></argsstring>
+        <name>pressureSensorTank</name>
+        <qualifiedname>Lucy::pressureSensorTank</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="30" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lucy_1a0e59c85870801a32c5229791b3e02368" prot="public" static="no" mutable="no">
+        <type><ref refid="class_a_i" kindref="compound">AI</ref></type>
+        <definition>AI Lucy::potiLeft</definition>
+        <argsstring></argsstring>
+        <name>potiLeft</name>
+        <qualifiedname>Lucy::potiLeft</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="32" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lucy_1affd78172c0f2486c46bafd2f4ae97a65" prot="public" static="no" mutable="no">
+        <type><ref refid="class_a_i" kindref="compound">AI</ref></type>
+        <definition>AI Lucy::potiRight</definition>
+        <argsstring></argsstring>
+        <name>potiRight</name>
+        <qualifiedname>Lucy::potiRight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="33" column="8" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_lucy_1ad707574a59e5d36d0bafa60d4406aac6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Lucy::Lucy</definition>
+        <argsstring>()</argsstring>
+        <name>Lucy</name>
+        <qualifiedname>Lucy::Lucy</qualifiedname>
+        <briefdescription>
+<para>Construct a new <ref refid="class_lucy" kindref="compound">Lucy</ref> object pass parameters declared in &quot;define.h&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="40" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="40" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lucy_1aa63564d3960ef1f8c9d00e23876b6d1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lucy::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>Lucy::init</qualifiedname>
+        <briefdescription>
+<para>calibrate sensors </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="55" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="55" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lucy_1a796987d87b314e8148f3e623df1ee3bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lucy::compute</definition>
+        <argsstring>()</argsstring>
+        <name>compute</name>
+        <qualifiedname>Lucy::compute</qualifiedname>
+        <briefdescription>
+<para>update sensor values and combine controls TODO: maybe move to another LucyController </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="68" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="68" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lucy_1a5b8f0916a91bc67d09371a6204e7a919" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Lucy::setBUI</definition>
+        <argsstring>(bool bVal)</argsstring>
+        <name>setBUI</name>
+        <qualifiedname>Lucy::setBUI</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>bVal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set general param<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bUI</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="89" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lucy_1a457e14bf1838603ef19a559529244c41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lucy::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>Lucy::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>basic stop function </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="94" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lucy_1a10412da3a7c084af5aa37c1ab4ad8a18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Lucy::validateSupplyPressure</definition>
+        <argsstring>(bool bLeft)</argsstring>
+        <name>validateSupplyPressure</name>
+        <qualifiedname>Lucy::validateSupplyPressure</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>bLeft</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><orderedlist>
+<listitem><para>release air</para>
+</listitem><listitem><para>close valves if supply pressure is insufficient</para>
+</listitem><listitem><para>pressure in cylinders will be reduced to less than neglectable pressure</para>
+</listitem></orderedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bLeft</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which Side to check , true = left side | false = right side </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="108" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="108" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lucy_1ac85cf2b94328aab4634f5099c97baa92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Lucy::checkSensors</definition>
+        <argsstring>()</argsstring>
+        <name>checkSensors</name>
+        <qualifiedname>Lucy::checkSensors</qualifiedname>
+        <briefdescription>
+<para>validate that all sensors provide correct information </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="136" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="136" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>AI</label>
+        <link refid="class_a_i"/>
+      </node>
+      <node id="3">
+        <label>Driver</label>
+        <link refid="class_driver"/>
+      </node>
+      <node id="1">
+        <label>Lucy</label>
+        <link refid="class_lucy"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>valveLeft</edgelabel>
+          <edgelabel>valveRight</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>potiLeft</edgelabel>
+          <edgelabel>potiRight</edgelabel>
+          <edgelabel>pressureSensorLeft</edgelabel>
+          <edgelabel>pressureSensorRight</edgelabel>
+          <edgelabel>pressureSensorSupply</edgelabel>
+          <edgelabel>pressureSensorTank</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ValveDriver</label>
+        <link refid="class_valve_driver"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" line="12" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h" bodystart="12" bodyend="142"/>
+    <listofallmembers>
+      <member refid="class_lucy_1a4ab65bc13c3bdcca1fdbecb62c8994c7" prot="private" virt="non-virtual"><scope>Lucy</scope><name>bUI</name></member>
+      <member refid="class_lucy_1ac85cf2b94328aab4634f5099c97baa92" prot="public" virt="non-virtual"><scope>Lucy</scope><name>checkSensors</name></member>
+      <member refid="class_lucy_1a796987d87b314e8148f3e623df1ee3bf" prot="public" virt="non-virtual"><scope>Lucy</scope><name>compute</name></member>
+      <member refid="class_lucy_1a7b29dcf9cdc6908e16023fd46679a408" prot="public" virt="non-virtual"><scope>Lucy</scope><name>dPressureLeft</name></member>
+      <member refid="class_lucy_1ae1efc768cb1169e5e104ba2ff4feea69" prot="public" virt="non-virtual"><scope>Lucy</scope><name>dPressureRight</name></member>
+      <member refid="class_lucy_1a864e43d13d818b15ef46411a51d057de" prot="public" virt="non-virtual"><scope>Lucy</scope><name>dPressureSupply</name></member>
+      <member refid="class_lucy_1aa63564d3960ef1f8c9d00e23876b6d1b" prot="public" virt="non-virtual"><scope>Lucy</scope><name>init</name></member>
+      <member refid="class_lucy_1ad707574a59e5d36d0bafa60d4406aac6" prot="public" virt="non-virtual"><scope>Lucy</scope><name>Lucy</name></member>
+      <member refid="class_lucy_1a0e59c85870801a32c5229791b3e02368" prot="public" virt="non-virtual"><scope>Lucy</scope><name>potiLeft</name></member>
+      <member refid="class_lucy_1affd78172c0f2486c46bafd2f4ae97a65" prot="public" virt="non-virtual"><scope>Lucy</scope><name>potiRight</name></member>
+      <member refid="class_lucy_1a16d364e93b16bb8198ea94b66a7441fb" prot="public" virt="non-virtual"><scope>Lucy</scope><name>pressureSensorLeft</name></member>
+      <member refid="class_lucy_1a66fd492d6701558402cac9722d89033b" prot="public" virt="non-virtual"><scope>Lucy</scope><name>pressureSensorRight</name></member>
+      <member refid="class_lucy_1aad40eb891024488dccd41c115402f707" prot="public" virt="non-virtual"><scope>Lucy</scope><name>pressureSensorSupply</name></member>
+      <member refid="class_lucy_1afd4750d124e8ceb87739226c8ac10192" prot="public" virt="non-virtual"><scope>Lucy</scope><name>pressureSensorTank</name></member>
+      <member refid="class_lucy_1a5b8f0916a91bc67d09371a6204e7a919" prot="public" virt="non-virtual"><scope>Lucy</scope><name>setBUI</name></member>
+      <member refid="class_lucy_1a457e14bf1838603ef19a559529244c41" prot="public" virt="non-virtual"><scope>Lucy</scope><name>stop</name></member>
+      <member refid="class_lucy_1a10412da3a7c084af5aa37c1ab4ad8a18" prot="public" virt="non-virtual"><scope>Lucy</scope><name>validateSupplyPressure</name></member>
+      <member refid="class_lucy_1a22cd3c75cce25dc359106c51694b176e" prot="public" virt="non-virtual"><scope>Lucy</scope><name>valveLeft</name></member>
+      <member refid="class_lucy_1a95c543493a5fc07822b3ce57dfeb7ad7" prot="public" virt="non-virtual"><scope>Lucy</scope><name>valveRight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

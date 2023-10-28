@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_c8fa76d8dc1b9e06ff8aeb3121608b1b" kind="dir">
+    <compoundname>D:/git/fertigung/lucy-esp/software</compoundname>
+    <innerdir refid="dir_07b2d9b3bad3157821e9825bd1d817f0">D:/git/fertigung/lucy-esp/software/microcontroller</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/fertigung/lucy-esp/software/"/>
+  </compounddef>
+</doxygen>

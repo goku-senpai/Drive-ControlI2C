@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group___b_o_a_r_d" kind="group">
+    <compoundname>BOARD</compoundname>
+    <title>BOARD</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>if another environment is chosen -&gt; compiling for another mainboard changing pins currently like this alternative is using a extra file for pin definitions and include the correct one </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

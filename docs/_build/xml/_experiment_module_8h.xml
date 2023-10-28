@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_experiment_module_8h" kind="file" language="C++">
+    <compoundname>ExperimentModule.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includedby refid="_experiment_modules_8h" local="yes">d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h</includedby>
+    <includedby refid="_experiment_8h" local="yes">d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h</includedby>
+    <includedby refid="_transport_8h" local="yes">d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="1">
+        <label>d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h</label>
+        <link refid="_experiment_module_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h</label>
+        <link refid="_experiment_modules_8h"/>
+      </node>
+      <node id="5">
+        <label>d:/git/fertigung/lucy-esp/software/microcontroller/include/Min.h</label>
+        <link refid="_min_8h_source"/>
+      </node>
+      <node id="3">
+        <label>d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Experiment.h</label>
+        <link refid="_experiment_8h"/>
+      </node>
+      <node id="1">
+        <label>d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h</label>
+        <link refid="_experiment_module_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Transport.h</label>
+        <link refid="_transport_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_experiment_module" prot="public">ExperimentModule</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright (c) 2020 IACE </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EXPERIMENTMODULE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPERIMENTMODULE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_experiment_module" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19" refid="class_experiment_module_1a812c5ce3fc52525e6ee9d4f260a5936a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_experiment_module_1a812c5ce3fc52525e6ee9d4f260a5936a" kindref="member">compute</ref>(uint32_t<sp/>lTime)<sp/>{}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_experiment_module_1a74fa6d8dbe61a4351135082d2f288da4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_experiment_module_1a74fa6d8dbe61a4351135082d2f288da4" kindref="member">handleFrame</ref>(uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_experiment_module_1aabbf45990fca2a3b0a50644c7741004f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_experiment_module_1aabbf45990fca2a3b0a50644c7741004f" kindref="member">sendFrame</ref>(uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>uint32_t<sp/>lTime)<sp/>{}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_experiment_module_1a7d7697d611871d8f054b618080769dcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_experiment_module_1a7d7697d611871d8f054b618080769dcc" kindref="member">registerModules</ref>(<ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref><sp/>*mod,<sp/>...)<sp/>{}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_experiment_module_1ac2f139ac6c26181fd2a7a7343c855eee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*<ref refid="class_experiment_module_1ac2f139ac6c26181fd2a7a7343c855eee" kindref="member">getOutput</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>outputs;<sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_experiment_module_1acf4101354fe002c105da75892d220dc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*<ref refid="class_experiment_module_1acf4101354fe002c105da75892d220dc7" kindref="member">getState</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>states;<sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="class_experiment_module_1ab8628df2b6883cdf92f55c5b067430d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_experiment_module_1ab8628df2b6883cdf92f55c5b067430d2" kindref="member">init</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_experiment_module_1a63415ccd081a94e842487e48dadbd8c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_experiment_module_1a63415ccd081a94e842487e48dadbd8c0" kindref="member">stop</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_experiment_module_1a8dc870b13ef7b6013dc2ab5aa7f5ffe7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_experiment_module_1a8dc870b13ef7b6013dc2ab5aa7f5ffe7" kindref="member">ExperimentModule</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>outputs,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>states)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;outputs<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">[outputs]();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;states<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">[states]();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_experiment_module" kindref="compound">~ExperimentModule</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>this-&gt;outputs;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>this-&gt;states;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*outputs<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*states<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//EXPERIMENTMODULE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/ExperimentModule.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,44 @@
+Tool - Libs - currently not used but 
+===================================================================
+Utility classes are imported from `tool-libs <https://github.com/umit-iace/tool-libs/>`_
+
+DynamicArray
+-------------
+.. doxygenfile:: DynamicArray.h
+   :project: auto
+
+Experiment
+-------------
+.. doxygenfile:: Experiment.h
+   :project: auto
+
+ExperimentModule.h
+---------------------
+.. doxygenfile:: ExperimentModule.h
+   :project: auto
+
+
+MovingAverage
+-------------
+.. doxygenfile:: MovingAverage.h
+   :project: auto
+
+
+Tick
+-------------
+.. doxygenfile:: Tick.h
+   :project: auto
+
+
+RingBuffer
+-------------
+.. doxygenfile:: RingBuffer.h
+   :project: auto
+
+
+Transport
+-------------
+.. doxygenfile:: Transport.h
+   :project: auto
+
+

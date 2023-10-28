@@ -1,0 +1,480 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_motor_controller" kind="class" language="C++" prot="public">
+    <compoundname>MotorController</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_motor_controller_1a396ac4f679915258f1ea5e6d74dd3e7a" prot="private" static="no" mutable="no">
+        <type>TIM_HandleTypeDef *</type>
+        <definition>TIM_HandleTypeDef* MotorController::htim_pwm_</definition>
+        <argsstring></argsstring>
+        <name>htim_pwm_</name>
+        <qualifiedname>MotorController::htim_pwm_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="21" column="23" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1ab7f8c735c39e747657dbf387a57dadbb" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MotorController::channel_pwm_</definition>
+        <argsstring></argsstring>
+        <name>channel_pwm_</name>
+        <qualifiedname>MotorController::channel_pwm_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="22" column="14" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1a80b594313e7a9cd40319a4d6eda7d9d5" prot="private" static="no" mutable="no">
+        <type>GPIO_TypeDef *</type>
+        <definition>GPIO_TypeDef* MotorController::gpio_pwm_</definition>
+        <argsstring></argsstring>
+        <name>gpio_pwm_</name>
+        <qualifiedname>MotorController::gpio_pwm_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="23" column="18" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1a33ca4fdefb6df3b92f357fcf9f764ab9" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MotorController::pin_pwm_</definition>
+        <argsstring></argsstring>
+        <name>pin_pwm_</name>
+        <qualifiedname>MotorController::pin_pwm_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="24" column="14" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1a6185cdd13c853ebcc107d75d912d16ac" prot="private" static="no" mutable="no">
+        <type>GPIO_TypeDef *</type>
+        <definition>GPIO_TypeDef* MotorController::gpio_dir_fwd_</definition>
+        <argsstring></argsstring>
+        <name>gpio_dir_fwd_</name>
+        <qualifiedname>MotorController::gpio_dir_fwd_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="25" column="18" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1abc7548a7e90f7ca743e2600eb75f6347" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MotorController::pin_direction_fwd_</definition>
+        <argsstring></argsstring>
+        <name>pin_direction_fwd_</name>
+        <qualifiedname>MotorController::pin_direction_fwd_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="26" column="14" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1a03e285556b372d3ac41628cd9a61970e" prot="private" static="no" mutable="no">
+        <type>GPIO_TypeDef *</type>
+        <definition>GPIO_TypeDef* MotorController::gpio_dir_bwd_</definition>
+        <argsstring></argsstring>
+        <name>gpio_dir_bwd_</name>
+        <qualifiedname>MotorController::gpio_dir_bwd_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="27" column="18" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1aadbfecd8a2863dfbcca7ad5b8b502a08" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MotorController::pin_direction_bwd_</definition>
+        <argsstring></argsstring>
+        <name>pin_direction_bwd_</name>
+        <qualifiedname>MotorController::pin_direction_bwd_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="28" column="14" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1aa9e156f17ca5b0e640a399ae87655a9e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MotorController::is_speed_controller_</definition>
+        <argsstring></argsstring>
+        <name>is_speed_controller_</name>
+        <qualifiedname>MotorController::is_speed_controller_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="30" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1a7fca3330df8fa7f7592b7b3accbd361e" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MotorController::current_position_</definition>
+        <argsstring></argsstring>
+        <name>current_position_</name>
+        <qualifiedname>MotorController::current_position_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="31" column="14" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1ab775ae1b04a7a521a5a55f328aa65095" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MotorController::current_output_</definition>
+        <argsstring></argsstring>
+        <name>current_output_</name>
+        <qualifiedname>MotorController::current_output_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="32" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1afae2d254302c6c5d1ed0492cb8e44bf6" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MotorController::prev_encoder_value_</definition>
+        <argsstring></argsstring>
+        <name>prev_encoder_value_</name>
+        <qualifiedname>MotorController::prev_encoder_value_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="33" column="14" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1a165299db373925df0f2e8bc7555c1e24" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t MotorController::control_mode_</definition>
+        <argsstring></argsstring>
+        <name>control_mode_</name>
+        <qualifiedname>MotorController::control_mode_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="36" column="13" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1a1c2467bea13c547a690535f2a4e2c228" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MotorController::dKp_</definition>
+        <argsstring></argsstring>
+        <name>dKp_</name>
+        <qualifiedname>MotorController::dKp_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="37" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1ab896ec8a9dc9a05e0354ae91e90a8b12" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MotorController::dKi_</definition>
+        <argsstring></argsstring>
+        <name>dKi_</name>
+        <qualifiedname>MotorController::dKi_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="38" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1aaa5566c4406c4a18b53a7a8586f077a1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MotorController::dKd_</definition>
+        <argsstring></argsstring>
+        <name>dKd_</name>
+        <qualifiedname>MotorController::dKd_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="39" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_controller_1a7dd451db5c22130836c94edd8631e171" prot="private" static="no" mutable="no">
+        <type><ref refid="class_p_i_d_controller" kindref="compound">PIDController</ref></type>
+        <definition>PIDController MotorController::pid_controller_</definition>
+        <argsstring></argsstring>
+        <name>pid_controller_</name>
+        <qualifiedname>MotorController::pid_controller_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="40" column="19" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_motor_controller_1a16a19e929df0774c97a4479e75609291" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MotorController::MotorController</definition>
+        <argsstring>(TIM_HandleTypeDef *htim_pwm, uint32_t channel_pwm, GPIO_TypeDef *gpio_pwm, uint32_t pin_pwm, float max_output, float max_integral, float target_start, bool is_speed_controller)</argsstring>
+        <name>MotorController</name>
+        <qualifiedname>MotorController::MotorController</qualifiedname>
+        <param>
+          <type>TIM_HandleTypeDef *</type>
+          <declname>htim_pwm</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>channel_pwm</declname>
+        </param>
+        <param>
+          <type>GPIO_TypeDef *</type>
+          <declname>gpio_pwm</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>pin_pwm</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_output</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_integral</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>target_start</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_speed_controller</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="11" column="5" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" bodystart="22" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motor_controller_1a3413ae9abcf748a58c58db974051105a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotorController::set_direction</definition>
+        <argsstring>(bool direction_fwd, bool direction_bwd)</argsstring>
+        <name>set_direction</name>
+        <qualifiedname>MotorController::set_direction</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>direction_fwd</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>direction_bwd</declname>
+        </param>
+        <briefdescription>
+<para>setter direction </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>direction_fwd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction_bwd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="16" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" bodystart="41" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motor_controller_1a1c5d87810b12a740121d540b51663966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotorController::set_target</definition>
+        <argsstring>(float dSetpoint)</argsstring>
+        <name>set_target</name>
+        <qualifiedname>MotorController::set_target</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>dSetpoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>setter for Setpoint <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dSetpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="17" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" bodystart="146" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motor_controller_1a46a7d8fdad02c45a062b9138f16d86d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotorController::update</definition>
+        <argsstring>(float sample_time, int32_t encoder_value, uint8_t bFreewheel, float dKp, float dKi, float dKd)</argsstring>
+        <name>update</name>
+        <qualifiedname>MotorController::update</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>sample_time</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>encoder_value</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bFreewheel</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dKp</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dKi</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dKd</declname>
+        </param>
+        <briefdescription>
+<para>update function for Motor controller </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encoder_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bFreewheel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dKp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dKi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dKd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="18" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/motor_controller.cpp" bodystart="69" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" line="9" column="1" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/motor_controller.h" bodystart="9" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_motor_controller_1ab7f8c735c39e747657dbf387a57dadbb" prot="private" virt="non-virtual"><scope>MotorController</scope><name>channel_pwm_</name></member>
+      <member refid="class_motor_controller_1a165299db373925df0f2e8bc7555c1e24" prot="private" virt="non-virtual"><scope>MotorController</scope><name>control_mode_</name></member>
+      <member refid="class_motor_controller_1ab775ae1b04a7a521a5a55f328aa65095" prot="private" virt="non-virtual"><scope>MotorController</scope><name>current_output_</name></member>
+      <member refid="class_motor_controller_1a7fca3330df8fa7f7592b7b3accbd361e" prot="private" virt="non-virtual"><scope>MotorController</scope><name>current_position_</name></member>
+      <member refid="class_motor_controller_1aaa5566c4406c4a18b53a7a8586f077a1" prot="private" virt="non-virtual"><scope>MotorController</scope><name>dKd_</name></member>
+      <member refid="class_motor_controller_1ab896ec8a9dc9a05e0354ae91e90a8b12" prot="private" virt="non-virtual"><scope>MotorController</scope><name>dKi_</name></member>
+      <member refid="class_motor_controller_1a1c2467bea13c547a690535f2a4e2c228" prot="private" virt="non-virtual"><scope>MotorController</scope><name>dKp_</name></member>
+      <member refid="class_motor_controller_1a03e285556b372d3ac41628cd9a61970e" prot="private" virt="non-virtual"><scope>MotorController</scope><name>gpio_dir_bwd_</name></member>
+      <member refid="class_motor_controller_1a6185cdd13c853ebcc107d75d912d16ac" prot="private" virt="non-virtual"><scope>MotorController</scope><name>gpio_dir_fwd_</name></member>
+      <member refid="class_motor_controller_1a80b594313e7a9cd40319a4d6eda7d9d5" prot="private" virt="non-virtual"><scope>MotorController</scope><name>gpio_pwm_</name></member>
+      <member refid="class_motor_controller_1a396ac4f679915258f1ea5e6d74dd3e7a" prot="private" virt="non-virtual"><scope>MotorController</scope><name>htim_pwm_</name></member>
+      <member refid="class_motor_controller_1aa9e156f17ca5b0e640a399ae87655a9e" prot="private" virt="non-virtual"><scope>MotorController</scope><name>is_speed_controller_</name></member>
+      <member refid="class_motor_controller_1a16a19e929df0774c97a4479e75609291" prot="public" virt="non-virtual"><scope>MotorController</scope><name>MotorController</name></member>
+      <member refid="class_motor_controller_1a7dd451db5c22130836c94edd8631e171" prot="private" virt="non-virtual"><scope>MotorController</scope><name>pid_controller_</name></member>
+      <member refid="class_motor_controller_1aadbfecd8a2863dfbcca7ad5b8b502a08" prot="private" virt="non-virtual"><scope>MotorController</scope><name>pin_direction_bwd_</name></member>
+      <member refid="class_motor_controller_1abc7548a7e90f7ca743e2600eb75f6347" prot="private" virt="non-virtual"><scope>MotorController</scope><name>pin_direction_fwd_</name></member>
+      <member refid="class_motor_controller_1a33ca4fdefb6df3b92f357fcf9f764ab9" prot="private" virt="non-virtual"><scope>MotorController</scope><name>pin_pwm_</name></member>
+      <member refid="class_motor_controller_1afae2d254302c6c5d1ed0492cb8e44bf6" prot="private" virt="non-virtual"><scope>MotorController</scope><name>prev_encoder_value_</name></member>
+      <member refid="class_motor_controller_1a3413ae9abcf748a58c58db974051105a" prot="public" virt="non-virtual"><scope>MotorController</scope><name>set_direction</name></member>
+      <member refid="class_motor_controller_1a1c5d87810b12a740121d540b51663966" prot="public" virt="non-virtual"><scope>MotorController</scope><name>set_target</name></member>
+      <member refid="class_motor_controller_1a46a7d8fdad02c45a062b9138f16d86d6" prot="public" virt="non-virtual"><scope>MotorController</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

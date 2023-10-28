@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_simulated_encoder" kind="class" language="C++" prot="public">
+    <compoundname>SimulatedEncoder</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_simulated_encoder_1a18155294d9e01e0a8dbbe1012cec7a9b" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t SimulatedEncoder::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <qualifiedname>SimulatedEncoder::count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/SimulatedEncoder.h" line="23" column="13" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/SimulatedEncoder.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_simulated_encoder_1a8b9af1746a39084a595870feb8bbba22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SimulatedEncoder::SimulatedEncoder</definition>
+        <argsstring>(int32_t initialCount=0)</argsstring>
+        <name>SimulatedEncoder</name>
+        <qualifiedname>SimulatedEncoder::SimulatedEncoder</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>initialCount</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/SimulatedEncoder.h" line="8" column="5" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/SimulatedEncoder.cpp" bodystart="3" bodyend="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulated_encoder_1a4e8fb4de8edc981922354a59a936f857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimulatedEncoder::simulateRotation</definition>
+        <argsstring>(int32_t increment=1)</argsstring>
+        <name>simulateRotation</name>
+        <qualifiedname>SimulatedEncoder::simulateRotation</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>increment</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/SimulatedEncoder.h" line="11" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/SimulatedEncoder.cpp" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulated_encoder_1adbf9f4ccad2c999cec6e3af3b41ee0d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t SimulatedEncoder::get_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_count</name>
+        <qualifiedname>SimulatedEncoder::get_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/SimulatedEncoder.h" line="14" column="13" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/SimulatedEncoder.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulated_encoder_1acbd793954506ab7b2734c0c3b4053b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimulatedEncoder::reset_count</definition>
+        <argsstring>(int32_t newValue=0)</argsstring>
+        <name>reset_count</name>
+        <qualifiedname>SimulatedEncoder::reset_count</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>newValue</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/SimulatedEncoder.h" line="17" column="10" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/SimulatedEncoder.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulated_encoder_1afaeae0fb199b9d4adcc2fd3b4fc64533" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SimulatedEncoder::simulateGetPosition</definition>
+        <argsstring>(int32_t resolution=1000) const</argsstring>
+        <name>simulateGetPosition</name>
+        <qualifiedname>SimulatedEncoder::simulateGetPosition</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>resolution</declname>
+          <defval>1000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/SimulatedEncoder.h" line="20" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/SimulatedEncoder.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/SimulatedEncoder.h" line="6" column="1" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Inc/SimulatedEncoder.h" bodystart="6" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_simulated_encoder_1a18155294d9e01e0a8dbbe1012cec7a9b" prot="private" virt="non-virtual"><scope>SimulatedEncoder</scope><name>count</name></member>
+      <member refid="class_simulated_encoder_1adbf9f4ccad2c999cec6e3af3b41ee0d6" prot="public" virt="non-virtual"><scope>SimulatedEncoder</scope><name>get_count</name></member>
+      <member refid="class_simulated_encoder_1acbd793954506ab7b2734c0c3b4053b3a" prot="public" virt="non-virtual"><scope>SimulatedEncoder</scope><name>reset_count</name></member>
+      <member refid="class_simulated_encoder_1a8b9af1746a39084a595870feb8bbba22" prot="public" virt="non-virtual"><scope>SimulatedEncoder</scope><name>SimulatedEncoder</name></member>
+      <member refid="class_simulated_encoder_1afaeae0fb199b9d4adcc2fd3b4fc64533" prot="public" virt="non-virtual"><scope>SimulatedEncoder</scope><name>simulateGetPosition</name></member>
+      <member refid="class_simulated_encoder_1a4e8fb4de8edc981922354a59a936f857" prot="public" virt="non-virtual"><scope>SimulatedEncoder</scope><name>simulateRotation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

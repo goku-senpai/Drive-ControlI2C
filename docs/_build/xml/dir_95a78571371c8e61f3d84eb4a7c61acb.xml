@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_95a78571371c8e61f3d84eb4a7c61acb" kind="dir">
+    <compoundname>d:/git/fertigung/lucy-esp/software/microcontroller/include/utils</compoundname>
+    <innerfile refid="_dynamic_array_8h">DynamicArray.h</innerfile>
+    <innerfile refid="_experiment_8h">Experiment.h</innerfile>
+    <innerfile refid="_experiment_module_8h">ExperimentModule.h</innerfile>
+    <innerfile refid="_interpolation_8h">Interpolation.h</innerfile>
+    <innerfile refid="_moving_average_8h">MovingAverage.h</innerfile>
+    <innerfile refid="_ring_buffer_8h">RingBuffer.h</innerfile>
+    <innerfile refid="_tick_8h">Tick.h</innerfile>
+    <innerfile refid="_transport_8h">Transport.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/"/>
+  </compounddef>
+</doxygen>

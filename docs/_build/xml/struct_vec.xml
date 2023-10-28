@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_vec" kind="struct" language="C++" prot="public">
+    <compoundname>Vec</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_vec_1a6b06c403da715c182792139c41fb4e1a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Vec::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>Vec::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" line="9" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vec_1a7e01ed5aadbe96e61e9192edf6cb740b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Vec::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>Vec::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" line="9" column="14" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" line="8" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Interpolation.h" bodystart="8" bodyend="10"/>
+    <listofallmembers>
+      <member refid="struct_vec_1a6b06c403da715c182792139c41fb4e1a" prot="public" virt="non-virtual"><scope>Vec</scope><name>x</name></member>
+      <member refid="struct_vec_1a7e01ed5aadbe96e61e9192edf6cb740b" prot="public" virt="non-virtual"><scope>Vec</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_force_reduction_trajectory" kind="class" language="C++" prot="public">
+    <compoundname>ForceReductionTrajectory</compoundname>
+    <basecompoundref refid="class_ramp_trajectory" prot="public" virt="non-virtual">RampTrajectory</basecompoundref>
+    <includes refid="_trajectory_8h" local="no">Trajectory.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_force_reduction_trajectory_1a919cb99af49a7fd37311081ec5cb5b32" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ForceReductionTrajectory::dVelocityReduction</definition>
+        <argsstring></argsstring>
+        <name>dVelocityReduction</name>
+        <qualifiedname>ForceReductionTrajectory::dVelocityReduction</qualifiedname>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="145" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_force_reduction_trajectory_1ae9399def2f52759fd443d38a111ec3ba" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ForceReductionTrajectory::dMaxVelocity</definition>
+        <argsstring></argsstring>
+        <name>dMaxVelocity</name>
+        <qualifiedname>ForceReductionTrajectory::dMaxVelocity</qualifiedname>
+        <initializer>=  -100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="146" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_force_reduction_trajectory_1af508195a70fa3f5365183bdcc59ab2a2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ForceReductionTrajectory::dOldInput</definition>
+        <argsstring></argsstring>
+        <name>dOldInput</name>
+        <qualifiedname>ForceReductionTrajectory::dOldInput</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="148" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_force_reduction_trajectory_1aae6f2396d0137a9cdb1ddf741288b739" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ForceReductionTrajectory::dV</definition>
+        <argsstring></argsstring>
+        <name>dV</name>
+        <qualifiedname>ForceReductionTrajectory::dV</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="149" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_force_reduction_trajectory_1acb9ca93a2aac7d8036195e5092b54656" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double *</type>
+        <definition>double * ForceReductionTrajectory::compute</definition>
+        <argsstring>(const double &amp;dCurInput)</argsstring>
+        <name>compute</name>
+        <qualifiedname>ForceReductionTrajectory::compute</qualifiedname>
+        <reimplements refid="class_trajectory_1ab56a8ae8ef699cdbe05a318cd1c37c7c">compute</reimplements>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dCurInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current Angle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>dTargetPoint </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="157" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="157" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_force_reduction_trajectory_1aaf938ce816721e02ba26253c8a451d7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ForceReductionTrajectory::calcVelocityReduction</definition>
+        <argsstring>(const double &amp;dCurInput)</argsstring>
+        <name>calcVelocityReduction</name>
+        <qualifiedname>ForceReductionTrajectory::calcVelocityReduction</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>calculates current velocity <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dCurInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="171" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="171" bodyend="179"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>FlattenTrajectory -&gt; is not a own <ref refid="class_trajectory" kindref="compound">Trajectory</ref> only other Params acutally no class needed replaces the Force_Curve Function which returns the TargetPoint Force Reduction <ref refid="class_trajectory" kindref="compound">Trajectory</ref> replaces the Force_Curve Function which returns the TargetPoint </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ForceReductionTrajectory</label>
+        <link refid="class_force_reduction_trajectory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RampTrajectory</label>
+        <link refid="class_ramp_trajectory"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Trajectory</label>
+        <link refid="class_trajectory"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ForceReductionTrajectory</label>
+        <link refid="class_force_reduction_trajectory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RampTrajectory</label>
+        <link refid="class_ramp_trajectory"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Trajectory</label>
+        <link refid="class_trajectory"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="143" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="143" bodyend="180"/>
+    <listofallmembers>
+      <member refid="class_force_reduction_trajectory_1aaf938ce816721e02ba26253c8a451d7e" prot="public" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>calcVelocityReduction</name></member>
+      <member refid="class_force_reduction_trajectory_1acb9ca93a2aac7d8036195e5092b54656" prot="public" virt="virtual"><scope>ForceReductionTrajectory</scope><name>compute</name></member>
+      <member refid="class_force_reduction_trajectory_1ae9399def2f52759fd443d38a111ec3ba" prot="private" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>dMaxVelocity</name></member>
+      <member refid="class_force_reduction_trajectory_1af508195a70fa3f5365183bdcc59ab2a2" prot="private" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>dOldInput</name></member>
+      <member refid="class_trajectory_1a828f96b61ad907a03e0aa7d484c80747" prot="protected" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>dOut</name></member>
+      <member refid="class_ramp_trajectory_1ab1da1130dbe8dd901d975f9575cf734e" prot="protected" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>dRampAngle</name></member>
+      <member refid="class_trajectory_1a38daac3e65bdd4a306670f83e43fd8b2" prot="protected" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>dRampAngleEnd</name></member>
+      <member refid="class_trajectory_1ac9369873bb7ff479cba63e098050b657" prot="protected" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>dRampAngleStart</name></member>
+      <member refid="class_force_reduction_trajectory_1aae6f2396d0137a9cdb1ddf741288b739" prot="private" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>dV</name></member>
+      <member refid="class_force_reduction_trajectory_1a919cb99af49a7fd37311081ec5cb5b32" prot="private" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>dVelocityReduction</name></member>
+      <member refid="class_trajectory_1a0b9f423b728e422c0da1af625b7e0be4" prot="public" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>getOutput</name></member>
+      <member refid="class_ramp_trajectory_1af55818e282d1a219356733715e7602e8" prot="public" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>RampTrajectory</name></member>
+      <member refid="class_ramp_trajectory_1af1e8baa7f49fed3a6ade1ed25d9d9070" prot="public" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>setRampParams</name></member>
+      <member refid="class_trajectory_1a82f0282097198990bb508d4c6cd1ef94" prot="public" virt="non-virtual" ambiguityscope="Trajectory::"><scope>ForceReductionTrajectory</scope><name>setRampParams</name></member>
+      <member refid="class_trajectory_1aa340ba80f1f4d1aa39f19f069d5d8089" prot="public" virt="non-virtual"><scope>ForceReductionTrajectory</scope><name>Trajectory</name></member>
+      <member refid="class_ramp_trajectory_1a80b594da3bb33ff6b433c41958ed5a4b" prot="public" virt="virtual"><scope>ForceReductionTrajectory</scope><name>~RampTrajectory</name></member>
+      <member refid="class_trajectory_1a3244e64a4c0eaf7c86fb1d985223227c" prot="public" virt="virtual"><scope>ForceReductionTrajectory</scope><name>~Trajectory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

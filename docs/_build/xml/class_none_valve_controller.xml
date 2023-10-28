@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_none_valve_controller" kind="class" language="C++" prot="public">
+    <compoundname>NoneValveController</compoundname>
+    <basecompoundref refid="class_valve_controller" prot="public" virt="non-virtual">ValveController</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_none_valve_controller_1aeb795ddea329897fb612d0c4564af5f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double *</type>
+        <definition>double * NoneValveController::compute</definition>
+        <argsstring>(const double &amp;dCurInput, const double &amp;dCurSetpoint)</argsstring>
+        <name>compute</name>
+        <qualifiedname>NoneValveController::compute</qualifiedname>
+        <reimplements refid="class_valve_controller_1aed45a8df64216ef44bbeedb4a453ac6d">compute</reimplements>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurInput</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurSetpoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method, that computes the controller output of the current time step for the given input value and set-point <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dCurInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current input value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dCurSetpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current setpoint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>controller output in the range of min and max output </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="70" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="70" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>NoneValveController</label>
+        <link refid="class_none_valve_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ValveController</label>
+        <link refid="class_valve_controller"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>NoneValveController</label>
+        <link refid="class_none_valve_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ValveController</label>
+        <link refid="class_valve_controller"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="68" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="68" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_valve_controller_1ac6dfdae7c7a3d138b0fc5590ae6640c0" prot="public" virt="non-virtual"><scope>NoneValveController</scope><name>clamp</name></member>
+      <member refid="class_none_valve_controller_1aeb795ddea329897fb612d0c4564af5f9" prot="public" virt="virtual"><scope>NoneValveController</scope><name>compute</name></member>
+      <member refid="class_valve_controller_1adfa0b07df3cd2a5292a919d546481ed3" prot="protected" virt="non-virtual"><scope>NoneValveController</scope><name>dLinInput</name></member>
+      <member refid="class_valve_controller_1af707465bdb18b66f0d60c66c862265e5" prot="protected" virt="non-virtual"><scope>NoneValveController</scope><name>dOut</name></member>
+      <member refid="class_valve_controller_1aaaa9cb35072c7f2c4f2d4805c435b4d8" prot="protected" virt="non-virtual"><scope>NoneValveController</scope><name>dOutputMax</name></member>
+      <member refid="class_valve_controller_1a3cb0e85d6f24d2b3f68ca53b1c7e0732" prot="protected" virt="non-virtual"><scope>NoneValveController</scope><name>dOutputMin</name></member>
+      <member refid="class_valve_controller_1a8fd9342fc9ed545b0dd991cc7f7de786" prot="protected" virt="non-virtual"><scope>NoneValveController</scope><name>dSampleTime</name></member>
+      <member refid="class_valve_controller_1a1ec02658c934ea8d80d3dd090c1a5344" prot="public" virt="non-virtual"><scope>NoneValveController</scope><name>getOutput</name></member>
+      <member refid="class_valve_controller_1a02177382e16681476d4b792367af4f30" prot="public" virt="non-virtual"><scope>NoneValveController</scope><name>ValveController</name></member>
+      <member refid="class_valve_controller_1ab36f41bebdb7816915ca0c446fb87f67" prot="public" virt="virtual"><scope>NoneValveController</scope><name>~ValveController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

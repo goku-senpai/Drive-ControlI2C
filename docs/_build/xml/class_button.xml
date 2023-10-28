@@ -1,0 +1,499 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_button" kind="class" language="C++" prot="public">
+    <compoundname>Button</compoundname>
+    <includes refid="_button_8h" local="no">Button.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_button_1a0750e3eb54fdd36a0f66c4b0f5aea224" prot="private" static="no" mutable="no">
+        <type>ButtonMode</type>
+        <definition>ButtonMode Button::mMode</definition>
+        <argsstring></argsstring>
+        <name>mMode</name>
+        <qualifiedname>Button::mMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="167" column="16" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_button_1a0fafa88795b2664ace3d09db1414a2df" prot="private" static="no" mutable="no">
+        <type><ref refid="class_button_input" kindref="compound">ButtonInput</ref> *</type>
+        <definition>ButtonInput* Button::pButtonInput</definition>
+        <argsstring></argsstring>
+        <name>pButtonInput</name>
+        <qualifiedname>Button::pButtonInput</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="168" column="17" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_button_1a5f87bc9d3a7f0b8c671b0c4f103de2db" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Button::bState</definition>
+        <argsstring></argsstring>
+        <name>bState</name>
+        <qualifiedname>Button::bState</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>final output of the &quot;state maschine&quot; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="170" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_button_1a504f486ab5664a86147043fe1f4a2f22" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Button::bValue</definition>
+        <argsstring></argsstring>
+        <name>bValue</name>
+        <qualifiedname>Button::bValue</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="172" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_button_1aa658ab72d7536f84ac3d0b6c4a29a3b7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Button::bValueOld</definition>
+        <argsstring></argsstring>
+        <name>bValueOld</name>
+        <qualifiedname>Button::bValueOld</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="173" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_button_1a7f7956b8052c29054aef014a23abfdac" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Button::bReleased</definition>
+        <argsstring></argsstring>
+        <name>bReleased</name>
+        <qualifiedname>Button::bReleased</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="174" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_button_1a32da455d82d6fdbe631594c3d1fed206" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Button::iDebounceTime</definition>
+        <argsstring></argsstring>
+        <name>iDebounceTime</name>
+        <qualifiedname>Button::iDebounceTime</qualifiedname>
+        <initializer>= 20</initializer>
+        <briefdescription>
+<para>debouncing time </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="176" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_button_1a56fb23d274cb324782a01daa9347251b" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long Button::lPressedTime</definition>
+        <argsstring></argsstring>
+        <name>lPressedTime</name>
+        <qualifiedname>Button::lPressedTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>counter for pressed State </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="177" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_button_1a9890c32e48f01324b6f8284759e3dccf" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long Button::lReleasedTime</definition>
+        <argsstring></argsstring>
+        <name>lReleasedTime</name>
+        <qualifiedname>Button::lReleasedTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>counter for released State </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="178" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_button_1a00078c9ef65d50404bdaf954fd0d4afb" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long Button::lHoldTime</definition>
+        <argsstring></argsstring>
+        <name>lHoldTime</name>
+        <qualifiedname>Button::lHoldTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>counter for min hold State </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="179" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_button_1aae25636f61d6eacc51e390765411e4fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Button::Button</definition>
+        <argsstring>(int _iPin, ButtonMode _mode=ButtonMode::PRESS, int _iDebounceTime=20, long _lHoldTime=30)</argsstring>
+        <name>Button</name>
+        <qualifiedname>Button::Button</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_iPin</declname>
+        </param>
+        <param>
+          <type>ButtonMode</type>
+          <declname>_mode</declname>
+          <defval>ButtonMode::PRESS</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_iDebounceTime</declname>
+          <defval>20</defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>_lHoldTime</declname>
+          <defval>30</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_button" kindref="compound">Button</ref> object using a onboard GPIO pin as Input. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_iPin</parametername>
+<parametername>onboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPIO pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_iDebounceTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_iHoldTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="193" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="193" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_1a68b0c83477ce2228156548a05f6817da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Button::Button</definition>
+        <argsstring>(int _iPin, PCF8575 *pExpander, ButtonMode _mode=ButtonMode::PRESS, int _iDebounceTime=20, long _lHoldTime=30)</argsstring>
+        <name>Button</name>
+        <qualifiedname>Button::Button</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_iPin</declname>
+        </param>
+        <param>
+          <type>PCF8575 *</type>
+          <declname>pExpander</declname>
+        </param>
+        <param>
+          <type>ButtonMode</type>
+          <declname>_mode</declname>
+          <defval>ButtonMode::PRESS</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_iDebounceTime</declname>
+          <defval>20</defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>_lHoldTime</declname>
+          <defval>30</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="197" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="197" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_1a9c5412fc8e97b4ff6b3fb10dbae80995" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Button::Button</definition>
+        <argsstring>(int _iPin, Adafruit_MCP23X08 *pExpander, ButtonMode _mode=ButtonMode::PRESS, int _iDebounceTime=20, long _lHoldTime=30)</argsstring>
+        <name>Button</name>
+        <qualifiedname>Button::Button</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_iPin</declname>
+        </param>
+        <param>
+          <type>Adafruit_MCP23X08 *</type>
+          <declname>pExpander</declname>
+        </param>
+        <param>
+          <type>ButtonMode</type>
+          <declname>_mode</declname>
+          <defval>ButtonMode::PRESS</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_iDebounceTime</declname>
+          <defval>20</defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>_lHoldTime</declname>
+          <defval>30</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="201" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="201" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_1a266b6572defd9f047b5359f313362f46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Button::Button</definition>
+        <argsstring>(int _iPin, Adafruit_seesaw *pExpander, ButtonMode _mode=ButtonMode::PRESS, int _iDebounceTime=20, long _lHoldTime=30)</argsstring>
+        <name>Button</name>
+        <qualifiedname>Button::Button</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_iPin</declname>
+        </param>
+        <param>
+          <type>Adafruit_seesaw *</type>
+          <declname>pExpander</declname>
+        </param>
+        <param>
+          <type>ButtonMode</type>
+          <declname>_mode</declname>
+          <defval>ButtonMode::PRESS</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_iDebounceTime</declname>
+          <defval>20</defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>_lHoldTime</declname>
+          <defval>30</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="205" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="205" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_1a671729a0270e7deb9d3eec2871498175" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Button::Button</definition>
+        <argsstring>(ButtonInput *_pButtonInput, ButtonMode _mode=ButtonMode::PRESS, int _iDebounceTime=20, int _iHoldTime=30)</argsstring>
+        <name>Button</name>
+        <qualifiedname>Button::Button</qualifiedname>
+        <param>
+          <type><ref refid="class_button_input" kindref="compound">ButtonInput</ref> *</type>
+          <declname>_pButtonInput</declname>
+        </param>
+        <param>
+          <type>ButtonMode</type>
+          <declname>_mode</declname>
+          <defval>ButtonMode::PRESS</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_iDebounceTime</declname>
+          <defval>20</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_iHoldTime</declname>
+          <defval>30</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="209" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="209" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_1a2a001eb9c3cc8ae54768a850dd345002" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Button::~Button</definition>
+        <argsstring>()</argsstring>
+        <name>~Button</name>
+        <qualifiedname>Button::~Button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="216" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="216" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_1a2cf89f076e1f24bcea2c0d29142575e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Button::setMode</definition>
+        <argsstring>(ButtonMode &amp;_mode)</argsstring>
+        <name>setMode</name>
+        <qualifiedname>Button::setMode</qualifiedname>
+        <param>
+          <type>ButtonMode &amp;</type>
+          <declname>_mode</declname>
+        </param>
+        <briefdescription>
+<para>Set the Mode object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="224" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="224" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_1ae34e8f3c482654e8585360fd639d02e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Button::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>Button::reset</qualifiedname>
+        <briefdescription>
+<para>reset counters and params to defaults </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="230" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="230" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_1ad7e2d9aee0132376d7ecdfc8995b164e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const bool</type>
+        <definition>const bool Button::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <qualifiedname>Button::get</qualifiedname>
+        <briefdescription>
+<para>Get the current button state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="248" column="16" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="248" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_1ad8e030c1c8846d43f3126047d4a3667f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Button::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <qualifiedname>Button::update</qualifiedname>
+        <briefdescription>
+<para>update state machine to debounce buttons </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="254" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="254" bodyend="318"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>wrapper for various digital input signal basic debouncing and minimum hold time </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="164" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="165" bodyend="319"/>
+    <listofallmembers>
+      <member refid="class_button_1a7f7956b8052c29054aef014a23abfdac" prot="private" virt="non-virtual"><scope>Button</scope><name>bReleased</name></member>
+      <member refid="class_button_1a5f87bc9d3a7f0b8c671b0c4f103de2db" prot="private" virt="non-virtual"><scope>Button</scope><name>bState</name></member>
+      <member refid="class_button_1aae25636f61d6eacc51e390765411e4fa" prot="public" virt="non-virtual"><scope>Button</scope><name>Button</name></member>
+      <member refid="class_button_1a68b0c83477ce2228156548a05f6817da" prot="public" virt="non-virtual"><scope>Button</scope><name>Button</name></member>
+      <member refid="class_button_1a9c5412fc8e97b4ff6b3fb10dbae80995" prot="public" virt="non-virtual"><scope>Button</scope><name>Button</name></member>
+      <member refid="class_button_1a266b6572defd9f047b5359f313362f46" prot="public" virt="non-virtual"><scope>Button</scope><name>Button</name></member>
+      <member refid="class_button_1a671729a0270e7deb9d3eec2871498175" prot="public" virt="non-virtual"><scope>Button</scope><name>Button</name></member>
+      <member refid="class_button_1a504f486ab5664a86147043fe1f4a2f22" prot="private" virt="non-virtual"><scope>Button</scope><name>bValue</name></member>
+      <member refid="class_button_1aa658ab72d7536f84ac3d0b6c4a29a3b7" prot="private" virt="non-virtual"><scope>Button</scope><name>bValueOld</name></member>
+      <member refid="class_button_1ad7e2d9aee0132376d7ecdfc8995b164e" prot="public" virt="non-virtual"><scope>Button</scope><name>get</name></member>
+      <member refid="class_button_1a32da455d82d6fdbe631594c3d1fed206" prot="private" virt="non-virtual"><scope>Button</scope><name>iDebounceTime</name></member>
+      <member refid="class_button_1a00078c9ef65d50404bdaf954fd0d4afb" prot="private" virt="non-virtual"><scope>Button</scope><name>lHoldTime</name></member>
+      <member refid="class_button_1a56fb23d274cb324782a01daa9347251b" prot="private" virt="non-virtual"><scope>Button</scope><name>lPressedTime</name></member>
+      <member refid="class_button_1a9890c32e48f01324b6f8284759e3dccf" prot="private" virt="non-virtual"><scope>Button</scope><name>lReleasedTime</name></member>
+      <member refid="class_button_1a0750e3eb54fdd36a0f66c4b0f5aea224" prot="private" virt="non-virtual"><scope>Button</scope><name>mMode</name></member>
+      <member refid="class_button_1a0fafa88795b2664ace3d09db1414a2df" prot="private" virt="non-virtual"><scope>Button</scope><name>pButtonInput</name></member>
+      <member refid="class_button_1ae34e8f3c482654e8585360fd639d02e3" prot="public" virt="non-virtual"><scope>Button</scope><name>reset</name></member>
+      <member refid="class_button_1a2cf89f076e1f24bcea2c0d29142575e6" prot="public" virt="non-virtual"><scope>Button</scope><name>setMode</name></member>
+      <member refid="class_button_1ad8e030c1c8846d43f3126047d4a3667f" prot="public" virt="non-virtual"><scope>Button</scope><name>update</name></member>
+      <member refid="class_button_1a2a001eb9c3cc8ae54768a850dd345002" prot="public" virt="non-virtual"><scope>Button</scope><name>~Button</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

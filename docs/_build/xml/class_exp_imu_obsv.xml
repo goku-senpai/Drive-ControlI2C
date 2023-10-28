@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_exp_imu_obsv" kind="class" language="C++" prot="public">
+    <compoundname>ExpImuObsv</compoundname>
+    <basecompoundref refid="class_experiment_module" prot="public" virt="non-virtual">ExperimentModule</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_exp_imu_obsv_1a02738d47fd3cf1dc08767f3de3a5616c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref> *</type>
+        <definition>ExperimentModule* ExpImuObsv::ctrl</definition>
+        <argsstring></argsstring>
+        <name>ctrl</name>
+        <qualifiedname>ExpImuObsv::ctrl</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="100" column="22" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_imu_obsv_1a4c35925188904113aa0c1185eb88fc6e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ExpImuObsv::iRampAngleStart</definition>
+        <argsstring></argsstring>
+        <name>iRampAngleStart</name>
+        <qualifiedname>ExpImuObsv::iRampAngleStart</qualifiedname>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="101" column="9" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_imu_obsv_1a7c60f8f4692abc6038c2c0265653819a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ExpImuObsv::iRampAngleEnd</definition>
+        <argsstring></argsstring>
+        <name>iRampAngleEnd</name>
+        <qualifiedname>ExpImuObsv::iRampAngleEnd</qualifiedname>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="102" column="9" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_imu_obsv_1a65c93098f07730d2137d42ea01f35861" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ExpImuObsv::iMaxVerticalDeviation</definition>
+        <argsstring></argsstring>
+        <name>iMaxVerticalDeviation</name>
+        <qualifiedname>ExpImuObsv::iMaxVerticalDeviation</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="103" column="9" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_exp_imu_obsv_1ad51fe6bbfe9ee9434da5e7f417434369" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_b_n0055" kindref="compound">BN0055</ref></type>
+        <definition>BN0055 ExpImuObsv::imu</definition>
+        <argsstring>()</argsstring>
+        <name>imu</name>
+        <qualifiedname>ExpImuObsv::imu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="104" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_exp_imu_obsv_1a1dd39196e9e21dcb0bee23d442333a53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpImuObsv::deactivate</definition>
+        <argsstring>()</argsstring>
+        <name>deactivate</name>
+        <qualifiedname>ExpImuObsv::deactivate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="108" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_imu_obsv_1a85e7c6be45a1189c989923f4ed40b830" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ExpImuObsv::compute</definition>
+        <argsstring>(uint32_t lTime) override</argsstring>
+        <name>compute</name>
+        <qualifiedname>ExpImuObsv::compute</qualifiedname>
+        <reimplements refid="class_experiment_module_1a812c5ce3fc52525e6ee9d4f260a5936a">compute</reimplements>
+        <param>
+          <type>uint32_t</type>
+          <declname>lTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>function is called regularly in EXP_DT ms intervals <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current experiment time in ms </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="112" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="112" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_imu_obsv_1a7fa4e310e34ae5cbd1d3ff18538042fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpImuObsv::calcSupportReductionFactor</definition>
+        <argsstring>(uint8_t iAxis, bool bInvert, double dOffset)</argsstring>
+        <name>calcSupportReductionFactor</name>
+        <qualifiedname>ExpImuObsv::calcSupportReductionFactor</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>iAxis</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bInvert</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dOffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="121" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="121" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_imu_obsv_1a2cffca27ebdbfa445bae92d9baefafe4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ExpImuObsv::ExpRig</definition>
+        <argsstring>()</argsstring>
+        <name>ExpRig</name>
+        <qualifiedname>ExpImuObsv::ExpRig</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="182" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="182" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_imu_obsv_1a3d05a459d34586a74ea68abbc9d48493" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpImuObsv::sendFrame</definition>
+        <argsstring>(unsigned char id, unsigned long lTime) override</argsstring>
+        <name>sendFrame</name>
+        <qualifiedname>ExpImuObsv::sendFrame</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>lTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="188" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="188" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_imu_obsv_1a3c58cee29239ff460b9a83ab602d2fcd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpImuObsv::handleFrame</definition>
+        <argsstring>(unsigned char id) override</argsstring>
+        <name>handleFrame</name>
+        <qualifiedname>ExpImuObsv::handleFrame</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="204" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="204" bodyend="212"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ExpImuObsv</label>
+        <link refid="class_exp_imu_obsv"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExperimentModule</label>
+        <link refid="class_experiment_module"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ExpImuObsv</label>
+        <link refid="class_exp_imu_obsv"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExperimentModule</label>
+        <link refid="class_experiment_module"/>
+      </node>
+    </collaborationgraph>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="98" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="98" bodyend="214"/>
+    <listofallmembers>
+      <member refid="class_exp_imu_obsv_1a7fa4e310e34ae5cbd1d3ff18538042fa" prot="public" virt="non-virtual"><scope>ExpImuObsv</scope><name>calcSupportReductionFactor</name></member>
+      <member refid="class_exp_imu_obsv_1a85e7c6be45a1189c989923f4ed40b830" prot="public" virt="virtual"><scope>ExpImuObsv</scope><name>compute</name></member>
+      <member refid="class_exp_imu_obsv_1a02738d47fd3cf1dc08767f3de3a5616c" prot="private" virt="non-virtual"><scope>ExpImuObsv</scope><name>ctrl</name></member>
+      <member refid="class_exp_imu_obsv_1a1dd39196e9e21dcb0bee23d442333a53" prot="public" virt="non-virtual"><scope>ExpImuObsv</scope><name>deactivate</name></member>
+      <member refid="class_experiment_module_1a8dc870b13ef7b6013dc2ab5aa7f5ffe7" prot="public" virt="non-virtual"><scope>ExpImuObsv</scope><name>ExperimentModule</name></member>
+      <member refid="class_exp_imu_obsv_1a2cffca27ebdbfa445bae92d9baefafe4" prot="public" virt="non-virtual"><scope>ExpImuObsv</scope><name>ExpRig</name></member>
+      <member refid="class_experiment_module_1ac2f139ac6c26181fd2a7a7343c855eee" prot="public" virt="non-virtual"><scope>ExpImuObsv</scope><name>getOutput</name></member>
+      <member refid="class_experiment_module_1acf4101354fe002c105da75892d220dc7" prot="public" virt="non-virtual"><scope>ExpImuObsv</scope><name>getState</name></member>
+      <member refid="class_exp_imu_obsv_1a3c58cee29239ff460b9a83ab602d2fcd" prot="public" virt="non-virtual"><scope>ExpImuObsv</scope><name>handleFrame</name></member>
+      <member refid="class_experiment_module_1a74fa6d8dbe61a4351135082d2f288da4" prot="public" virt="virtual" ambiguityscope="ExperimentModule::"><scope>ExpImuObsv</scope><name>handleFrame</name></member>
+      <member refid="class_exp_imu_obsv_1a65c93098f07730d2137d42ea01f35861" prot="private" virt="non-virtual"><scope>ExpImuObsv</scope><name>iMaxVerticalDeviation</name></member>
+      <member refid="class_exp_imu_obsv_1ad51fe6bbfe9ee9434da5e7f417434369" prot="private" virt="non-virtual"><scope>ExpImuObsv</scope><name>imu</name></member>
+      <member refid="class_experiment_module_1ab8628df2b6883cdf92f55c5b067430d2" prot="public" virt="virtual"><scope>ExpImuObsv</scope><name>init</name></member>
+      <member refid="class_exp_imu_obsv_1a7c60f8f4692abc6038c2c0265653819a" prot="private" virt="non-virtual"><scope>ExpImuObsv</scope><name>iRampAngleEnd</name></member>
+      <member refid="class_exp_imu_obsv_1a4c35925188904113aa0c1185eb88fc6e" prot="private" virt="non-virtual"><scope>ExpImuObsv</scope><name>iRampAngleStart</name></member>
+      <member refid="class_experiment_module_1af7cddd22f46a142c197203da7130ffdf" prot="protected" virt="non-virtual"><scope>ExpImuObsv</scope><name>outputs</name></member>
+      <member refid="class_experiment_module_1a7d7697d611871d8f054b618080769dcc" prot="public" virt="virtual"><scope>ExpImuObsv</scope><name>registerModules</name></member>
+      <member refid="class_exp_imu_obsv_1a3d05a459d34586a74ea68abbc9d48493" prot="public" virt="non-virtual"><scope>ExpImuObsv</scope><name>sendFrame</name></member>
+      <member refid="class_experiment_module_1aabbf45990fca2a3b0a50644c7741004f" prot="public" virt="virtual" ambiguityscope="ExperimentModule::"><scope>ExpImuObsv</scope><name>sendFrame</name></member>
+      <member refid="class_experiment_module_1a6286b09a3f2e24144534321a7e5ef2c2" prot="protected" virt="non-virtual"><scope>ExpImuObsv</scope><name>states</name></member>
+      <member refid="class_experiment_module_1a63415ccd081a94e842487e48dadbd8c0" prot="public" virt="virtual"><scope>ExpImuObsv</scope><name>stop</name></member>
+      <member refid="class_experiment_module_1a909d236cad2e09e23f479a4263cbd1e9" prot="public" virt="non-virtual"><scope>ExpImuObsv</scope><name>~ExperimentModule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

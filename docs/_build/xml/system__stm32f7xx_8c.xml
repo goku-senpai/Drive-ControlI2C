@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="system__stm32f7xx_8c" kind="file" language="C++">
+    <compoundname>system_stm32f7xx.c</compoundname>
+    <includes local="yes">stm32f7xx.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c</label>
+        <link refid="system__stm32f7xx_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stm32f7xx.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___s_t_m32_f7xx___system___private___includes_1gaeafcff4f57440c60e64812dddd13e7cb" prot="public" static="no">
+        <name>HSE_VALUE</name>
+        <initializer>((uint32_t)25000000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default value of the External oscillator in Hz </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" line="50" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_t_m32_f7xx___system___private___includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37" prot="public" static="no">
+        <name>HSI_VALUE</name>
+        <initializer>((uint32_t)16000000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Value of the Internal oscillator in Hz </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" line="54" column="11" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___s_t_m32_f7xx___system___private___variables_1gaa3cd3e43291e81e795d642b79b6088e6" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SystemCoreClock</definition>
+        <argsstring></argsstring>
+        <name>SystemCoreClock</name>
+        <initializer>= 16000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" line="124" column="12" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_t_m32_f7xx___system___private___variables_1ga6e1d9cd666f0eacbfde31e9932a93466" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t AHBPrescTable[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>AHBPrescTable</name>
+        <initializer>= {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" line="125" column="17" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_t_m32_f7xx___system___private___variables_1ga5b4f8b768465842cf854a8f993b375e9" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t APBPrescTable[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>APBPrescTable</name>
+        <initializer>= {0, 0, 0, 0, 1, 2, 3, 4}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" line="126" column="17" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___s_t_m32_f7xx___system___private___functions_1ga93f514700ccf00d08dbdcff7f1224eb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>SystemInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Setup the microcontroller system Initialize the Embedded Flash Interface, the PLL and update the SystemFrequency variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" line="151" column="6" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" bodystart="151" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_t_m32_f7xx___system___private___functions_1gae0c36a9591fe6e9c45ecb21a794f0f0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemCoreClockUpdate</definition>
+        <argsstring>(void)</argsstring>
+        <name>SystemCoreClockUpdate</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Update SystemCoreClock variable according to Clock Register Values. The SystemCoreClock variable contains the core clock (HCLK), it can be used by the user application to setup the SysTick timer or configure other parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Each time the core clock (HCLK) changes, this function must be called to update SystemCoreClock variable value. Otherwise, any configuration based on this variable will be incorrect. <linebreak/>
+</para>
+</simplesect>
+<simplesect kind="note"><para>- The system frequency computed by this function is not the real frequency in the chip. It is calculated based on the predefined constant and the selected clock source:</para>
+</simplesect>
+<itemizedlist>
+<listitem><para>If SYSCLK source is HSI, SystemCoreClock will contain the <ref refid="group___s_t_m32_f7xx___system___private___includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37" kindref="member">HSI_VALUE(*)</ref></para>
+</listitem><listitem><para>If SYSCLK source is HSE, SystemCoreClock will contain the <ref refid="group___s_t_m32_f7xx___system___private___includes_1gaeafcff4f57440c60e64812dddd13e7cb" kindref="member">HSE_VALUE(**)</ref></para>
+</listitem><listitem><para>If SYSCLK source is PLL, SystemCoreClock will contain the <ref refid="group___s_t_m32_f7xx___system___private___includes_1gaeafcff4f57440c60e64812dddd13e7cb" kindref="member">HSE_VALUE(**)</ref> or <ref refid="group___s_t_m32_f7xx___system___private___includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37" kindref="member">HSI_VALUE(*)</ref> multiplied/divided by the PLL factors.</para>
+</listitem></itemizedlist>
+</para>
+<para>(*) HSI_VALUE is a constant defined in <ref refid="stm32f7xx__hal__conf_8h_source" kindref="compound">stm32f7xx_hal_conf.h</ref> file (default value 16 MHz) but the real value may vary depending on the variations in voltage and temperature. <linebreak/>
+</para>
+<para>(**) HSE_VALUE is a constant defined in <ref refid="stm32f7xx__hal__conf_8h_source" kindref="compound">stm32f7xx_hal_conf.h</ref> file (default value 25 MHz), user has to ensure that HSE_VALUE is same as the real frequency of the crystal used. Otherwise, this function may have wrong result.</para>
+<para><itemizedlist>
+<listitem><para>The result of this function could be not correct when using fractional value for HSE crystal.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Value of the Internal oscillator in Hz</para>
+<para>&lt; Default value of the External oscillator in Hz</para>
+<para>&lt; Default value of the External oscillator in Hz</para>
+<para>&lt; Value of the Internal oscillator in Hz</para>
+<para>&lt; Value of the Internal oscillator in Hz</para>
+        </inbodydescription>
+        <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" line="200" column="6" bodyfile="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c" bodystart="200" bodyend="246"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>CMSIS Cortex-M7 Device Peripheral Access Layer System Source File. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>MCD Application Team </para>
+</simplesect>
+This file provides two functions and one global variable to be called from user application:<itemizedlist>
+<listitem><para><ref refid="group___s_t_m32_f7xx___system___private___functions_1ga93f514700ccf00d08dbdcff7f1224eb2" kindref="member">SystemInit()</ref>: This function is called at startup just after reset and before branch to main program. This call is made inside the &quot;startup_stm32f7xx.s&quot; file.</para>
+</listitem><listitem><para>SystemCoreClock variable: Contains the core clock (HCLK), it can be used by the user application to setup the SysTick timer or configure other parameters.</para>
+</listitem><listitem><para><ref refid="group___s_t_m32_f7xx___system___private___functions_1gae0c36a9591fe6e9c45ecb21a794f0f0f" kindref="member">SystemCoreClockUpdate()</ref>: Updates the variable SystemCoreClock and must be called whenever the core clock is changed during program execution.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="attention"><para></para>
+</simplesect>
+Copyright (c) 2016 STMicroelectronics. All rights reserved.</para>
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f7xx.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined<sp/><sp/>(HSE_VALUE)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>HSE_VALUE<sp/><sp/><sp/><sp/>((uint32_t)25000000)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HSE_VALUE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined<sp/><sp/>(HSI_VALUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>HSI_VALUE<sp/><sp/><sp/><sp/>((uint32_t)16000000)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HSI_VALUE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">/*************************<sp/>Miscellaneous<sp/>Configuration<sp/>************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Note:<sp/>Following<sp/>vector<sp/>table<sp/>addresses<sp/>must<sp/>be<sp/>defined<sp/>in<sp/>line<sp/>with<sp/>linker</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>configuration.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>#define<sp/>USER_VECT_TAB_ADDRESS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(USER_VECT_TAB_ADDRESS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>#define<sp/>VECT_TAB_SRAM<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(VECT_TAB_SRAM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VECT_TAB_BASE_ADDRESS<sp/><sp/><sp/>RAMDTCM_BASE<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VECT_TAB_OFFSET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000U<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VECT_TAB_BASE_ADDRESS<sp/><sp/><sp/>FLASH_BASE<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VECT_TAB_OFFSET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000U<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>VECT_TAB_SRAM<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>USER_VECT_TAB_ADDRESS<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>This<sp/>variable<sp/>is<sp/>updated<sp/>in<sp/>three<sp/>ways:</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>1)<sp/>by<sp/>calling<sp/>CMSIS<sp/>function<sp/>SystemCoreClockUpdate()</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>2)<sp/>by<sp/>calling<sp/>HAL<sp/>API<sp/>function<sp/>HAL_RCC_GetHCLKFreq()</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>3)<sp/>each<sp/>time<sp/>HAL_RCC_ClockConfig()<sp/>is<sp/>called<sp/>to<sp/>configure<sp/>the<sp/>system<sp/>clock<sp/>frequency<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Note:<sp/>If<sp/>you<sp/>use<sp/>this<sp/>function<sp/>to<sp/>configure<sp/>the<sp/>system<sp/>clock;<sp/>then<sp/>there</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is<sp/>no<sp/>need<sp/>to<sp/>call<sp/>the<sp/>2<sp/>first<sp/>functions<sp/>listed<sp/>above,<sp/>since<sp/>SystemCoreClock</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>variable<sp/>is<sp/>updated<sp/>automatically.</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>uint32_t<sp/>SystemCoreClock<sp/>=<sp/>16000000;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>AHBPrescTable[16]<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>1,<sp/>2,<sp/>3,<sp/>4,<sp/>6,<sp/>7,<sp/>8,<sp/>9};</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>APBPrescTable[8]<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0,<sp/>1,<sp/>2,<sp/>3,<sp/>4};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___s_t_m32_f7xx___system___private___functions_1ga93f514700ccf00d08dbdcff7f1224eb2" kindref="member">SystemInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>FPU<sp/>settings<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(__FPU_PRESENT<sp/>==<sp/>1)<sp/>&amp;&amp;<sp/>(__FPU_USED<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>SCB-&gt;CPACR<sp/>|=<sp/>((3UL<sp/>&lt;&lt;<sp/>10*2)|(3UL<sp/>&lt;&lt;<sp/>11*2));<sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>CP10<sp/>and<sp/>CP11<sp/>Full<sp/>Access<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>the<sp/>Vector<sp/>Table<sp/>location<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(USER_VECT_TAB_ADDRESS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>SCB-&gt;VTOR<sp/>=<sp/>VECT_TAB_BASE_ADDRESS<sp/>|<sp/>VECT_TAB_OFFSET;<sp/></highlight><highlight class="comment">/*<sp/>Vector<sp/>Table<sp/>Relocation<sp/>in<sp/>Internal<sp/>SRAM<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>USER_VECT_TAB_ADDRESS<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___s_t_m32_f7xx___system___private___functions_1gae0c36a9591fe6e9c45ecb21a794f0f0f" kindref="member">SystemCoreClockUpdate</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>uint32_t<sp/>tmp<sp/>=<sp/>0,<sp/>pllvco<sp/>=<sp/>0,<sp/>pllp<sp/>=<sp/>2,<sp/>pllsource<sp/>=<sp/>0,<sp/>pllm<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>SYSCLK<sp/>source<sp/>-------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/>tmp<sp/>=<sp/>RCC-&gt;CFGR<sp/>&amp;<sp/>RCC_CFGR_SWS;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(tmp)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x00:<sp/><sp/></highlight><highlight class="comment">/*<sp/>HSI<sp/>used<sp/>as<sp/>system<sp/>clock<sp/>source<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SystemCoreClock<sp/>=<sp/><ref refid="group___s_t_m32_f7xx___system___private___includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37" kindref="member">HSI_VALUE</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x04:<sp/><sp/></highlight><highlight class="comment">/*<sp/>HSE<sp/>used<sp/>as<sp/>system<sp/>clock<sp/>source<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SystemCoreClock<sp/>=<sp/><ref refid="group___s_t_m32_f7xx___system___private___includes_1gaeafcff4f57440c60e64812dddd13e7cb" kindref="member">HSE_VALUE</ref>;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x08:<sp/><sp/></highlight><highlight class="comment">/*<sp/>PLL<sp/>used<sp/>as<sp/>system<sp/>clock<sp/>source<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>PLL_VCO<sp/>=<sp/>(HSE_VALUE<sp/>or<sp/>HSI_VALUE<sp/>/<sp/>PLL_M)<sp/>*<sp/>PLL_N</highlight></codeline>
+<codeline lineno="218"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SYSCLK<sp/>=<sp/>PLL_VCO<sp/>/<sp/>PLL_P</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pllsource<sp/>=<sp/>(RCC-&gt;PLLCFGR<sp/>&amp;<sp/>RCC_PLLCFGR_PLLSRC)<sp/>&gt;&gt;<sp/>22;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pllm<sp/>=<sp/>RCC-&gt;PLLCFGR<sp/>&amp;<sp/>RCC_PLLCFGR_PLLM;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pllsource<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>HSE<sp/>used<sp/>as<sp/>PLL<sp/>clock<sp/>source<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pllvco<sp/>=<sp/>(<ref refid="group___s_t_m32_f7xx___system___private___includes_1gaeafcff4f57440c60e64812dddd13e7cb" kindref="member">HSE_VALUE</ref><sp/>/<sp/>pllm)<sp/>*<sp/>((RCC-&gt;PLLCFGR<sp/>&amp;<sp/>RCC_PLLCFGR_PLLN)<sp/>&gt;&gt;<sp/>6);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>HSI<sp/>used<sp/>as<sp/>PLL<sp/>clock<sp/>source<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pllvco<sp/>=<sp/>(<ref refid="group___s_t_m32_f7xx___system___private___includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37" kindref="member">HSI_VALUE</ref><sp/>/<sp/>pllm)<sp/>*<sp/>((RCC-&gt;PLLCFGR<sp/>&amp;<sp/>RCC_PLLCFGR_PLLN)<sp/>&gt;&gt;<sp/>6);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pllp<sp/>=<sp/>(((RCC-&gt;PLLCFGR<sp/>&amp;<sp/>RCC_PLLCFGR_PLLP)<sp/>&gt;&gt;16)<sp/>+<sp/>1<sp/>)<sp/>*2;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SystemCoreClock<sp/>=<sp/>pllvco/pllp;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SystemCoreClock<sp/>=<sp/><ref refid="group___s_t_m32_f7xx___system___private___includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37" kindref="member">HSI_VALUE</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Compute<sp/>HCLK<sp/>frequency<sp/>--------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>HCLK<sp/>prescaler<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>tmp<sp/>=<sp/>AHBPrescTable[((RCC-&gt;CFGR<sp/>&amp;<sp/>RCC_CFGR_HPRE)<sp/>&gt;&gt;<sp/>4)];</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>HCLK<sp/>frequency<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/>SystemCoreClock<sp/>&gt;&gt;=<sp/>tmp;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="comment">/************************<sp/>(C)<sp/>COPYRIGHT<sp/>STMicroelectronics<sp/>*****END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Palan/Documents/CODE/UMIT_communication_setup/UartCommunication/Core/Src/system_stm32f7xx.c"/>
+  </compounddef>
+</doxygen>

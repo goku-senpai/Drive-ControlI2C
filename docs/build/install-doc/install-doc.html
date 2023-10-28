@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; lucy-esp 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hardware" href="../hardware-doc/hardware-doc.html" />
+    <link rel="prev" title="Project Description" href="../overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            lucy-esp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Project Description</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#guide-microcontroller-setup-develop">Guide microcontroller setup develop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugging-with-platformio-and-esp-prog">Debugging with PlatformIO and ESP-Prog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware-doc/hardware-doc.html">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software-doc/software-doc.html">Software</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">lucy-esp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/install-doc/install-doc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+<section id="guide-microcontroller-setup-develop">
+<h2>Guide microcontroller setup develop<a class="headerlink" href="#guide-microcontroller-setup-develop" title="Permalink to this heading"></a></h2>
+<ol class="arabic bignums">
+<li><p>Install <a class="reference external" href="https://code.visualstudio.com/">VS code</a></p>
+<blockquote>
+<div><p>Windows: just download the installer
+Linux: sudo snap install –classic code # or code-insiders</p>
+</div></blockquote>
+</li>
+<li><dl>
+<dt>Install Extension <cite>PlatformIO &lt;https://platformio.org/&gt;_</cite></dt><dd><p>Open the Extension Manager on the left side bar.
+Search for  <strong>PlatformIO</strong> and install. A restart of the window will be required.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/extPIO.png"><img alt="ExtensionManager" src="../_images/extPIO.png" style="width: 399px;" /></a>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><p>Open Project Folder containing <strong>platformio.ini</strong></p>
+<blockquote>
+<div><p>This assures that PlatformIO is recognizing the Projectstructure. If it is loaded correctly,
+it should open up the <em>PlatformIO Home</em> Page along with the loaded <strong>platformio.ini</strong></p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/initPIO.png"><img alt="inital Project Page" src="../_images/initPIO.png" style="width: 399px;" /></a>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="debugging-with-platformio-and-esp-prog">
+<h2>Debugging with PlatformIO and ESP-Prog<a class="headerlink" href="#debugging-with-platformio-and-esp-prog" title="Permalink to this heading"></a></h2>
+<p>currently the debugger is not reliable stopping at custom breakpoints. It does stop after every iteration of the <strong>loop</strong> function.</p>
+<ol class="arabic bignums">
+<li><p>Verfiy voltage is set to <strong>3.3V</strong> on the PCB via both jumpers</p></li>
+<li><p>Verify wiring</p>
+<blockquote>
+<div><ul>
+<li><p>GPIO12 — TDI</p></li>
+<li><p>GPIO15 — TDO</p></li>
+<li><p>GPIO13 — TCK</p></li>
+<li><p>GPIO14 — TMS</p></li>
+<li><p>GND — GND</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/espProg.png"><img alt="inital Project Page" src="../_images/espProg.png" style="width: 399px;" /></a>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><dl>
+<dt>Validating the COM Ports in the device manager</dt><dd><a class="reference internal image-reference" href="../_images/pioDebug0.png"><img alt="debug pov" src="../_images/pioDebug0.png" style="width: 399px;" /></a>
+</dd>
+</dl>
+</li>
+<li><p>update <em>platformio.ini</em>
+.. code:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">debug_tool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esp</span><span class="o">-</span><span class="n">prog</span>
+<span class="n">monitor_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COM5</span>
+<span class="n">upload_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COM5</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>The debugger can be preconfigured to disable the inital breakpoint</p>
+<blockquote>
+<div><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">debug_init_break</span><span class="w"> </span><span class="o">=</span><span class="w">            </span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic" start="3">
+<li><p>run <strong>PIO Debug</strong> via launch tab in vs-code</p>
+<ol class="arabic">
+<li><p>select <em>Run and Debug</em> in left sidepane.</p></li>
+<li><p>compile and upload the current code in debug mode.</p></li>
+<li><p>after the debugger is connected (takes some time ~1min), an extra navbar appears.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/pioDebug.png"><img alt="debug pov" src="../_images/pioDebug.png" style="width: 399px;" /></a>
+</div></blockquote>
+</li>
+</ol>
+</li>
+<li><p>add variables to the watch-list to keep track</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/pioDebug2.png"><img alt="debug pov" src="../_images/pioDebug2.png" style="width: 399px;" /></a>
+</div></blockquote>
+</li>
+</ol>
+<section id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading"></a></h3>
+<p>The ESP - Prog contains a <strong>JTAG</strong> Debug Interface and an <strong>FTDI</strong> Programming Interface.
+Only one of these Devices can be used at once. If the ESP-Prog is not detecting the Board and is showing a error
+msg <em>FTDI Device ID xxxx not found … etc</em> a driver problem is most likley causing the issue. This can be validated via the <strong>Device Manager</strong> in Windows.</p>
+<ol class="arabic bignums">
+<li><p>Validate driver problems via device manager</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/deviceManagerFalse.png"><img alt="dev manager" src="../_images/deviceManagerFalse.png" style="width: 399px;" /></a>
+</div></blockquote>
+</li>
+<li><p>Download <a class="reference external" href="https://zadig.akeo.ie/">zadig</a>  and run</p></li>
+<li><p>Select <strong>Interface-0</strong> and Flash <strong>WinUSB</strong> driver (may take a while)</p>
+<blockquote>
+<div><blockquote>
+<div><a class="reference internal image-reference" href="../_images/zadig.png"><img alt="zadig" src="../_images/zadig.png" style="width: 399px;" /></a>
+</div></blockquote>
+<p>after installing the following msg should show up:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/zadig2.png"><img alt="zadig" src="../_images/zadig2.png" style="width: 399px;" /></a>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><dl>
+<dt>replug the device and validate device manager</dt><dd><a class="reference internal image-reference" href="../_images/deviceManagerTrue.png"><img alt="dev manager correct" src="../_images/deviceManagerTrue.png" style="width: 399px;" /></a>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../overview.html" class="btn btn-neutral float-left" title="Project Description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../hardware-doc/hardware-doc.html" class="btn btn-neutral float-right" title="Hardware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Fertigungstechnik UIBK.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

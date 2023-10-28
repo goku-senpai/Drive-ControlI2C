@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_70f1519d3c5769c0fd4bc783c4360655" kind="dir">
+    <compoundname>D:/git/fertigung/lucy-esp/software/microcontroller/include</compoundname>
+    <innerdir refid="dir_d8057e263bd20e079c975348c67454a6">D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32</innerdir>
+    <innerfile refid="_b_n0055_8h">BN0055.h</innerfile>
+    <innerfile refid="_button_8h">Button.h</innerfile>
+    <innerfile refid="_controller_8h">Controller.h</innerfile>
+    <innerfile refid="define_8h">define.h</innerfile>
+    <innerfile refid="_lucy_8h">Lucy.h</innerfile>
+    <innerfile refid="_remote_8h">Remote.h</innerfile>
+    <innerfile refid="_trajectory_8h">Trajectory.h</innerfile>
+    <innerfile refid="_valve_driver_8h">ValveDriver.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/"/>
+  </compounddef>
+</doxygen>

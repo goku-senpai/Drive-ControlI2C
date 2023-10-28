@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_d_i_o" kind="class" language="C++" prot="public">
+    <compoundname>DIO</compoundname>
+    <includes refid="gpio_8h" local="no">gpio.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_i_o_1a69bbe8f8ff5a160bb20dd1f07c7e59b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DIO::DIO</definition>
+        <argsstring>(int _iPin)</argsstring>
+        <name>DIO</name>
+        <qualifiedname>DIO::DIO</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_iPin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="26" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_i_o_1a4349e83d08c0b3be0994ab36485376d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DIO::DIO</definition>
+        <argsstring>(int _iPin, gpio_mode_t pinMode, gpio_pull_mode_t _pullMode)</argsstring>
+        <name>DIO</name>
+        <qualifiedname>DIO::DIO</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_iPin</declname>
+        </param>
+        <param>
+          <type>gpio_mode_t</type>
+          <declname>pinMode</declname>
+        </param>
+        <param>
+          <type>gpio_pull_mode_t</type>
+          <declname>_pullMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="31" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_i_o_1ae7888be5765c30a4e53353180cfb8b14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DIO::~DIO</definition>
+        <argsstring>()</argsstring>
+        <name>~DIO</name>
+        <qualifiedname>DIO::~DIO</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="38" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DIO::set</definition>
+        <argsstring>(bool _bState)</argsstring>
+        <name>set</name>
+        <qualifiedname>DIO::set</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>_bState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set digital output level <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>high</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true/false </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="44" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_i_o_1aca561fc9bf48b3db38b557672d207fe0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DIO::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <qualifiedname>DIO::get</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>read digital input level <simplesect kind="return"><para>high/low </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="53" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_i_o_1a727bcda55147f93d2c6b5f0e2d3a561f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DIO::toggle</definition>
+        <argsstring>()</argsstring>
+        <name>toggle</name>
+        <qualifiedname>DIO::toggle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>toggle digital output level </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="61" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="61" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Wrapper class for simple digital input/output pin TODO: fix pinMode to correctly work with gpio driver restructure initialization of Pins with config object TODO:: add more overloads to constructor TODO: rename get to read -&gt; to be consistent </para>
+    </detaileddescription>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" line="16" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/esp32/gpio.h" bodystart="16" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_d_i_o_1a69bbe8f8ff5a160bb20dd1f07c7e59b0" prot="public" virt="non-virtual"><scope>DIO</scope><name>DIO</name></member>
+      <member refid="class_d_i_o_1a4349e83d08c0b3be0994ab36485376d5" prot="public" virt="non-virtual"><scope>DIO</scope><name>DIO</name></member>
+      <member refid="class_d_i_o_1aca561fc9bf48b3db38b557672d207fe0" prot="public" virt="non-virtual"><scope>DIO</scope><name>get</name></member>
+      <member refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" prot="public" virt="non-virtual"><scope>DIO</scope><name>set</name></member>
+      <member refid="class_d_i_o_1a727bcda55147f93d2c6b5f0e2d3a561f" prot="public" virt="non-virtual"><scope>DIO</scope><name>toggle</name></member>
+      <member refid="class_d_i_o_1ae7888be5765c30a4e53353180cfb8b14" prot="public" virt="non-virtual"><scope>DIO</scope><name>~DIO</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

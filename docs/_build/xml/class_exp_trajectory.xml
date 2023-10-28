@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_exp_trajectory" kind="class" language="C++" prot="public">
+    <compoundname>ExpTrajectory</compoundname>
+    <basecompoundref refid="class_experiment_module" prot="public" virt="non-virtual">ExperimentModule</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997" prot="private" static="no" strong="no">
+        <type></type>
+        <name>TrajType</name>
+        <qualifiedname>ExpTrajectory::TrajType</qualifiedname>
+        <enumvalue id="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997a4b314772839f782a682bd59b920fbff1" prot="private">
+          <name>T_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997ae3dc59b7c7d0f6b15227d449f333f959" prot="private">
+          <name>T_POLY</name>
+          <initializer>= 1 &lt;&lt; 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997a047d9a08e04b86731a2f281b4acb3f76" prot="private">
+          <name>T_ORIGINAL_LUCY</name>
+          <initializer>= 1 &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997a0c1e34bcd30090eaf4c33cdae75ea676" prot="private">
+          <name>T_FLATTEN_TRAJECTORY</name>
+          <initializer>= 1 &lt;&lt; 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997af780aeb9088b52876c53979a33fcc800" prot="private">
+          <name>T_FORCE_REDUCTION</name>
+          <initializer>= 1 &lt;&lt; 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="416" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="416" bodyend="422"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_exp_trajectory_1a8cbe03242de043752b10b7d5bbd406ea" prot="private" static="no" mutable="no">
+        <type><ref refid="class_trajectory" kindref="compound">Trajectory</ref> *</type>
+        <definition>Trajectory* ExpTrajectory::traj</definition>
+        <argsstring></argsstring>
+        <name>traj</name>
+        <qualifiedname>ExpTrajectory::traj</qualifiedname>
+        <initializer>= new <ref refid="class_none_trajectory" kindref="compound">NoneTrajectory</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="415" column="16" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_exp_trajectory_1a38a2068661a6f23020e0e5d7427e48b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ExpTrajectory::ExpTrajectory</definition>
+        <argsstring>()</argsstring>
+        <name>ExpTrajectory</name>
+        <qualifiedname>ExpTrajectory::ExpTrajectory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="381" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="381" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_trajectory_1aee1447adc02de065444d16cfdac48ccd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ExpTrajectory::compute</definition>
+        <argsstring>(uint32_t lTime) override</argsstring>
+        <name>compute</name>
+        <qualifiedname>ExpTrajectory::compute</qualifiedname>
+        <reimplements refid="class_experiment_module_1a812c5ce3fc52525e6ee9d4f260a5936a">compute</reimplements>
+        <param>
+          <type>uint32_t</type>
+          <declname>lTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>function is called regularly in EXP_DT ms intervals <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current experiment time in ms </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="387" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="387" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_trajectory_1a31ae14c1936e9eba5caefc6614641dc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpTrajectory::handleFrame</definition>
+        <argsstring>(unsigned char id) override</argsstring>
+        <name>handleFrame</name>
+        <qualifiedname>ExpTrajectory::handleFrame</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="394" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="394" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_trajectory_1aef68cb8c81c849c58dba2d54e6069f6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpTrajectory::sendFrame</definition>
+        <argsstring>(unsigned char id, unsigned long lTime) override</argsstring>
+        <name>sendFrame</name>
+        <qualifiedname>ExpTrajectory::sendFrame</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>lTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="405" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="405" bodyend="412"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_exp_trajectory_1a69737ba916e960da47df834167df0beb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpTrajectory::unpackTraj</definition>
+        <argsstring>()</argsstring>
+        <name>unpackTraj</name>
+        <qualifiedname>ExpTrajectory::unpackTraj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="424" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="424" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="class_exp_trajectory_1aa92b83f08b9e85b41b3d658e680a3b81" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExpTrajectory::unpackPolyTrajData</definition>
+        <argsstring>()</argsstring>
+        <name>unpackPolyTrajData</name>
+        <qualifiedname>ExpTrajectory::unpackPolyTrajData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="438" column="10" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="438" bodyend="448"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ExpTrajectory</label>
+        <link refid="class_exp_trajectory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExperimentModule</label>
+        <link refid="class_experiment_module"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ExpTrajectory</label>
+        <link refid="class_exp_trajectory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExperimentModule</label>
+        <link refid="class_experiment_module"/>
+      </node>
+    </collaborationgraph>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="377" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="377" bodyend="449"/>
+    <listofallmembers>
+      <member refid="class_exp_trajectory_1aee1447adc02de065444d16cfdac48ccd" prot="public" virt="virtual"><scope>ExpTrajectory</scope><name>compute</name></member>
+      <member refid="class_experiment_module_1a8dc870b13ef7b6013dc2ab5aa7f5ffe7" prot="public" virt="non-virtual"><scope>ExpTrajectory</scope><name>ExperimentModule</name></member>
+      <member refid="class_exp_trajectory_1a38a2068661a6f23020e0e5d7427e48b9" prot="public" virt="non-virtual"><scope>ExpTrajectory</scope><name>ExpTrajectory</name></member>
+      <member refid="class_experiment_module_1ac2f139ac6c26181fd2a7a7343c855eee" prot="public" virt="non-virtual"><scope>ExpTrajectory</scope><name>getOutput</name></member>
+      <member refid="class_experiment_module_1acf4101354fe002c105da75892d220dc7" prot="public" virt="non-virtual"><scope>ExpTrajectory</scope><name>getState</name></member>
+      <member refid="class_exp_trajectory_1a31ae14c1936e9eba5caefc6614641dc9" prot="public" virt="non-virtual"><scope>ExpTrajectory</scope><name>handleFrame</name></member>
+      <member refid="class_experiment_module_1a74fa6d8dbe61a4351135082d2f288da4" prot="public" virt="virtual" ambiguityscope="ExperimentModule::"><scope>ExpTrajectory</scope><name>handleFrame</name></member>
+      <member refid="class_experiment_module_1ab8628df2b6883cdf92f55c5b067430d2" prot="public" virt="virtual"><scope>ExpTrajectory</scope><name>init</name></member>
+      <member refid="class_experiment_module_1af7cddd22f46a142c197203da7130ffdf" prot="protected" virt="non-virtual"><scope>ExpTrajectory</scope><name>outputs</name></member>
+      <member refid="class_experiment_module_1a7d7697d611871d8f054b618080769dcc" prot="public" virt="virtual"><scope>ExpTrajectory</scope><name>registerModules</name></member>
+      <member refid="class_exp_trajectory_1aef68cb8c81c849c58dba2d54e6069f6c" prot="public" virt="non-virtual"><scope>ExpTrajectory</scope><name>sendFrame</name></member>
+      <member refid="class_experiment_module_1aabbf45990fca2a3b0a50644c7741004f" prot="public" virt="virtual" ambiguityscope="ExperimentModule::"><scope>ExpTrajectory</scope><name>sendFrame</name></member>
+      <member refid="class_experiment_module_1a6286b09a3f2e24144534321a7e5ef2c2" prot="protected" virt="non-virtual"><scope>ExpTrajectory</scope><name>states</name></member>
+      <member refid="class_experiment_module_1a63415ccd081a94e842487e48dadbd8c0" prot="public" virt="virtual"><scope>ExpTrajectory</scope><name>stop</name></member>
+      <member refid="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997a0c1e34bcd30090eaf4c33cdae75ea676" prot="private" virt="non-virtual"><scope>ExpTrajectory</scope><name>T_FLATTEN_TRAJECTORY</name></member>
+      <member refid="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997af780aeb9088b52876c53979a33fcc800" prot="private" virt="non-virtual"><scope>ExpTrajectory</scope><name>T_FORCE_REDUCTION</name></member>
+      <member refid="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997a4b314772839f782a682bd59b920fbff1" prot="private" virt="non-virtual"><scope>ExpTrajectory</scope><name>T_NONE</name></member>
+      <member refid="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997a047d9a08e04b86731a2f281b4acb3f76" prot="private" virt="non-virtual"><scope>ExpTrajectory</scope><name>T_ORIGINAL_LUCY</name></member>
+      <member refid="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997ae3dc59b7c7d0f6b15227d449f333f959" prot="private" virt="non-virtual"><scope>ExpTrajectory</scope><name>T_POLY</name></member>
+      <member refid="class_exp_trajectory_1a8cbe03242de043752b10b7d5bbd406ea" prot="private" virt="non-virtual"><scope>ExpTrajectory</scope><name>traj</name></member>
+      <member refid="class_exp_trajectory_1a5864b1d0a8f3768a66460dfbd5fdc997" prot="private" virt="non-virtual"><scope>ExpTrajectory</scope><name>TrajType</name></member>
+      <member refid="class_exp_trajectory_1aa92b83f08b9e85b41b3d658e680a3b81" prot="private" virt="non-virtual"><scope>ExpTrajectory</scope><name>unpackPolyTrajData</name></member>
+      <member refid="class_exp_trajectory_1a69737ba916e960da47df834167df0beb" prot="private" virt="non-virtual"><scope>ExpTrajectory</scope><name>unpackTraj</name></member>
+      <member refid="class_experiment_module_1a909d236cad2e09e23f479a4263cbd1e9" prot="public" virt="non-virtual"><scope>ExpTrajectory</scope><name>~ExperimentModule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_driver" kind="class" language="C++" prot="public">
+    <compoundname>Driver</compoundname>
+    <derivedcompoundref refid="class_valve_driver" prot="private" virt="non-virtual">ValveDriver</derivedcompoundref>
+    <includes refid="_valve_driver_8h" local="no">ValveDriver.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_driver_1a281515695ed747b81b373682b525022f" prot="protected" static="no" mutable="no">
+        <type><ref refid="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806" kindref="member">ValveState</ref></type>
+        <definition>ValveState Driver::vState</definition>
+        <argsstring></argsstring>
+        <name>vState</name>
+        <qualifiedname>Driver::vState</qualifiedname>
+        <initializer>= AIR_STOP</initializer>
+        <briefdescription>
+<para>current state of the valve </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="32" column="14" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_driver_1af0658d103e3e810a8e9ef0a53bb2e261" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Driver::Driver</definition>
+        <argsstring>()</argsstring>
+        <name>Driver</name>
+        <qualifiedname>Driver::Driver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="28" column="3" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_driver_1a2864fd05273f30e23aa959c92ef8a5b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Driver::~Driver</definition>
+        <argsstring>()</argsstring>
+        <name>~Driver</name>
+        <qualifiedname>Driver::~Driver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="29" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_driver_1a81f2e7082d0b84ae421870a41611cfb4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806" kindref="member">ValveState</ref></type>
+        <definition>ValveState Driver::getState</definition>
+        <argsstring>()</argsstring>
+        <name>getState</name>
+        <qualifiedname>Driver::getState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>current ValveState </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="38" column="14" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>General description of a valve driver for press air. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Driver</label>
+        <link refid="class_driver"/>
+      </node>
+      <node id="2">
+        <label>ValveDriver</label>
+        <link refid="class_valve_driver"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="25" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="26" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_driver_1af0658d103e3e810a8e9ef0a53bb2e261" prot="public" virt="non-virtual"><scope>Driver</scope><name>Driver</name></member>
+      <member refid="class_driver_1a81f2e7082d0b84ae421870a41611cfb4" prot="protected" virt="non-virtual"><scope>Driver</scope><name>getState</name></member>
+      <member refid="class_driver_1a281515695ed747b81b373682b525022f" prot="protected" virt="non-virtual"><scope>Driver</scope><name>vState</name></member>
+      <member refid="class_driver_1a2864fd05273f30e23aa959c92ef8a5b9" prot="public" virt="virtual"><scope>Driver</scope><name>~Driver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

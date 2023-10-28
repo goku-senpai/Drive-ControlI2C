@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_discrete_valve_controller" kind="class" language="C++" prot="public">
+    <compoundname>DiscreteValveController</compoundname>
+    <basecompoundref refid="class_valve_controller" prot="public" virt="non-virtual">ValveController</basecompoundref>
+    <includes refid="_controller_8h" local="no">Controller.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_discrete_valve_controller_1a62e4885aee8dc75df5c004fbb753b539" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DiscreteValveController::dActiveCycleTime</definition>
+        <argsstring></argsstring>
+        <name>dActiveCycleTime</name>
+        <qualifiedname>DiscreteValveController::dActiveCycleTime</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="83" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_discrete_valve_controller_1a4a7183b8855876dea3d66059743bbbbd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DiscreteValveController::dPressureDiff</definition>
+        <argsstring></argsstring>
+        <name>dPressureDiff</name>
+        <qualifiedname>DiscreteValveController::dPressureDiff</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="84" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_discrete_valve_controller_1a7af5d1b597f6bc11428b46bb208ba6de" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DiscreteValveController::dPressurePerMs</definition>
+        <argsstring></argsstring>
+        <name>dPressurePerMs</name>
+        <qualifiedname>DiscreteValveController::dPressurePerMs</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="85" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_discrete_valve_controller_1a1bd9ddf0b18621d153653c9bb6bd5211" prot="private" static="no" mutable="no">
+        <type><ref refid="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806" kindref="member">ValveState</ref></type>
+        <definition>ValveState DiscreteValveController::valveState</definition>
+        <argsstring></argsstring>
+        <name>valveState</name>
+        <qualifiedname>DiscreteValveController::valveState</qualifiedname>
+        <initializer>= ValveState::AIR_STOP</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="87" column="16" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_discrete_valve_controller_1ac2b7e4264734714919faa05dca2323b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DiscreteValveController::DiscreteValveController</definition>
+        <argsstring>()</argsstring>
+        <name>DiscreteValveController</name>
+        <qualifiedname>DiscreteValveController::DiscreteValveController</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="92" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_discrete_valve_controller_1af7444f2be5e8567968e71b69b2413e2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DiscreteValveController::~DiscreteValveController</definition>
+        <argsstring>()</argsstring>
+        <name>~DiscreteValveController</name>
+        <qualifiedname>DiscreteValveController::~DiscreteValveController</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="93" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_discrete_valve_controller_1ac45a54f941c3d913b31c5f704bf5c37c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double *</type>
+        <definition>double * DiscreteValveController::compute</definition>
+        <argsstring>(const double &amp;dCurInput, const double &amp;dCurPressureUI, const double &amp;dCurSetpoint)</argsstring>
+        <name>compute</name>
+        <qualifiedname>DiscreteValveController::compute</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurInput</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurPressureUI</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurSetpoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dCurInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current Pressure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dCurPressureUI</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current potentiometer value from UI <ref refid="class_remote" kindref="compound">Remote</ref> converted into Pressure UI.get()*PRESSURE_MAX </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dCurSetpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current TargetPressure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="102" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="102" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_discrete_valve_controller_1a47adcf5dae7586fbacd9f28ae39d80c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DiscreteValveController::calcActiveValveTime</definition>
+        <argsstring>()</argsstring>
+        <name>calcActiveValveTime</name>
+        <qualifiedname>DiscreteValveController::calcActiveValveTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="145" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="145" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>valve Controller for discrete valves with 2 Digital Pins </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DiscreteValveController</label>
+        <link refid="class_discrete_valve_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ValveController</label>
+        <link refid="class_valve_controller"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DiscreteValveController</label>
+        <link refid="class_discrete_valve_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ValveController</label>
+        <link refid="class_valve_controller"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="81" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="81" bodyend="148"/>
+    <listofallmembers>
+      <member refid="class_discrete_valve_controller_1a47adcf5dae7586fbacd9f28ae39d80c3" prot="public" virt="non-virtual"><scope>DiscreteValveController</scope><name>calcActiveValveTime</name></member>
+      <member refid="class_valve_controller_1ac6dfdae7c7a3d138b0fc5590ae6640c0" prot="public" virt="non-virtual"><scope>DiscreteValveController</scope><name>clamp</name></member>
+      <member refid="class_discrete_valve_controller_1ac45a54f941c3d913b31c5f704bf5c37c" prot="public" virt="non-virtual"><scope>DiscreteValveController</scope><name>compute</name></member>
+      <member refid="class_valve_controller_1aed45a8df64216ef44bbeedb4a453ac6d" prot="public" virt="pure-virtual" ambiguityscope="ValveController::"><scope>DiscreteValveController</scope><name>compute</name></member>
+      <member refid="class_discrete_valve_controller_1a62e4885aee8dc75df5c004fbb753b539" prot="private" virt="non-virtual"><scope>DiscreteValveController</scope><name>dActiveCycleTime</name></member>
+      <member refid="class_discrete_valve_controller_1ac2b7e4264734714919faa05dca2323b6" prot="public" virt="non-virtual"><scope>DiscreteValveController</scope><name>DiscreteValveController</name></member>
+      <member refid="class_valve_controller_1adfa0b07df3cd2a5292a919d546481ed3" prot="protected" virt="non-virtual"><scope>DiscreteValveController</scope><name>dLinInput</name></member>
+      <member refid="class_valve_controller_1af707465bdb18b66f0d60c66c862265e5" prot="protected" virt="non-virtual"><scope>DiscreteValveController</scope><name>dOut</name></member>
+      <member refid="class_valve_controller_1aaaa9cb35072c7f2c4f2d4805c435b4d8" prot="protected" virt="non-virtual"><scope>DiscreteValveController</scope><name>dOutputMax</name></member>
+      <member refid="class_valve_controller_1a3cb0e85d6f24d2b3f68ca53b1c7e0732" prot="protected" virt="non-virtual"><scope>DiscreteValveController</scope><name>dOutputMin</name></member>
+      <member refid="class_discrete_valve_controller_1a4a7183b8855876dea3d66059743bbbbd" prot="private" virt="non-virtual"><scope>DiscreteValveController</scope><name>dPressureDiff</name></member>
+      <member refid="class_discrete_valve_controller_1a7af5d1b597f6bc11428b46bb208ba6de" prot="private" virt="non-virtual"><scope>DiscreteValveController</scope><name>dPressurePerMs</name></member>
+      <member refid="class_valve_controller_1a8fd9342fc9ed545b0dd991cc7f7de786" prot="protected" virt="non-virtual"><scope>DiscreteValveController</scope><name>dSampleTime</name></member>
+      <member refid="class_valve_controller_1a1ec02658c934ea8d80d3dd090c1a5344" prot="public" virt="non-virtual"><scope>DiscreteValveController</scope><name>getOutput</name></member>
+      <member refid="class_valve_controller_1a02177382e16681476d4b792367af4f30" prot="public" virt="non-virtual"><scope>DiscreteValveController</scope><name>ValveController</name></member>
+      <member refid="class_discrete_valve_controller_1a1bd9ddf0b18621d153653c9bb6bd5211" prot="private" virt="non-virtual"><scope>DiscreteValveController</scope><name>valveState</name></member>
+      <member refid="class_discrete_valve_controller_1af7444f2be5e8567968e71b69b2413e2f" prot="public" virt="non-virtual"><scope>DiscreteValveController</scope><name>~DiscreteValveController</name></member>
+      <member refid="class_valve_controller_1ab36f41bebdb7816915ca0c446fb87f67" prot="public" virt="virtual"><scope>DiscreteValveController</scope><name>~ValveController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

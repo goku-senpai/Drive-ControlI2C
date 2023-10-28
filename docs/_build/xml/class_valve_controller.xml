@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_valve_controller" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ValveController</compoundname>
+    <derivedcompoundref refid="class_cont_valve_controller" prot="public" virt="non-virtual">ContValveController</derivedcompoundref>
+    <derivedcompoundref refid="class_discrete_valve_controller" prot="public" virt="non-virtual">DiscreteValveController</derivedcompoundref>
+    <derivedcompoundref refid="class_none_valve_controller" prot="public" virt="non-virtual">NoneValveController</derivedcompoundref>
+    <derivedcompoundref refid="class_p_i_d_controller" prot="public" virt="non-virtual">PIDController</derivedcompoundref>
+    <includes refid="_controller_8h" local="no">Controller.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_valve_controller_1a3cb0e85d6f24d2b3f68ca53b1c7e0732" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ValveController::dOutputMin</definition>
+        <argsstring></argsstring>
+        <name>dOutputMin</name>
+        <qualifiedname>ValveController::dOutputMin</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Minimal value for the calculated output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="58" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_valve_controller_1aaaa9cb35072c7f2c4f2d4805c435b4d8" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ValveController::dOutputMax</definition>
+        <argsstring></argsstring>
+        <name>dOutputMax</name>
+        <qualifiedname>ValveController::dOutputMax</qualifiedname>
+        <initializer>= 255.0</initializer>
+        <briefdescription>
+<para>Maximal value for the calculated output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="59" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_valve_controller_1a8fd9342fc9ed545b0dd991cc7f7de786" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ValveController::dSampleTime</definition>
+        <argsstring></argsstring>
+        <name>dSampleTime</name>
+        <qualifiedname>ValveController::dSampleTime</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Sample time of the controller in s. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="60" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_valve_controller_1adfa0b07df3cd2a5292a919d546481ed3" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ValveController::dLinInput</definition>
+        <argsstring></argsstring>
+        <name>dLinInput</name>
+        <qualifiedname>ValveController::dLinInput</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Linearization part of input. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="61" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_valve_controller_1af707465bdb18b66f0d60c66c862265e5" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ValveController::dOut</definition>
+        <argsstring></argsstring>
+        <name>dOut</name>
+        <qualifiedname>ValveController::dOut</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>last calculated output of controller </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="62" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_valve_controller_1aed45a8df64216ef44bbeedb4a453ac6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double *</type>
+        <definition>virtual double * ValveController::compute</definition>
+        <argsstring>(const double &amp;dCurInput, const double &amp;dCurSetpoint)=0</argsstring>
+        <name>compute</name>
+        <qualifiedname>ValveController::compute</qualifiedname>
+        <reimplementedby refid="class_none_valve_controller_1aeb795ddea329897fb612d0c4564af5f9">compute</reimplementedby>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurInput</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurSetpoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method, that computes the controller output of the current time step for the given input value and set-point <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dCurInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current input value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dCurSetpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current setpoint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>controller output in the range of min and max output </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="22" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_valve_controller_1a1ec02658c934ea8d80d3dd090c1a5344" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double *</type>
+        <definition>double * ValveController::getOutput</definition>
+        <argsstring>()</argsstring>
+        <name>getOutput</name>
+        <qualifiedname>ValveController::getOutput</qualifiedname>
+        <briefdescription>
+<para>Method that returns the last calculated output of the controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>dOut calculated output value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="29" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_valve_controller_1a02177382e16681476d4b792367af4f30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ValveController::ValveController</definition>
+        <argsstring>()</argsstring>
+        <name>ValveController</name>
+        <qualifiedname>ValveController::ValveController</qualifiedname>
+        <briefdescription>
+<para>default constructor to set dSampleTime from <ref refid="define_8h" kindref="compound">define.h</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="36" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_valve_controller_1ab36f41bebdb7816915ca0c446fb87f67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ValveController::~ValveController</definition>
+        <argsstring>()</argsstring>
+        <name>~ValveController</name>
+        <qualifiedname>ValveController::~ValveController</qualifiedname>
+        <briefdescription>
+<para>virtual destructor to make deleting derived classes from a base class pointer work </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="43" column="13" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_valve_controller_1ac6dfdae7c7a3d138b0fc5590ae6640c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValveController::clamp</definition>
+        <argsstring>()</argsstring>
+        <name>clamp</name>
+        <qualifiedname>ValveController::clamp</qualifiedname>
+        <briefdescription>
+<para>clamp the output signal to specified bounds </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="49" column="10" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="49" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base controller class that can used to derive a P, PI, PD or PID controller. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ContValveController</label>
+        <link refid="class_cont_valve_controller"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DiscreteValveController</label>
+        <link refid="class_discrete_valve_controller"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>NoneValveController</label>
+        <link refid="class_none_valve_controller"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PIDController</label>
+        <link refid="class_p_i_d_controller"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ValveController</label>
+        <link refid="class_valve_controller"/>
+      </node>
+    </inheritancegraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" line="14" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h" bodystart="14" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_valve_controller_1ac6dfdae7c7a3d138b0fc5590ae6640c0" prot="public" virt="non-virtual"><scope>ValveController</scope><name>clamp</name></member>
+      <member refid="class_valve_controller_1aed45a8df64216ef44bbeedb4a453ac6d" prot="public" virt="pure-virtual"><scope>ValveController</scope><name>compute</name></member>
+      <member refid="class_valve_controller_1adfa0b07df3cd2a5292a919d546481ed3" prot="protected" virt="non-virtual"><scope>ValveController</scope><name>dLinInput</name></member>
+      <member refid="class_valve_controller_1af707465bdb18b66f0d60c66c862265e5" prot="protected" virt="non-virtual"><scope>ValveController</scope><name>dOut</name></member>
+      <member refid="class_valve_controller_1aaaa9cb35072c7f2c4f2d4805c435b4d8" prot="protected" virt="non-virtual"><scope>ValveController</scope><name>dOutputMax</name></member>
+      <member refid="class_valve_controller_1a3cb0e85d6f24d2b3f68ca53b1c7e0732" prot="protected" virt="non-virtual"><scope>ValveController</scope><name>dOutputMin</name></member>
+      <member refid="class_valve_controller_1a8fd9342fc9ed545b0dd991cc7f7de786" prot="protected" virt="non-virtual"><scope>ValveController</scope><name>dSampleTime</name></member>
+      <member refid="class_valve_controller_1a1ec02658c934ea8d80d3dd090c1a5344" prot="public" virt="non-virtual"><scope>ValveController</scope><name>getOutput</name></member>
+      <member refid="class_valve_controller_1a02177382e16681476d4b792367af4f30" prot="public" virt="non-virtual"><scope>ValveController</scope><name>ValveController</name></member>
+      <member refid="class_valve_controller_1ab36f41bebdb7816915ca0c446fb87f67" prot="public" virt="virtual"><scope>ValveController</scope><name>~ValveController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

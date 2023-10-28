@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_valve_driver_8h" kind="file" language="C++">
+    <compoundname>ValveDriver.h</compoundname>
+    <includes refid="gpio_8h" local="no">esp32/gpio.h</includes>
+    <includes refid="pwm_8h" local="no">esp32/pwm.h</includes>
+    <includedby refid="_controller_8h" local="yes">D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h</includedby>
+    <includedby refid="_lucy_8h" local="yes">D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="1">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h</label>
+        <link refid="_valve_driver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>esp32/gpio.h</label>
+        <link refid="gpio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>esp32/pwm.h</label>
+        <link refid="pwm_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/Controller.h</label>
+        <link refid="_controller_8h_source"/>
+      </node>
+      <node id="3">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/Lucy.h</label>
+        <link refid="_lucy_8h"/>
+      </node>
+      <node id="1">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h</label>
+        <link refid="_valve_driver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_driver" prot="public">Driver</innerclass>
+    <innerclass refid="class_valve_driver" prot="public">ValveDriver</innerclass>
+    <innerclass refid="class_s_m_c_valve_driver" prot="public">SMCValveDriver</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ValveState</name>
+        <enumvalue id="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806ae7df84b17ab7a7855c48b9a5a8f95dda" prot="public">
+          <name>AIR_IN</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806a993cc2a6f9931bbc36a60f91bc20f745" prot="public">
+          <name>AIR_OUT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806ad97d13e4820d9d952d671f28f4203156" prot="public">
+          <name>AIR_STOP</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>different states for valves clean up NONE and STOP </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" line="15" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h" bodystart="16" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gpio_8h" kindref="compound">esp32/gpio.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="pwm_8h" kindref="compound">esp32/pwm.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VALVE_DRIVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALVE_DRIVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806" kindref="member">ValveState</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>AIR_IN<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>AIR_OUT<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>AIR_STOP<sp/>=<sp/>3</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_driver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_driver" kindref="compound">Driver</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="class_driver" kindref="compound">Driver</ref>(){};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_driver" kindref="compound">~Driver</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="class_driver_1a281515695ed747b81b373682b525022f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806" kindref="member">ValveState</ref><sp/><ref refid="class_driver_1a281515695ed747b81b373682b525022f" kindref="member">vState</ref><sp/>=<sp/>AIR_STOP;<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_driver_1a81f2e7082d0b84ae421870a41611cfb4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806" kindref="member">ValveState</ref><sp/><ref refid="class_driver_1a81f2e7082d0b84ae421870a41611cfb4" kindref="member">getState</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="class_driver_1a281515695ed747b81b373682b525022f" kindref="member">vState</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_valve_driver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_valve_driver" kindref="compound">ValveDriver</ref><sp/>:<sp/><ref refid="class_driver" kindref="compound">Driver</ref></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><ref refid="class_d_i_o" kindref="compound">DIO</ref><sp/>pinA;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><ref refid="class_d_i_o" kindref="compound">DIO</ref><sp/>pinB;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="class_valve_driver" kindref="compound">ValveDriver</ref>(uint8_t<sp/>iPinA,<sp/>uint8_t<sp/>iPinB)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>pinA(iPinA),<sp/>pinB(iPinB)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_valve_driver_1a4b2b1528a7b9a2d2eddb9be708d7b2f1" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_valve_driver_1a4b2b1528a7b9a2d2eddb9be708d7b2f1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_valve_driver_1a4b2b1528a7b9a2d2eddb9be708d7b2f1" kindref="member">stop</ref>()</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;pinA.<ref refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" kindref="member">set</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;pinB.<ref refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" kindref="member">set</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="class_valve_driver_1a4fd9ab4133ec682ea81e3673ccd332bf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_valve_driver_1a4fd9ab4133ec682ea81e3673ccd332bf" kindref="member">set</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>targetPressure)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Todo<sp/>calc<sp/>outputs<sp/>based<sp/>on<sp/>current<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="class_valve_driver_1af549e6a3e70480ed191b6f89ec18bb90" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_valve_driver_1af549e6a3e70480ed191b6f89ec18bb90" kindref="member">setState</ref>(<ref refid="_valve_driver_8h_1a39da986c7ba6c68c09743efce6e55806" kindref="member">ValveState</ref><sp/>state)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_driver_1a281515695ed747b81b373682b525022f" kindref="member">vState</ref><sp/>=<sp/>state;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(this-&gt;<ref refid="class_driver_1a281515695ed747b81b373682b525022f" kindref="member">vState</ref>)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>AIR_IN:</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;pinA.<ref refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" kindref="member">set</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;pinB.<ref refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" kindref="member">set</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>AIR_OUT:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;pinA.<ref refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" kindref="member">set</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;pinB.<ref refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" kindref="member">set</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>AIR_STOP:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;pinA.<ref refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" kindref="member">set</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;pinB.<ref refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" kindref="member">set</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="class_s_m_c_valve_driver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_m_c_valve_driver" kindref="compound">SMCValveDriver</ref></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><ref refid="class_p_w_m" kindref="compound">PWM</ref><sp/>pwm;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><ref refid="class_s_m_c_valve_driver" kindref="compound">SMCValveDriver</ref>()</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><ref refid="class_s_m_c_valve_driver" kindref="compound">~SMCValveDriver</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="class_s_m_c_valve_driver_1aa66ca196fa967ead4600712874e9e380" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_m_c_valve_driver_1aa66ca196fa967ead4600712874e9e380" kindref="member">setFlow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dFlow)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dFlow<sp/>=<sp/>dFlow;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;calcCurrent(dFlow);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;pwm.<ref refid="class_p_w_m_1af66606fd29070ee4a009b26fc461a38e" kindref="member">set</ref>(dCurrent);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dFlow<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dCurrent<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>calcCurrent(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dFlow)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dCurrent<sp/>=<sp/>sqrt(10)<sp/>+<sp/>10;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>VALVE_DRIVER_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/ValveDriver.h"/>
+  </compounddef>
+</doxygen>

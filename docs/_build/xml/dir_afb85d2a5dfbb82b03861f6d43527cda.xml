@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_afb85d2a5dfbb82b03861f6d43527cda" kind="dir">
+    <compoundname>D:/git/fertigung/lucy-esp/software/microcontroller/test</compoundname>
+    <innerfile refid="adc__gpio__pwm__i2c_8cpp">adc_gpio_pwm_i2c.cpp</innerfile>
+    <innerfile refid="pwm_8cpp">pwm.cpp</innerfile>
+    <innerfile refid="timer_8cpp">timer.cpp</innerfile>
+    <innerfile refid="transport__min__exp_modules_8cpp">transport_min_expModules.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/"/>
+  </compounddef>
+</doxygen>

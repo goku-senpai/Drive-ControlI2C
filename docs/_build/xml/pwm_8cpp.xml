@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="pwm_8cpp" kind="file" language="C++">
+    <compoundname>pwm.cpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="pwm_8h" local="no">esp32/pwm.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="3">
+        <label>esp32/pwm.h</label>
+        <link refid="pwm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp</label>
+        <link refid="pwm_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="pwm_8cpp_1a01a679f192f6620d0255381e00c535c2" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int potiPin</definition>
+        <argsstring></argsstring>
+        <name>potiPin</name>
+        <initializer>= 14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" line="12" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pwm_8cpp_1a2cd9f0d96c9cd0637798de3baa7aee60" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ledPin</definition>
+        <argsstring></argsstring>
+        <name>ledPin</name>
+        <initializer>= 25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" line="14" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pwm_8cpp_1ad730376c68b5ab8fccb31a5266657bf5" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ledPin2</definition>
+        <argsstring></argsstring>
+        <name>ledPin2</name>
+        <initializer>= 26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" line="15" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pwm_8cpp_1a2dce285eeeb99dff1af9729566ed80e0" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ledPin3</definition>
+        <argsstring></argsstring>
+        <name>ledPin3</name>
+        <initializer>= 27</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" line="16" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pwm_8cpp_1a323a9f2cf2eeae7e0acd9fe48da80fff" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int freq</definition>
+        <argsstring></argsstring>
+        <name>freq</name>
+        <initializer>= 5000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" line="19" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pwm_8cpp_1a5bf8a40c83e5abee86f09b6e49ddcdc3" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ledChannel</definition>
+        <argsstring></argsstring>
+        <name>ledChannel</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" line="20" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pwm_8cpp_1a3f31ec61b48ff621facda746f143c34c" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int resolution</definition>
+        <argsstring></argsstring>
+        <name>resolution</name>
+        <initializer>= 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" line="21" column="11" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pwm_8cpp_1a198e8e7f98d16bf75d6ce8478555b37f" prot="public" static="no" mutable="no">
+        <type><ref refid="class_p_w_m" kindref="compound">PWM</ref></type>
+        <definition>PWM pwm(ledChannel, freq, resolution)</definition>
+        <argsstring>(ledChannel, freq, resolution)</argsstring>
+        <name>pwm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" line="23" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pwm_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" line="25" column="6" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" bodystart="25" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="pwm_8cpp_1afe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" line="36" column="6" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp" bodystart="36" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Basic<sp/>test<sp/>of<sp/>the<sp/>implemented<sp/>pwm<sp/>adatper<sp/>class</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>steps<sp/>required<sp/>to<sp/>use<sp/>are:</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>1.<sp/>select<sp/>a<sp/>channel<sp/>and<sp/>set<sp/>the<sp/>frequency<sp/>and<sp/>resolution<sp/>of<sp/>the<sp/>counter<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>2.<sp/>attach<sp/>the<sp/>Output<sp/>pins<sp/>to<sp/>the<sp/>pwm<sp/>-<sp/>channel<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>3.<sp/>then<sp/>just<sp/>write<sp/>the<sp/>duty<sp/>cycle<sp/>with<sp/>the<sp/>required<sp/>resolution<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="pwm_8h" kindref="compound">esp32/pwm.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>potiPin<sp/>=<sp/>14;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ledPin<sp/>=<sp/>25;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ledPin2<sp/>=<sp/>26;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ledPin3<sp/>=<sp/>27;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>PWM<sp/>channel<sp/>0<sp/>parameter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>freq<sp/>=<sp/>5000;<sp/></highlight><highlight class="comment">//<sp/>5000<sp/>Hz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ledChannel<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>resolution<sp/>=<sp/>8;<sp/></highlight><highlight class="comment">//<sp/>8-bit<sp/>resolution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="class_p_w_m" kindref="compound">PWM</ref><sp/>pwm(ledChannel,freq,resolution);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setup(){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>the<sp/>channel<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm.init();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Attach<sp/>the<sp/>channel<sp/>0<sp/>on<sp/>the<sp/>3<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm.<ref refid="class_p_w_m_1a821f233640f30489bdd08040d07f0de3" kindref="member">attachPin</ref>(ledPin);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm.<ref refid="class_p_w_m_1a821f233640f30489bdd08040d07f0de3" kindref="member">attachPin</ref>(ledPin2);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm.<ref refid="class_p_w_m_1a821f233640f30489bdd08040d07f0de3" kindref="member">attachPin</ref>(ledPin3);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loop(){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Increase<sp/>the<sp/>brightness<sp/>of<sp/>the<sp/>led<sp/>in<sp/>the<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>iDuty<sp/>=<sp/>(uint8_t)<sp/>(((</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)<sp/>analogRead(potiPin)/4096.0<sp/>)<sp/>*<sp/>256);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm.write(iDuty);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/pwm.cpp"/>
+  </compounddef>
+</doxygen>

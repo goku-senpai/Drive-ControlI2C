@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_none_trajectory" kind="class" language="C++" prot="public">
+    <compoundname>NoneTrajectory</compoundname>
+    <basecompoundref refid="class_trajectory" prot="public" virt="non-virtual">Trajectory</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_none_trajectory_1a2a001251bba4b43a1c065b99d9f9cbb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double *</type>
+        <definition>double * NoneTrajectory::compute</definition>
+        <argsstring>(const double &amp;dCurInput)</argsstring>
+        <name>compute</name>
+        <qualifiedname>NoneTrajectory::compute</qualifiedname>
+        <reimplements refid="class_trajectory_1ab56a8ae8ef699cdbe05a318cd1c37c7c">compute</reimplements>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dCurInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dCurInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current input value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="70" column="12" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="70" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>NoneTrajectory</label>
+        <link refid="class_none_trajectory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Trajectory</label>
+        <link refid="class_trajectory"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>NoneTrajectory</label>
+        <link refid="class_none_trajectory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Trajectory</label>
+        <link refid="class_trajectory"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" line="68" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Trajectory.h" bodystart="68" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_none_trajectory_1a2a001251bba4b43a1c065b99d9f9cbb5" prot="public" virt="virtual"><scope>NoneTrajectory</scope><name>compute</name></member>
+      <member refid="class_trajectory_1a828f96b61ad907a03e0aa7d484c80747" prot="protected" virt="non-virtual"><scope>NoneTrajectory</scope><name>dOut</name></member>
+      <member refid="class_trajectory_1a38daac3e65bdd4a306670f83e43fd8b2" prot="protected" virt="non-virtual"><scope>NoneTrajectory</scope><name>dRampAngleEnd</name></member>
+      <member refid="class_trajectory_1ac9369873bb7ff479cba63e098050b657" prot="protected" virt="non-virtual"><scope>NoneTrajectory</scope><name>dRampAngleStart</name></member>
+      <member refid="class_trajectory_1a0b9f423b728e422c0da1af625b7e0be4" prot="public" virt="non-virtual"><scope>NoneTrajectory</scope><name>getOutput</name></member>
+      <member refid="class_trajectory_1a82f0282097198990bb508d4c6cd1ef94" prot="public" virt="non-virtual"><scope>NoneTrajectory</scope><name>setRampParams</name></member>
+      <member refid="class_trajectory_1aa340ba80f1f4d1aa39f19f069d5d8089" prot="public" virt="non-virtual"><scope>NoneTrajectory</scope><name>Trajectory</name></member>
+      <member refid="class_trajectory_1a3244e64a4c0eaf7c86fb1d985223227c" prot="public" virt="virtual"><scope>NoneTrajectory</scope><name>~Trajectory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

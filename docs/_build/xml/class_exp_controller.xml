@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_exp_controller" kind="class" language="C++" prot="public">
+    <compoundname>ExpController</compoundname>
+    <basecompoundref refid="class_experiment_module" prot="public" virt="non-virtual">ExperimentModule</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_exp_controller_1adb4b8ad4e9e6ad5377a760867d31e9dd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExpController::dMaxHardwarePressure</definition>
+        <argsstring></argsstring>
+        <name>dMaxHardwarePressure</name>
+        <qualifiedname>ExpController::dMaxHardwarePressure</qualifiedname>
+        <initializer>=  8.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="274" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_controller_1a88233812601d159a12e42a6794f96d57" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExpController::dMinNicePressure</definition>
+        <argsstring></argsstring>
+        <name>dMinNicePressure</name>
+        <qualifiedname>ExpController::dMinNicePressure</qualifiedname>
+        <initializer>=  6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="275" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_controller_1a5946f18614c2260cfd7c68022265ffa3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExpController::pressure_deadzone</definition>
+        <argsstring></argsstring>
+        <name>pressure_deadzone</name>
+        <qualifiedname>ExpController::pressure_deadzone</qualifiedname>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="277" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_controller_1acc4fcafac01e5d1182716b59fbea1d88" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExpController::min_supply_pressure</definition>
+        <argsstring></argsstring>
+        <name>min_supply_pressure</name>
+        <qualifiedname>ExpController::min_supply_pressure</qualifiedname>
+        <initializer>= PRESSURE_MIN_SUPPLY</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="278" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_controller_1a91ad6c289fe7355248960d447f03a7ff" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExpController::neglectable_pressure</definition>
+        <argsstring></argsstring>
+        <name>neglectable_pressure</name>
+        <qualifiedname>ExpController::neglectable_pressure</qualifiedname>
+        <initializer>=  0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="279" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_controller_1ac0f62076c527923ba7bb9494d55fcee5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExpController::target_pressure_reduction</definition>
+        <argsstring></argsstring>
+        <name>target_pressure_reduction</name>
+        <qualifiedname>ExpController::target_pressure_reduction</qualifiedname>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="281" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_controller_1a02de04c4b33e780fbefe6dfd0546cead" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExpController::pressure_adjust_mode</definition>
+        <argsstring></argsstring>
+        <name>pressure_adjust_mode</name>
+        <qualifiedname>ExpController::pressure_adjust_mode</qualifiedname>
+        <initializer>=  false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="282" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_controller_1a224296e878c6f49ad88dc86542da7cc2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExpController::active_cycle_time_max</definition>
+        <argsstring></argsstring>
+        <name>active_cycle_time_max</name>
+        <qualifiedname>ExpController::active_cycle_time_max</qualifiedname>
+        <initializer>=  20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="284" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_controller_1a16d38568871ae974b873d6ca18b69d91" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExpController::active_cycle_time_min</definition>
+        <argsstring></argsstring>
+        <name>active_cycle_time_min</name>
+        <qualifiedname>ExpController::active_cycle_time_min</qualifiedname>
+        <initializer>=  7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="285" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_controller_1ad7800b82b31b40ba9bb015f0644a83ab" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExpController::dMaxPressure</definition>
+        <argsstring></argsstring>
+        <name>dMaxPressure</name>
+        <qualifiedname>ExpController::dMaxPressure</qualifiedname>
+        <initializer>=  6.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="288" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_controller_1a92d41552dcaee8dacccbf7dcb144d16f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExpController::dMinPressure</definition>
+        <argsstring></argsstring>
+        <name>dMinPressure</name>
+        <qualifiedname>ExpController::dMinPressure</qualifiedname>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="289" column="12" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_exp_controller_1a3c08759878bad3ba8188709edb492869" prot="private" static="no" mutable="no">
+        <type><ref refid="class_experiment_module" kindref="compound">ExperimentModule</ref> *</type>
+        <definition>ExperimentModule* ExpController::traj</definition>
+        <argsstring></argsstring>
+        <name>traj</name>
+        <qualifiedname>ExpController::traj</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="291" column="22" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ExpController</label>
+        <link refid="class_exp_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExperimentModule</label>
+        <link refid="class_experiment_module"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ExpController</label>
+        <link refid="class_exp_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExperimentModule</label>
+        <link refid="class_experiment_module"/>
+      </node>
+    </collaborationgraph>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" line="272" column="1" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/ExperimentModules.h" bodystart="272" bodyend="295"/>
+    <listofallmembers>
+      <member refid="class_exp_controller_1a224296e878c6f49ad88dc86542da7cc2" prot="private" virt="non-virtual"><scope>ExpController</scope><name>active_cycle_time_max</name></member>
+      <member refid="class_exp_controller_1a16d38568871ae974b873d6ca18b69d91" prot="private" virt="non-virtual"><scope>ExpController</scope><name>active_cycle_time_min</name></member>
+      <member refid="class_experiment_module_1a812c5ce3fc52525e6ee9d4f260a5936a" prot="public" virt="virtual"><scope>ExpController</scope><name>compute</name></member>
+      <member refid="class_exp_controller_1adb4b8ad4e9e6ad5377a760867d31e9dd" prot="private" virt="non-virtual"><scope>ExpController</scope><name>dMaxHardwarePressure</name></member>
+      <member refid="class_exp_controller_1ad7800b82b31b40ba9bb015f0644a83ab" prot="private" virt="non-virtual"><scope>ExpController</scope><name>dMaxPressure</name></member>
+      <member refid="class_exp_controller_1a88233812601d159a12e42a6794f96d57" prot="private" virt="non-virtual"><scope>ExpController</scope><name>dMinNicePressure</name></member>
+      <member refid="class_exp_controller_1a92d41552dcaee8dacccbf7dcb144d16f" prot="private" virt="non-virtual"><scope>ExpController</scope><name>dMinPressure</name></member>
+      <member refid="class_experiment_module_1a8dc870b13ef7b6013dc2ab5aa7f5ffe7" prot="public" virt="non-virtual"><scope>ExpController</scope><name>ExperimentModule</name></member>
+      <member refid="class_experiment_module_1ac2f139ac6c26181fd2a7a7343c855eee" prot="public" virt="non-virtual"><scope>ExpController</scope><name>getOutput</name></member>
+      <member refid="class_experiment_module_1acf4101354fe002c105da75892d220dc7" prot="public" virt="non-virtual"><scope>ExpController</scope><name>getState</name></member>
+      <member refid="class_experiment_module_1a74fa6d8dbe61a4351135082d2f288da4" prot="public" virt="virtual"><scope>ExpController</scope><name>handleFrame</name></member>
+      <member refid="class_experiment_module_1ab8628df2b6883cdf92f55c5b067430d2" prot="public" virt="virtual"><scope>ExpController</scope><name>init</name></member>
+      <member refid="class_exp_controller_1acc4fcafac01e5d1182716b59fbea1d88" prot="private" virt="non-virtual"><scope>ExpController</scope><name>min_supply_pressure</name></member>
+      <member refid="class_exp_controller_1a91ad6c289fe7355248960d447f03a7ff" prot="private" virt="non-virtual"><scope>ExpController</scope><name>neglectable_pressure</name></member>
+      <member refid="class_experiment_module_1af7cddd22f46a142c197203da7130ffdf" prot="protected" virt="non-virtual"><scope>ExpController</scope><name>outputs</name></member>
+      <member refid="class_exp_controller_1a02de04c4b33e780fbefe6dfd0546cead" prot="private" virt="non-virtual"><scope>ExpController</scope><name>pressure_adjust_mode</name></member>
+      <member refid="class_exp_controller_1a5946f18614c2260cfd7c68022265ffa3" prot="private" virt="non-virtual"><scope>ExpController</scope><name>pressure_deadzone</name></member>
+      <member refid="class_experiment_module_1a7d7697d611871d8f054b618080769dcc" prot="public" virt="virtual"><scope>ExpController</scope><name>registerModules</name></member>
+      <member refid="class_experiment_module_1aabbf45990fca2a3b0a50644c7741004f" prot="public" virt="virtual"><scope>ExpController</scope><name>sendFrame</name></member>
+      <member refid="class_experiment_module_1a6286b09a3f2e24144534321a7e5ef2c2" prot="protected" virt="non-virtual"><scope>ExpController</scope><name>states</name></member>
+      <member refid="class_experiment_module_1a63415ccd081a94e842487e48dadbd8c0" prot="public" virt="virtual"><scope>ExpController</scope><name>stop</name></member>
+      <member refid="class_exp_controller_1ac0f62076c527923ba7bb9494d55fcee5" prot="private" virt="non-virtual"><scope>ExpController</scope><name>target_pressure_reduction</name></member>
+      <member refid="class_exp_controller_1a3c08759878bad3ba8188709edb492869" prot="private" virt="non-virtual"><scope>ExpController</scope><name>traj</name></member>
+      <member refid="class_experiment_module_1a909d236cad2e09e23f479a4263cbd1e9" prot="public" virt="non-virtual"><scope>ExpController</scope><name>~ExperimentModule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

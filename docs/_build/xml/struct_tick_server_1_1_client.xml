@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_tick_server_1_1_client" kind="struct" language="C++" prot="protected">
+    <compoundname>TickServer::Client</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_tick_server_1_1_client_1acc8414c16880bdcfc03788de8824231a" prot="public" static="no" mutable="no">
+        <type><ref refid="class_tick_client" kindref="compound">TickClient</ref> *</type>
+        <definition>TickClient* TickServer::Client::client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <qualifiedname>TickServer::Client::client</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Tick.h" line="58" column="20" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Tick.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tick_server_1_1_client_1aa8d5589f9f9c2b8bc8365ef5e6eeec42" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TickServer::Client::ms</definition>
+        <argsstring></argsstring>
+        <name>ms</name>
+        <qualifiedname>TickServer::Client::ms</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Tick.h" line="59" column="18" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Tick.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tick_server_1_1_client_1ae03bde90fe995e892d54caa2e3ea1917" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TickServer::Client::msLastCall</definition>
+        <argsstring></argsstring>
+        <name>msLastCall</name>
+        <qualifiedname>TickServer::Client::msLastCall</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Tick.h" line="60" column="18" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Tick.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>TickClient</label>
+        <link refid="class_tick_client"/>
+      </node>
+      <node id="1">
+        <label>TickServer::Client</label>
+        <link refid="struct_tick_server_1_1_client"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>client</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Tick.h" line="57" column="5" bodyfile="d:/git/fertigung/lucy-esp/software/microcontroller/include/utils/Tick.h" bodystart="57" bodyend="61"/>
+    <listofallmembers>
+      <member refid="struct_tick_server_1_1_client_1acc8414c16880bdcfc03788de8824231a" prot="public" virt="non-virtual"><scope>TickServer::Client</scope><name>client</name></member>
+      <member refid="struct_tick_server_1_1_client_1aa8d5589f9f9c2b8bc8365ef5e6eeec42" prot="public" virt="non-virtual"><scope>TickServer::Client</scope><name>ms</name></member>
+      <member refid="struct_tick_server_1_1_client_1ae03bde90fe995e892d54caa2e3ea1917" prot="public" virt="non-virtual"><scope>TickServer::Client</scope><name>msLastCall</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

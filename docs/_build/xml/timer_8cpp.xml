@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="timer_8cpp" kind="file" language="C++">
+    <compoundname>timer.cpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="gpio_8h" local="no">esp32/gpio.h</includes>
+    <includes refid="timer_8h" local="no">esp32/timer.h</includes>
+    <includes refid="pwm_8h" local="no">esp32/pwm.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="3">
+        <label>esp32/gpio.h</label>
+        <link refid="gpio_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>esp32/pwm.h</label>
+        <link refid="pwm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>esp32/timer.h</label>
+        <link refid="timer_8h"/>
+      </node>
+      <node id="1">
+        <label>D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp</label>
+        <link refid="timer_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="timer_8cpp_1ae06e349b2a8a01148e40706325a36dcf" prot="public" static="no">
+        <name>TIMER_ID</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" line="7" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="timer_8cpp_1a2eba0c84813ee1261cdc6946c9dd2ea6" prot="public" static="no">
+        <name>TIMER_PRESCALAR</name>
+        <initializer>8000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" line="8" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="timer_8cpp_1ad888acf7c13a4bedd6541ceb5cf9bf6d" prot="public" static="no">
+        <name>TIMER_PERIOD</name>
+        <initializer>10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" line="9" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="timer_8cpp_1a5685712b68b4047070e0755386df1cd6" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_i_o" kindref="compound">DIO</ref></type>
+        <definition>DIO ledG1(25, OUTPUT)</definition>
+        <argsstring>(25, OUTPUT)</argsstring>
+        <name>ledG1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="variable" id="timer_8cpp_1a75330b950fa3794f653419a25499213c" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_i_o" kindref="compound">DIO</ref></type>
+        <definition>DIO ledB1(26, OUTPUT)</definition>
+        <argsstring>(26, OUTPUT)</argsstring>
+        <name>ledB1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" line="13" column="5"/>
+      </memberdef>
+      <memberdef kind="variable" id="timer_8cpp_1adedb0f4641b7b425776dbacb23a96576" prot="public" static="no" mutable="no">
+        <type>portMUX_TYPE</type>
+        <definition>portMUX_TYPE timerMux</definition>
+        <argsstring></argsstring>
+        <name>timerMux</name>
+        <initializer>= portMUX_INITIALIZER_UNLOCKED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" line="16" column="14" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="timer_8cpp_1aab6303ce6f1e2f5615184284a40abb8f" prot="public" static="no" mutable="no">
+        <type><ref refid="class_hardware_timer" kindref="compound">HardwareTimer</ref></type>
+        <definition>HardwareTimer timer(1, 8000, 10000)</definition>
+        <argsstring>(1, 8000, 10000)</argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" line="18" column="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="timer_8cpp_1ae5a37e191ca4c26956cfb247f66aa9c1" prot="public" static="no" mutable="no">
+        <type>volatile int</type>
+        <definition>volatile int interruptCounter</definition>
+        <argsstring></argsstring>
+        <name>interruptCounter</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" line="19" column="14" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="timer_8cpp_1ada06ab1c4bbd307a9fea75726c8894f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void IRAM_ATTR</type>
+        <definition>void IRAM_ATTR onTimer</definition>
+        <argsstring>()</argsstring>
+        <name>onTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" line="21" column="16" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" bodystart="21" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="timer_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" line="31" column="6" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" bodystart="31" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="timer_8cpp_1afe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" line="44" column="6" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gpio_8h" kindref="compound">esp32/gpio.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="timer_8h" kindref="compound">esp32/timer.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="pwm_8h" kindref="compound">esp32/pwm.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TIMER_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TIMER_PRESCALAR<sp/>8000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TIMER_PERIOD<sp/><sp/><sp/><sp/>10000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="class_d_i_o" kindref="compound">DIO</ref><sp/>ledG1(25,OUTPUT);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="class_d_i_o" kindref="compound">DIO</ref><sp/>ledB1(26,OUTPUT);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Hardware<sp/>Timer<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">portMUX_TYPE<sp/>timerMux<sp/>=<sp/>portMUX_INITIALIZER_UNLOCKED;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="class_hardware_timer" kindref="compound">HardwareTimer</ref><sp/>timer(1,8000,10000);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interruptCounter<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>volatile<sp/>due<sp/>being<sp/>used<sp/>in<sp/>isr<sp/>routine<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>IRAM_ATTR<sp/>onTimer()<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>portENTER_CRITICAL_ISR(&amp;timerMux);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>interruptCounter++;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>ledG1.<ref refid="class_d_i_o_1a727bcda55147f93d2c6b5f0e2d3a561f" kindref="member">toggle</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>ledB1.<ref refid="class_d_i_o_1a727bcda55147f93d2c6b5f0e2d3a561f" kindref="member">toggle</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>portEXIT_CRITICAL_ISR(&amp;timerMux);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setup()<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>Serial.begin(115200);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Setup<sp/>started&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>setup<sp/>offset<sp/>for<sp/>heartbeat<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>ledG1.<ref refid="class_d_i_o_1a2a73b7604f820b49f96a78c2b25292e4" kindref="member">set</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>setup<sp/>TimerCallback<sp/>and<sp/>Start<sp/>Timer0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>timer.<ref refid="class_hardware_timer_1a01b687bda6159f35cc5a3238e7860cba" kindref="member">setCallback</ref>(&amp;onTimer);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>timer.<ref refid="class_hardware_timer_1af11b73a57af629b8082eb49799caf9ec" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Setup<sp/>complete&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loop()<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>Serial.println(interruptCounter);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>delay(100);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/test/timer.cpp"/>
+  </compounddef>
+</doxygen>

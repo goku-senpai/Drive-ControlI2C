@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_button_input" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ButtonInput</compoundname>
+    <derivedcompoundref refid="class_encoder_button_input" prot="public" virt="non-virtual">EncoderButtonInput</derivedcompoundref>
+    <derivedcompoundref refid="class_m_c_p_button_input" prot="public" virt="non-virtual">MCPButtonInput</derivedcompoundref>
+    <derivedcompoundref refid="class_onboard_button_input" prot="public" virt="non-virtual">OnboardButtonInput</derivedcompoundref>
+    <derivedcompoundref refid="class_p_c_f_button_input" prot="public" virt="non-virtual">PCFButtonInput</derivedcompoundref>
+    <includes refid="_button_8h" local="no">Button.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_button_input_1a80bb9c5440ef13d458858eba7f291dee" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ButtonInput::iPin</definition>
+        <argsstring></argsstring>
+        <name>iPin</name>
+        <qualifiedname>ButtonInput::iPin</qualifiedname>
+        <briefdescription>
+<para>corresponding input pin </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="47" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_button_input_1a05c951f902e7d44a19977ba1b07ba582" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ButtonInput::ButtonInput</definition>
+        <argsstring>(int _pin)</argsstring>
+        <name>ButtonInput</name>
+        <qualifiedname>ButtonInput::ButtonInput</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="41" column="5" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_input_1a4e2d540e3f499e598c87f0568adf93bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ButtonInput::~ButtonInput</definition>
+        <argsstring>()</argsstring>
+        <name>~ButtonInput</name>
+        <qualifiedname>ButtonInput::~ButtonInput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="42" column="13" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_input_1aee02bce6f864e1df65044d08a1703092" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool ButtonInput::read</definition>
+        <argsstring>()=0</argsstring>
+        <name>read</name>
+        <qualifiedname>ButtonInput::read</qualifiedname>
+        <reimplementedby refid="class_onboard_button_input_1a7e44aa3a0cfac7238578af54740356d0">read</reimplementedby>
+        <reimplementedby refid="class_p_c_f_button_input_1a90461094c0ba359d0b086895a38ec645">read</reimplementedby>
+        <reimplementedby refid="class_m_c_p_button_input_1af8398124c3c9dcbca6b7a5598a3a5f4c">read</reimplementedby>
+        <reimplementedby refid="class_encoder_button_input_1aa68a480c44b99775463f6ea2e8929c6f">read</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="43" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_button_input_1a0cd249e8849ce84954a77b90435ade88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ButtonInput::getPin</definition>
+        <argsstring>()</argsstring>
+        <name>getPin</name>
+        <qualifiedname>ButtonInput::getPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="44" column="9" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Basic <ref refid="class_button" kindref="compound">Button</ref> Wrapper Class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   @param _pin : pin to use
+   add an abstraction layer for different i2c expander setups etc
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ButtonInput</label>
+        <link refid="class_button_input"/>
+      </node>
+      <node id="2">
+        <label>EncoderButtonInput</label>
+        <link refid="class_encoder_button_input"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MCPButtonInput</label>
+        <link refid="class_m_c_p_button_input"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>OnboardButtonInput</label>
+        <link refid="class_onboard_button_input"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PCFButtonInput</label>
+        <link refid="class_p_c_f_button_input"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" line="38" column="1" bodyfile="D:/git/fertigung/lucy-esp/software/microcontroller/include/Button.h" bodystart="39" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_button_input_1a05c951f902e7d44a19977ba1b07ba582" prot="public" virt="non-virtual"><scope>ButtonInput</scope><name>ButtonInput</name></member>
+      <member refid="class_button_input_1a0cd249e8849ce84954a77b90435ade88" prot="public" virt="non-virtual"><scope>ButtonInput</scope><name>getPin</name></member>
+      <member refid="class_button_input_1a80bb9c5440ef13d458858eba7f291dee" prot="protected" virt="non-virtual"><scope>ButtonInput</scope><name>iPin</name></member>
+      <member refid="class_button_input_1aee02bce6f864e1df65044d08a1703092" prot="public" virt="pure-virtual"><scope>ButtonInput</scope><name>read</name></member>
+      <member refid="class_button_input_1a4e2d540e3f499e598c87f0568adf93bb" prot="public" virt="virtual"><scope>ButtonInput</scope><name>~ButtonInput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

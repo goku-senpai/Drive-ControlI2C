@@ -1,0 +1,114 @@
+===============================
+Software Implementation STM32
+===============================
+
+
+Classes 
+=========
+
+Lucy
+-----------
+.. doxygenfile:: Lucy.h
+   :project: auto
+
+ValveDriver
+-----------
+.. doxygenfile:: ValveDriver.h
+   :project: auto
+
+IMU - BN0055
+---------------
+.. doxygenfile:: BN0055.h
+   :project: auto
+
+
+Trajectory
+-------------
+.. doxygenfile:: Trajectory.h
+   :project: auto
+
+Controller
+-----------
+.. doxygenfile:: Controller.h
+   :project: auto
+
+
+
+Parameters Groups in **define.h**
+===================================
+
+.. todo::  fix missing values in docs & add links
+
+Lucy
+-------------
+.. doxygengroup:: LUCY
+   :project: auto
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+
+UI
+-------------
+.. doxygengroup:: UI
+   :project: auto
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+I2C
+-------------
+.. doxygengroup:: I2C
+   :project: auto
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+
+Valve
+-------------
+.. doxygengroup:: VALVE
+   :project: auto
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+Pressure
+-------------
+.. doxygengroup:: PRESSURE
+   :project: auto
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+
+
+Trajectory
+-------------
+.. doxygengroup:: TRAJECTORY
+   :project: auto
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+
+
+
+Mainboard 
+-------------
+.. doxygengroup::  BOARD
+   :project: auto
+   :members:
+   :protected-members:
+   :private-members:
+   :undoc-members:
+
+
+
+
